@@ -1,0 +1,277 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato de tolerado sobre salón con baño privado",
+    "tipo_contrato": "tolerado (ocupación gratuita)",
+    "rubro": "civil",
+    "ficha": {
+      "plaza": "Cochabamba",
+      "fecha": "2024-07-20",
+      "cuantia": "sin contraprestación económica",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "tolerado (ocupación gratuita)",
+      "rubro": "civil"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "O. R. T.",
+        "rol": "propietaria",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "D. F. A.",
+        "rol": "tolerado",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Objeto",
+        "texto": "La PROPIETARIA, señora O. R. T., tolera la ocupación por parte del señor D. F. A. de un salón con baño privado dentro del inmueble de su propiedad ubicado en la zona Cala Cala de la ciudad de Cochabamba, sin que ello genere contraprestación económica alguna."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Uso del espacio",
+        "texto": "el TOLERADO tendrá uso exclusivo del salón y del baño privado descritos, pudiendo acceder a las demás áreas de la vivienda únicamente con autorización previa de la PROPIETARIA."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Terminación de la tolerancia",
+        "texto": "la PROPIETARIA podrá dar por concluida la presente tolerancia en cualquier momento, sin necesidad de aviso previo ni de expresar causa alguna, pudiendo proceder al desalojo inmediato del TOLERADO y de sus pertenencias."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Responsabilidad por daños",
+        "texto": "el TOLERADO será responsable por cualquier daño o deterioro que sufra el inmueble durante la vigencia de la presente tolerancia, aun cuando dicho daño fuese ocasionado por caso fortuito, fuerza mayor o hecho de terceros."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Renuncia a reclamar mejoras",
+        "texto": "el TOLERADO renuncia desde ya a reclamar el pago o reconocimiento de cualquier mejora, reparación o inversión que realizara en el salón durante la vigencia de la presente tolerancia, aun cuando dichas mejoras fuesen necesarias para la habitabilidad del espacio."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Naturaleza de la tolerancia",
+        "texto": "Queda expresamente establecido que la presente tolerancia no genera derecho posesorio ni de ninguna otra naturaleza a favor del TOLERADO sobre el inmueble."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Firmas",
+        "texto": "Firmado en la ciudad de Cochabamba, a los veinte días del mes de julio de 2024."
+      }
+    ],
+    "texto": "CONTRATO DE TOLERADO SOBRE SALÓN CON BAÑO PRIVADO\n\nCLÁUSULA PRIMERA (Objeto).- La PROPIETARIA, señora O. R. T., tolera la ocupación por parte del señor D. F. A. de un salón con baño privado dentro del inmueble de su propiedad ubicado en la zona Cala Cala de la ciudad de Cochabamba, sin que ello genere contraprestación económica alguna.\n\nCLÁUSULA SEGUNDA (Uso del espacio).- el TOLERADO tendrá uso exclusivo del salón y del baño privado descritos, pudiendo acceder a las demás áreas de la vivienda únicamente con autorización previa de la PROPIETARIA.\n\nCLÁUSULA TERCERA (Terminación de la tolerancia).- la PROPIETARIA podrá dar por concluida la presente tolerancia en cualquier momento, sin necesidad de aviso previo ni de expresar causa alguna, pudiendo proceder al desalojo inmediato del TOLERADO y de sus pertenencias.\n\nCLÁUSULA CUARTA (Responsabilidad por daños).- el TOLERADO será responsable por cualquier daño o deterioro que sufra el inmueble durante la vigencia de la presente tolerancia, aun cuando dicho daño fuese ocasionado por caso fortuito, fuerza mayor o hecho de terceros.\n\nCLÁUSULA QUINTA (Renuncia a reclamar mejoras).- el TOLERADO renuncia desde ya a reclamar el pago o reconocimiento de cualquier mejora, reparación o inversión que realizara en el salón durante la vigencia de la presente tolerancia, aun cuando dichas mejoras fuesen necesarias para la habitabilidad del espacio.\n\nCLÁUSULA SEXTA (Naturaleza de la tolerancia).- Queda expresamente establecido que la presente tolerancia no genera derecho posesorio ni de ninguna otra naturaleza a favor del TOLERADO sobre el inmueble.\n\nCLÁUSULA SÉPTIMA (Firmas).- Firmado en la ciudad de Cochabamba, a los veinte días del mes de julio de 2024.\n\nPROPIETARIA: O. R. T.   —   TOLERADO: D. F. A.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 75,
+    "nivel": "alto",
+    "confianza": 0.75,
+    "resumen": {
+      "hallazgos": 5,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 0,
+        "alto": 3,
+        "medio": 2,
+        "bajo": 0,
+        "informativo": 0
+      }
+    },
+    "sintesis": "Contrato de tolerancia sobre un salón con baño privado, sin contraprestación económica, que concentra en la propietaria la facultad de terminar la relación sin aviso ni causa y traslada al tolerado riesgos —incluidos el caso fortuito y el hecho de terceros— y renuncias que exceden lo que la libertad contractual permite pactar razonablemente, aun tratándose de una figura sin la protección legal del arrendamiento.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "O. R. T.",
+        "rol": "propietaria",
+        "redacto": true,
+        "balance": 55,
+        "a_favor": 5,
+        "en_contra": 0,
+        "lectura": "Redactó el documento reservándose la facultad de terminar la tolerancia sin aviso ni causa y trasladando al tolerado riesgos y renuncias amplias."
+      },
+      {
+        "id": "p2",
+        "nombre": "D. F. A.",
+        "rol": "tolerado",
+        "redacto": false,
+        "balance": -58,
+        "a_favor": 0,
+        "en_contra": 5,
+        "lectura": "Ocupa el espacio sin ninguna certeza sobre la duración de la tolerancia y asume riesgos y renuncias que exceden su situación de ocupante gratuito."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "alto",
+        "titulo": "Terminación sin aviso ni causa, con desalojo inmediato",
+        "clausula_id": "c3",
+        "cita_textual": "la PROPIETARIA podrá dar por concluida la presente tolerancia en cualquier momento, sin necesidad de aviso previo ni de expresar causa alguna, pudiendo proceder al desalojo inmediato del TOLERADO y de sus pertenencias",
+        "fundamento": "Aun cuando el tolerado carece de la protección propia del arrendamiento, la ausencia total de un plazo de gracia para retirar sus pertenencias y desocupar el espacio genera un desequilibrio absoluto en favor de la PROPIETARIA y roza los límites que la ley impone a la libertad contractual.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Conceder un plazo mínimo razonable (p. ej. diez días) para el desalojo material tras la notificación de terminación.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "alto",
+        "titulo": "Responsabilidad del tolerado incluso por caso fortuito o hecho de terceros",
+        "clausula_id": "c4",
+        "cita_textual": "el TOLERADO será responsable por cualquier daño o deterioro que sufra el inmueble durante la vigencia de la presente tolerancia, aun cuando dicho daño fuese ocasionado por caso fortuito, fuerza mayor o hecho de terceros",
+        "fundamento": "El contrato debe ejecutarse de buena fe, lo que incluye no trasladar a una parte riesgos que no dependen de su conducta. Hacer responsable al TOLERADO por daños ocasionados por caso fortuito, fuerza mayor o terceros ajenos a él es una carga que excede lo que la buena fe contractual permite imponer.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "520",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Limitar la responsabilidad del tolerado a los daños causados por su propio hecho, dolo o negligencia.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "alto",
+        "titulo": "Renuncia anticipada a reclamar mejoras necesarias para la habitabilidad",
+        "clausula_id": "c5",
+        "cita_textual": "el TOLERADO renuncia desde ya a reclamar el pago o reconocimiento de cualquier mejora, reparación o inversión que realizara en el salón durante la vigencia de la presente tolerancia, aun cuando dichas mejoras fuesen necesarias para la habitabilidad del espacio",
+        "fundamento": "La renuncia anticipada y genérica a cualquier reclamo por mejoras, incluidas las necesarias para la habitabilidad del espacio, deja al TOLERADO sin posibilidad de recuperar inversiones básicas indispensables, lo que excede el margen de libertad contractual admisible.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "520",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Reconocer al menos el derecho a reclamar el valor de las mejoras necesarias para la habitabilidad, salvo pacto expreso e informado en contrario.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "medio",
+        "titulo": "Alcance ambiguo del uso exclusivo frente a las áreas comunes",
+        "clausula_id": "c2",
+        "cita_textual": "el TOLERADO tendrá uso exclusivo del salón y del baño privado descritos, pudiendo acceder a las demás áreas de la vivienda únicamente con autorización previa de la PROPIETARIA",
+        "fundamento": "La cláusula no define qué se entiende por \"áreas comunes\" ni bajo qué criterio se otorgará o negará la autorización de acceso, lo que puede dar lugar a conflictos de convivencia. Al haber sido la PROPIETARIA quien redactó el documento, la ambigüedad debe interpretarse en favor del TOLERADO.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Detallar qué áreas se consideran de uso exclusivo y cuáles son de acceso común, y bajo qué condiciones.",
+        "beneficia": null,
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "medio",
+        "titulo": "Plazo de desalojo material no definido en la terminación",
+        "clausula_id": "c3",
+        "cita_textual": "la PROPIETARIA podrá dar por concluida la presente tolerancia en cualquier momento, sin necesidad de aviso previo ni de expresar causa alguna, pudiendo proceder al desalojo inmediato del TOLERADO y de sus pertenencias",
+        "fundamento": "Más allá de la falta de aviso previo, la cláusula tampoco fija un plazo mínimo razonable para que el TOLERADO retire sus pertenencias una vez comunicada la terminación, lo que genera riesgo de conflicto en la ejecución práctica del desalojo.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar un plazo cierto (p. ej. cuarenta y ocho horas) para el retiro de pertenencias tras la notificación de terminación.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "No se aclara si existe contraprestación encubierta",
+        "descripcion": "El documento declara que no existe contraprestación económica, pero no aclara si el TOLERADO presta a cambio algún servicio (cuidado del inmueble, tareas domésticas), lo que de existir podría desvirtuar la naturaleza gratuita declarada y encubrir una relación distinta, incluso de tipo laboral.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "48",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "II"
+          }
+        ],
+        "recomendacion": "Aclarar expresamente si existe o no alguna prestación a cargo del tolerado y, de existir, calificarla correctamente."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de acta de entrega del estado del inmueble",
+        "descripcion": "No se deja constancia del estado del salón, el baño y el mobiliario a la fecha de ingreso del TOLERADO, lo que puede perjudicar a cualquiera de las partes ante un reclamo posterior por daños.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "705",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Suscribir un acta de entrega con fotografías al momento del ingreso del tolerado."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Fijar un plazo mínimo de desalojo material tras la notificación de terminación."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Limitar la responsabilidad del tolerado a los daños causados por su propio hecho o negligencia."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "asesoria",
+        "accion": "Aclarar por escrito si existe alguna prestación a cambio de la ocupación, para evitar que se encubra una relación distinta."
+      }
+    ]
+  }
+}

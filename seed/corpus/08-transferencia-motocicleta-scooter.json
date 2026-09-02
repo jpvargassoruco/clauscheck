@@ -1,0 +1,273 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Transferencia de motocicleta scooter",
+    "tipo_contrato": "transferencia de vehículo (motocicleta)",
+    "rubro": "comercial",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-08-08",
+      "cuantia": "Bs 5.000",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "transferencia de vehículo (motocicleta)",
+      "rubro": "comercial"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "F. N. O.",
+        "rol": "vendedor",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "K. R. D.",
+        "rol": "comprador",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Objeto",
+        "texto": "El VENDEDOR, señor F. N. O., transfiere en venta real y definitiva al COMPRADOR, señor K. R. D., la motocicleta tipo scooter, color rojo, placa de control 1234-SCZ, de su legítima propiedad."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Precio",
+        "texto": "El precio de la presente transferencia es la suma de Bs 5.000.- (CINCO MIL 00/100 BOLIVIANOS), que el VENDEDOR declara recibir en efectivo y en su integridad al momento de la firma."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Estado del vehículo",
+        "texto": "El vehículo se transfiere en el estado en que se encuentra, conocido y aceptado por el COMPRADOR previa inspección personal."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Declaración sobre gravámenes",
+        "texto": "el VENDEDOR declara bajo juramento que la motocicleta se encuentra libre de todo gravamen, prenda o proceso judicial."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Exclusión de responsabilidad",
+        "texto": "El presente contrato descarta cualquier situación de estafa o estelionato por parte del VENDEDOR, quien no será responsable por vicios ocultos ni por la evicción total o parcial del bien transferido."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Entrega",
+        "texto": "La motocicleta y su documentación (tarjeta de propiedad y RUAT) se entregan al COMPRADOR en el momento de la firma del presente documento."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Gastos de transferencia",
+        "texto": "todos los gastos y trámites de refrendación ante el RUAT correrán por exclusiva cuenta del COMPRADOR."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Renuncia a reclamo por el estado mecánico",
+        "texto": "el COMPRADOR declara conocer y aceptar el estado mecánico y de funcionamiento de la motocicleta, renunciando desde ya a cualquier reclamo posterior por dicho concepto, sea cual fuere su naturaleza o gravedad."
+      },
+      {
+        "id": "c9",
+        "numero": "NOVENA",
+        "titulo": "Firmas",
+        "texto": "Firmado en la ciudad de Santa Cruz de la Sierra, a los ocho días del mes de agosto de 2024."
+      }
+    ],
+    "texto": "CONTRATO DE TRANSFERENCIA DE MOTOCICLETA (SCOOTER)\n\nCLÁUSULA PRIMERA (Objeto).- El VENDEDOR, señor F. N. O., transfiere en venta real y definitiva al COMPRADOR, señor K. R. D., la motocicleta tipo scooter, color rojo, placa de control 1234-SCZ, de su legítima propiedad.\n\nCLÁUSULA SEGUNDA (Precio).- El precio de la presente transferencia es la suma de Bs 5.000.- (CINCO MIL 00/100 BOLIVIANOS), que el VENDEDOR declara recibir en efectivo y en su integridad al momento de la firma.\n\nCLÁUSULA TERCERA (Estado del vehículo).- El vehículo se transfiere en el estado en que se encuentra, conocido y aceptado por el COMPRADOR previa inspección personal.\n\nCLÁUSULA CUARTA (Declaración sobre gravámenes).- el VENDEDOR declara bajo juramento que la motocicleta se encuentra libre de todo gravamen, prenda o proceso judicial.\n\nCLÁUSULA QUINTA (Exclusión de responsabilidad).- El presente contrato descarta cualquier situación de estafa o estelionato por parte del VENDEDOR, quien no será responsable por vicios ocultos ni por la evicción total o parcial del bien transferido.\n\nCLÁUSULA SEXTA (Entrega).- La motocicleta y su documentación (tarjeta de propiedad y RUAT) se entregan al COMPRADOR en el momento de la firma del presente documento.\n\nCLÁUSULA SÉPTIMA (Gastos de transferencia).- todos los gastos y trámites de refrendación ante el RUAT correrán por exclusiva cuenta del COMPRADOR.\n\nCLÁUSULA OCTAVA (Renuncia a reclamo por el estado mecánico).- el COMPRADOR declara conocer y aceptar el estado mecánico y de funcionamiento de la motocicleta, renunciando desde ya a cualquier reclamo posterior por dicho concepto, sea cual fuere su naturaleza o gravedad.\n\nCLÁUSULA NOVENA (Firmas).- Firmado en la ciudad de Santa Cruz de la Sierra, a los ocho días del mes de agosto de 2024.\n\nVENDEDOR: F. N. O.   —   COMPRADOR: K. R. D.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 75,
+    "nivel": "alto",
+    "confianza": 0.78,
+    "resumen": {
+      "hallazgos": 5,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 0,
+        "alto": 2,
+        "medio": 2,
+        "bajo": 1,
+        "informativo": 0
+      }
+    },
+    "sintesis": "Transferencia de una motocicleta scooter por Bs 5.000 cuya cláusula más problemática pretende \"descartar cualquier situación de estafa o estelionato\" del vendedor, algo que la ley prohíbe de forma expresa porque nadie puede blindarse contractualmente frente a su propio hecho doloso. A esa nulidad parcial se suma una renuncia genérica del comprador a reclamar por el estado mecánico del vehículo, que en la práctica persigue el mismo efecto por otra vía.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "F. N. O.",
+        "rol": "vendedor",
+        "redacto": true,
+        "balance": 48,
+        "a_favor": 4,
+        "en_contra": 1,
+        "lectura": "Redactó el documento incluyendo una cláusula nula que pretende excluir su responsabilidad incluso por estafa o estelionato, además de una renuncia amplia del comprador a reclamar por el estado del vehículo."
+      },
+      {
+        "id": "p2",
+        "nombre": "K. R. D.",
+        "rol": "comprador",
+        "redacto": false,
+        "balance": -50,
+        "a_favor": 1,
+        "en_contra": 4,
+        "lectura": "Firma una renuncia genérica a reclamar por el estado mecánico y queda a cargo de todos los trámites de transferencia sin resguardo expreso frente a infracciones previas."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "alto",
+        "titulo": "Cláusula que descarta la estafa o el estelionato del vendedor",
+        "clausula_id": "c5",
+        "cita_textual": "descarta cualquier situación de estafa o estelionato por parte del VENDEDOR",
+        "fundamento": "Aun cuando se pacte la exclusión de responsabilidad, el vendedor está siempre sujeto a responsabilidad por su propio hecho, y es nulo todo pacto contrario. Una cláusula que pretende \"descartar cualquier situación de estafa o estelionato\" del vendedor es nula por mandato expreso de la ley en cuanto pretende blindarlo frente a su propio hecho doloso; no compromete, sin embargo, la validez del resto de la compraventa.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "628",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "II"
+          }
+        ],
+        "redaccion_sustitutiva": "Eliminar la cláusula; la exclusión de responsabilidad no puede alcanzar hechos propios del vendedor, incluidos el dolo, la estafa o el estelionato.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "alto",
+        "titulo": "Renuncia total y anticipada a reclamar por el estado mecánico",
+        "clausula_id": "c8",
+        "cita_textual": "el COMPRADOR declara conocer y aceptar el estado mecánico y de funcionamiento de la motocicleta, renunciando desde ya a cualquier reclamo posterior por dicho concepto, sea cual fuere su naturaleza o gravedad",
+        "fundamento": "El vendedor responde por la evicción y los vicios de la cosa aunque no se lo haya expresado en el contrato; esa responsabilidad puede disminuirse por pacto, pero no eliminarse frente al hecho propio del vendedor. La renuncia genérica y anticipada del comprador \"a cualquier reclamo\", sin distinguir vicios ocultos graves preexistentes, busca neutralizar preventivamente esa protección legal.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "614",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "624",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Limitar la renuncia a defectos visibles y conocidos al momento de la inspección, dejando a salvo el reclamo por vicios ocultos graves no detectables a simple vista.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "medio",
+        "titulo": "Gastos de refrendación a cargo del comprador sin verificar infracciones previas",
+        "clausula_id": "c7",
+        "cita_textual": "todos los gastos y trámites de refrendación ante el RUAT correrán por exclusiva cuenta del COMPRADOR",
+        "fundamento": "Todos los trámites y gastos de refrendación se imponen al COMPRADOR sin que el contrato aclare qué ocurre si existieran multas o infracciones de tránsito pendientes a nombre del VENDEDOR anteriores a la transferencia, que en la práctica podrían trasladarse de hecho al COMPRADOR. Al haber sido el VENDEDOR quien redactó el documento, la omisión debe interpretarse en favor del COMPRADOR.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Aclarar que las multas o infracciones generadas antes de la fecha de transferencia quedan a cargo del vendedor.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "medio",
+        "titulo": "Declaración de no gravamen sin consecuencia contractual expresa",
+        "clausula_id": "c4",
+        "cita_textual": "el VENDEDOR declara bajo juramento que la motocicleta se encuentra libre de todo gravamen, prenda o proceso judicial",
+        "fundamento": "El vendedor declara bajo juramento que el vehículo está libre de gravámenes, pero el contrato no pacta ninguna consecuencia específica (resolución, indemnización) para el caso de que la declaración resulte falsa, más allá de la responsabilidad general por evicción.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "614",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Pactar expresamente la resolución del contrato y la devolución del precio, más daños y perjuicios, si la declaración de no gravamen resultase falsa.",
+        "beneficia": null,
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "bajo",
+        "titulo": "Falta de número de motor y chasis en la individualización del vehículo",
+        "clausula_id": "c1",
+        "cita_textual": "placa de control 1234-SCZ",
+        "fundamento": "El vehículo se individualiza solo por color y placa, sin consignar el número de motor ni de chasis, datos habituales para la plena identificación del bien transferido.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Incorporar el número de motor y de chasis de la motocicleta en la cláusula primera.",
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "Sin plazo de revisión posterior a la entrega",
+        "descripcion": "El contrato no prevé ningún plazo breve posterior a la entrega para que el comprador pueda reportar defectos mecánicos graves que no fueran perceptibles en la inspección visual previa a la firma.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "614",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Pactar un plazo breve (p. ej. 48 horas) para reportar defectos mecánicos graves no perceptibles a simple vista."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "No se exige certificado de no adeudo de multas de tránsito",
+        "descripcion": "El contrato no condiciona la transferencia a la presentación de un certificado de no adeudo de multas o infracciones de tránsito a nombre del vendedor.",
+        "articulos": [],
+        "recomendacion": "Exigir certificado de no adeudo de multas antes de la firma o como condición suspensiva del pago."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Eliminar la cláusula que descarta la estafa o el estelionato del vendedor, por ser nula."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Acotar la renuncia del comprador a defectos visibles al momento de la inspección."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "tramite",
+        "accion": "Solicitar certificado de no adeudo de multas de tránsito antes de cancelar el precio."
+      }
+    ]
+  }
+}

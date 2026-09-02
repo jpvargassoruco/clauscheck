@@ -1,0 +1,279 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato de anticrético sobre tienda comercial",
+    "tipo_contrato": "anticrético",
+    "rubro": "civil",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-02-05",
+      "cuantia": "USD 15.000",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "anticrético",
+      "rubro": "civil"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "J. P. R.",
+        "rol": "acreedor anticresista",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "M. A. Q.",
+        "rol": "deudor anticresista / propietario",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Comparecientes y objeto",
+        "texto": "Comparecen el señor J. P. R., en calidad de ACREEDOR ANTICRESISTA, y el señor M. A. Q., en calidad de DEUDOR ANTICRESISTA y propietario, quienes celebran contrato de anticrético sobre la tienda comercial ubicada en la Av. Cristo Redentor, entre 3er y 4to anillo, de la ciudad de Santa Cruz de la Sierra."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Capital anticrético",
+        "texto": "El ACREEDOR ANTICRESISTA entrega en este acto al DEUDOR ANTICRESISTA la suma de USD 15.000.- (QUINCE MIL 00/100 DÓLARES AMERICANOS) en calidad de capital anticrético, que este último recibe a su entera satisfacción."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Uso del inmueble",
+        "texto": "El ACREEDOR ANTICRESISTA queda facultado a usar y explotar comercialmente la tienda objeto del presente contrato, percibiendo sus frutos, durante toda la vigencia del contrato."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Plazo",
+        "texto": "el presente contrato de anticrético tendrá una duración de siete (7) años, computables desde la fecha de suscripción del presente documento."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Prohibición de retiro anticipado",
+        "texto": "el DEUDOR ANTICRESISTA no podrá solicitar la restitución anticipada de la tienda comercial bajo ninguna circunstancia, ni siquiera ofreciendo la devolución total y anticipada del capital entregado por el ACREEDOR ANTICRESISTA."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Impuestos y mantenimiento",
+        "texto": "los impuestos, tasas municipales y gastos de mantenimiento mayor del inmueble serán asumidos según corresponda conforme al uso del bien."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Prohibición de subarriendo",
+        "texto": "El ACREEDOR ANTICRESISTA no podrá subarrendar ni ceder el uso de la tienda a terceros sin autorización escrita del DEUDOR ANTICRESISTA."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Firmas",
+        "texto": "Firmado como documento privado en la ciudad de Santa Cruz de la Sierra, a los cinco días del mes de febrero de 2024."
+      }
+    ],
+    "texto": "CONTRATO DE ANTICRÉTICO SOBRE TIENDA COMERCIAL\n\nCLÁUSULA PRIMERA (Comparecientes y objeto).- Comparecen el señor J. P. R., en calidad de ACREEDOR ANTICRESISTA, y el señor M. A. Q., en calidad de DEUDOR ANTICRESISTA y propietario, quienes celebran contrato de anticrético sobre la tienda comercial ubicada en la Av. Cristo Redentor, entre 3er y 4to anillo, de la ciudad de Santa Cruz de la Sierra.\n\nCLÁUSULA SEGUNDA (Capital anticrético).- El ACREEDOR ANTICRESISTA entrega en este acto al DEUDOR ANTICRESISTA la suma de USD 15.000.- (QUINCE MIL 00/100 DÓLARES AMERICANOS) en calidad de capital anticrético, que este último recibe a su entera satisfacción.\n\nCLÁUSULA TERCERA (Uso del inmueble).- El ACREEDOR ANTICRESISTA queda facultado a usar y explotar comercialmente la tienda objeto del presente contrato, percibiendo sus frutos, durante toda la vigencia del contrato.\n\nCLÁUSULA CUARTA (Plazo).- el presente contrato de anticrético tendrá una duración de siete (7) años, computables desde la fecha de suscripción del presente documento.\n\nCLÁUSULA QUINTA (Prohibición de retiro anticipado).- el DEUDOR ANTICRESISTA no podrá solicitar la restitución anticipada de la tienda comercial bajo ninguna circunstancia, ni siquiera ofreciendo la devolución total y anticipada del capital entregado por el ACREEDOR ANTICRESISTA.\n\nCLÁUSULA SEXTA (Impuestos y mantenimiento).- los impuestos, tasas municipales y gastos de mantenimiento mayor del inmueble serán asumidos según corresponda conforme al uso del bien.\n\nCLÁUSULA SÉPTIMA (Prohibición de subarriendo).- El ACREEDOR ANTICRESISTA no podrá subarrendar ni ceder el uso de la tienda a terceros sin autorización escrita del DEUDOR ANTICRESISTA.\n\nCLÁUSULA OCTAVA (Firmas).- Firmado como documento privado en la ciudad de Santa Cruz de la Sierra, a los cinco días del mes de febrero de 2024.\n\nACREEDOR ANTICRESISTA: J. P. R.   —   DEUDOR ANTICRESISTA: M. A. Q.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 87,
+    "nivel": "critico",
+    "confianza": 0.81,
+    "resumen": {
+      "hallazgos": 5,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 1,
+        "alto": 2,
+        "medio": 1,
+        "bajo": 1,
+        "informativo": 0
+      }
+    },
+    "sintesis": "Contrato de anticrético sobre una tienda comercial por USD 15.000 firmado como minuta privada, pese a que la ley exige documento público para este tipo de acto y para que surta efectos frente a terceros. A ese defecto de forma se suma la omisión más grave del documento: ninguna cláusula regula cuándo ni cómo se restituirá el capital entregado, y el plazo pactado excede el máximo legal de cinco años.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "J. P. R.",
+        "rol": "acreedor anticresista",
+        "redacto": true,
+        "balance": 40,
+        "a_favor": 3,
+        "en_contra": 2,
+        "lectura": "Redactó el contrato y obtiene el uso comercial del inmueble por un plazo que excede el máximo legal, pero la falta de forma pública expone su propia garantía frente a terceros."
+      },
+      {
+        "id": "p2",
+        "nombre": "M. A. Q.",
+        "rol": "deudor anticresista / propietario",
+        "redacto": false,
+        "balance": -60,
+        "a_favor": 0,
+        "en_contra": 4,
+        "lectura": "Entrega su tienda comercial sin que el contrato le garantice cuándo ni cómo recuperará el capital anticrético ni el inmueble."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "critico",
+        "titulo": "Anticrético constituido por minuta privada",
+        "clausula_id": "c1",
+        "cita_textual": "contrato de anticrético",
+        "fundamento": "El contrato de anticresis no se constituye sino por documento público y surte efecto respecto a terceros solo desde su inscripción en el registro; además, la anticresis está expresamente incluida entre los actos que deben celebrarse por documento público. Al haberse firmado como minuta privada, el contrato carece de la forma exigida por la ley como requisito de validez y es, además, inoponible a terceros.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "491",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "3"
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1430",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Protocolizar el contrato mediante escritura pública ante notario e inscribirlo en el registro de Derechos Reales.",
+        "beneficia": null,
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "alto",
+        "titulo": "Plazo pactado superior al máximo legal de cinco años",
+        "clausula_id": "c4",
+        "cita_textual": "el presente contrato de anticrético tendrá una duración de siete (7) años, computables desde la fecha de suscripción del presente documento",
+        "fundamento": "La anticresis no puede convenirse por un plazo superior a cinco años; si se pacta un plazo mayor, este se reduce automáticamente a dicho término. El plazo de siete años pactado en la cláusula cuarta excede el máximo legal y se reduce de pleno derecho a cinco.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1435",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar el plazo en un máximo de cinco años, conforme al límite legal.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "alto",
+        "titulo": "Prohibición absoluta de retiro anticipado aun ofreciendo el pago total",
+        "clausula_id": "c5",
+        "cita_textual": "el DEUDOR ANTICRESISTA no podrá solicitar la restitución anticipada de la tienda comercial bajo ninguna circunstancia, ni siquiera ofreciendo la devolución total y anticipada del capital entregado por el ACREEDOR ANTICRESISTA",
+        "fundamento": "La cláusula impide al DEUDOR ANTICRESISTA recuperar su tienda incluso ofreciendo devolver la totalidad del capital anticipadamente, lo que desnaturaliza la anticresis como garantía real vinculada al cumplimiento de una obligación y concentra en el ACREEDOR una ventaja que la propia lógica de la figura no justifica una vez satisfecho el crédito.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1435",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Permitir la restitución anticipada del bien contra la devolución total del capital anticrético, con un preaviso razonable.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "medio",
+        "titulo": "Ambigüedad sobre impuestos y mantenimiento mayor",
+        "clausula_id": "c6",
+        "cita_textual": "los impuestos, tasas municipales y gastos de mantenimiento mayor del inmueble serán asumidos según corresponda conforme al uso del bien",
+        "fundamento": "La cláusula remite el pago de impuestos y mantenimiento mayor a lo que \"corresponda conforme al uso del bien\", sin precisar a cuál de las partes corresponde cada concepto. Al haber sido el ACREEDOR ANTICRESISTA quien redactó el contrato, la duda debe interpretarse en favor del DEUDOR ANTICRESISTA.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Detallar expresamente qué impuestos y gastos de mantenimiento corresponden a cada parte.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "bajo",
+        "titulo": "Individualización del inmueble sin número de matrícula",
+        "clausula_id": "c1",
+        "cita_textual": "sobre la tienda comercial ubicada en la Av. Cristo Redentor, entre 3er y 4to anillo, de la ciudad de Santa Cruz de la Sierra",
+        "fundamento": "El inmueble se individualiza solo por su dirección, sin el número de matrícula computarizada de Derechos Reales, lo que es un defecto técnico menor pero relevante de cara a la inscripción del contrato.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Incorporar el número de matrícula computarizada y el código catastral de la tienda.",
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "critico",
+        "titulo": "Sin previsión de restitución del capital anticrético",
+        "descripcion": "El contrato no contempla mecanismo, plazo ni condición alguna para la restitución del capital de USD 15.000 al término de la relación anticrética, dejando al DEUDOR ANTICRESISTA sin certeza sobre cuándo y cómo recuperará el inmueble ni el ACREEDOR ANTICRESISTA su capital.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1429",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1435",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Incorporar una cláusula expresa sobre el mecanismo, plazo y condiciones de restitución del capital y del inmueble al vencimiento del contrato."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de acta de entrega y de restitución del inmueble",
+        "descripcion": "No se prevé la suscripción de un acta de entrega al inicio ni de restitución al final del contrato, lo que dificultará acreditar el estado de la tienda en ambos momentos.",
+        "articulos": [],
+        "recomendacion": "Suscribir un acta de entrega detallada al inicio del contrato y prever otra al momento de la restitución."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "tramite",
+        "accion": "Protocolizar el contrato mediante escritura pública e inscribirlo en Derechos Reales."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Incorporar una cláusula expresa de restitución del capital y del inmueble, con plazo y forma de pago."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "correccion",
+        "accion": "Ajustar el plazo pactado al máximo legal de cinco años."
+      },
+      {
+        "prioridad": 4,
+        "tipo": "asesoria",
+        "accion": "Ambas partes deben consultar con un abogado antes de protocolizar el contrato, dado que su forma actual carece de validez plena."
+      }
+    ]
+  }
+}

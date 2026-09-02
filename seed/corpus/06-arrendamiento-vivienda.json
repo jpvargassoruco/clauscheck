@@ -1,0 +1,319 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato privado de arrendamiento de vivienda",
+    "tipo_contrato": "arrendamiento de vivienda",
+    "rubro": "civil",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-01-01",
+      "cuantia": "Bs 800 mensuales · 12 meses",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "arrendamiento de vivienda",
+      "rubro": "civil"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "V. H. P.",
+        "rol": "arrendador",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "S. G. M.",
+        "rol": "arrendataria",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Objeto",
+        "texto": "El ARRENDADOR, señor V. H. P., da en arrendamiento a la ARRENDATARIA, señora S. G. M., el inmueble destinado a vivienda ubicado en el Barrio Equipetrol Norte, calle Los Mangales, de la ciudad de Santa Cruz de la Sierra."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Canon de arrendamiento",
+        "texto": "La ARRENDATARIA pagará al ARRENDADOR la suma de Bs 800.- (OCHOCIENTOS 00/100 BOLIVIANOS) mensuales, dentro de los primeros cinco días de cada mes."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Plazo",
+        "texto": "El presente contrato tiene una duración de doce (12) meses, computables desde el 1 de enero de 2024."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Renovación",
+        "texto": "vencido el plazo de doce meses, el contrato se renovará automáticamente por periodos iguales, salvo que cualquiera de las partes notifique lo contrario con no menos de noventa (90) días de anticipación al vencimiento."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Ingreso del arrendador al inmueble",
+        "texto": "el ARRENDADOR podrá ingresar al inmueble en cualquier momento, incluso sin previo aviso, con el fin de verificar el estado de conservación del bien."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Mora y desalojo inmediato",
+        "texto": "la mora de un solo día en el pago del canon de arrendamiento facultará al ARRENDADOR a dar por resuelto el presente contrato en forma inmediata y a proceder al desalojo de la ARRENDATARIA sin necesidad de trámite judicial alguno."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Reparaciones",
+        "texto": "todas las reparaciones que requiera el inmueble durante la vigencia del contrato, incluidas las de carácter estructural y de mantenimiento mayor, correrán por cuenta y cargo exclusivo de la ARRENDATARIA."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Garantía",
+        "texto": "la ARRENDATARIA entrega en calidad de garantía la suma de Bs 2.400.-, monto que el ARRENDADOR podrá retener a la conclusión del contrato por cualquier concepto que estime pertinente."
+      },
+      {
+        "id": "c9",
+        "numero": "NOVENA",
+        "titulo": "Prohibición de subarriendo",
+        "texto": "queda expresamente prohibido a la ARRENDATARIA subarrendar o ceder el presente contrato, total o parcialmente, salvo autorización expresa y escrita del ARRENDADOR."
+      },
+      {
+        "id": "c10",
+        "numero": "DÉCIMA",
+        "titulo": "Firmas",
+        "texto": "Firmado en la ciudad de Santa Cruz de la Sierra, a primero de enero de 2024."
+      }
+    ],
+    "texto": "CONTRATO PRIVADO DE ARRENDAMIENTO DE VIVIENDA\n\nCLÁUSULA PRIMERA (Objeto).- El ARRENDADOR, señor V. H. P., da en arrendamiento a la ARRENDATARIA, señora S. G. M., el inmueble destinado a vivienda ubicado en el Barrio Equipetrol Norte, calle Los Mangales, de la ciudad de Santa Cruz de la Sierra.\n\nCLÁUSULA SEGUNDA (Canon de arrendamiento).- La ARRENDATARIA pagará al ARRENDADOR la suma de Bs 800.- (OCHOCIENTOS 00/100 BOLIVIANOS) mensuales, dentro de los primeros cinco días de cada mes.\n\nCLÁUSULA TERCERA (Plazo).- El presente contrato tiene una duración de doce (12) meses, computables desde el 1 de enero de 2024.\n\nCLÁUSULA CUARTA (Renovación).- vencido el plazo de doce meses, el contrato se renovará automáticamente por periodos iguales, salvo que cualquiera de las partes notifique lo contrario con no menos de noventa (90) días de anticipación al vencimiento.\n\nCLÁUSULA QUINTA (Ingreso del arrendador al inmueble).- el ARRENDADOR podrá ingresar al inmueble en cualquier momento, incluso sin previo aviso, con el fin de verificar el estado de conservación del bien.\n\nCLÁUSULA SEXTA (Mora y desalojo inmediato).- la mora de un solo día en el pago del canon de arrendamiento facultará al ARRENDADOR a dar por resuelto el presente contrato en forma inmediata y a proceder al desalojo de la ARRENDATARIA sin necesidad de trámite judicial alguno.\n\nCLÁUSULA SÉPTIMA (Reparaciones).- todas las reparaciones que requiera el inmueble durante la vigencia del contrato, incluidas las de carácter estructural y de mantenimiento mayor, correrán por cuenta y cargo exclusivo de la ARRENDATARIA.\n\nCLÁUSULA OCTAVA (Garantía).- la ARRENDATARIA entrega en calidad de garantía la suma de Bs 2.400.-, monto que el ARRENDADOR podrá retener a la conclusión del contrato por cualquier concepto que estime pertinente.\n\nCLÁUSULA NOVENA (Prohibición de subarriendo).- queda expresamente prohibido a la ARRENDATARIA subarrendar o ceder el presente contrato, total o parcialmente, salvo autorización expresa y escrita del ARRENDADOR.\n\nCLÁUSULA DÉCIMA (Firmas).- Firmado en la ciudad de Santa Cruz de la Sierra, a primero de enero de 2024.\n\nARRENDADOR: V. H. P.   —   ARRENDATARIA: S. G. M.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 80,
+    "nivel": "critico",
+    "confianza": 0.79,
+    "resumen": {
+      "hallazgos": 6,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 2,
+        "alto": 2,
+        "medio": 1,
+        "bajo": 0,
+        "informativo": 1
+      }
+    },
+    "sintesis": "Arrendamiento de vivienda por Bs 800 mensuales cuyo mayor riesgo está en dos cláusulas que afectan derechos que la ley protege de forma especial: la facultad del arrendador de ingresar al domicilio sin previo aviso, que compromete el derecho a la privacidad, y el desalojo inmediato por un solo día de mora sin proceso judicial, que elude el mecanismo legal de extinción del arrendamiento. A ello se suman cargas de mantenimiento y una garantía abiertamente favorables al arrendador.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "V. H. P.",
+        "rol": "arrendador",
+        "redacto": true,
+        "balance": 62,
+        "a_favor": 5,
+        "en_contra": 1,
+        "lectura": "Redactó el contrato reservándose la facultad de ingresar al inmueble sin aviso, de desalojar sin proceso judicial y de retener la garantía por cualquier motivo."
+      },
+      {
+        "id": "p2",
+        "nombre": "S. G. M.",
+        "rol": "arrendataria",
+        "redacto": false,
+        "balance": -65,
+        "a_favor": 1,
+        "en_contra": 5,
+        "lectura": "Asume la totalidad de las reparaciones del inmueble y queda expuesta a un desalojo inmediato y a la pérdida de su garantía sin causales definidas."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "critico",
+        "titulo": "Ingreso del arrendador al inmueble sin previo aviso",
+        "clausula_id": "c5",
+        "cita_textual": "el ARRENDADOR podrá ingresar al inmueble en cualquier momento, incluso sin previo aviso, con el fin de verificar el estado de conservación del bien",
+        "fundamento": "Toda persona tiene derecho a la privacidad e intimidad de su domicilio, y cuenta con la Acción de Protección de Privacidad para hacerlo valer. Autorizar al ARRENDADOR a ingresar a la vivienda \"en cualquier momento\" y \"sin previo aviso\" vulnera ese derecho fundamental de la ARRENDATARIA sobre el bien que habita.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "21",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "2"
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "130",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "El ingreso del arrendador requiere aviso previo con al menos 24 horas de anticipación y horario razonable, salvo emergencia justificada.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "critico",
+        "titulo": "Desalojo inmediato por un día de mora, sin proceso judicial",
+        "clausula_id": "c6",
+        "cita_textual": "la mora de un solo día en el pago del canon de arrendamiento facultará al ARRENDADOR a dar por resuelto el presente contrato en forma inmediata y a proceder al desalojo de la ARRENDATARIA sin necesidad de trámite judicial alguno",
+        "fundamento": "El arrendamiento de fundos urbanos destinados a vivienda solo se extingue por las causales taxativas que señala la ley, entre ellas la sentencia ejecutoriada de desahucio. Pactar el desalojo inmediato por la sola mora de un día, sin proceso judicial, es un pacto que busca eludir un mecanismo de orden público establecido en favor de la parte más débil del contrato.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "720",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "489",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Sustituir por el procedimiento legal de desahucio, con un plazo de gracia razonable antes de iniciar cualquier acción.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "alto",
+        "titulo": "Todas las reparaciones, incluidas las estructurales, a cargo de la arrendataria",
+        "clausula_id": "c7",
+        "cita_textual": "todas las reparaciones que requiera el inmueble durante la vigencia del contrato, incluidas las de carácter estructural y de mantenimiento mayor, correrán por cuenta y cargo exclusivo de la ARRENDATARIA",
+        "fundamento": "El arrendador está obligado a entregar la cosa en estado de servir para el uso a que está destinada, lo que incluye asumir las reparaciones estructurales y de mantenimiento mayor. Trasladar la totalidad de esa carga a la ARRENDATARIA invierte una obligación que la ley pone en cabeza del ARRENDADOR.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "726",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Limitar las reparaciones a cargo de la arrendataria a los daños menores derivados del uso ordinario, dejando las estructurales y de mantenimiento mayor a cargo del arrendador.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "alto",
+        "titulo": "Garantía retenible por cualquier concepto a discreción del arrendador",
+        "clausula_id": "c8",
+        "cita_textual": "la ARRENDATARIA entrega en calidad de garantía la suma de Bs 2.400.-, monto que el ARRENDADOR podrá retener a la conclusión del contrato por cualquier concepto que estime pertinente",
+        "fundamento": "La cláusula permite al ARRENDADOR retener la garantía \"por cualquier concepto que estime pertinente\", sin definir causales ni plazo de devolución. Al haber sido el ARRENDADOR quien redactó el contrato, esta apertura debe interpretarse en favor de la ARRENDATARIA.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Definir taxativamente las causales de retención de la garantía y fijar un plazo máximo para su devolución con la liquidación correspondiente.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "medio",
+        "titulo": "Renovación automática con preaviso de 90 días",
+        "clausula_id": "c4",
+        "cita_textual": "vencido el plazo de doce meses, el contrato se renovará automáticamente por periodos iguales, salvo que cualquiera de las partes notifique lo contrario con no menos de noventa (90) días de anticipación al vencimiento",
+        "fundamento": "El plazo de noventa días para evitar la renovación automática es excesivo en relación con el plazo total del contrato (doce meses), lo que dificulta a la ARRENDATARIA planificar su salida y puede atarla a una nueva anualidad por no haber notificado con la anticipación exigida.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Reducir el preaviso a un plazo razonable (p. ej. treinta días) y notificarlo por escrito con acuse de recibo.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h6",
+        "nivel": "informativo",
+        "titulo": "Prohibición de subarrendar conforme al régimen legal supletorio",
+        "clausula_id": "c9",
+        "cita_textual": "queda expresamente prohibido a la ARRENDATARIA subarrendar o ceder el presente contrato, total o parcialmente, salvo autorización expresa y escrita del ARRENDADOR",
+        "fundamento": "La ley prohíbe, como regla general y salvo pacto contrario, que el arrendatario de un fundo urbano destinado a vivienda subarriende o ceda el contrato. La cláusula novena reitera correctamente ese régimen legal.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "719",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": null,
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "Falta de distribución de servicios básicos",
+        "descripcion": "El contrato no establece a cargo de quién quedan los servicios de agua, luz y gas del inmueble, lo que es fuente frecuente de conflicto durante la vigencia del arrendamiento.",
+        "articulos": [],
+        "recomendacion": "Especificar expresamente qué servicios asume cada parte y la forma de acreditación de pago."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de acta de entrega e inventario inicial",
+        "descripcion": "No se prevé la suscripción de un acta de entrega con inventario del inmueble al inicio del contrato. A falta de acta de entrega, se presume que la arrendataria recibió la cosa en buen estado de mantenimiento, presunción que puede perjudicarla si existían defectos previos no documentados.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "705",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Suscribir un acta de entrega con inventario y fotografías al inicio del arrendamiento."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Eliminar la facultad de ingreso sin previo aviso y sustituirla por un régimen de visitas con aviso previo."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Sustituir el desalojo inmediato por el procedimiento legal de desahucio, con plazo de gracia."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "correccion",
+        "accion": "Redistribuir la carga de reparaciones conforme a la obligación legal del arrendador."
+      },
+      {
+        "prioridad": 4,
+        "tipo": "tramite",
+        "accion": "Suscribir un acta de entrega con inventario antes del ingreso de la arrendataria al inmueble."
+      }
+    ]
+  }
+}

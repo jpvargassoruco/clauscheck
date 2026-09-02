@@ -1,0 +1,291 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Minuta de compraventa de bien inmueble",
+    "tipo_contrato": "compraventa de bien inmueble",
+    "rubro": "comercial",
+    "ficha": {
+      "plaza": "Cochabamba",
+      "fecha": "2024-06-10",
+      "cuantia": "Bs 850.000 (precio consignado de forma equívoca)",
+      "forma_instrumental": "minuta privada",
+      "tipo_contrato": "compraventa de bien inmueble",
+      "rubro": "comercial"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "H. S. C.",
+        "rol": "vendedor",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "N. T. B.",
+        "rol": "comprador",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Comparecientes",
+        "texto": "Comparecen el señor H. S. C., en calidad de VENDEDOR, y el señor N. T. B., en calidad de COMPRADOR, mayores de edad, hábiles por derecho, quienes celebran el presente contrato de compraventa en los términos siguientes."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Objeto",
+        "texto": "El VENDEDOR transfiere en venta real y enajenación perpetua a favor del COMPRADOR el inmueble de su propiedad ubicado en la Av. Beni, zona Villa Coronilla de la ciudad de Cochabamba, con una superficie de 360 m2."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Precio",
+        "texto": "el precio pactado por las partes para la presente venta es la suma de Bs. 850.000.- (OCHOCIENTOS CINCUENTA MIL 00/100 DÓLARES AMERICANOS), que el VENDEDOR declara recibir en este acto a su entera satisfacción."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Forma de pago",
+        "texto": "El precio se cancela de la siguiente manera: Bs. 500.000.- a la firma del presente documento, y el saldo de Bs. 350.000.- en un plazo de sesenta (60) días calendario."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Incumplimiento en el pago del saldo",
+        "texto": "si el SALDO DE PRECIO no fuese cancelado dentro del plazo pactado, el VENDEDOR queda facultado, sin necesidad de trámite judicial alguno, a dejar sin efecto la presente venta y disponer libremente del inmueble a favor de terceros, reteniendo en su integridad las sumas ya percibidas."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Entrega del inmueble",
+        "texto": "la entrega de la posesión material del inmueble se realizará en un plazo razonable a criterio del VENDEDOR."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Gastos de transferencia",
+        "texto": "todos los impuestos, tasas y gastos de transferencia, incluidos aquellos que por ley correspondan al VENDEDOR, serán asumidos en su integridad por el COMPRADOR."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Firmas",
+        "texto": "Las partes firman el presente documento en la ciudad de Cochabamba, a los diez días del mes de junio de 2024, comprometiéndose a elevarlo a escritura pública."
+      }
+    ],
+    "texto": "MINUTA DE COMPRAVENTA DE BIEN INMUEBLE\n\nCLÁUSULA PRIMERA (Comparecientes).- Comparecen el señor H. S. C., en calidad de VENDEDOR, y el señor N. T. B., en calidad de COMPRADOR, mayores de edad, hábiles por derecho, quienes celebran el presente contrato de compraventa en los términos siguientes.\n\nCLÁUSULA SEGUNDA (Objeto).- El VENDEDOR transfiere en venta real y enajenación perpetua a favor del COMPRADOR el inmueble de su propiedad ubicado en la Av. Beni, zona Villa Coronilla de la ciudad de Cochabamba, con una superficie de 360 m2.\n\nCLÁUSULA TERCERA (Precio).- el precio pactado por las partes para la presente venta es la suma de Bs. 850.000.- (OCHOCIENTOS CINCUENTA MIL 00/100 DÓLARES AMERICANOS), que el VENDEDOR declara recibir en este acto a su entera satisfacción.\n\nCLÁUSULA CUARTA (Forma de pago).- El precio se cancela de la siguiente manera: Bs. 500.000.- a la firma del presente documento, y el saldo de Bs. 350.000.- en un plazo de sesenta (60) días calendario.\n\nCLÁUSULA QUINTA (Incumplimiento en el pago del saldo).- si el SALDO DE PRECIO no fuese cancelado dentro del plazo pactado, el VENDEDOR queda facultado, sin necesidad de trámite judicial alguno, a dejar sin efecto la presente venta y disponer libremente del inmueble a favor de terceros, reteniendo en su integridad las sumas ya percibidas.\n\nCLÁUSULA SEXTA (Entrega del inmueble).- la entrega de la posesión material del inmueble se realizará en un plazo razonable a criterio del VENDEDOR.\n\nCLÁUSULA SÉPTIMA (Gastos de transferencia).- todos los impuestos, tasas y gastos de transferencia, incluidos aquellos que por ley correspondan al VENDEDOR, serán asumidos en su integridad por el COMPRADOR.\n\nCLÁUSULA OCTAVA (Firmas).- Las partes firman el presente documento en la ciudad de Cochabamba, a los diez días del mes de junio de 2024, comprometiéndose a elevarlo a escritura pública.\n\nVENDEDOR: H. S. C.   —   COMPRADOR: N. T. B.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 98,
+    "nivel": "critico",
+    "confianza": 0.8,
+    "resumen": {
+      "hallazgos": 6,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 2,
+        "alto": 2,
+        "medio": 1,
+        "bajo": 1,
+        "informativo": 0
+      }
+    },
+    "sintesis": "Minuta de compraventa de un inmueble en Cochabamba cuyo defecto más grave es la propia determinación del precio: el monto se consigna en bolivianos pero se describe en letras como dólares americanos, dejando en duda cuál es realmente la contraprestación pactada. A esto se suma una minuta privada sin plazo para su elevación a escritura pública e inscripción, lo que deja al comprador expuesto frente a terceros, y una cláusula que permite al vendedor dejar sin efecto la venta por su sola voluntad ante la falta de pago del saldo.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "H. S. C.",
+        "rol": "vendedor",
+        "redacto": true,
+        "balance": 45,
+        "a_favor": 3,
+        "en_contra": 2,
+        "lectura": "Redactó el documento y se reserva la facultad de resolver la venta por su cuenta, además de trasladar al comprador gastos que por ley le corresponden a él."
+      },
+      {
+        "id": "p2",
+        "nombre": "N. T. B.",
+        "rol": "comprador",
+        "redacto": false,
+        "balance": -55,
+        "a_favor": 1,
+        "en_contra": 4,
+        "lectura": "Queda expuesto a la ambigüedad del precio pactado, a una entrega sin fecha cierta y a la falta de garantías registrales sobre la transferencia que está pagando."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "critico",
+        "titulo": "Precio consignado de forma equívoca (Bs. escritos como si fueran dólares)",
+        "clausula_id": "c3",
+        "cita_textual": "el precio pactado por las partes para la presente venta es la suma de Bs. 850.000.- (OCHOCIENTOS CINCUENTA MIL 00/100 DÓLARES AMERICANOS), que el VENDEDOR declara recibir en este acto a su entera satisfacción",
+        "fundamento": "La cláusula fija el precio en bolivianos (\"Bs. 850.000.-\") pero lo describe en letras como \"DÓLARES AMERICANOS\", generando una contradicción insalvable sobre la moneda y, en la práctica, sobre el monto real pactado (Bs. 850.000 y USD 850.000 difieren en más de seis veces). El precio es un requisito esencial del objeto del contrato de compraventa; su falta de determinación cierta compromete la validez del acuerdo.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "485",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "549",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Consignar el precio en una sola moneda, en cifras y en letras coincidentes: \"Bs. 850.000.- (OCHOCIENTOS CINCUENTA MIL 00/100 BOLIVIANOS)\".",
+        "beneficia": null,
+        "perjudica": null
+      },
+      {
+        "id": "h2",
+        "nivel": "critico",
+        "titulo": "Minuta privada sin previsión de inscripción registral",
+        "clausula_id": "c8",
+        "cita_textual": "comprometiéndose a elevarlo a escritura pública",
+        "fundamento": "Aunque las partes se comprometen a elevar la minuta a escritura pública, el documento no fija plazo ni consecuencia por el incumplimiento de ese compromiso. Mientras el título no se inscriba en el registro de Derechos Reales, la transferencia no produce efectos frente a terceros: el COMPRADOR queda expuesto a que el VENDEDOR grave, embargue o vuelva a vender el mismo inmueble a otra persona que sí registre su derecho primero.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar un plazo perentorio (p. ej. treinta días) para el otorgamiento de la escritura pública e inscripción registral, con penalidad expresa por su incumplimiento.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "alto",
+        "titulo": "Resolución directa por el vendedor sin proceso judicial",
+        "clausula_id": "c5",
+        "cita_textual": "si el SALDO DE PRECIO no fuese cancelado dentro del plazo pactado, el VENDEDOR queda facultado, sin necesidad de trámite judicial alguno, a dejar sin efecto la presente venta y disponer libremente del inmueble a favor de terceros, reteniendo en su integridad las sumas ya percibidas",
+        "fundamento": "Ante la falta de pago del saldo, la cláusula faculta al VENDEDOR a dejar sin efecto la venta y disponer del inmueble a favor de terceros por su sola decisión, reteniendo lo ya pagado, sin pasar por el mecanismo de resolución judicial que la ley prevé para los contratos con prestaciones recíprocas.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "568",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Sustituir por el mecanismo de resolución judicial por incumplimiento, con plazo razonable de subsanación y liquidación de las sumas pagadas conforme a derecho.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "alto",
+        "titulo": "Gastos de transferencia que por ley corresponden al vendedor trasladados al comprador",
+        "clausula_id": "c7",
+        "cita_textual": "todos los impuestos, tasas y gastos de transferencia, incluidos aquellos que por ley correspondan al VENDEDOR, serán asumidos en su integridad por el COMPRADOR",
+        "fundamento": "La cláusula traslada al COMPRADOR incluso los gastos e impuestos que por ley corresponden al VENDEDOR (como el impuesto a la transferencia de bienes que grava la ganancia del enajenante), sin que exista contraprestación o descuento en el precio que compense dicho traslado.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "520",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Distribuir los gastos conforme a la obligación legal de cada parte, dejando a cargo del VENDEDOR los impuestos que gravan la transferencia por su cuenta.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "medio",
+        "titulo": "Fecha de entrega de la posesión indeterminada",
+        "clausula_id": "c6",
+        "cita_textual": "la entrega de la posesión material del inmueble se realizará en un plazo razonable a criterio del VENDEDOR",
+        "fundamento": "La entrega queda sujeta a un \"plazo razonable\" fijado unilateralmente \"a criterio del VENDEDOR\", sin fecha cierta ni parámetro objetivo. Al haber sido el VENDEDOR quien redactó el documento, la ambigüedad debe resolverse en favor del COMPRADOR.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar una fecha calendario cierta para la entrega de la posesión material del inmueble.",
+        "beneficia": null,
+        "perjudica": "p2"
+      },
+      {
+        "id": "h6",
+        "nivel": "bajo",
+        "titulo": "Superficie del inmueble sin referencia a matrícula computarizada",
+        "clausula_id": "c2",
+        "cita_textual": "con una superficie de 360 m2",
+        "fundamento": "La individualización del inmueble solo consigna dirección y superficie aproximada, sin el número de matrícula computarizada de Derechos Reales ni el código catastral, lo que dificulta verificar que se trata exactamente del bien inscrito a nombre del VENDEDOR.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Incorporar el número de matrícula computarizada y el código catastral del inmueble.",
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "Falta de saneamiento previo de gravámenes",
+        "descripcion": "El contrato no exige al VENDEDOR acreditar, antes de la transferencia, que el inmueble se encuentra libre de hipotecas, embargos o anotaciones preventivas, ni prevé qué ocurre si aparece un gravamen no declarado.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Exigir certificado de registro actualizado (folio real) libre de gravámenes como condición previa al pago del saldo."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de cláusula de arras o señal",
+        "descripcion": "No se pacta si la suma entregada a la firma tiene el carácter de arras confirmatorias o penitenciales, ni sus efectos en caso de desistimiento de cualquiera de las partes antes del pago del saldo.",
+        "articulos": [],
+        "recomendacion": "Definir expresamente la naturaleza de los pagos parciales y sus efectos ante un eventual desistimiento."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Corregir de inmediato la cláusula de precio para que la cifra y las letras coincidan en la misma moneda."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "tramite",
+        "accion": "Fijar plazo perentorio para elevar la minuta a escritura pública e inscribirla en Derechos Reales."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "correccion",
+        "accion": "Sustituir la resolución directa por el vendedor por el mecanismo judicial de resolución por incumplimiento."
+      },
+      {
+        "prioridad": 4,
+        "tipo": "tramite",
+        "accion": "Solicitar folio real actualizado del inmueble antes de cancelar el saldo del precio."
+      }
+    ]
+  }
+}

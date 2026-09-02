@@ -1,0 +1,388 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato de prestación de servicios inmobiliarios con exclusividad",
+    "tipo_contrato": "prestación de servicios inmobiliarios con exclusividad",
+    "rubro": "comercial",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-04-02",
+      "cuantia": "USD 8.800 (comisión 4% sobre USD 220.000)",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "prestación de servicios inmobiliarios con exclusividad",
+      "rubro": "comercial"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "M. L. F.",
+        "rol": "propietaria / vendedora",
+        "redacto": false
+      },
+      {
+        "id": "p2",
+        "nombre": "INVERSIONES SANTA CRUZ NEGOCIOS S.R.L.",
+        "rol": "inmobiliaria / intermediaria",
+        "redacto": true
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Comparecientes y objeto",
+        "texto": "Comparecen, de una parte, la señora M. L. F., en calidad de PROPIETARIA del inmueble descrito en la cláusula segunda, y de la otra, la empresa INVERSIONES SANTA CRUZ NEGOCIOS S.R.L., en calidad de LA INMOBILIARIA, quien mediante el presente documento asume la intermediación exclusiva para la venta del inmueble de propiedad de la PROPIETARIA."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Precio de referencia",
+        "texto": "Las partes fijan como precio de referencia para la venta del inmueble la suma de USD 220.000.- (DOSCIENTOS VEINTE MIL 00/100 DÓLARES AMERICANOS), entendiéndose que LA INMOBILIARIA gestionará ofertas iguales o superiores a dicho monto."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Comisión",
+        "texto": "LA INMOBILIARIA percibirá, por su gestión de intermediación, una comisión equivalente al cuatro por ciento (4%) del precio final de venta, pagadera al momento de la suscripción de la minuta de transferencia."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Exclusividad",
+        "texto": "Durante la vigencia del presente contrato, la exclusividad alcanza a cualquier comprador que adquiera el inmueble durante la vigencia del contrato, sea cual fuere el medio por el que se hubiese enterado de la venta, incluyendo contactos directos y personales de la PROPIETARIA, obligándose la PROPIETARIA a canalizar toda negociación relativa a la venta exclusivamente a través de LA INMOBILIARIA."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Obligación de pago ante rechazo de oferta",
+        "texto": "Si durante la vigencia del contrato LA INMOBILIARIA presenta a la PROPIETARIA una oferta de compra igual o superior al precio de referencia fijado en la cláusula segunda y la PROPIETARIA la rechaza por cualquier motivo, la PROPIETARIA se obliga a pagar a LA INMOBILIARIA la totalidad de la comisión pactada, como si la venta se hubiese perfeccionado, por el solo hecho de haber rechazado dicha oferta."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Vigencia y renovación",
+        "texto": "El presente contrato tendrá una vigencia inicial de seis (6) meses computables desde la fecha de suscripción. Vencido dicho plazo, el presente contrato se renovará automáticamente por periodos iguales y sucesivos de seis (6) meses, salvo que la PROPIETARIA notifique su voluntad de no renovar con al menos treinta (30) días de anticipación al vencimiento."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Gastos de publicidad",
+        "texto": "los gastos de fotografía profesional, señalética, publicación en portales y demás gastos de promoción corren enteramente por cuenta de la PROPIETARIA y no serán reembolsados bajo ninguna circunstancia, se concrete o no la venta."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Exoneración de responsabilidad",
+        "texto": "LA INMOBILIARIA no asume responsabilidad alguna por la exactitud de la información, superficies, gravámenes o estado de la documentación del inmueble que sea transmitida a los interesados, aun cuando dicha información hubiese sido proporcionada por ella misma, quedando la PROPIETARIA como única responsable frente a los interesados y frente a terceros por cualquier inexactitud."
+      },
+      {
+        "id": "c9",
+        "numero": "NOVENA",
+        "titulo": "Confidencialidad",
+        "texto": "Los datos de contacto de los interesados que gestione LA INMOBILIARIA tendrán carácter confidencial y no podrán ser utilizados por la PROPIETARIA para negociaciones directas."
+      },
+      {
+        "id": "c10",
+        "numero": "DÉCIMA",
+        "titulo": "Resolución anticipada",
+        "texto": "en caso de que la PROPIETARIA decida resolver anticipadamente el presente contrato antes de su vencimiento, deberá pagar a LA INMOBILIARIA, en calidad de penalidad, el cincuenta por ciento (50%) de la comisión total pactada."
+      },
+      {
+        "id": "c11",
+        "numero": "DÉCIMA PRIMERA",
+        "titulo": "Domicilio y jurisdicción",
+        "texto": "Para todos los efectos del presente contrato, las partes señalan domicilio en la ciudad de Santa Cruz de la Sierra y se someten a la jurisdicción de sus tribunales."
+      },
+      {
+        "id": "c12",
+        "numero": "DÉCIMA SEGUNDA",
+        "titulo": "Firmas",
+        "texto": "El presente contrato se firma en dos ejemplares de un mismo tenor, suscrito en la ciudad de Santa Cruz de la Sierra, a los ____ días del mes de ________ de 2024."
+      }
+    ],
+    "texto": "CONTRATO DE PRESTACIÓN DE SERVICIOS INMOBILIARIOS CON EXCLUSIVIDAD\n(INMOBILIARIA SANTA CRUZ NEGOCIOS S.R.L.)\n\nCLÁUSULA PRIMERA (Comparecientes y objeto).- Comparecen, de una parte, la señora M. L. F., en calidad de PROPIETARIA del inmueble descrito en la cláusula segunda, y de la otra, la empresa INVERSIONES SANTA CRUZ NEGOCIOS S.R.L., en calidad de LA INMOBILIARIA, quien mediante el presente documento asume la intermediación exclusiva para la venta del inmueble de propiedad de la PROPIETARIA.\n\nCLÁUSULA SEGUNDA (Precio de referencia).- Las partes fijan como precio de referencia para la venta del inmueble la suma de USD 220.000.- (DOSCIENTOS VEINTE MIL 00/100 DÓLARES AMERICANOS), entendiéndose que LA INMOBILIARIA gestionará ofertas iguales o superiores a dicho monto.\n\nCLÁUSULA TERCERA (Comisión).- LA INMOBILIARIA percibirá, por su gestión de intermediación, una comisión equivalente al cuatro por ciento (4%) del precio final de venta, pagadera al momento de la suscripción de la minuta de transferencia.\n\nCLÁUSULA CUARTA (Exclusividad).- Durante la vigencia del presente contrato, la exclusividad alcanza a cualquier comprador que adquiera el inmueble durante la vigencia del contrato, sea cual fuere el medio por el que se hubiese enterado de la venta, incluyendo contactos directos y personales de la PROPIETARIA, obligándose la PROPIETARIA a canalizar toda negociación relativa a la venta exclusivamente a través de LA INMOBILIARIA.\n\nCLÁUSULA QUINTA (Obligación de pago ante rechazo de oferta).- Si durante la vigencia del contrato LA INMOBILIARIA presenta a la PROPIETARIA una oferta de compra igual o superior al precio de referencia fijado en la cláusula segunda y la PROPIETARIA la rechaza por cualquier motivo, la PROPIETARIA se obliga a pagar a LA INMOBILIARIA la totalidad de la comisión pactada, como si la venta se hubiese perfeccionado, por el solo hecho de haber rechazado dicha oferta.\n\nCLÁUSULA SEXTA (Vigencia y renovación).- El presente contrato tendrá una vigencia inicial de seis (6) meses computables desde la fecha de suscripción. Vencido dicho plazo, el presente contrato se renovará automáticamente por periodos iguales y sucesivos de seis (6) meses, salvo que la PROPIETARIA notifique su voluntad de no renovar con al menos treinta (30) días de anticipación al vencimiento.\n\nCLÁUSULA SÉPTIMA (Gastos de publicidad).- los gastos de fotografía profesional, señalética, publicación en portales y demás gastos de promoción corren enteramente por cuenta de la PROPIETARIA y no serán reembolsados bajo ninguna circunstancia, se concrete o no la venta.\n\nCLÁUSULA OCTAVA (Exoneración de responsabilidad).- LA INMOBILIARIA no asume responsabilidad alguna por la exactitud de la información, superficies, gravámenes o estado de la documentación del inmueble que sea transmitida a los interesados, aun cuando dicha información hubiese sido proporcionada por ella misma, quedando la PROPIETARIA como única responsable frente a los interesados y frente a terceros por cualquier inexactitud.\n\nCLÁUSULA NOVENA (Confidencialidad).- Los datos de contacto de los interesados que gestione LA INMOBILIARIA tendrán carácter confidencial y no podrán ser utilizados por la PROPIETARIA para negociaciones directas.\n\nCLÁUSULA DÉCIMA (Resolución anticipada).- en caso de que la PROPIETARIA decida resolver anticipadamente el presente contrato antes de su vencimiento, deberá pagar a LA INMOBILIARIA, en calidad de penalidad, el cincuenta por ciento (50%) de la comisión total pactada.\n\nCLÁUSULA DÉCIMA PRIMERA (Domicilio y jurisdicción).- Para todos los efectos del presente contrato, las partes señalan domicilio en la ciudad de Santa Cruz de la Sierra y se someten a la jurisdicción de sus tribunales.\n\nCLÁUSULA DÉCIMA SEGUNDA (Firmas).- El presente contrato se firma en dos ejemplares de un mismo tenor, suscrito en la ciudad de Santa Cruz de la Sierra, a los ____ días del mes de ________ de 2024.\n\nPOR LA PROPIETARIA: M. L. F.   —   POR LA INMOBILIARIA: INVERSIONES SANTA CRUZ NEGOCIOS S.R.L.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 100,
+    "nivel": "critico",
+    "confianza": 0.82,
+    "resumen": {
+      "hallazgos": 8,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 2,
+        "alto": 4,
+        "medio": 1,
+        "bajo": 1,
+        "informativo": 0
+      }
+    },
+    "sintesis": "Contrato de intermediación inmobiliaria con exclusividad que concentra prácticamente todas las ventajas en LA INMOBILIARIA: el formulario ni siquiera identifica de forma consistente a la sociedad que contrata, la exclusividad se renueva de forma indefinida, y el rechazo de una oferta —una decisión que por ley corresponde en exclusiva a la propietaria del bien— dispara el pago de la comisión completa mediante una cláusula penal desproporcionada. El índice máximo responde tanto a la incertidumbre sobre la contraparte real como al efecto acumulado de cláusulas leoninas que, en conjunto, comprometen la operación.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "M. L. F.",
+        "rol": "propietaria / vendedora",
+        "redacto": false,
+        "balance": -85,
+        "a_favor": 0,
+        "en_contra": 7,
+        "lectura": "Asume prácticamente toda la carga del contrato: paga comisión aunque rechace ofertas, financia la publicidad sin reembolso, no puede confirmar con certeza quién es su contraparte y queda atada a una exclusividad que se renueva sola."
+      },
+      {
+        "id": "p2",
+        "nombre": "INVERSIONES SANTA CRUZ NEGOCIOS S.R.L.",
+        "rol": "inmobiliaria / intermediaria",
+        "redacto": true,
+        "balance": 82,
+        "a_favor": 7,
+        "en_contra": 0,
+        "lectura": "Redactó el formulario y concentra en él todas las cláusulas favorables: comisión garantizada incluso sin venta, exclusividad perpetua, penalidad por resolución anticipada y exoneración de responsabilidad por la información que ella misma difunde."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "critico",
+        "titulo": "Identificación contradictoria de la sociedad contratante",
+        "clausula_id": "c1",
+        "cita_textual": "INVERSIONES SANTA CRUZ NEGOCIOS S.R.L.",
+        "fundamento": "El encabezado del formulario individualiza a \"INMOBILIARIA SANTA CRUZ NEGOCIOS S.R.L.\" como prestadora del servicio, mientras que la cláusula primera y el bloque de firmas atribuyen la calidad de parte contratante a \"INVERSIONES SANTA CRUZ NEGOCIOS S.R.L.\", una razón social distinta. La indeterminación de quién es efectivamente el sujeto obligado (y frente a quién podría exigirse responsabilidad) compromete la validez del consentimiento y la eficacia misma del contrato frente a la PROPIETARIA.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "452",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "554",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "519",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Individualizar en la cláusula primera y en el bloque de firmas, con nombre completo, número de matrícula de comercio y representante legal, a una única sociedad, idéntica a la que figura en el encabezado y en cualquier membrete o sello del formulario.",
+        "beneficia": null,
+        "perjudica": "p1"
+      },
+      {
+        "id": "h2",
+        "nivel": "critico",
+        "titulo": "Renovación automática indefinida que perpetúa la exclusividad",
+        "clausula_id": "c6",
+        "cita_textual": "el presente contrato se renovará automáticamente por periodos iguales y sucesivos de seis (6) meses, salvo que la PROPIETARIA notifique su voluntad de no renovar con al menos treinta (30) días de anticipación al vencimiento",
+        "fundamento": "La cláusula no fija un número máximo de renovaciones ni un plazo total, de modo que la exclusividad puede perpetuarse indefinidamente por la sola inacción de la PROPIETARIA. Al no contemplar un límite temporal razonable, la cláusula vacía de contenido práctico el derecho de la propietaria a disponer libremente de su bien, con potencial de comprometer la operación de venta en su conjunto.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "56",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar un plazo máximo total de vigencia (incluidas renovaciones), p. ej. dieciocho (18) meses, vencido el cual el contrato se extingue de pleno derecho salvo renovación expresa y por escrito de ambas partes.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h3",
+        "nivel": "alto",
+        "titulo": "Cláusula penal por comisión íntegra ante rechazo de oferta",
+        "clausula_id": "c5",
+        "cita_textual": "la PROPIETARIA se obliga a pagar a LA INMOBILIARIA la totalidad de la comisión pactada, como si la venta se hubiese perfeccionado, por el solo hecho de haber rechazado dicha oferta",
+        "fundamento": "La cláusula obliga a pagar la comisión completa como si la venta se hubiese perfeccionado por el solo rechazo de una oferta, sin permitir a la PROPIETARIA valorar circunstancias legítimas del comprador (forma de pago, plazos, condición). Se trata de una cláusula penal que, por su desproporción frente al daño real de LA INMOBILIARIA (la sola pérdida de una comisión potencial, no efectivamente devengada), es susceptible de reducción judicial.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "532",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "535",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Limitar la penalidad a un porcentaje razonable de la comisión (p. ej. 20%) y condicionarla a que la oferta rechazada cumpla condiciones objetivas de pago verificables, no solo el monto nominal.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h4",
+        "nivel": "alto",
+        "titulo": "Penalidad del 50% por resolución anticipada",
+        "clausula_id": "c10",
+        "cita_textual": "en caso de que la PROPIETARIA decida resolver anticipadamente el presente contrato antes de su vencimiento, deberá pagar a LA INMOBILIARIA, en calidad de penalidad, el cincuenta por ciento (50%) de la comisión total pactada",
+        "fundamento": "Se impone a la PROPIETARIA una penalidad equivalente a la mitad de la comisión total por el solo hecho de resolver anticipadamente el contrato, sin exigir a LA INMOBILIARIA acreditar gestión, gasto o perjuicio efectivo alguno. Es una cláusula penal desproporcionada, típica de formularios que concentran las ventajas en quien los redacta.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "532",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "535",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Condicionar la penalidad a la acreditación de gestiones concretas de venta ya realizadas y limitarla a los gastos efectivamente incurridos y documentados.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h5",
+        "nivel": "alto",
+        "titulo": "Exoneración total de responsabilidad por información entregada a terceros",
+        "clausula_id": "c8",
+        "cita_textual": "LA INMOBILIARIA no asume responsabilidad alguna por la exactitud de la información, superficies, gravámenes o estado de la documentación del inmueble que sea transmitida a los interesados, aun cuando dicha información hubiese sido proporcionada por ella misma",
+        "fundamento": "LA INMOBILIARIA se exime de toda responsabilidad por la información que ella misma transmite a los interesados, trasladando a la PROPIETARIA —que no tiene contacto directo con el público— toda la responsabilidad por inexactitudes que pudo haber introducido el propio intermediario en la promoción del inmueble. Contraviene la ejecución de buena fe exigible a quien presta el servicio.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "520",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "LA INMOBILIARIA responde solidariamente por la exactitud de la información que ella elabore o difunda, sin perjuicio de la responsabilidad de la PROPIETARIA por los datos que ella le hubiese proporcionado por escrito.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h6",
+        "nivel": "alto",
+        "titulo": "Exclusividad extendida a contactos personales previos de la propietaria",
+        "clausula_id": "c4",
+        "cita_textual": "la exclusividad alcanza a cualquier comprador que adquiera el inmueble durante la vigencia del contrato, sea cual fuere el medio por el que se hubiese enterado de la venta, incluyendo contactos directos y personales de la PROPIETARIA",
+        "fundamento": "La exclusividad no se limita a compradores conseguidos por gestión de LA INMOBILIARIA, sino que alcanza a cualquier comprador, incluidos contactos directos y personales que la PROPIETARIA ya tuviera antes de firmar el contrato, obligándola a pagar comisión aun por ventas en las que LA INMOBILIARIA no intervino en absoluto.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Excluir de la exclusividad a los compradores que la PROPIETARIA acredite haber contactado por cuenta propia antes de la firma, mediante una lista de excepciones anexa al contrato.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h7",
+        "nivel": "medio",
+        "titulo": "Ambigüedad sobre la base de cálculo del precio de referencia",
+        "clausula_id": "c2",
+        "cita_textual": "USD 220.000.- (DOSCIENTOS VEINTE MIL 00/100 DÓLARES AMERICANOS)",
+        "fundamento": "El contrato no aclara si el precio de referencia incluye o excluye impuestos de transferencia, comisión y otros gastos, lo que abre margen de disputa sobre si una oferta determinada alcanza o no el umbral que dispara la obligación de pago íntegro de comisión de la cláusula quinta. Al haber sido redactado por LA INMOBILIARIA, la duda debe interpretarse en favor de la PROPIETARIA.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Definir expresamente si el precio de referencia es neto para la PROPIETARIA o precio bruto de venta, y detallar qué conceptos se descuentan antes de calcular la comisión.",
+        "beneficia": null,
+        "perjudica": "p1"
+      },
+      {
+        "id": "h8",
+        "nivel": "bajo",
+        "titulo": "Fecha de suscripción dejada en blanco",
+        "clausula_id": "c12",
+        "cita_textual": "suscrito en la ciudad de Santa Cruz de la Sierra, a los ____ días del mes de ________ de 2024",
+        "fundamento": "El contrato se firma con la fecha exacta en blanco (día y mes sin completar), lo que es un defecto técnico menor pero relevante porque de esa fecha depende el cómputo del plazo de vigencia y de la renovación automática pactada en la cláusula sexta.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Completar la fecha exacta de firma antes de que las partes suscriban el documento.",
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "Falta de obligación de rendición de cuentas periódica",
+        "descripcion": "El contrato no impone a LA INMOBILIARIA el deber de informar periódicamente a la PROPIETARIA sobre las gestiones de promoción realizadas ni sobre las ofertas recibidas y rechazadas, lo que dificulta verificar el cumplimiento efectivo de la exclusividad que se le concede.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "520",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Incorporar un reporte mensual escrito de gestiones y ofertas recibidas."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de protección de datos personales de los interesados",
+        "descripcion": "No se regula qué ocurre con los datos personales de los potenciales compradores una vez concluido o resuelto el contrato, ni se limita su uso a la finalidad de la intermediación pactada.",
+        "articulos": [],
+        "recomendacion": "Incluir una cláusula de tratamiento y destrucción de datos personales al término del contrato."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Unificar la razón social de LA INMOBILIARIA en todo el documento y verificar su matrícula de comercio antes de firmar."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Reescribir la cláusula quinta para que la penalidad por rechazo de oferta sea proporcional y esté sujeta a condiciones objetivas verificables."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "correccion",
+        "accion": "Fijar un plazo máximo total a la exclusividad y eliminar la renovación automática indefinida."
+      },
+      {
+        "prioridad": 4,
+        "tipo": "asesoria",
+        "accion": "Consultar con un abogado antes de firmar, dado el número y la gravedad de los desequilibrios detectados."
+      },
+      {
+        "prioridad": 5,
+        "tipo": "tramite",
+        "accion": "Solicitar por escrito a LA INMOBILIARIA un reporte de gestiones antes de renovar o resolver el contrato."
+      }
+    ]
+  }
+}

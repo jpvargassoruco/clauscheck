@@ -1,0 +1,238 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato privado de exclusividad para venta de inmueble",
+    "tipo_contrato": "exclusividad para venta de inmueble",
+    "rubro": "comercial",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-10-04",
+      "cuantia": "Oferta USD 2.100.000 · comisión 3%",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "exclusividad para venta de inmueble",
+      "rubro": "comercial"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "W. A. S.",
+        "rol": "propietario",
+        "redacto": false
+      },
+      {
+        "id": "p2",
+        "nombre": "CORRETAJE PATIÑO & ASOCIADOS S.R.L.",
+        "rol": "inmobiliaria / corretaje",
+        "redacto": true
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Objeto",
+        "texto": "El señor W. A. S., PROPIETARIO, otorga a CORRETAJE PATIÑO & ASOCIADOS S.R.L., LA INMOBILIARIA, la exclusividad para la intermediación en la venta del inmueble de su propiedad ubicado en el Urubó, Santa Cruz de la Sierra."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Precio mínimo",
+        "texto": "El PROPIETARIO fija como precio mínimo de venta la suma de USD 2.100.000.- (DOS MILLONES CIEN MIL 00/100 DÓLARES AMERICANOS)."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Comisión",
+        "texto": "la comisión del tres por ciento (3%) se calculará sobre el valor de la oferta aceptada, pagadera por el PROPIETARIO al momento de la suscripción de la minuta de transferencia."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Vigencia y renovación",
+        "texto": "El presente contrato tiene una vigencia de doce (12) meses. la exclusividad se renovará automáticamente por periodos iguales de doce (12) meses, salvo que el PROPIETARIO notifique lo contrario con treinta (30) días de anticipación al vencimiento."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Rechazo lícito de ofertas por debajo del mínimo",
+        "texto": "el PROPIETARIO podrá rechazar libremente cualquier oferta inferior al precio mínimo pactado en la cláusula segunda, sin que ello genere obligación de pago de comisión alguna a favor de LA INMOBILIARIA."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Gestión de ofertas",
+        "texto": "LA INMOBILIARIA se obliga a presentar por escrito al PROPIETARIO toda oferta recibida, con indicación del oferente, monto y condiciones de pago propuestas."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Gastos de promoción",
+        "texto": "LA INMOBILIARIA asumirá los gastos de fotografía profesional y publicación del inmueble en portales inmobiliarios, sin cargo para el PROPIETARIO."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Firmas",
+        "texto": "Firmado en la ciudad de Santa Cruz de la Sierra, a los cuatro días del mes de octubre de 2024."
+      }
+    ],
+    "texto": "CONTRATO PRIVADO DE EXCLUSIVIDAD PARA VENTA DE INMUEBLE\n\nCLÁUSULA PRIMERA (Objeto).- El señor W. A. S., PROPIETARIO, otorga a CORRETAJE PATIÑO & ASOCIADOS S.R.L., LA INMOBILIARIA, la exclusividad para la intermediación en la venta del inmueble de su propiedad ubicado en el Urubó, Santa Cruz de la Sierra.\n\nCLÁUSULA SEGUNDA (Precio mínimo).- El PROPIETARIO fija como precio mínimo de venta la suma de USD 2.100.000.- (DOS MILLONES CIEN MIL 00/100 DÓLARES AMERICANOS).\n\nCLÁUSULA TERCERA (Comisión).- la comisión del tres por ciento (3%) se calculará sobre el valor de la oferta aceptada, pagadera por el PROPIETARIO al momento de la suscripción de la minuta de transferencia.\n\nCLÁUSULA CUARTA (Vigencia y renovación).- El presente contrato tiene una vigencia de doce (12) meses. la exclusividad se renovará automáticamente por periodos iguales de doce (12) meses, salvo que el PROPIETARIO notifique lo contrario con treinta (30) días de anticipación al vencimiento.\n\nCLÁUSULA QUINTA (Rechazo lícito de ofertas por debajo del mínimo).- el PROPIETARIO podrá rechazar libremente cualquier oferta inferior al precio mínimo pactado en la cláusula segunda, sin que ello genere obligación de pago de comisión alguna a favor de LA INMOBILIARIA.\n\nCLÁUSULA SEXTA (Gestión de ofertas).- LA INMOBILIARIA se obliga a presentar por escrito al PROPIETARIO toda oferta recibida, con indicación del oferente, monto y condiciones de pago propuestas.\n\nCLÁUSULA SÉPTIMA (Gastos de promoción).- LA INMOBILIARIA asumirá los gastos de fotografía profesional y publicación del inmueble en portales inmobiliarios, sin cargo para el PROPIETARIO.\n\nCLÁUSULA OCTAVA (Firmas).- Firmado en la ciudad de Santa Cruz de la Sierra, a los cuatro días del mes de octubre de 2024.\n\nPROPIETARIO: W. A. S.   —   LA INMOBILIARIA: CORRETAJE PATIÑO & ASOCIADOS S.R.L.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 41,
+    "nivel": "medio",
+    "confianza": 0.76,
+    "resumen": {
+      "hallazgos": 4,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 0,
+        "alto": 0,
+        "medio": 2,
+        "bajo": 1,
+        "informativo": 1
+      }
+    },
+    "sintesis": "Contrato de exclusividad para la venta de un inmueble de gran valor (oferta de USD 2.100.000, comisión del 3%) que, a diferencia de otros formularios del mismo rubro en este corpus, reconoce expresamente el derecho del propietario a rechazar ofertas por debajo del precio mínimo sin penalidad. Sus defectos son menores: ambigüedad en la base de cálculo de la comisión y ausencia de un tope a la renovación automática de la exclusividad.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "W. A. S.",
+        "rol": "propietario",
+        "redacto": false,
+        "balance": -12,
+        "a_favor": 1,
+        "en_contra": 2,
+        "lectura": "Conserva el control sobre el rechazo de ofertas por debajo del mínimo pactado, aunque queda expuesto a una renovación automática sin tope y a una comisión cuya base de cálculo no está del todo definida."
+      },
+      {
+        "id": "p2",
+        "nombre": "CORRETAJE PATIÑO & ASOCIADOS S.R.L.",
+        "rol": "inmobiliaria / corretaje",
+        "redacto": true,
+        "balance": 15,
+        "a_favor": 2,
+        "en_contra": 1,
+        "lectura": "Redactó el contrato; obtiene una exclusividad renovable sin límite máximo, aunque asume íntegramente los gastos de promoción sin garantía de recuperarlos si no se concreta la venta."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "medio",
+        "titulo": "Base de cálculo de la comisión no aclara impuestos y gastos",
+        "clausula_id": "c3",
+        "cita_textual": "la comisión del tres por ciento (3%) se calculará sobre el valor de la oferta aceptada",
+        "fundamento": "La comisión se calcula \"sobre el valor de la oferta aceptada\" sin aclarar si dicho valor incluye o excluye impuestos y gastos de transferencia, lo que puede generar disputas sobre la base exacta de cálculo. Al haber sido LA INMOBILIARIA quien redactó el contrato, la ambigüedad debe interpretarse en favor del PROPIETARIO.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Aclarar expresamente que la comisión se calcula sobre el precio bruto de venta efectivamente pactado, antes de cualquier descuento o gasto.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h2",
+        "nivel": "medio",
+        "titulo": "Renovación automática sin tope máximo de periodos",
+        "clausula_id": "c4",
+        "cita_textual": "la exclusividad se renovará automáticamente por periodos iguales de doce (12) meses, salvo que el PROPIETARIO notifique lo contrario con treinta (30) días de anticipación al vencimiento",
+        "fundamento": "La exclusividad se renueva automáticamente por periodos de doce meses sin límite máximo de renovaciones, lo que, aunque remediable mediante un aviso oportuno, impone al PROPIETARIO una carga de vigilancia continua sobre la fecha de vencimiento para no verse atado indefinidamente.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar un número máximo de renovaciones automáticas o un plazo total tope para la exclusividad.",
+        "beneficia": "p2",
+        "perjudica": "p1"
+      },
+      {
+        "id": "h3",
+        "nivel": "bajo",
+        "titulo": "Sin mecanismo para acreditar el origen de la oferta",
+        "clausula_id": "c6",
+        "cita_textual": "LA INMOBILIARIA se obliga a presentar por escrito al PROPIETARIO toda oferta recibida",
+        "fundamento": "El contrato no define un mecanismo para acreditar que una oferta determinada fue efectivamente generada por la gestión de LA INMOBILIARIA, frente a contactos que el PROPIETARIO ya tuviera por cuenta propia, lo que puede generar disputas menores sobre la procedencia de la comisión.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Llevar un registro escrito y fechado de cada gestión y oferta presentada por LA INMOBILIARIA.",
+        "beneficia": null,
+        "perjudica": null
+      },
+      {
+        "id": "h4",
+        "nivel": "informativo",
+        "titulo": "Rechazo lícito de ofertas por debajo del precio mínimo",
+        "clausula_id": "c5",
+        "cita_textual": "el PROPIETARIO podrá rechazar libremente cualquier oferta inferior al precio mínimo pactado en la cláusula segunda, sin que ello genere obligación de pago de comisión alguna a favor de LA INMOBILIARIA",
+        "fundamento": "A diferencia de otros formularios de este rubro, la cláusula reconoce expresamente que el PROPIETARIO puede rechazar libremente ofertas por debajo del precio mínimo sin obligación de pagar comisión, lo que respeta su derecho de propiedad y la libertad contractual y se documenta como un ejemplo de cláusula equilibrada dentro del corpus.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "56",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": null,
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "medio",
+        "titulo": "Sin destino de los gastos de promoción si concluye la exclusividad sin venta",
+        "descripcion": "El contrato no aclara qué ocurre con los gastos de fotografía profesional y publicación ya incurridos por LA INMOBILIARIA si la exclusividad concluye sin que se concrete la venta.",
+        "articulos": [],
+        "recomendacion": "Aclarar si dichos gastos quedan a cargo de LA INMOBILIARIA en todos los casos o si son recuperables en algún supuesto."
+      },
+      {
+        "id": "o2",
+        "nivel": "bajo",
+        "titulo": "Falta de anexo con la individualización registral del inmueble",
+        "descripcion": "No se adjunta un anexo con la matrícula computarizada, superficie exacta y gravámenes del inmueble ofertado.",
+        "articulos": [],
+        "recomendacion": "Adjuntar como anexo la ficha registral completa del inmueble."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Aclarar la base de cálculo de la comisión respecto de impuestos y gastos de transferencia."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Fijar un tope máximo de renovaciones automáticas a la exclusividad."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "tramite",
+        "accion": "Adjuntar la ficha registral completa del inmueble como anexo."
+      }
+    ]
+  }
+}

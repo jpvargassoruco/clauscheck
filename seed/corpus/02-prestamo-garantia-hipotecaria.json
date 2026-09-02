@@ -1,0 +1,360 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Contrato privado de préstamo de dinero con garantía hipotecaria",
+    "tipo_contrato": "préstamo de dinero con garantía hipotecaria",
+    "rubro": "financiero",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-05-15",
+      "cuantia": "USD 28.000",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "préstamo de dinero con garantía hipotecaria",
+      "rubro": "financiero"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "R. A. M.",
+        "rol": "acreedor / prestamista",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "C. E. V.",
+        "rol": "deudor / prestatario",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Objeto",
+        "texto": "El ACREEDOR, señor R. A. M., entrega en calidad de préstamo de dinero al DEUDOR, señor C. E. V., la suma de USD 28.000.- (VEINTIOCHO MIL 00/100 DÓLARES AMERICANOS), que este último recibe en este acto a su entera satisfacción."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Plazo",
+        "texto": "El DEUDOR se obliga a restituir el capital prestado en el plazo improrrogable de dieciocho (18) meses, mediante cuotas mensuales conforme al cronograma que las partes acuerdan de manera verbal."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Interés convencional",
+        "texto": "las partes convienen un interés del cinco por ciento (5%) mensual sobre saldos deudores, computable desde la fecha de desembolso hasta la total cancelación del préstamo."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Capitalización de intereses",
+        "texto": "los intereses devengados y no pagados en la fecha de vencimiento de cada cuota se sumarán al capital adeudado, generando a su vez el interés pactado en la cláusula tercera."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Garantía hipotecaria",
+        "texto": "el DEUDOR constituye a favor del ACREEDOR garantía hipotecaria sobre el inmueble de su propiedad ubicado en la Urbanización Los Sauces, mediante la sola firma del presente documento privado, sin que sea necesaria formalidad adicional alguna para su plena validez y oponibilidad."
+      },
+      {
+        "id": "c6",
+        "numero": "SEXTA",
+        "titulo": "Vencimiento anticipado y ejecución",
+        "texto": "el incumplimiento de una sola cuota, aun parcial, dará lugar al vencimiento anticipado de la totalidad del saldo adeudado, más los intereses pactados sobre el monto total, pudiendo el ACREEDOR proceder directamente a la ejecución de la garantía sin necesidad de proceso judicial previo ni notificación alguna al DEUDOR."
+      },
+      {
+        "id": "c7",
+        "numero": "SÉPTIMA",
+        "titulo": "Renuncia a objetar la tasa de interés",
+        "texto": "el DEUDOR renuncia expresamente a objetar, reclamar o solicitar en sede judicial o administrativa la reducción de la tasa de interés pactada en el presente contrato, cualquiera fuese su monto."
+      },
+      {
+        "id": "c8",
+        "numero": "OCTAVA",
+        "titulo": "Gastos",
+        "texto": "todos los gastos de elaboración de minuta, notariales, de registro en Derechos Reales y cualquier otro gasto conexo a la constitución y eventual ejecución de la garantía correrán por exclusiva cuenta del DEUDOR."
+      },
+      {
+        "id": "c9",
+        "numero": "NOVENA",
+        "titulo": "Domicilio especial",
+        "texto": "las partes constituyen domicilio especial en la ciudad de Santa Cruz de la Sierra para todo efecto de notificaciones judiciales y extrajudiciales derivadas del presente contrato."
+      },
+      {
+        "id": "c10",
+        "numero": "DÉCIMA",
+        "titulo": "Penalidad por mora",
+        "texto": "en caso de mora, el DEUDOR pagará adicionalmente una penalidad del diez por ciento (10%) mensual sobre el saldo total, acumulable al interés de la cláusula tercera."
+      },
+      {
+        "id": "c11",
+        "numero": "DÉCIMA PRIMERA",
+        "titulo": "Firmas",
+        "texto": "Leído y ratificado el presente documento en todas sus partes, las partes lo firman en señal de conformidad en la ciudad de Santa Cruz de la Sierra, a los quince días del mes de mayo de 2024."
+      }
+    ],
+    "texto": "CONTRATO PRIVADO DE PRÉSTAMO DE DINERO CON GARANTÍA HIPOTECARIA\n\nCLÁUSULA PRIMERA (Objeto).- El ACREEDOR, señor R. A. M., entrega en calidad de préstamo de dinero al DEUDOR, señor C. E. V., la suma de USD 28.000.- (VEINTIOCHO MIL 00/100 DÓLARES AMERICANOS), que este último recibe en este acto a su entera satisfacción.\n\nCLÁUSULA SEGUNDA (Plazo).- El DEUDOR se obliga a restituir el capital prestado en el plazo improrrogable de dieciocho (18) meses, mediante cuotas mensuales conforme al cronograma que las partes acuerdan de manera verbal.\n\nCLÁUSULA TERCERA (Interés convencional).- las partes convienen un interés del cinco por ciento (5%) mensual sobre saldos deudores, computable desde la fecha de desembolso hasta la total cancelación del préstamo.\n\nCLÁUSULA CUARTA (Capitalización de intereses).- los intereses devengados y no pagados en la fecha de vencimiento de cada cuota se sumarán al capital adeudado, generando a su vez el interés pactado en la cláusula tercera.\n\nCLÁUSULA QUINTA (Garantía hipotecaria).- el DEUDOR constituye a favor del ACREEDOR garantía hipotecaria sobre el inmueble de su propiedad ubicado en la Urbanización Los Sauces, mediante la sola firma del presente documento privado, sin que sea necesaria formalidad adicional alguna para su plena validez y oponibilidad.\n\nCLÁUSULA SEXTA (Vencimiento anticipado y ejecución).- el incumplimiento de una sola cuota, aun parcial, dará lugar al vencimiento anticipado de la totalidad del saldo adeudado, más los intereses pactados sobre el monto total, pudiendo el ACREEDOR proceder directamente a la ejecución de la garantía sin necesidad de proceso judicial previo ni notificación alguna al DEUDOR.\n\nCLÁUSULA SÉPTIMA (Renuncia a objetar la tasa de interés).- el DEUDOR renuncia expresamente a objetar, reclamar o solicitar en sede judicial o administrativa la reducción de la tasa de interés pactada en el presente contrato, cualquiera fuese su monto.\n\nCLÁUSULA OCTAVA (Gastos).- todos los gastos de elaboración de minuta, notariales, de registro en Derechos Reales y cualquier otro gasto conexo a la constitución y eventual ejecución de la garantía correrán por exclusiva cuenta del DEUDOR.\n\nCLÁUSULA NOVENA (Domicilio especial).- las partes constituyen domicilio especial en la ciudad de Santa Cruz de la Sierra para todo efecto de notificaciones judiciales y extrajudiciales derivadas del presente contrato.\n\nCLÁUSULA DÉCIMA (Penalidad por mora).- en caso de mora, el DEUDOR pagará adicionalmente una penalidad del diez por ciento (10%) mensual sobre el saldo total, acumulable al interés de la cláusula tercera.\n\nCLÁUSULA DÉCIMA PRIMERA (Firmas).- Leído y ratificado el presente documento en todas sus partes, las partes lo firman en señal de conformidad en la ciudad de Santa Cruz de la Sierra, a los quince días del mes de mayo de 2024.\n\nPOR EL ACREEDOR: R. A. M.   —   POR EL DEUDOR: C. E. V.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 100,
+    "nivel": "critico",
+    "confianza": 0.85,
+    "resumen": {
+      "hallazgos": 7,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 3,
+        "alto": 2,
+        "medio": 1,
+        "bajo": 0,
+        "informativo": 1
+      }
+    },
+    "sintesis": "Préstamo de USD 28.000 con garantía hipotecaria que acumula tres defectos de nulidad: capitalización prohibida de intereses, una hipoteca que no se constituyó con las formalidades que la ley exige para ser oponible a terceros, y una tasa de interés que, sumada a la penalidad de mora, excede holgadamente el tope legal. A ello se suma una cláusula de ejecución extrajudicial de la garantía que prescinde de todo proceso. El índice máximo refleja que, pese a la apariencia de solidez del documento, la garantía ofrecida al acreedor es en realidad precaria y varias de sus cláusulas más gravosas para el deudor son inválidas.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "R. A. M.",
+        "rol": "acreedor / prestamista",
+        "redacto": true,
+        "balance": 55,
+        "a_favor": 5,
+        "en_contra": 2,
+        "lectura": "Redactó el documento a su favor —interés por encima del tope legal, anatocismo, ejecución extrajudicial— pero la garantía que more lo protege está mal constituida, lo que en la práctica lo deja más expuesto de lo que el texto sugiere."
+      },
+      {
+        "id": "p2",
+        "nombre": "C. E. V.",
+        "rol": "deudor / prestatario",
+        "redacto": false,
+        "balance": -70,
+        "a_favor": 1,
+        "en_contra": 5,
+        "lectura": "Firma condiciones de interés y ejecución claramente desfavorables y renuncia por escrito a cuestionar la tasa pactada, renuncia que la ley no reconoce como válida."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "critico",
+        "titulo": "Capitalización mensual de intereses impagos (anatocismo)",
+        "clausula_id": "c4",
+        "cita_textual": "los intereses devengados y no pagados en la fecha de vencimiento de cada cuota se sumarán al capital adeudado, generando a su vez el interés pactado en la cláusula tercera",
+        "fundamento": "La cláusula dispone que los intereses no pagados se sumen al capital y generen a su vez nuevos intereses. El anatocismo y cualquier forma de capitalización de intereses están expresamente prohibidos, y la convención que los pacta es nula de pleno derecho.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "412",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Eliminar la capitalización; los intereses no pagados se acumulan como deuda simple, sin generar nuevos intereses sobre sí mismos.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "critico",
+        "titulo": "Hipoteca constituida sin documento público ni inscripción registral",
+        "clausula_id": "c5",
+        "cita_textual": "el DEUDOR constituye a favor del ACREEDOR garantía hipotecaria sobre el inmueble de su propiedad ubicado en la Urbanización Los Sauces, mediante la sola firma del presente documento privado, sin que sea necesaria formalidad adicional alguna para su plena validez y oponibilidad",
+        "fundamento": "La hipoteca solo tiene lugar en los casos y según las formas autorizadas por la ley, y ningún derecho real sobre inmuebles surte efectos frente a terceros sino desde su inscripción en el registro de Derechos Reales. Al constituirse mediante la sola firma de un documento privado, sin previsión de escritura pública ni de inscripción, la garantía es inoponible frente a terceros (otros acreedores, compradores de buena fe) pese a la apariencia de seguridad que el texto ofrece al ACREEDOR.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1360",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Constituir la hipoteca mediante escritura pública e inscribirla en Derechos Reales como condición de eficacia de la garantía frente a terceros.",
+        "beneficia": null,
+        "perjudica": "p1"
+      },
+      {
+        "id": "h3",
+        "nivel": "critico",
+        "titulo": "Interés convencional y penalidad de mora que exceden el tope legal",
+        "clausula_id": "c3",
+        "cita_textual": "las partes convienen un interés del cinco por ciento (5%) mensual sobre saldos deudores, computable desde la fecha de desembolso hasta la total cancelación del préstamo",
+        "fundamento": "El interés convencional no puede exceder del tres por ciento (3%) mensual; el pacto por encima de esa tasa se reduce automáticamente. Aquí se pactó un cinco por ciento (5%) mensual, que además se acumula con una penalidad de mora del diez por ciento (10%) mensual adicional pactada en la cláusula décima, superando ampliamente el máximo legal permitido.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "409",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Ajustar el interés convencional al tres por ciento (3%) mensual y limitar cualquier penalidad de mora a un porcentaje razonable no acumulativo con el interés ordinario.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h4",
+        "nivel": "alto",
+        "titulo": "Vencimiento anticipado con ejecución extrajudicial de la garantía",
+        "clausula_id": "c6",
+        "cita_textual": "el incumplimiento de una sola cuota, aun parcial, dará lugar al vencimiento anticipado de la totalidad del saldo adeudado, más los intereses pactados sobre el monto total, pudiendo el ACREEDOR proceder directamente a la ejecución de la garantía sin necesidad de proceso judicial previo ni notificación alguna al DEUDOR",
+        "fundamento": "La cláusula habilita al ACREEDOR a ejecutar directamente la garantía por la mora de una sola cuota, sin proceso judicial ni notificación previa. La resolución de un contrato con prestaciones recíprocas por incumplimiento requiere, como regla, acudir a la vía judicial o conceder un plazo razonable de cumplimiento; prescindir de todo procedimiento y de la posibilidad de defensa del DEUDOR desborda lo que la autonomía de la voluntad puede pactar válidamente.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "568",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "115",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "II"
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CPE",
+            "numero": "119",
+            "texto": "",
+            "fuente_url": null,
+            "inciso": "II"
+          }
+        ],
+        "redaccion_sustitutiva": "Sustituir la ejecución directa por el mecanismo judicial de ejecución de garantías, con notificación previa y plazo de subsanación de al menos diez (10) días.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h5",
+        "nivel": "alto",
+        "titulo": "Penalidad de mora acumulativa del 10% mensual",
+        "clausula_id": "c10",
+        "cita_textual": "en caso de mora, el DEUDOR pagará adicionalmente una penalidad del diez por ciento (10%) mensual sobre el saldo total, acumulable al interés de la cláusula tercera",
+        "fundamento": "La penalidad de mora se suma sin límite al interés ya pactado, configurando una cláusula penal manifiestamente excesiva en relación con el capital prestado, susceptible de reducción equitativa por el juez.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "532",
+            "texto": "",
+            "fuente_url": null
+          },
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "535",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Fijar la penalidad de mora en un porcentaje moderado y no acumulable con el interés ordinario sobre el mismo período.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h6",
+        "nivel": "medio",
+        "titulo": "Gastos de la garantía enteramente a cargo del deudor",
+        "clausula_id": "c8",
+        "cita_textual": "todos los gastos de elaboración de minuta, notariales, de registro en Derechos Reales y cualquier otro gasto conexo a la constitución y eventual ejecución de la garantía correrán por exclusiva cuenta del DEUDOR",
+        "fundamento": "Los gastos de constitución y eventual ejecución de una garantía que protege únicamente el interés del ACREEDOR se imponen en su totalidad al DEUDOR, incluyendo gastos que benefician de forma exclusiva al acreedor hipotecario. Al haber sido el ACREEDOR quien redactó el documento, la ambigüedad sobre qué se entiende por \"gasto conexo\" debe interpretarse en favor del DEUDOR.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Distribuir los gastos según el interés de cada parte o, al menos, acotar taxativamente qué conceptos integran los \"gastos conexos\".",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h7",
+        "nivel": "informativo",
+        "titulo": "Domicilio especial válidamente constituido",
+        "clausula_id": "c9",
+        "cita_textual": "las partes constituyen domicilio especial en la ciudad de Santa Cruz de la Sierra para todo efecto de notificaciones judiciales y extrajudiciales derivadas del presente contrato",
+        "fundamento": "A diferencia del domicilio general, que es irrenunciable, la ley permite elegir un domicilio especial para la ejecución de un acto o el ejercicio de un derecho determinado. La cláusula novena se ajusta a esta facultad y es, en este punto, conforme a derecho.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "29",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": null,
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "alto",
+        "titulo": "Falta de cláusula de liberación de la hipoteca al pago total",
+        "descripcion": "El contrato no regula el trámite de cancelación y desinscripción del gravamen hipotecario una vez pagada la totalidad de la deuda, lo que puede dejar al DEUDOR con un inmueble formalmente gravado pese a haber cancelado su obligación.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Incluir la obligación del ACREEDOR de suscribir la minuta de cancelación de hipoteca dentro de un plazo determinado desde el pago total."
+      },
+      {
+        "id": "o2",
+        "nivel": "medio",
+        "titulo": "Falta de cronograma de pagos y de regla de imputación",
+        "descripcion": "El contrato remite el cronograma de cuotas a un acuerdo verbal y no establece cómo se imputan los pagos entre capital e interés, lo que deja abierta la discusión sobre el saldo real adeudado en cualquier momento de la relación.",
+        "articulos": [],
+        "recomendacion": "Adjuntar como anexo un cronograma de pagos detallado, con imputación clara a capital e interés en cada cuota."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "correccion",
+        "accion": "Eliminar la cláusula de capitalización de intereses (cláusula cuarta) por ser nula."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "tramite",
+        "accion": "Elevar la garantía a escritura pública e inscribirla en Derechos Reales antes del desembolso."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "correccion",
+        "accion": "Ajustar la tasa de interés al máximo legal del 3% mensual y revisar la penalidad de mora."
+      },
+      {
+        "prioridad": 4,
+        "tipo": "asesoria",
+        "accion": "El deudor debe consultar con un abogado antes de firmar la renuncia a objetar la tasa de interés, dado que esa renuncia es inválida."
+      }
+    ]
+  }
+}

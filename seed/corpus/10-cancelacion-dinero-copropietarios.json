@@ -1,0 +1,221 @@
+{
+  "nota": "Contenido sintético para demostración; requiere revisión de abogado.",
+  "document": {
+    "titulo": "Documento de cancelación de dinero entre copropietarios",
+    "tipo_contrato": "cancelación de dinero entre copropietarios",
+    "rubro": "financiero",
+    "ficha": {
+      "plaza": "Santa Cruz de la Sierra",
+      "fecha": "2024-09-12",
+      "cuantia": "USD 30.000",
+      "forma_instrumental": "documento privado",
+      "tipo_contrato": "cancelación de dinero entre copropietarios",
+      "rubro": "financiero"
+    },
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "E. L. V.",
+        "rol": "copropietario que paga",
+        "redacto": true
+      },
+      {
+        "id": "p2",
+        "nombre": "T. M. V.",
+        "rol": "copropietaria que recibe y cancela su parte",
+        "redacto": false
+      }
+    ],
+    "clausulas": [
+      {
+        "id": "c1",
+        "numero": "PRIMERA",
+        "titulo": "Antecedente",
+        "texto": "Los señores E. L. V. y T. M. V., hermanos, son copropietarios en partes iguales del inmueble ubicado en el Barrio Las Palmas de la ciudad de Santa Cruz de la Sierra, según consta en la matrícula computarizada correspondiente."
+      },
+      {
+        "id": "c2",
+        "numero": "SEGUNDA",
+        "titulo": "Pago y cancelación",
+        "texto": "El señor E. L. V. entrega en este acto a la señora T. M. V. la suma de USD 30.000.- (TREINTA MIL 00/100 DÓLARES AMERICANOS), quien la recibe a su entera satisfacción. Con dicho pago, queda cancelado y totalmente extinguido el derecho propietario que a la señora T. M. V. le correspondía sobre el inmueble objeto de la copropiedad, en mérito al pago recibido en el presente acto."
+      },
+      {
+        "id": "c3",
+        "numero": "TERCERA",
+        "titulo": "Forma de pago",
+        "texto": "el pago de la suma indicada se realiza en la fecha de firma del presente documento."
+      },
+      {
+        "id": "c4",
+        "numero": "CUARTA",
+        "titulo": "Renuncia recíproca",
+        "texto": "ambas partes renuncian recíprocamente a cualquier acción o reclamo futuro relacionado exclusivamente con la copropiedad que por este acto se cancela, sin que dicha renuncia alcance a otros derechos u obligaciones ajenos al objeto del presente documento."
+      },
+      {
+        "id": "c5",
+        "numero": "QUINTA",
+        "titulo": "Firmas",
+        "texto": "Firmado en la ciudad de Santa Cruz de la Sierra, a los doce días del mes de septiembre de 2024."
+      }
+    ],
+    "texto": "DOCUMENTO DE CANCELACIÓN DE DINERO ENTRE COPROPIETARIOS\n\nCLÁUSULA PRIMERA (Antecedente).- Los señores E. L. V. y T. M. V., hermanos, son copropietarios en partes iguales del inmueble ubicado en el Barrio Las Palmas de la ciudad de Santa Cruz de la Sierra, según consta en la matrícula computarizada correspondiente.\n\nCLÁUSULA SEGUNDA (Pago y cancelación).- El señor E. L. V. entrega en este acto a la señora T. M. V. la suma de USD 30.000.- (TREINTA MIL 00/100 DÓLARES AMERICANOS), quien la recibe a su entera satisfacción. Con dicho pago, queda cancelado y totalmente extinguido el derecho propietario que a la señora T. M. V. le correspondía sobre el inmueble objeto de la copropiedad, en mérito al pago recibido en el presente acto.\n\nCLÁUSULA TERCERA (Forma de pago).- el pago de la suma indicada se realiza en la fecha de firma del presente documento.\n\nCLÁUSULA CUARTA (Renuncia recíproca).- ambas partes renuncian recíprocamente a cualquier acción o reclamo futuro relacionado exclusivamente con la copropiedad que por este acto se cancela, sin que dicha renuncia alcance a otros derechos u obligaciones ajenos al objeto del presente documento.\n\nCLÁUSULA QUINTA (Firmas).- Firmado en la ciudad de Santa Cruz de la Sierra, a los doce días del mes de septiembre de 2024.\n\nE. L. V.   —   T. M. V.\n",
+    "is_public": true
+  },
+  "dictamen": {
+    "version": "1.0",
+    "indice_riesgo": 49,
+    "nivel": "medio",
+    "confianza": 0.74,
+    "resumen": {
+      "hallazgos": 4,
+      "omisiones": 2,
+      "por_nivel": {
+        "critico": 0,
+        "alto": 0,
+        "medio": 2,
+        "bajo": 1,
+        "informativo": 1
+      }
+    },
+    "sintesis": "Documento entre hermanos copropietarios por el cual uno cancela a la otra su cuota parte en un inmueble por USD 30.000. El clausulado es en general razonable y su renuncia recíproca está correctamente acotada, pero omite el trámite de protocolización e inscripción registral que formalice el cambio de titularidad, y no aclara la base sobre la que se fijó el monto pactado.",
+    "partes": [
+      {
+        "id": "p1",
+        "nombre": "E. L. V.",
+        "rol": "copropietario que paga",
+        "redacto": true,
+        "balance": 20,
+        "a_favor": 2,
+        "en_contra": 1,
+        "lectura": "Redactó el documento; el pago realizado carece de trámite registral posterior expresamente pactado, lo que también le genera cierta incertidumbre sobre la consolidación de su derecho."
+      },
+      {
+        "id": "p2",
+        "nombre": "T. M. V.",
+        "rol": "copropietaria que recibe y cancela su parte",
+        "redacto": false,
+        "balance": -20,
+        "a_favor": 1,
+        "en_contra": 2,
+        "lectura": "Recibe el pago pactado, pero el documento no aclara la base del monto ni garantiza la formalización registral de la cancelación de su derecho."
+      }
+    ],
+    "hallazgos": [
+      {
+        "id": "h1",
+        "nivel": "medio",
+        "titulo": "Cancelación declarada sin previsión de la transferencia registral",
+        "clausula_id": "c2",
+        "cita_textual": "queda cancelado y totalmente extinguido el derecho propietario que a la señora T. M. V. le correspondía sobre el inmueble objeto de la copropiedad, en mérito al pago recibido en el presente acto",
+        "fundamento": "El documento declara cancelado y extinguido el derecho propietario de una de las copropietarias por el solo pago recibido, pero no menciona el trámite posterior de transferencia e inscripción en Derechos Reales que formalice el cambio en las proporciones de la matrícula, del cual depende que el cambio surta efectos frente a terceros.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Incluir la obligación de suscribir y protocolizar la escritura pública de transferencia de cuota parte dentro de un plazo determinado.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h2",
+        "nivel": "medio",
+        "titulo": "No se aclara la base del monto pactado",
+        "clausula_id": "c2",
+        "cita_textual": "USD 30.000.- (TREINTA MIL 00/100 DÓLARES AMERICANOS)",
+        "fundamento": "El documento no especifica si la suma de USD 30.000 corresponde al valor de mercado de la cuota parte transferida o a un acuerdo interno entre hermanos por debajo de ese valor, lo que puede prestarse a cuestionamientos posteriores de otros herederos o acreedores de cualquiera de las partes. Al haber sido el señor E. L. V. quien redactó el documento, la ambigüedad debe interpretarse en favor de la señora T. M. V.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "518",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": "Consignar expresamente si el monto corresponde al valor comercial de la cuota parte o a un acuerdo distinto, y las razones de dicho acuerdo.",
+        "beneficia": "p1",
+        "perjudica": "p2"
+      },
+      {
+        "id": "h3",
+        "nivel": "bajo",
+        "titulo": "Falta de detalle sobre el medio de pago",
+        "clausula_id": "c3",
+        "cita_textual": "el pago de la suma indicada se realiza en la fecha de firma del presente documento",
+        "fundamento": "El documento no especifica el medio de pago utilizado (efectivo, transferencia bancaria), lo que dificulta acreditar posteriormente que la cancelación efectivamente se produjo.",
+        "articulos": [],
+        "redaccion_sustitutiva": "Consignar el medio de pago utilizado y, de corresponder, el número de operación bancaria.",
+        "beneficia": null,
+        "perjudica": null
+      },
+      {
+        "id": "h4",
+        "nivel": "informativo",
+        "titulo": "Renuncia recíproca limitada al objeto cancelado",
+        "clausula_id": "c4",
+        "cita_textual": "ambas partes renuncian recíprocamente a cualquier acción o reclamo futuro relacionado exclusivamente con la copropiedad que por este acto se cancela, sin que dicha renuncia alcance a otros derechos u obligaciones ajenos al objeto del presente documento",
+        "fundamento": "La renuncia recíproca se limita expresamente a la copropiedad cancelada por este acto, sin alcanzar otros derechos u obligaciones entre las partes. Conforme al principio de libertad contractual, esta renuncia acotada es válida y no compromete derechos irrenunciables de orden público.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "454",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "redaccion_sustitutiva": null,
+        "beneficia": null,
+        "perjudica": null
+      }
+    ],
+    "omisiones": [
+      {
+        "id": "o1",
+        "nivel": "medio",
+        "titulo": "Falta de compromiso de protocolización de la transferencia",
+        "descripcion": "El documento no obliga a las partes a suscribir la escritura pública de transferencia de cuota parte que permita inscribir el cambio de titularidad ante Derechos Reales.",
+        "articulos": [
+          {
+            "articulo_id": "",
+            "cuerpo": "CC",
+            "numero": "1538",
+            "texto": "",
+            "fuente_url": null
+          }
+        ],
+        "recomendacion": "Fijar plazo para la protocolización notarial de la transferencia de la cuota parte cancelada."
+      },
+      {
+        "id": "o2",
+        "nivel": "bajo",
+        "titulo": "Falta de referencia a la matrícula computarizada",
+        "descripcion": "El documento no consigna el número de matrícula computarizada del inmueble objeto de la copropiedad.",
+        "articulos": [],
+        "recomendacion": "Incorporar el número de matrícula computarizada en el documento."
+      }
+    ],
+    "recomendaciones": [
+      {
+        "prioridad": 1,
+        "tipo": "tramite",
+        "accion": "Protocolizar la transferencia de la cuota parte mediante escritura pública e inscribirla en Derechos Reales."
+      },
+      {
+        "prioridad": 2,
+        "tipo": "correccion",
+        "accion": "Aclarar en el documento la base sobre la que se fijó el monto de USD 30.000."
+      },
+      {
+        "prioridad": 3,
+        "tipo": "tramite",
+        "accion": "Incorporar el número de matrícula computarizada del inmueble."
+      }
+    ]
+  }
+}
