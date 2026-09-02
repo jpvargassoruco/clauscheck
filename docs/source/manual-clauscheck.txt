@@ -1,0 +1,271 @@
+ 
+ Manual de ClausCheck 
+ Manual de uso y contexto
+ ClausCheck revisa un contrato cláusula por cláusula, señala cuáles están mal
+ redactadas o desequilibradas, y dice con nombre y apellido a qué parte
+ benefician y a cuál perjudican, citando la norma boliviana que lo
+ sostiene.
+ Versión 1.0.0 
+ Plataforma Android 
+ Conexión No requiere 
+ Documentos 11 indexados 
+ Jurisdicción Bolivia 
+ Contenido
+ 01 Qué problema resuelve 
+ 02 Cómo se usa 
+ 03 Cómo leer el dictamen 
+ 04 La escala de riesgo 
+ 05 Los contratos incluidos 
+ 06 En qué se apoya 
+ 07 Privacidad 
+ 08 Alcance y límites 
+ 09 Preguntas frecuentes 
+ 01 
+ Qué problema resuelve
+ En Bolivia, la mayoría de los contratos que firma una persona común
+ —trabajo, alquiler, anticrético, préstamo, compraventa— se redactan
+ sobre plantillas reutilizadas que nadie vuelve a revisar. El resultado
+ es predecible: cláusulas que trasladan todo el riesgo a una sola parte,
+ renuncias de derechos que la ley no permite, plazos contradictorios y,
+ sobre todo, omisiones.
+ Lo que más daño hace no suele ser lo que el contrato dice, sino lo que
+ calla. Un contrato de anticrético que no menciona cuándo se devuelve el
+ capital. Un contrato de trabajo que no nombra la seguridad social. Una
+ compraventa en la que el precio quedó escrito de forma ininteligible.
+ Son defectos que solo se descubren cuando ya hay conflicto.
+ ClausCheck existe para adelantar ese descubrimiento. Toma un contrato, lo
+ separa en cláusulas y contrasta cada una contra el Código Civil, la
+ Constitución y la normativa laboral vigente. Devuelve un dictamen
+ escrito en el lenguaje de un informe legal, no en el de una aplicación.
+ Para quién es
+ Despachos jurídicos. Una primera lectura estructurada
+ antes de que el abogado dedique horas al documento.
+ Startups y empresas. Revisión previa de los contratos
+ que se firman a diario, sin abrir un expediente por cada uno.
+ Personas que van a firmar. Entender qué se está
+ aceptando antes de poner la firma, no después.
+ 02 
+ Cómo se usa
+ El recorrido completo, desde que se abre la aplicación hasta que se
+ tiene el dictamen en la mano, toma menos de un minuto.
+ Abrir el corpus
+ La pantalla principal muestra los documentos disponibles. Se puede
+ buscar por parte, por tipo de contrato o por el texto de cualquier
+ cláusula, y filtrar por rubro: laboral, comercial, financiero o
+ civil.
+ Elegir el contrato
+ Con el botón «Analizar contrato» se abre la ingesta, que ofrece
+ tomar el documento de los archivos del equipo, digitalizarlo con
+ la cámara o elegirlo del repositorio del despacho.
+ Revisar el documento
+ Antes de analizar, la pestaña «Documento» muestra la ficha del
+ contrato —plaza, fecha, cuantía, forma instrumental—, los
+ intervinientes con una marca sobre quién redactó el clausulado, y
+ el articulado completo.
+ Ejecutar el análisis
+ El motor recorre siete etapas visibles: normaliza el texto, separa
+ las cláusulas, identifica a las partes, detecta patrones de
+ riesgo, contrasta contra la norma, pondera el impacto sobre cada
+ parte y redacta el dictamen.
+ Leer y compartir
+ El dictamen queda guardado en el historial del equipo. Con «Copiar
+ dictamen completo» se lleva al portapapeles en texto plano, listo
+ para pegarlo en un correo, un informe o un mensaje.
+ 03 
+ Cómo leer el dictamen
+ El informe se lee de arriba abajo y va de lo general a lo particular.
+ Estas son sus seis partes.
+ Encabezado 
+ Índice de riesgo
+ Un número de 0 a 100 que resume el estado del contrato completo, con
+ el recuento de hallazgos, de omisiones y el grado de confianza del
+ motor. Es el dato que se mira primero y el único que cabe en una
+ frase.
+ Conclusión 
+ Síntesis ejecutiva
+ Un párrafo que dice qué es este contrato y cuál es su problema
+ principal. Escrito para que alguien que no leyó el documento entienda
+ la situación.
+ Reparto de cargas 
+ A quién beneficia
+ La respuesta directa a la pregunta que motiva la revisión. Cada parte
+ recibe un balance de −100 a +100 y el conteo de cláusulas a favor y
+ en contra, con una lectura de su posición real.
+ Detalle 
+ Hallazgos
+ El cuerpo del informe, ordenado por gravedad. Cada hallazgo cita el
+ fragmento textual del contrato, explica el fundamento jurídico,
+ reproduce el artículo aplicable y propone una redacción sustitutiva.
+ Lo que el contrato calla 
+ Omisiones
+ Los puntos que este tipo de contrato debía regular y que el
+ instrumento no contempla. En varios documentos del corpus es la
+ sección más grave.
+ Plan de acción 
+ Recomendaciones
+ Qué hacer, en orden de prioridad. Van de la corrección de una
+ cláusula a trámites concretos, como protocolizar una minuta o
+ inscribir una garantía en Derechos Reales.
+ Un detalle que conviene mirar 
+ En la ficha de intervinientes, la parte que redactó el clausulado
+ aparece marcada. No es un dato menor: el Art. 518 
+ del Código Civil establece que, en caso de duda, las cláusulas se
+ interpretan en contra de quien las redactó . Saber
+ quién escribió el contrato cambia cómo se lee cada ambigüedad.
+ 04 
+ La escala de riesgo
+ Cada hallazgo se clasifica en uno de cinco niveles. La escala no depende
+ solo del color: el rótulo acompaña siempre al matiz.
+ Nivel 
+ Qué significa 
+ Crítico 
+ Nulidad, inoponibilidad frente a terceros o renuncia de derechos irrenunciables. Compromete la operación completa. 
+ Alto 
+ Desequilibrio grave o cláusula con fuerte carácter leonino: concentra las ventajas en quien redactó. 
+ Medio 
+ Ambigüedad que la otra parte puede explotar, o carga desproporcionada pero subsanable. 
+ Bajo 
+ Defecto menor de técnica contractual. No compromete la validez. 
+ Informativo 
+ Cláusula conforme a derecho. Se documenta el contraste: en un dictamen serio importa tanto señalar lo defectuoso como acreditar lo correcto. 
+ El índice del documento no es un promedio. Un solo hallazgo crítico
+ eleva el índice aunque el resto del clausulado sea intachable, porque
+ una sola nulidad basta para comprometer el contrato entero.
+ 05 
+ Los contratos incluidos
+ La aplicación viene con once contratos reales de la práctica jurídica
+ cruceña y cochabambina, digitalizados y separados cláusula por cláusula.
+ Los números de documento de identidad están truncados y los nombres
+ abreviados; la redacción de las cláusulas se conserva literal, incluidos
+ sus errores.
+ Documento 
+ Rubro 
+ Índice 
+ Nivel 
+ Hallazgos 
+ Prestación de servicios inmobiliarios con exclusividad Comisión 4% · obligación de USD 8.800 
+ Comercial 100 Crítico 8 
+ Préstamo de dinero con garantía hipotecaria USD 28.000 de capital 
+ Financiero 100 Crítico 7 
+ Minuta de compraventa de bien inmueble Precio consignado de forma equívoca 
+ Comercial 98 Crítico 6 
+ Contrato de trabajo indefinido — Regente bioquímica Bs 2.800 mensuales 
+ Laboral 95 Crítico 7 
+ Contrato de anticrético sobre tienda comercial USD 15.000 de capital anticrético 
+ Civil 87 Crítico 5 
+ Contrato privado de arrendamiento de vivienda Bs 800 mensuales · 12 meses 
+ Civil 80 Crítico 6 
+ Contrato de tolerado sobre salón con baño privado Sin contraprestación económica 
+ Civil 75 Alto 5 
+ Transferencia de motocicleta scooter Bs 5.000 
+ Comercial 75 Alto 5 
+ Contrato de trabajo indefinido — Regente farmacéutica Bs 2.750 mensuales 
+ Laboral 67 Alto 6 
+ Documento de cancelación de dinero entre copropietarios USD 30.000 
+ Financiero 49 Medio 4 
+ Contrato privado de exclusividad para venta de inmueble Oferta USD 2.100.000 · comisión 3% 
+ Comercial 41 Medio 4 
+ Tres ejemplos de lo que encuentra
+ Anticrético. El contrato se firmó como minuta privada,
+ pero el Art. 491.3 y el
+ Art. 1430 exigen documento público.
+ Además, ninguna cláusula dice cuándo ni cómo se devuelven los USD
+ 15.000 entregados.
+ Transferencia de motocicleta. La cláusula que
+ «descarta cualquier situación de estafa o estelionato» es nula por
+ mandato expreso del Art. 628.II : ningún
+ pacto puede blindar al vendedor frente a su propio hecho.
+ Servicios inmobiliarios. Rechazar una oferta obliga a
+ la propietaria a pagar la comisión íntegra. Es una cláusula penal
+ sujeta a reducción judicial por el
+ Art. 535 , y el formulario además nombra
+ a dos sociedades distintas como parte contratante.
+ 06 
+ En qué se apoya
+ Cada cita del dictamen reproduce el texto oficial del
+ artículo, no una paráfrasis, para que quien conozca la materia pueda
+ contrastarla de inmediato. El catálogo se verificó contra el texto
+ publicado de cada cuerpo legal.
+ Código Civil · D.L. 12760 de 6 de agosto de 1975
+ Arts. 29 · 409 · 412 · 414 · 450 · 452 · 454 · 485 · 489 · 491 · 518 ·
+ 519 · 520 · 532 · 535 · 549 · 554 · 561 · 568 · 581 · 584 · 614 ·
+ 624 · 628 · 685 · 700 · 705 · 719 · 720 · 726 · 732 · 1360 · 1429 ·
+ 1430 · 1435 · 1538
+ Constitución Política del Estado
+ Arts. 21.2 · 48.II · 48.III y IV · 56 · 115.II · 116.II · 119.II · 130
+ Normativa laboral y especial
+ Ley General del Trabajo, Arts. 16 y 46 · D.S. 110/2009 ·
+ Ley 065/2010 de Pensiones · Código de Seguridad Social y D.S. 21637 ·
+ D.S. 3150/1952 y D.S. 17288/1980 · D.S. 5383/2025 ·
+ Ley 045/2010 · Ley 16998/1979
+ 07 
+ Privacidad
+ ClausCheck no envía ningún documento a internet. No hay servidor, no hay
+ cuenta de usuario y no hay servicio externo de por medio.
+ Tanto los contratos como el catálogo normativo viajan dentro de la
+ aplicación, y el análisis se ejecuta en el propio teléfono. Los
+ dictámenes emitidos se guardan únicamente en el historial local del
+ equipo. Si se desinstala la aplicación, esa información desaparece con
+ ella.
+ Esto tiene una consecuencia práctica que conviene destacar en materia
+ contractual: funciona sin conexión . Se puede revisar un
+ contrato en una audiencia, en una notaría o en una oficina sin señal, y
+ el resultado es el mismo.
+ 08 
+ Alcance y límites
+ Léase antes de usar el dictamen 
+ ClausCheck es una herramienta de apoyo a la revisión
+ contractual . No sustituye el criterio de un abogado
+ habilitado ni constituye asesoramiento legal para un caso concreto.
+ Un dictamen señala dónde mirar y con qué norma contrastar; la decisión
+ sobre qué hacer con un contrato concreto, en una situación concreta y
+ frente a una contraparte concreta, sigue correspondiendo a un
+ profesional del derecho.
+ Qué hace y qué no hace
+ Analiza los documentos de su corpus. Esta versión
+ trabaja sobre los once contratos indexados, que cubren los tipos
+ contractuales más frecuentes de la práctica boliviana.
+ Cita normativa boliviana vigente. Las referencias
+ corresponden al ordenamiento del Estado Plurinacional de Bolivia y no
+ son trasladables a otra jurisdicción.
+ No litiga ni redacta por usted. Las recomendaciones
+ proponen redacciones sustitutivas y trámites, pero requieren revisión
+ profesional antes de incorporarse a un documento que se vaya a firmar.
+ No conoce el contexto del caso. Un contrato
+ desequilibrado puede ser perfectamente aceptable si las partes lo
+ negociaron con información y asesoría. El dictamen valora el texto, no
+ la negociación que lo produjo.
+ 09 
+ Preguntas frecuentes
+ ¿Necesito internet para usarla? 
+ No. La aplicación funciona por completo sin conexión, y ese es un
+ requisito de diseño, no una limitación: garantiza que ningún
+ contrato salga del dispositivo.
+ ¿Qué pasa con los datos de mis clientes? 
+ No salen del teléfono. No hay envío a servidores, no hay cuenta y no
+ hay copia en la nube. El historial de dictámenes se guarda solo en
+ el equipo.
+ ¿Puedo confiar en las citas legales? 
+ Cada artículo reproduce el texto oficial del cuerpo legal
+ correspondiente, verificado contra la publicación del Código Civil,
+ la Constitución y la normativa laboral. La cita se muestra completa
+ para que pueda contrastarla, no resumida.
+ ¿Un índice de 100 significa que el contrato es inválido? 
+ No. Significa que el documento acumula defectos graves, entre ellos
+ al menos uno que compromete su validez o su oponibilidad frente a
+ terceros. La declaración de nulidad corresponde a un juez; el índice
+ solo ordena la urgencia de la revisión.
+ ¿Puedo compartir un dictamen? 
+ Sí. El botón «Copiar dictamen completo» lo lleva al portapapeles en
+ texto plano —con hallazgos, citas, normas y recomendaciones— listo
+ para pegarlo en un correo o un informe.
+ ¿Se pueden añadir otros contratos? 
+ Sí. La aplicación está construida para que el corpus y el catálogo
+ normativo crezcan sin rehacer la aplicación. Incorporar un nuevo tipo
+ contractual es trabajo de análisis jurídico y carga de datos.
+ Desarrollado por
+ Juan Pablo Rodríguez Gutiérrez
+ 78079512 
+ ClausCheck 1.0.0 — Análisis de cláusulas contractuales bajo normativa del
+ Estado Plurinacional de Bolivia.
+ 

@@ -1,0 +1,776 @@
+
+UNIVERSIDAD AUTÓNOMA GABRIEL RENE MORENO
+CARRERA DE DERECHO
+1663065107950
+
+
+
+
+
+
+
+
+Diseño de una aplicación jurídica basada en inteligencia artificial que detecte cláusulas engañosas en contratos, garantizando seguridad, accesibilidad y sostenibilidad económica, con el fin de reducir riesgos legales y optimizar la gestión documental en despachos jurídicos, startups y empresas en Bolivia.
+MATERIA: Derecho Informático 
+DOCENTE: Honel Justiniano 
+N
+MIEMBROS DEL GRUPO:
+REGISTRO:
+1
+Basilio Soliz Ribera 
+205106749
+2
+Roxana Vaca Ibáñez 
+200702092
+3
+Lilian Marcela Reynolds Aparicio
+224043439
+4
+Ana Katherin Ñandauca Soliz
+210046090
+5
+Katherine Nikol Siles Rojas
+210046090
+6
+Eloisa Milena Apaza Ribera
+212066293
+7
+Leslie Alondra Apaza Ribera
+226004569
+GRUPO: F-1
+Contenido
+ TOC \o "1-3" \h \z \u 1.Introducción PAGEREF _Toc239012409 \h 3
+2.Definición de identidad visual corporativa: Nombre de la empresa, logotipo, colores y plantillas personalizadas para documentos y presentaciones. PAGEREF _Toc239012410 \h 4
+2.1. Nombre de la empresa PAGEREF _Toc239012411 \h 4
+2.2. Logotipo PAGEREF _Toc239012412 \h 5
+2.3. colores PAGEREF _Toc239012413 \h 5
+2.4. Plantillas personalizadas para documentos y presentaciones PAGEREF _Toc239012414 \h 5
+3.Misión PAGEREF _Toc239012415 \h 5
+4.Visión PAGEREF _Toc239012416 \h 6
+5.Objetivos PAGEREF _Toc239012417 \h 6
+5.1.Objetivo general PAGEREF _Toc239012418 \h 6
+5.2.Objetivos específicos PAGEREF _Toc239012419 \h 6
+6.Valores PAGEREF _Toc239012420 \h 7
+7.Estructura organizacional (para la modalidad empresa junior, ver ejemplo en el manual de funciones y el reglamento interno de la empresa junior INMERCO). PAGEREF _Toc239012421 \h 7
+7.1.Estructura organizacional PAGEREF _Toc239012422 \h 7
+7.1.1.Componentes principales. PAGEREF _Toc239012423 \h 8
+7.1.2.Cargos. PAGEREF _Toc239012424 \h 9
+7.2.Manual de funciones PAGEREF _Toc239012425 \h 10
+7.3.Reglamento interno PAGEREF _Toc239012426 \h 11
+7.3.1.Normas generales PAGEREF _Toc239012427 \h 11
+7.3.2.Normas específicas por área PAGEREF _Toc239012428 \h 12
+7.3.3.Régimen disciplinario PAGEREF _Toc239012429 \h 13
+8.Metodología basada en el modelo de negocio CANVAS PAGEREF _Toc239012430 \h 13
+8.1.Modulo 1: Segmento de clientes PAGEREF _Toc239012431 \h 13
+8.2.Modulo 2: Problema PAGEREF _Toc239012432 \h 14
+8.3.Modulo 3: Propuestas de valor única PAGEREF _Toc239012433 \h 15
+8.3.1.Elementos que marcan la diferencia PAGEREF _Toc239012434 \h 15
+8.4.Modulo 4: Solución PAGEREF _Toc239012435 \h 16
+8.4.1.CLAUSCHECK LegalTech: PAGEREF _Toc239012436 \h 16
+8.4.2.Valor estratégico PAGEREF _Toc239012437 \h 16
+8.5.Modulo 5: Canales PAGEREF _Toc239012438 \h 17
+8.5.1.Categorías de canales PAGEREF _Toc239012439 \h 18
+8.5.1. Canales PAGEREF _Toc239012440 \h 18
+8.6.Modulo 6: Métricas clave PAGEREF _Toc239012441 \h 19
+8.7.Modulo 7: Ventaja especial PAGEREF _Toc239012442 \h 20
+8.7.1.Recursos esenciales de CLAUSCHECK PAGEREF _Toc239012443 \h 20
+8.7.2.Algoritmos de IA aplicados a contratos PAGEREF _Toc239012444 \h 21
+8.7.3.Proceso de entrenamiento PAGEREF _Toc239012445 \h 22
+8.7.4.Ventajas estratégicas PAGEREF _Toc239012446 \h 22
+8.8.Modulo 8: Flujo de ingresos PAGEREF _Toc239012447 \h 22
+8.8.1.Modelo de ingresos proyectado. PAGEREF _Toc239012448 \h 23
+8.9.Modulo 9: Estructura de costos PAGEREF _Toc239012449 \h 23
+8.9.1.VAN PAGEREF _Toc239012450 \h 24
+8.9.2.TIR PAGEREF _Toc239012451 \h 24
+8.9.3.Inversión PAGEREF _Toc239012452 \h 24
+8.9.4.Inversión a cinco años PAGEREF _Toc239012453 \h 24
+8.9.5.Costos financieros y administrativos PAGEREF _Toc239012454 \h 25
+9.Conclusiones y recomendaciones PAGEREF _Toc239012455 \h 25
+9.1.Conclusión PAGEREF _Toc239012456 \h 25
+9.2.Recomendación PAGEREF _Toc239012457 \h 26
+10.Bibliografía PAGEREF _Toc239012458 \h 26
+11.Anexo PAGEREF _Toc239012459 \h 27
+
+
+Índice de contenido
+ TOC \h \z \c "Ilustración" Ilustración 1. Diagrama de flujo. PAGEREF _Toc239012557 \h 9
+
+Índice de tablas
+ TOC \h \z \c "Tabla" Tabla 1. Componentes principales. PAGEREF _Toc239012476 \h 9
+Tabla 2. Cargos. PAGEREF _Toc239012477 \h 10
+Tabla 3. Manual de funciones. PAGEREF _Toc239012478 \h 11
+Tabla 4. Funciones principales. PAGEREF _Toc239012479 \h 12
+Tabla 5. Normas generales. PAGEREF _Toc239012480 \h 12
+Tabla 6. Normas específicas por área. PAGEREF _Toc239012481 \h 13
+Tabla 7. Régimen disciplinario. PAGEREF _Toc239012482 \h 14
+Tabla 8. Elementos y diferencia. PAGEREF _Toc239012483 \h 16
+Tabla 9. Elementos y soluciones. PAGEREF _Toc239012484 \h 17
+Tabla 10. Valor estratégico. PAGEREF _Toc239012485 \h 17
+Tabla 11. Función de la IA. PAGEREF _Toc239012486 \h 18
+Tabla 12. Categoría y conexiones. PAGEREF _Toc239012487 \h 19
+Tabla 13. Canales. PAGEREF _Toc239012488 \h 19
+Tabla 14. Métricas claves. PAGEREF _Toc239012489 \h 20
+Tabla 15. Recursos esenciales. PAGEREF _Toc239012490 \h 21
+Tabla 16. Algoritmos de IA aplicados a contratos. PAGEREF _Toc239012491 \h 22
+Tabla 17. Flujo de ingresos. PAGEREF _Toc239012492 \h 24
+Tabla 18. Modelo de ingresos proyectado. PAGEREF _Toc239012493 \h 24
+Tabla 19. Estructura de costos. PAGEREF _Toc239012494 \h 24
+Tabla 20. TIR 1 a 5 años. PAGEREF _Toc239012495 \h 26
+
+
+
+
+
+Introducción 
+A nivel mundial, el proyecto está en consonancia con la tendencia de digitalización dentro del ámbito legal, donde países como Estados Unidos, España y algunas naciones de la Unión Europea han incorporado tecnologías de inteligencia artificial para analizar contratos. Startups como LawGeex y Kira Systems han mostrado que el uso del procesamiento de lenguaje natural reduce el tiempo de revisión en más del 40% y mejora la precisión en la detección de cláusulas dañinas. Por otra parte, la Unión Europea ha implementado regulaciones específicas sobre cláusulas abusivas en los contratos de consumo, lo que ha impulsado la creación de herramientas legales que fortalecen la protección del consumidor. Este contexto internacional revela que la propuesta no solo se alinea con las tendencias globales, sino que también puede adaptarse al marco jurídico de Bolivia, favoreciendo la modernización del sistema judicial CITATION Ben19 \l 16394  (Bench-Capon, T., &amp; Ashley, K. , 2019).
+A nivel nacional (Bolivia), la modernización digital en el ámbito jurídico está en sus primeras fases, con oficinas y notarias que todavía utilizan métodos manuales y físicos, lo que aumenta la susceptibilidad a errores humanos y a la pérdida de datos. Investigadores bolivianos como Cruz Apaza (2026) han señalado que la inteligencia artificial puede ser clave para aumentar la eficiencia en el sistema judicial, aunque también subrayan la importancia de contar con una regulación adecuada. En este contexto, la implementación de una aplicación startup es pertinente ya que aborda una necesidad tecnológica en el país, proporcionando una solución concreta para bufetes de abogados, startups y empresas que requieren mayor seguridad en sus contratos. Además, esta herramienta podría acortar los tiempos de revisión de contratos, mejorar la transparencia y reforzar la confianza en las instituciones del sistema jurídico boliviano  CITATION Cru26 \l 16394 (Cruz Apaza, R. R. , 2026)
+Finalmente, en el ámbito departamental de Santa Cruz, el proyecto tiene una importancia estratégica, ya que esta región es el centro empresarial más activo del país, con un aumento rápido de nuevas empresas y startups. La administración de documentos en notarías y oficinas legales de Santa Cruz todavía se realiza en su mayoría de manera física, lo que aumenta el riesgo de cláusulas dañinas y la pérdida de información. Una aplicación que aborde este problema podría tener un efecto inmediato en el entorno legal y empresarial de la región, mejorando la seguridad de los contratos y la confianza en las instituciones. Además, las proyecciones financieras del proyecto indican un valor actual neto de aproximadamente USD 66,000 y una tasa interna de retorno del 22%, lo que respalda su rentabilidad económica. Con un modelo de negocio de software como servicio asequible para nuevas empresas y despachos legales, la aplicación se posiciona como una herramienta que puede escalar y ser sostenible, permitiendo un acceso más igualitario a la justicia digital en Santa Cruz y extendiéndose hacia otras partes del país CITATION CAI25 \l 16394  (CAINCO, 2025).
+Definición de identidad visual corporativa: Nombre de la empresa, logotipo, colores y plantillas personalizadas para documentos y presentaciones.
+2.1. Nombre de la empresa
+ClausCheck
+El nombre ClausCheck tiene una definición estratégica y clara, ya que combina la acción de verificación tecnológica con el campo legal:
+Claus: 
+Deriva de "cláusula", que es el elemento central de cualquier contrato. Simboliza el lenguaje legal, la norma redactada y el objeto de estudio.
+Check
+Término general que se refiere a verificar, validar o confirmar. Enmarca la esencia tecnológica del startup: identificar, confirmar y alertar sobre cláusulas fraudulentas o abusivas.
+2.2. Logotipo
+
+2.3. colores
+Azul 
+Dorado 
+Blanco  
+2.4. Plantillas personalizadas para documentos y presentaciones
+Misión 
+La finalidad del startup es mejorar la claridad en los contratos a través de la implementación de inteligencia artificial en el análisis legal, centrándose en la identificación automática de cláusulas injustas en contratos laborales, comerciales y financieros. La compañía pretende proporcionar una herramienta asequible y confiable para bufetes de abogados, nuevas empresas y corporaciones, disminuyendo el tiempo de revisión, aumentando la seguridad de los documentos y facilitando el acceso a la justicia digital. Con un modelo SaaS que es escalable y flexible, la finalidad radica en ofrecer soluciones tecnológicas que defiendan los derechos de los usuarios y fomenten prácticas contractuales equitativas en Bolivia y en la región.
+Visión 
+La meta del startup es establecerse como un referente en la región dentro del sector legaltech, guiando el cambio digital en la administración de contratos en Bolivia y ampliando su alcance a América Latina. Se desea crear un ambiente jurídico más eficaz, confiable y claro, donde la inteligencia artificial actúe como un recurso clave en la salvaguarda de los derechos de trabajadores, consumidores y empresarios. Con una visión a largo plazo, la compañía pretende crecer a nivel internacional, adoptando estándares de seguridad global y regulaciones digitales, posicionándose como una plataforma innovadora que fomente la modernización del sistema judicial y la confianza en las instituciones durante los procedimientos contractuales.
+Objetivos 
+Objetivo general 
+Diseñar e implementar una aplicación startup jurídica basada en inteligencia artificial que detecte cláusulas engañosas en contratos laborales, comerciales y financieros, garantizando seguridad, accesibilidad y sostenibilidad económica, con el fin de reducir riesgos legales y optimizar la gestión documental en despachos jurídicos, startups y empresas en Bolivia.
+Objetivos específicos 
+Identificar un sistema que permita cargar y almacenar contratos en formato digital con el fin de construir un corpus jurídico que sirva de base para el entrenamiento del sistema de IA, facilitando su análisis automático y reduciendo el uso de papel.
+Desarrollar módulos de inteligencia artificial capaces de identificar cláusulas abusivas, ambiguas o engañosas de forma automática en contratos jurídicos mediante procesamiento de lenguaje natural.
+Evaluar la factibilidad financiera de la aplicación mediante un modelo de negocio sostenible y accesible para startups a despachos jurídicos e involucrados.
+Diseñar una aplicación que detecte cláusulas abusivas en los contratos mediante un startup para despachos jurídicos e involucrados
+Valores 
+La formulación de los valores de la empresa es clave para guiar la cultura organizacional y la planificación estratégica. Estos principios orientan las decisiones, refuerzan la identidad institucional y crean confianza entre los clientes y socios estratégicos.
+• Innovación: dedicación al progreso de soluciones tecnológicas que emplean inteligencia artificial y procesamiento de lenguaje natural para revolucionar la práctica legal.
+• Transparencia: asegurar claridad en los trámites contractuales, cultivando la confianza entre usuarios, oficinas y organizaciones.
+• Accesibilidad: proporcionar un modelo SaaS y freemium que permita a empresas emergentes y despachos pequeños utilizar herramientas de justicia digital.
+• Seguridad: salvaguardar los datos legales mediante normas internacionales de gestión documental y ciberseguridad.
+• Responsabilidad social: apoyar la democratización del acceso a la justicia digital y minimizar el uso de papel, promoviendo la sostenibilidad ambiental.
+• Excelencia: mantener estándares elevados de calidad tanto en el desarrollo tecnológico como en el servicio al cliente.
+Estructura organizacional (para la modalidad empresa junior, ver ejemplo en el manual de funciones y el reglamento interno de la empresa junior INMERCO).
+ Estructura organizacional 
+La estructura organizacional de la empresa se diseña bajo un modelo horizontal y flexible, propio de startups tecnológicas, que permite adaptarse rápidamente a los cambios del mercado y a las necesidades de los usuarios. Este modelo busca fomentar la innovación, la colaboración interdisciplinaria y la eficiencia en la toma de decisiones, asegurando que cada área cumpla un rol estratégico en el desarrollo de la aplicación para la detección de cláusulas abusivas en contratos.
+left18409500Ilustración  SEQ Ilustración \* ARABIC 1. Diagrama de flujo.
+Fuente: Elaboración propia.
+
+
+
+
+Componentes principales.
+Tabla  SEQ Tabla \* ARABIC 1. Componentes principales.
+Componentes principales
+Dirección General:
+Encargada de definir la estrategia general, establecer alianzas institucionales y tomar decisiones importantes.
+Área Legal:
+Compuesta por abogados y expertos en leyes contractuales, responsables de revisar el marco legal y asegurar el cumplimiento de normativas.
+Área Tecnológica:
+Grupo de programadores, ingenieros de datos y especialistas en inteligencia artificial y procesamiento de lenguaje natural que elaboran y entrenan modelos para la detección automática.
+Área Financiera:
+Encargada de la administración de recursos, la elaboración de proyecciones de valor actual neto y tasa interna de retorno, así como de la viabilidad económica del proyecto.
+Área de Marketing y Comunicación:
+Responsabilizada de la imagen visual de la empresa, el posicionamiento de la marca y la gestión de las relaciones con clientes e inversionistas.
+Área de Operaciones:
+Se encarga de la implementación del software, asistencia técnica y atención al usuario.
+Fuente: Elaboración propia.
+Cargos.
+Tabla  SEQ Tabla \* ARABIC 2. Cargos.
+Cargos
+Capacidad preparatoria de los cargos
+Trabajo que desarrollara
+Dirección General:
+Nivel superior, encargado de la estrategia global y toma de decisiones.
+lidera la estrategia global, alianzas institucionales y toma de decisiones clave.
+Área Legal:
+Juristas y asesores legales que validan el corpus jurídico y garantizan cumplimiento normativo.
+juristas y asesores legales que validan el corpus jurídico y garantizan el cumplimiento normativo.
+Área Tecnológica:
+Desarrolladores, especialistas en IA/NLP e ingenieros de datos que diseñan y entrenan los modelos de detección.
+desarrolladores, ingenieros de datos y especialistas en IA/NLP que diseñan y entrenan los modelos de detección automática.
+Área Financiera:
+Contabilidad y análisis financiero, responsables de la sostenibilidad económica (VAN y TIR).
+contabilidad y análisis financiero, responsables de la sostenibilidad económica (VAN y TIR).
+Área de Marketing y Comunicación:
+Marketing digital y relaciones públicas para posicionamiento de marca e identidad visual.
+marketing digital y relaciones públicas para posicionamiento de marca e identidad visual.
+Área de Operaciones:
+Soporte técnico y gestión de producto, asegurando la implementación y atención a usuarios.
+El Área de Operaciones adecuará la infraestructura e implementará los controles metrológicos, logísticos y procedimentales exigidos por la norma NB-ISO/IEC 17025:2018 para garantizar la validez técnica de los ensayos.
+Fuente: Elaboración propia.
+ Manual de funciones 
+El documento de funciones establece las tareas, habilidades y vínculos jerárquicos en el marco de la organización de la compañía. Este texto asegura un funcionamiento eficiente, comprensión de los roles y alineación con la misión, visión y principios de la empresa.
+Tabla  SEQ Tabla \* ARABIC 3. Manual de funciones.
+Manual de funciones
+Responsabilidades
+Competencias
+Relaciones:
+Dirección General:
+Dirigir la estrategia global, aprobar presupuestos, coordinar alianzas institucionales y supervisar el cumplimiento de objetivos.
+Liderazgo, toma de decisiones, gestión de recursos y visión estratégica.
+
+Reporta al consejo de administración y coordina con todas las áreas funcionales.
+Área Legal:
+Validar el corpus jurídico, revisar contratos, garantizar cumplimiento normativo y asesorar en temas legales.
+Conocimiento del derecho contractual, análisis jurídico y ética profesional
+Colabora con el área tecnológica para definir criterios de detección de cláusulas abusivas.
+Área Tecnológica:
+Desarrollar, entrenar y mantener los modelos IA/NLP; gestionar bases de datos y seguridad informática.
+Programación, machine learning, procesamiento de lenguaje natural y ciberseguridad.
+Trabaja con el área legal y operaciones para integrar los resultados en la aplicación.
+Área Financiera:
+Administrar recursos, elaborar presupuestos, calcular indicadores financieros (VAN, TIR) y evaluar la rentabilidad del proyecto.
+Análisis financiero, contabilidad y planificación estratégica.
+
+Reporta a la dirección general y coordina con marketing para proyecciones de inversión.
+Área de Marketing y Comunicación:
+Diseñar la identidad visual corporativa, ejecutar campañas digitales y gestionar relaciones públicas.
+Comunicación estratégica, diseño gráfico, marketing digital y gestión de marca.
+Colabora con dirección general y operaciones para posicionar la aplicación en el mercado.
+Área de Operaciones:
+Implementar el software, brindar soporte técnico y garantizar la satisfacción del usuario.
+Gestión de proyectos, atención al cliente y mantenimiento de sistemas.
+
+Trabaja directamente con el área tecnológica y marketing para optimizar la experiencia del usuario.
+Fuente: Elaboración propia.
+El manual establece la organización funcional del startup, garantizando una administración eficaz, colaborativa y enfocada en los resultados, lo cual es fundamental para el éxito del proyecto que busca identificar cláusulas abusivas en los contratos.
+Tabla  SEQ Tabla \* ARABIC 4. Funciones principales.
+Área/Cargo
+Funciones principales
+Dirección General
+Establecer un plan global, validar los presupuestos, gestionar las alianzas de las instituciones y asegurar el cumplimiento de las metas.
+
+Área Legal
+Verificar el conjunto de normas legales, examinar acuerdos, asegurar el respeto a la normativa y brindar orientación en asuntos jurídicos.
+Área Tecnológica
+Desarrollar y entrenar modelos IA/NLP, gestionar bases de datos y seguridad informática.
+Área Financiera
+Administrar recursos, elaborar presupuestos, calcular VAN y TIR, evaluar rentabilidad del proyecto.
+Área de Marketing y Comunicación
+Diseñar identidad visual corporativa, ejecutar campañas digitales, gestionar relaciones públicas.
+Área de Operaciones
+Implementar software, brindar soporte técnico, garantizar satisfacción del usuario.
+Fuente: Elaboración propia.
+ Reglamento interno 
+El reglamento interno define las reglas fundamentales para la convivencia, la estructura y el funcionamiento de la compañía. Su finalidad es asegurar un entorno de trabajo organizado, claro y en consonancia con la misión, la visión y los valores de la empresa.
+Normas generales
+Tabla  SEQ Tabla \* ARABIC 5. Normas generales.
+Características
+Involucrados
+Normativa aplicable
+Cumplimiento de la ley
+Todos los socios deben cumplir con las leyes nacionales e internacionales que son pertinentes al sector tecnológico y jurídico.
+Constitución Política del Estado (Art. 46–48) garantiza el derecho al trabajo digno y la obligatoriedad de normas sociales y laborales.
+Ley N° 2027 (Estatuto del funcionario Público) y Ley N° 1178 (Administración y Control Gubernamentales).
+Confidencialidad
+La información de los contratos y de los clientes es absolutamente confidencial; cualquier divulgación se tomará como una falta grave.
+Ley N° 164 (Ley de Telecomunicaciones y TIC) y normativa de protección de datos personales.
+Empleo de recursos
+El hardware y el software solo deben ser usados para propósitos laborales.
+Ley N° 1178 de Administración y Control Gubernamentales regula el uso adecuado de bienes y recursos públicos y privados.
+Horario laboral
+jornada de 8 horas, con flexibilidad y opción a trabajar desde casa según los acuerdos internos.
+Constitución Política del Estado (Art. 46) y Ley General del Trabajo establecen jornadas de 8 horas, con posibilidad de flexibilidad y teletrabajo según acuerdos internos.
+Conducta ética
+Dentro de la organización, se prohíben las acciones de acoso, discriminación o corrupción.
+Constitución Política del Estado (Art. 48) y Ley N° 2027 prohíben actos de discriminación, acoso o corrupción.
+Fuente: Elaboración propia.
+
+Normas específicas por área
+Tabla  SEQ Tabla \* ARABIC 6. Normas específicas por área.
+Área/Cargo
+Normas especificas
+Dirección General
+Encargada de tomar decisiones estratégicas y supervisar la aplicación de las normas.
+Área Legal
+Tiene que asegurar la validez legal del corpus y proteger la ética profesional durante el examen de contratos.
+Área Tecnológica
+responsable de sostener la seguridad informática y de seguir los protocolos de ciberseguridad.
+Área Financiera
+debe garantizar que la administración de recursos sea transparente y elaborar informes periódicos sobre indicadores financieros.
+Área de Marketing y Comunicación
+encargada de mantener la coherencia en los mensajes institucionales y en la identidad visual.
+Área de Operaciones
+tiene que asegurar la satisfacción del cliente y la calidad del servicio.
+Fuente: Elaboración propia.
+Régimen disciplinario
+Tabla  SEQ Tabla \* ARABIC 7. Régimen disciplinario.
+Tipos de faltas
+Sanción
+Faltas menores:
+No cumplir con los horarios, demoras en las entregas
+Sanción mediante advertencias.
+Faltas graves:
+Violación de la confidencialidad, empleo inapropiado de recursos.
+Suspensión temporal.
+Infracciones muy graves
+Actos de discriminación, corrupción o filtración de información.
+Despido inmediato.
+Fuente: Elaboración propia.
+Metodología basada en el modelo de negocio CANVAS 
+ Modulo 1: Segmento de clientes 
+Despachos jurídicos: Abogados y bufetes que revisan los contratos de sus clientes y tratan de reducir los peligros jurídicos.
+Necesidad: Disminuir el tiempo de revisión y prevenir fallos en los contratos.
+Valor: identificación automática de cláusulas abusivas y administración digital segura.
+Startups – Pymes: Empresas emergentes que requieren seguridad en los contratos, pero no poseen los recursos para costear de forma constante asesoría legal.
+Necesidad: Instrumentos asequibles y accesibles para resguardarse de los riesgos contractuales.
+Valor: Una plataforma que puede escalarse y adaptarse al escenario boliviano.
+Instituciones privadas (Empresas entre otras): Organismos encargados de gestionar contratos comerciales, laborales y financieros con el propósito de reducir gastos y mejorar la eficiencia.
+Necesidad: Trazabilidad, manejo de riesgos y eficiencia en la documentación.
+Valor: Auditoría digital e implementación de contratos con IA.
+Instituciones públicas:  Se logró identificar los siguientes clientes:
+Ministerio de la Justicia
+Necesidad: Monitorear los contratos y las regulaciones de manera transparente.
+Valor: Auditoría digital y rastreo de documentos utilizando inteligencia artificial.
+Las cortes y los juzgados
+Necesidad: Gestión eficaz de expedientes y disminución de los plazos procesales.
+Valor: Búsqueda inteligente de cláusulas y digitalización en procedimientos judiciales.
+Registros públicos y notarías
+Necesidad: Validación de documentos y contratos con certeza jurídica.
+Valor: Integración con blockchain y firma digital para garantizar la autenticidad.
+Contraloría General del Estado
+Necesidad: Supervisión de las licitaciones y contratos estatales.
+Valor: Identificación automática de cláusulas contractuales que sean abusivas o riesgosas.
+Gobiernos y municipios locales
+Necesidad: Claridad en los contratos de servicios y obras públicas.
+Valor: Supervisión digital y seguimiento de convenios municipales.
+ Modulo 2: Problema 
+La investigación se centra en la necesidad de contar con una aplicación startup legaltech que permita detectar cláusulas abusivas en contratos mediante inteligencia artificial, en el contexto jurídico y empresarial de Santa Cruz, Bolivia y en el ámbito internacional, las aplicaciones legaltech han demostrado que la automatización de la revisión contractual reduce tiempos y aumenta la precisión en la detección de cláusulas abusivas. Sin embargo, en Bolivia y particularmente en Santa Cruz la gestión documental sigue siendo predominantemente física y manual, lo que genera vulnerabilidad frente a errores humanos, pérdida de información y aceptación de condiciones contractuales desfavorables.
+¿Cómo puede una aplicación startup basada en inteligencia artificial contribuir a la detección automática de cláusulas abusivas en contratos laborales, comerciales y financieros en Santa Cruz, mejorando la seguridad jurídica, reduciendo tiempos de revisión y optimizando la gestión documental en despachos jurídicos, startups y empresas?
+ Modulo 3: Propuestas de valor única 
+Con inteligencia artificial que identifica cláusulas abusivas y valida contratos con trazabilidad digital, la cual está a disposición de empresas, despachos e instituciones públicas, garantizamos la seguridad jurídica y la transparencia.
+Elementos que marcan la diferencia
+El CLAUSCHECK no solo identifica cláusulas que son abusivas, sino también transforma la gestión de contratos en un proceso seguro, transparente y al alcance de todos, estableciéndote como pioneros en justicia digital en Bolivia con los siguientes clientes y componentes:
+Cliente privado: Disminución de riesgos y eficacia.
+Cliente público: Claridad y capacidad de rastreo.
+Cliente emergente (PYMES/startups): Escalabilidad y accesibilidad.
+
+
+
+Tabla  SEQ Tabla \* ARABIC 8. Elementos y diferencia.
+N°
+Elementos
+Diferencia
+1
+Identificación automática de cláusulas
+IA capacitada en las regulaciones de Bolivia y de la región.
+Minimiza el tiempo de revisión y los riesgos legales.
+2
+Auditoría digital mediante blockchain
+Trazabilidad y permanencia de la documentación.
+Certificación de seguridad jurídica.
+3
+Accesibilidad de SaaS
+Plataforma que puede escalarse y es asequible.
+Adecuada para pequeñas oficinas, nuevas empresas y grandes entidades.
+4
+Transparencia a nivel institucional
+Instrumento para los gobiernos locales, las contralorías y las notarías.
+Aumenta la confianza de los ciudadanos en los procedimientos legales.
+5
+Efectos en el medio ambiente y la sociedad
+Facilita el acceso a la justicia digital para todos.
+Disminuye la utilización de papel más del 70%.
+Fuente: Elaboración propia.
+ Modulo 4: Solución 
+CLAUSCHECK LegalTech:
+Una plataforma SaaS con inteligencia artificial que analiza, digitaliza y valida contratos legales, hallando cláusulas abusivas y asegurando transparencia a través de la trazabilidad digital.
+Tabla  SEQ Tabla \* ARABIC 9. Elementos y soluciones.
+N°
+Elementos
+Solución 
+1
+Digitalización de archivos con seguridad
+Almacenamiento y escaneo en la nube con cifrado.
+Acceso a distancia para oficinas, compañías e instituciones.
+2
+Identificación automática de cláusulas engañosas
+Algoritmos de inteligencia artificial entrenados con regulaciones bolivianas y regionales.
+Identifica riesgos contractuales en segundos.
+3
+Auditoría utilizando blockchain
+Registro irreversible de contratos y sus modificaciones.
+Asegura la confianza institucional y la trazabilidad.
+4
+Administración inteligente de documentos
+Búsqueda avanzada mediante partes implicadas, fechas o cláusulas.
+Disminuye los lapsos procesales y los errores humanos.
+5
+Interfaz accesible de SaaS
+Plataforma que puede escalarse y es asequible.
+Adecuada para pequeñas oficinas, nuevas empresas y grandes entidades.
+Fuente: Elaboración propia.
+Valor estratégico
+Tabla  SEQ Tabla \* ARABIC 10. Valor estratégico.
+N°
+Clientes 
+Solución 
+1
+Oficinas de abogados
+Disminución de errores y eficacia.
+2
+Empresas privadas
+Seguimiento y gestión de riesgos.
+3
+Entidades públicas
+Confianza de la ciudadanía y transparencia.
+4
+Startups/pequeñas y medianas empresas (pymes)
+Acceso económico y que se pueda escalar.
+5
+Sociedad 
+Tecnología Legal
+Fuente: Elaboración propia.
+CLAUSCHECK es un ecosistema digital legal que fusiona la inteligencia artificial, el blockchain y la gestión documental para cambiar el modo en que se examinan, verifican y guardan los contratos.
+Tabla  SEQ Tabla \* ARABIC 11. Función de la IA.
+N°
+Función de la IA en CLAUSCHECK
+Trabajo instantáneo
+1
+Identificación automática de cláusulas
+Detecta en cuestión de segundos cláusulas que sean engañosas, ambiguas o abusivas.
+Disminuye la duración de las revisiones y los errores cometidos por el ser humano.
+2
+Clasificación inteligente de contratos
+Clasifica contratos según su tipo (comerciales, laborales, financieros).
+Facilita las auditorías y búsquedas legales.
+3
+Pronóstico de riesgos legales
+Señala la posibilidad de incumplimientos o litigios.
+Contribuye a la toma de decisiones estratégicas.
+4
+Auditoría digital mediante blockchain
+Registro irreversible de contratos y sus modificaciones.
+Asegura la confianza institucional y la trazabilidad.
+Fuente: Elaboración propia.
+La IA en CLAUSCHECK hace que la administración de contratos sea rápida, confiable y transparente, lo cual te distingue de cualquier otra solución jurídica convencional.
+ Modulo 5: Canales 
+Los canales de CLAUSCHECK integran eventos jurídicos, plataformas digitales y colaboraciones estratégicas para garantizar que la propuesta de valor se transmita a cada segmento de clientes de manera confiable, eficiente y escalable, por lo que se dividió en las siguientes categorías:
+Categorías de canales
+Tabla  SEQ Tabla \* ARABIC 12. Categoría y conexiones.
+N°
+Categoría de canales
+Conexiones
+1
+Canales digitales propios.
+Sitio web de la empresa con acceso a la plataforma SaaS.
+Aplicación de teléfono móvil para la revisión rápida de contratos.
+Blog legal con publicaciones acerca de justicia digital y cláusulas abusivas.
+2
+Plataformas de redes sociales para profesionales
+LinkedIn: posicionamiento en la industria empresarial y legal.
+Twitter/X: divulgación de avances en tecnología y leyes.
+Facebook/Instagram: campañas pedagógicas y llegada masiva.
+3
+Acuerdos estratégicos
+Universidades y colegios de abogados.
+Cámaras empresariales y organizaciones de pequeñas y medianas empresas.
+Entidades públicas (notarías, Contraloría, Ministerio de Justicia).
+4
+Ferias y eventos de derecho
+Congresos sobre derecho digital.
+Seminarios sobre contratos y cumplimiento.
+Talleres de formación en LegalTech.
+5
+Canales de asistencia y servicio
+Chatbot legal con inteligencia artificial para consultas rápidas.
+Asistencia individualizada a través de videollamadas y correo electrónico.
+Tutoriales en línea y documentación técnica.
+Fuente: Elaboración propia.
+8.5.1. Canales
+Tabla  SEQ Tabla \* ARABIC 13. Canales.
+Canales
+Objetivo
+Segmento impactado
+Web/App SaaS
+Acceso directo a la plataforma
+Despachos, empresas, startups
+Redes sociales
+Difusión y posicionamiento
+Público general y pymes
+Alianzas
+Credibilidad y expansión
+Instituciones públicas y privadas
+Eventos
+Educación y networking
+Abogados, universidades, empresas
+Soporte digital
+Fidelización y confianza
+Todos los segmentos
+Fuente: Elaboración propia.
+ Modulo 6: Métricas clave 
+Tabla  SEQ Tabla \* ARABIC 14. Métricas claves.
+N°
+Métricas clave de CLAUSCHECK
+Trabajos a realizar
+1
+Cantidad de contratos examinados
+Número de contratos procesados mensualmente por la plataforma.
+Evalúa la adopción y el uso efectivo del sistema.
+2
+Porcentaje de identificación de cláusulas abusivas
+Porcentaje de cláusulas arriesgadas que la inteligencia artificial identificó con precisión.
+Indicador de la confiabilidad y precisión de la tecnología.
+3
+Promedio de tiempo dedicado a la revisión
+Tiempo que requiere la plataforma para examinar un contrato en comparación con el tiempo que toma a una persona.
+Evalúa la eficiencia y el ahorro en términos operativos.
+4
+Grado de satisfacción del consumidor
+Opiniones de los usuarios (abogados, empresas e instituciones) y encuestas.
+Muestra la aceptación y la lealtad.
+5
+Disminución de los costos de operación
+Comparación de los costos previos y posteriores a la implementación de CLAUSCHECK.
+Evalúa el impacto económico directo.
+6
+Usuarios activos mensuales (MAU)
+Cantidad de usuarios que emplean la plataforma de manera habitual.
+Señal de expansión y crecimiento.
+7
+Índice de fidelización de clientes
+Porcentaje de clientes que continúan usando el servicio después de 6-12 meses.
+Mide sostenibilidad del modelo de negocio.
+Fuente: Elaboración propia.
+Las métricas esenciales deben centrarse en el uso efectivo, la exactitud de la IA, el ahorro financiero y la satisfacción del cliente, asegurando que CLAUSCHECK se establezca como una alternativa fiable y escalable en términos de justicia digital, por lo que estas métricas posibilitan evidenciar:
+Eficiencia tecnológica (exactitud de la IA, duración de la revisión).
+Impacto económico (disminución de los costos, contratos estudiados).
+Aceptación social (conservación, satisfacción, usuarios que están activos).
+ Modulo 7: Ventaja especial
+La ventaja competitiva o especial en el modelo CANVAS es lo que distingue que la startup CLAUSCHECK LegalTech sea una propuesta de valor único de cualquier otra solución existente en el mercado, porque resuelve necesidades de una población jurídica estudiada con la única finalidad de: "Mediante inteligencia artificial que identifica cláusulas abusivas y verifica contratos con trazabilidad digital, a la cual tienen acceso empresas, despachos e instituciones públicas, aseguramos transparencia y seguridad jurídica.".
+En síntesis, es propuesta de valor única es que CLAUSCHECK no solo identifica cláusulas abusivas, sino que también transforma la administración de contratos en un procedimiento transparente, seguro y accesible, lo cual te sitúa como líder en justicia digital en Bolivia con las siguientes ventajas:
+IA capacitada en las regulaciones de Bolivia y de la región.
+Minimiza el tiempo de revisión y los riesgos legales.
+Trazabilidad y permanencia de la documentación.
+Certificación de seguridad jurídica.
+Plataforma que puede escalarse y es asequible.
+Adecuada para pequeñas oficinas, nuevas empresas y grandes entidades.
+Instrumento para los gobiernos locales, las contralorías y las notarías.
+Aumenta la confianza de los ciudadanos en los procedimientos legales.
+Facilita el acceso a la justicia digital para todos.
+Disminuye la utilización de papel más del 70%.
+Recursos esenciales de CLAUSCHECK 
+Tabla  SEQ Tabla \* ARABIC 15. Recursos esenciales.
+N°
+Recursos esenciales 
+CLAUSCHECK
+1
+Recursos tecnológicos 
+
+Modelos de IA preparados bajo la normativa boliviana y regional. 
+Plataforma SaaS en la nube que asegura escalabilidad y seguridad. 
+Uso de blockchain para auditorías que aseguran trazabilidad e inmutabilidad. 
+2
+Recursos humanos 
+Grupo jurídico especializado en el entrenamiento de la IA y la validación de resultados. Equipo de desarrollo tecnológico encargado del mantenimiento de la plataforma SaaS. Equipo de marketing digital jurídico para posicionar a CLAUSCHECK en el mercado. 
+3
+Recursos financieros 
+
+Inversión inicial para el desarrollo y la validación de mercado. 
+Fondos de inversión LegalTech para expandir la plataforma. 
+Ingresos recurrentes a través de suscripciones y licencias. 
+4
+Recursos estratégicos 
+
+Colaboraciones institucionales con ministerios, notarías y universidades. 
+Red de despachos jurídicos para pruebas piloto y recibir retroalimentación. 
+Propiedad intelectual (marca CLAUSCHECK, algoritmos y patentes). 
+Fuente: Elaboración propia.
+Los recursos de CLAUSCHECK se clasifica en: 
+Tecnológicos: IA + SaaS + blockchain. 
+Humanos: abogados, desarrolladores y marketing. 
+Financieros: inversión inicial y financiación. 
+Estratégicos: colaboraciones y propiedad intelectual.
+Con esta clasificación obtiene una ventaja competitiva se mantiene gracias a estos recursos fundamentales, que aseguran que CLAUSCHECK pueda crecer, diferenciarse y convertirse en líder dentro del ecosistema LegalTech en Santa Cruz - Bolivia.
+Algoritmos de IA aplicados a contratos 
+Tabla  SEQ Tabla \* ARABIC 16. Algoritmos de IA aplicados a contratos.
+N°
+Clases de algoritmos de IA 
+Contenido 
+1
+Procesamiento de lenguaje natural (NLP)
+Análisis de significado, lematización y tokenización.
+Facilita la comprensión del texto legal y su normalización con el fin de analizarlo.
+2
+Modelos supervisados de clasificación
+Redes neuronales, Random Forest y SVM.
+Categoriza las cláusulas como "válidas" o "abusivas".
+3
+Transformadores ajustados al lenguaje legal
+BERT Legal, RoBERTa adaptado a textos legales.
+Capturan el contexto y la interpretación profunda de las cláusulas.
+4
+Modelos para identificar anomalías
+Detectan cláusulas inusuales o que representan un riesgo.
+Prácticos para contratos laborales y financieros.
+5
+Incrustaciones jurídicas
+Representaciones vectoriales de las cláusulas.
+Facilidad de búsquedas y comparaciones entre contratos 
+Fuente: Elaboración propia.
+Proceso de entrenamiento
+Conjunto de documentos legales digitalizados (contratos de trabajo, contratos comerciales y financieros).
+Marcado manual por abogados con experiencia (cláusula válida / abusiva).
+Entrenamiento supervisado con algoritmos de aprendizaje automático y profundo.
+Validación mediante métricas F1-score, precisión y recall.
+Implementación en plataformas SaaS para el análisis automático.
+Ventajas estratégicas
+Mayor exactitud en la identificación de cláusulas abusivas.
+Los tiempos de revisión de horas se reducen a minutos.
+Capacidad para escalar a empresas, despachos e instituciones públicas.
+Transparencia y seguridad en los procedimientos de contratación.
+ Modulo 8: Flujo de ingresos 
+El flujo de ingresos de CLAUSCHECK combina:
+Ingresos recurrentes (suscripciones SaaS).
+Ingresos institucionales (licencias públicas).
+Ingresos premium (consultoría y entrenamiento IA).
+Ingresos complementarios (marketplace y alianzas).
+El flujo asegura sostenibilidad financiera, diversificación y escalabilidad, alineado con tu propuesta de valor única.
+Tabla  SEQ Tabla \* ARABIC 17. Flujo de ingresos.
+N°
+Flujo de ingresos 
+Medios 
+1
+Suscripciones SaaS
+Planes mensuales/anuales para despachos, empresas y notarías.
+Diferentes niveles según volumen de contratos analizados.
+2
+Licencias institucionales
+Contratos con ministerios, tribunales y contraloría.
+Pago por uso masivo y auditoría digital de contratos públicos
+3
+Servicios premium
+Entrenamiento personalizado de la IA con contratos propios del cliente.
+Consultoría en digitalización y compliance jurídico.
+4
+Marketplace de cláusulas
+Base de datos de cláusulas validadas y modelos contractuales.
+Acceso pago para abogados y empresas.
+5
+Alianzas estratégicas
+Integración con notarías y universidades.
+Ingresos compartidos por uso de la plataforma en formación y certificación.
+Fuente: Elaboración propia.
+Modelo de ingresos proyectado.
+Tabla  SEQ Tabla \* ARABIC 18. Modelo de ingresos proyectado.
+Fuente
+Tipo de ingreso
+Segmento impactado
+Suscripciones SaaS
+Recurrente
+Despachos, startups, pymes
+Licencias institucionales
+Contratos anuales
+Ministerios, tribunales, contraloría
+Servicios premium
+Consultoría
+Empresas privadas
+Marketplace de cláusulas
+Pago por acceso
+Abogados y estudiantes
+Alianzas
+Ingresos compartidos
+Universidades y notarías
+Fuente: Elaboración propia.
+ Modulo 9: Estructura de costos 
+Tabla  SEQ Tabla \* ARABIC 19. Estructura de costos.
+Categoría
+Costo inicial (USD)
+Costo anual (USD)
+
+
+Desarrollo IA
+20,000
+6,000 (mantenimiento)
+
+
+Infraestructura SaaS
+15,000
+15,000
+
+
+Blockchain
+12,000
+3,000 (operación)
+
+
+Ciberseguridad
+8,000
+8,000
+
+
+Total
+55,000
+32,000
+
+
+Fuente: Elaboración propia.
+VAN
+VAN=t=1 nFlujo-netot(1+r)t-Inverison_inicial
+Año 1: Flujo neto = 40,000 – 32,000 = 8,000 
+VAN=8.0001.12-55,000-47,857
+Año 5 (acumulado): Flujo neto promedio = 50,000 anual 
+VAN5=t=1 550.000(1.12)t-55.000+110,000
+TIR 
+O =t=1 nFlujo-netot(1+TIR)t-Inverison_inicial
+AÑO 1:  8,000(1+r)1
+AÑO 2:8,000(1+r)2
+AÑO 3: 8,000(1+r)3
+AÑO 4: 8,000(1+r)4
+AÑO 5: 8,000(1+r)5
+Inversión 
+Inversión inicial: USD 55,000
+Costos operativos anuales: USD 32,000 
+Ingresos proyectados:
+Inversión a cinco años
+Año 1: USD 40,000 → Flujo neto = 8,000
+Año 2: USD 60,000 → Flujo neto = 28,000
+Año 3: USD 90,000 → Flujo neto = 58,000
+Año 4: USD 120,000 → Flujo neto = 88,000
+Año 5: USD 150,000 → Flujo neto = 118,000
+Año 1: TIR ≈ 6% → no cubre el costo de capital (12%).
+Año 3: TIR ≈ 20% → empieza a ser atractivo.
+Año 5: TIR ≈ 30% → altamente atractivo para inversionistas.
+Se definió que el TIR de CLAUSCHECK a 5 años es aproximadamente del 30%, lo que evidencia que el proyecto es financieramente factible y provechoso, con la posibilidad de recuperar la inversión entre el segundo y tercer año.
+Tabla  SEQ Tabla \* ARABIC 20. TIR 1 a 5 años.
+N°
+Año
+Ingresos
+1
+1 año
+USD 40,000
+2
+5 años
+USD 250,000
+Fuente: Elaboración propia.
+
+Para la elaboración de la aplicación CLAUSCHECK, la estructura de costos tecnológicos reales en Bolivia necesita una inversión inicial de 50,000 a 60,000 dólares y costos operativos anuales de 30,000 a 35,000 dólares. Esto garantiza la sostenibilidad si se obtienen ingresos recurrentes a través de licencias y suscripciones.
+Costos financieros y administrativos
+Capital semilla e inversión: financiamiento inicial y rondas de inversión.
+Licencias y propiedad intelectual: registro de marca CLAUSCHECK y patentes de algoritmos.
+Gestión administrativa: contabilidad, legalidad y cumplimiento normativo.
+Conclusiones y recomendaciones 
+Conclusión 
+Para concluir, el proyecto CLAUSCHECK LegalTech ha logrado todos los objetivos propuestos: se creó un sistema de gestión documental digital que permite la carga y almacenamiento de contratos en formato electrónico con el fin de construir un corpus jurídico; se desarrollaron módulos de inteligencia artificial capaces de detectar cláusulas engañosas, ambiguas o abusivas a través del procesamiento del lenguaje natural; se examinó la viabilidad financiera, demostrando que, pese a que el primer año presenta un VAN negativo, el proyecto alcanza una TIR cercana al 30% a cinco años, lo cual lo hace atractivo y viable económicamente para los inversores; por último, se elaboró una aplicación SaaS con integración de IA, blockchain y ciberseguridad que asegura sostenibilidad económica, accesibilidad y seguridad. De esta manera se optimiza la gestión documental en despachos jurídicos, empresas y startups en Bolivia.
+ Recomendación 
+Las sugerencias que cumplen con todos los propósitos específicos y el propósito general del proyecto CLAUSCHECK LegalTech son: Para el objetivo de identificar un sistema de carga y almacenamiento digital, se aconseja crear un cuerpo jurídico nacional que incluya contratos financieros, laborales y comerciales, garantizando respaldo en la nube híbrida y disminuyendo el uso de papel. En lo que respecta al desarrollo de módulos de inteligencia artificial, se recomienda formar continuamente los modelos con jurisprudencia boliviana y validar los resultados con abogados expertos para lograr mayor precisión y confiabilidad. Con respecto a la viabilidad financiera, se aconseja diversificar los ingresos mediante suscripciones SaaS (software como servicio), licencias institucionales y alianzas estratégicas; además, se debe buscar fondos internacionales y capital semilla para solventar la inversión inicial. Finalmente, para planear la aplicación, es importante priorizar.
+
+Bibliografía 
+BIBLIOGRAPHYBench-Capon, T., &amp; Ashley, K. . (2019). Artificial inteligence and legal reasoning. Cambridge University Press.
+CAINCO. (2025). Innovación y transformación digital en el ecosistema empresarial cruceño. Observatorio Económico y Jurídico de Santa Cruz. Santa Cruz de la Sierra .
+Cruz Apaza, R. R. . (2026). Inteligencia artificial y proceso constitucional en Bolivia . Derecho de la UCB , 10(18),93-135.
+Osterwalder, A., Pigneur, Y., &amp; Clark, T. (2010). Business model generation: A handbook for visionaries, game changers, and challengers. Wiley. 
+Robbins, S. P., &amp; Coulter, M. (2018). Management (13th ed.). 
+
+Anexo 
