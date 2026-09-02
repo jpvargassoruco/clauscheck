@@ -1,0 +1,370 @@
+<title>Dictamen ClausCheck</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --paper: #FBFBF9;
+    --paper-2: #F1F2EE;
+    --ink: #17233A;
+    --ink-2: #4A5468;
+    --ink-3: #7D8698;
+    --line: #D7DBD9;
+    --navy: #1B2A4A;
+    --gold: #A9852A;
+    --gold-soft: #F1E6C6;
+    --critico: #8E1F24;
+    --alto: #B45A16;
+    --medio: #9A7A00;
+    --bajo: #2F6B4E;
+    --info: #3E5A8A;
+    --mark: #FFF4CC;
+    --shadow: 0 1px 0 rgba(23,35,58,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12161F; --paper-2: #1A2030; --ink: #E7E9EE; --ink-2: #B4BAC8; --ink-3: #7F889A;
+      --line: #2B3346; --navy: #C9D4EE; --gold: #D2B15A; --gold-soft: #3A3220;
+      --critico: #E07A7F; --alto: #E39A5A; --medio: #D8C24A; --bajo: #7FC39F; --info: #8FB0EA; --mark: #3B3518;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12161F; --paper-2: #1A2030; --ink: #E7E9EE; --ink-2: #B4BAC8; --ink-3: #7F889A;
+    --line: #2B3346; --navy: #C9D4EE; --gold: #D2B15A; --gold-soft: #3A3220;
+    --critico: #E07A7F; --alto: #E39A5A; --medio: #D8C24A; --bajo: #7FC39F; --info: #8FB0EA; --mark: #3B3518;
+    --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
+  h1, h2, h3 { font-family: Spectral, Georgia, "Times New Roman", serif; color: var(--navy); text-wrap: balance; line-height: 1.15; margin: 0; }
+  h1 { font-size: clamp(2rem, 4vw, 2.9rem); font-weight: 600; }
+  h2 { font-size: 1.55rem; font-weight: 600; margin-top: 3.2rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.15rem; font-weight: 600; margin-top: 1.6rem; }
+  p { margin: .75rem 0; max-width: 68ch; }
+  ul, ol { max-width: 68ch; padding-left: 1.3rem; }
+  li { margin: .3rem 0; }
+  a { color: var(--info); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.4rem 5rem; }
+  .eyebrow { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  .meta { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .6rem 1.4rem; margin: 1.4rem 0 0; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .9rem; }
+  .meta b { display: block; font-weight: 500; color: var(--ink-3); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; }
+  .lead { font-family: Spectral, Georgia, serif; font-size: 1.22rem; line-height: 1.5; color: var(--ink); max-width: 62ch; }
+  .toc { columns: 2; column-gap: 2rem; font-size: .92rem; margin: 1rem 0 0; padding-left: 1.2rem; }
+  .toc li { break-inside: avoid; }
+  .gauge { display: flex; align-items: center; gap: 1.2rem; margin: 1.8rem 0 0; padding: 1.1rem 1.2rem; background: var(--paper-2); border-left: 4px solid var(--gold); }
+  .gauge .n { font-family: Spectral, serif; font-size: 3rem; font-weight: 600; line-height: 1; color: var(--navy); font-variant-numeric: tabular-nums; }
+  .gauge .t { font-size: .92rem; color: var(--ink-2); max-width: 52ch; }
+  .nivel { display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; padding: .15rem .5rem; border: 1px solid currentColor; border-radius: 2px; vertical-align: middle; }
+  .n-critico { color: var(--critico); } .n-alto { color: var(--alto); } .n-medio { color: var(--medio); } .n-bajo { color: var(--bajo); } .n-info { color: var(--info); }
+  .hallazgo { margin: 1.6rem 0; padding: 0 0 0 1.1rem; border-left: 3px solid var(--line); }
+  .hallazgo.c { border-left-color: var(--critico); } .hallazgo.a { border-left-color: var(--alto); } .hallazgo.m { border-left-color: var(--medio); }
+  .hallazgo h3 { margin-top: 0; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+  .hallazgo dl { margin: .5rem 0 0; display: grid; grid-template-columns: 9.5rem 1fr; gap: .35rem 1rem; max-width: 72ch; }
+  .hallazgo dt { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding-top: .25rem; }
+  .hallazgo dd { margin: 0; }
+  .cita { font-family: Spectral, serif; font-style: italic; color: var(--ink-2); }
+  mark { background: var(--mark); color: inherit; padding: 0 .15em; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; margin: 1rem 0; }
+  .tabla { overflow-x: auto; }
+  th, td { text-align: left; vertical-align: top; padding: .55rem .6rem; border-bottom: 1px solid var(--line); }
+  th { font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: "IBM Plex Mono", monospace; font-size: .85rem; }
+  .fase { margin: 1.8rem 0; display: grid; grid-template-columns: 8.5rem 1fr; gap: .4rem 1.4rem; }
+  .fase .cuando { font-family: "IBM Plex Mono", monospace; font-size: .8rem; color: var(--gold); letter-spacing: .04em; padding-top: .3rem; }
+  .fase h3 { margin-top: 0; }
+  .fase .kpi { font-size: .88rem; color: var(--ink-2); background: var(--paper-2); padding: .55rem .8rem; margin-top: .6rem; border-radius: 3px; }
+  .fase .kpi b { color: var(--ink); font-weight: 500; }
+  .nota { font-size: .88rem; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: .6rem; margin-top: 1.4rem; max-width: 68ch; }
+  .fuentes { font-size: .85rem; color: var(--ink-2); }
+  .fuentes li { margin: .2rem 0; }
+  .no { list-style: none; padding: 0; max-width: 68ch; }
+  .no li { padding: .5rem 0 .5rem 1.6rem; border-bottom: 1px solid var(--line); position: relative; }
+  .no li::before { content: "✕"; position: absolute; left: 0; color: var(--critico); font-weight: 600; }
+  @media (max-width: 640px) {
+    .toc { columns: 1; }
+    .hallazgo dl { grid-template-columns: 1fr; }
+    .fase { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Revisión del proyecto · formato dictamen</div>
+  <h1>Dictamen ClausCheck</h1>
+  <p class="lead">Crítica y mejoras al MVP construido el 2 de septiembre de 2026, más un roadmap para que el producto se venda en Bolivia. Está escrito con la misma estructura que ClausCheck usa para un contrato: índice, síntesis, hallazgos por gravedad, omisiones y plan de acción.</p>
+  <div class="meta">
+    <div><b>Fecha</b>2 de septiembre de 2026</div>
+    <div><b>Objeto</b>ClausCheck MVP (repo privado, stack local + VPS COTAS)</div>
+    <div><b>Autor</b>Fable 5.1, con investigación delegada</div>
+    <div><b>Para</b>Juan Pablo Vargas y el grupo F‑1 UAGRM</div>
+  </div>
+
+  <div class="gauge">
+    <div class="n">62</div>
+    <div class="t"><b>Índice de riesgo comercial.</b> No es un promedio: dos hallazgos críticos (responsabilidad profesional y confidencialidad de los documentos) bastan para frenar una venta a un despacho, aunque la ingeniería esté bien. Confianza del dictamen: media‑alta; los datos de mercado sin verificar están marcados.</div>
+  </div>
+
+  <h2 id="contenido">Contenido</h2>
+  <ol class="toc">
+    <li><a href="#sintesis">Síntesis</a></li>
+    <li><a href="#bien">Lo que ya está bien</a></li>
+    <li><a href="#hallazgos">Hallazgos</a></li>
+    <li><a href="#omisiones">Omisiones</a></li>
+    <li><a href="#no">Lo que no hay que hacer</a></li>
+    <li><a href="#roadmap">Roadmap vendible en Bolivia</a></li>
+    <li><a href="#precios">Precios y unit economics</a></li>
+    <li><a href="#fuentes">Fuentes</a></li>
+  </ol>
+
+  <h2 id="sintesis">Síntesis</h2>
+  <p>ClausCheck tiene una tesis correcta y un hueco real: no existe en Bolivia un producto que revise contratos cláusula por cláusula citando el Código Civil, la CPE y la normativa laboral con texto oficial. Los competidores locales (JusNova, Pixi Legal, LEXIUS, D‑Lex) hacen búsqueda y redacción, no detección de cláusulas abusivas con cita verificada. La arquitectura elegida (recuperación sobre una base normativa propia y verificación de citas) es la defensa técnica adecuada contra el problema documentado de alucinaciones legales de los modelos de lenguaje.</p>
+  <p>Lo que impide venderlo hoy no es tecnología. Son cuatro cosas: el producto emite un «dictamen», palabra que en Bolivia implica opinión jurídica de un abogado colegiado (Ley 387); los contratos de los clientes viajan a un proveedor de IA extranjero sin política de confidencialidad; el catálogo normativo es una demostración de 63 artículos y no cubre la Ley 453 ni la Ley 393, que son las normas que literalmente definen «cláusula abusiva» en Bolivia; y no hay ninguna medición de precisión. El roadmap propone cerrar eso en seis semanas, hacer un piloto cerrado con despachos cruceños hasta noviembre y cobrar desde diciembre de 2026 con planes en bolivianos, pago por QR y factura SIAT.</p>
+
+  <h2 id="bien">Lo que ya está bien</h2>
+  <ul>
+    <li><b>La cita verificada como principio.</b> El modelo solo puede citar artículos recuperados de la base y el texto mostrado es siempre el oficial. Esto es exactamente lo que la literatura recomienda y lo que ningún competidor local anuncia. Conviértalo en el mensaje central de venta.</li>
+    <li><b>Multitenant y gestor documental desde el día uno.</b> Evita la reescritura clásica del mes seis. paperless‑ngx aporta OCR en español y búsqueda sin costo de desarrollo.</li>
+    <li><b>Proveedor de IA intercambiable.</b> Permite responder a la objeción de confidencialidad cambiando de proveedor por cliente, sin tocar código.</li>
+    <li><b>Infraestructura en Bolivia.</b> Alojar en la nube de COTAS es un argumento de venta ante despachos y entidades públicas: los documentos no salen del país en reposo.</li>
+    <li><b>Un corpus de contratos reales cruceños.</b> Los once documentos son el activo más difícil de copiar. Son el embrión del conjunto de evaluación.</li>
+  </ul>
+
+  <h2 id="hallazgos">Hallazgos</h2>
+  <p>Ordenados por gravedad, con la misma escala del producto. Cada uno trae el fundamento y una «redacción sustitutiva»: qué cambiar concretamente.</p>
+
+  <div class="hallazgo c">
+    <h3><span class="nivel n-critico">Crítico</span> El producto se presenta como emisor de dictámenes jurídicos</h3>
+    <dl>
+      <dt>Cita</dt><dd class="cita">«Devuelve un dictamen escrito en el lenguaje de un informe legal» — Manual, sección 01; el botón dice «Copiar dictamen completo».</dd>
+      <dt>Fundamento</dt><dd>La Ley 387 del Ejercicio de la Abogacía reserva la asesoría y el patrocinio a abogados con registro; obliga además a denunciar el ejercicio ilegal. Un software que entrega a personas sin abogado un texto titulado «dictamen» con recomendaciones de trámite («protocolizar la minuta», «inscribir en Derechos Reales») se expone a esa calificación, y a responsabilidad civil si alguien firma o deja de firmar por lo que dijo la aplicación. El Colegio de Abogados no tiene aún una posición pública sobre IA (no encontrada); eso es una ventana, no una garantía.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Renombrar la salida como <mark>«Informe de revisión asistida»</mark> en toda la interfaz. Reservar la palabra «dictamen» para una función nueva: un abogado de la organización revisa, edita y <b>firma</b> el informe (nombre, matrícula, fecha) y solo entonces se exporta con ese título. Para usuarios que no son abogados, el plan personal muestra el informe con un aviso fijo y ofrece «Enviar a un abogado» (marketplace de despachos que usan ClausCheck: un canal de ingresos).</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo c">
+    <h3><span class="nivel n-critico">Crítico</span> Los contratos del cliente salen a un proveedor extranjero sin política declarada</h3>
+    <dl>
+      <dt>Cita</dt><dd class="cita">Proveedor por defecto: DeepSeek (China). El manual heredado promete «no envía ningún documento a internet».</dd>
+      <dt>Fundamento</dt><dd>Bolivia no tiene ley general de protección de datos (el anteproyecto de AGETIC de 2025 sigue sin aprobarse), pero sí el habeas data del artículo 130 de la CPE y el secreto profesional del abogado. Un despacho no puede justificar ante su cliente que la minuta con nombres, cédulas y montos fue procesada por un servidor cuya política de retención desconoce. Además, el túnel de Cloudflare termina TLS en la red de Cloudflare: el mensaje «sus datos no salen de Bolivia» sería falso en tránsito.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Tres capas. (1) <b>Seudonimización antes del envío</b>: el worker reemplaza nombres, cédulas, NIT, cuentas y direcciones por marcadores estables (PARTE_A, CI_1) y los restituye al renderizar; el modelo nunca ve identidades. (2) <b>Política por plan</b>: proveedor con contrato de no retención por defecto (OpenRouter con proveedores «zero data retention» o Anthropic API), DeepSeek solo como opción explícita y barata. (3) <b>Datos en reposo en Bolivia</b> y publicación con IP pública de COTAS y TLS propio en Caddy en lugar del túnel, para que la frase de venta sea verdadera. Documentarlo en una página «Confidencialidad» de dos párrafos, no en un aviso legal de veinte.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo c">
+    <h3><span class="nivel n-critico">Crítico</span> El catálogo normativo no incluye las normas que definen «cláusula abusiva»</h3>
+    <dl>
+      <dt>Cita</dt><dd class="cita">seed/normativa.json: 12 cuerpos, 63 artículos (Código Civil, CPE, laboral).</dd>
+      <dt>Fundamento</dt><dd>La Ley 453 (derechos del consumidor, 2013) enumera las cláusulas abusivas en contratos de adhesión y las declara «por no puestas». La Ley 393 (servicios financieros) obliga a ASFI a revisar y registrar los contratos de adhesión de bancos y cooperativas. El Código de Comercio, la Ley 708 de arbitraje y el Código Procesal Civil (Ley 439) rigen cláusulas de jurisdicción, arbitraje y penalidades mercantiles. Sin ellas, el producto no puede analizar con propiedad un contrato de tarjeta, un préstamo bancario, un contrato de telefonía ni una distribución comercial, que es donde más cláusulas abusivas hay y donde hay compradores institucionales.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Un <b>plan de cobertura por rubro</b> con un abogado curador: consumidor (Ley 453 + D.S. 2130/4732), financiero (Ley 393 + reglamentos ASFI), comercial (Código de Comercio, Ley 708, Ley 439), laboral (completar LGT, D.S. 28699, Ley 2450 trabajo asalariado del hogar), inmobiliario (Código Civil sobre propiedad, anticrético y arrendamiento; Ley 247 de regularización del derecho propietario; Ley 1715 y Ley 3545 para predios rurales). Cada artículo con fuente, versión y vigencia, como ya soporta el esquema. Meta: 400 artículos curados antes del lanzamiento comercial. Fase 2: sentencias del Tribunal Constitucional sobre cláusulas nulas, que ningún competidor cita en línea.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo c">
+    <h3><span class="nivel n-critico">Crítico</span> No hay medición de precisión</h3>
+    <dl>
+      <dt>Cita</dt><dd class="cita">Startup doc: «Validación mediante métricas F1‑score, precisión y recall». Estado real: cero mediciones.</dd>
+      <dt>Fundamento</dt><dd>Los estudios de referencia muestran tasas de alucinación legal del 58 % al 88 % en modelos generales; en Latinoamérica hay más de cien abogados sancionados por citas inventadas. Un despacho preguntará «¿cuántas cláusulas abusivas detecta y cuántas inventa?». Sin número, no hay venta ni defensa ante un error.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Construir un <b>conjunto dorado</b>: los 11 contratos actuales más 50 reales anotados cláusula por cláusula por el grupo F‑1 bajo supervisión de un abogado (etiqueta: nivel, artículo aplicable). Medir precisión y recall por rubro en cada cambio de prompt o proveedor, automatizado en el repo. Publicar el resultado en la landing como «Precisión medida sobre contratos bolivianos». No existe un benchmark así en español para derecho civil: sería el primero y es material de prensa y de tesis.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo a">
+    <h3><span class="nivel n-alto">Alto</span> El informe no entra en el flujo de trabajo real del abogado</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>El abogado trabaja en Word y entrega a su cliente un documento con control de cambios. Hoy ClausCheck ofrece «copiar texto plano». Los productos que se adoptan (Spellbook, Harvey) viven dentro de Word.</dd>
+      <dt>Redacción sustitutiva</dt><dd><b>Exportar .docx</b> con el contrato original y las redacciones sustitutivas como cambios rastreados y comentarios con la cita legal. <b>Playbook por despacho</b>: cláusulas estándar propias contra las que comparar (una tabla más en el tenant). <b>Expediente</b>: agrupar documentos por cliente y versión, con comparación entre versiones del mismo contrato. Después, un complemento de Word.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo a">
+    <h3><span class="nivel n-alto">Alto</span> Registro abierto y sin correo</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>Cualquiera puede crear organizaciones sin límite y consumir análisis gratuitos; no hay verificación de correo ni SMTP. Ya está pedido: registro por solicitud, aprobación en /admin, invitación por correo.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Modo «aprobación» por defecto en producción, límite por IP, correo transaccional con un dominio propio (Brevo o Resend con DKIM). Mientras no haya dominio, backend de consola.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo a">
+    <h3><span class="nivel n-alto">Alto</span> El modelo de negocio del documento académico no es el que hay que ejecutar</h3>
+    <dl>
+      <dt>Cita</dt><dd class="cita">«Auditoría digital mediante blockchain», «modelos BERT Legal entrenados», inversión inicial USD 55.000, licencias a ministerios.</dd>
+      <dt>Fundamento</dt><dd>Blockchain no resuelve nada que un hash firmado con certificado ADSIB y un registro de auditoría no resuelvan, y espanta a compradores serios. Entrenar modelos propios cuesta más que el negocio en tres años; la recuperación sobre catálogo curado ya da la especificidad boliviana. La venta institucional pasa por SICOES, ciclos de 9 a 18 meses y no financia una startup.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Reescribir el pitch: <b>«Revisión de contratos con citas verificadas de la ley boliviana, en minutos, desde Bs 149 al mes»</b>. Trazabilidad = hash SHA‑256 del documento y del informe con sello de tiempo; firma digital ADSIB del abogado en fase 3. Institucional solo después de diez despachos pagando.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo a">
+    <h3><span class="nivel n-alto">Alto</span> Falta la capa de cobro y de facturación boliviana</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>Lecciones ya pagadas en metalticket: el QR es el medio de pago que la gente usa (los pagos QR crecieron 131 % en 2025; OpenBCB permite generar QR sin costo); la factura electrónica SIAT es obligatoria; una factura emitida devenga IVA e IT aunque no se cobre; la actividad debe estar en el padrón del NIT antes de la primera factura.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Reutilizar el port de <code>payment_qr_mercantil</code> del plugin mtk‑payments como módulo de cobro (QR dinámico con verificación automática). Facturar con Redesk Bolivia (NIT existente, agregar CAEB de software) hasta constituir la sociedad. Facturar al confirmar el pago, nunca antes. Planes anuales con descuento para reducir la fricción del cobro mensual.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo a">
+    <h3><span class="nivel n-alto">Alto</span> Endurecimiento antes de exponer datos de terceros</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>Aislamiento por <code>org_id</code> en la capa de aplicación es correcto pero frágil; un olvido en una consulta filtra datos entre despachos. Contraseña de superadmin por defecto, sin MFA, sin registro de auditoría, sin límite de tasa, sin restauración de respaldo probada en el VPS.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Row‑Level Security en Postgres con <code>SET app.org_id</code> por petición, MFA TOTP para superadmin y dueños de organización, tabla <code>audit_log</code> (quién vio o exportó qué), límite de tasa en Caddy, respaldo diario cifrado fuera del VPS y un ejercicio de restauración documentado. Un pentest propio con el kit de CyberStrikeAI antes del piloto: es un argumento de venta ante despachos.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo m">
+    <h3><span class="nivel n-medio">Medio</span> La entrada de documentos no sigue el hábito boliviano</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>El usuario fotografía el contrato con el celular y lo manda por WhatsApp. La PWA con cámara lo cubre a medias; el OCR de fotos torcidas de paperless es mediocre sin preprocesar.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Corrección de perspectiva y contraste en el navegador antes de subir (OpenCV.js o un recorte manual). Fase 3: número de WhatsApp Business como canal de ingreso y de entrega del informe, con consentimiento explícito.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo m">
+    <h3><span class="nivel n-medio">Medio</span> Costo por análisis sin techo</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>Un contrato de 10 cláusulas costó USD 0,012 con DeepSeek. Un contrato de 60 páginas multiplica tokens y tiempo y puede superar los límites de contexto; con un proveedor de no retención el costo por análisis sube entre 5 y 15 veces.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Trocear por cláusulas con ventana deslizante, cachear el prompt de sistema, limitar páginas por plan, registrar costo real por proveedor (hoy es estimado) y mostrar el costo por análisis en /admin. Meta: menos del 8 % del precio del plan.</dd>
+    </dl>
+  </div>
+
+  <div class="hallazgo m">
+    <h3><span class="nivel n-medio">Medio</span> Marca y propiedad</h3>
+    <dl>
+      <dt>Fundamento</dt><dd>El nombre es bueno y está libre en Bolivia según lo revisado, pero no está registrado; el corpus y el catálogo son obra de un grupo universitario sin acuerdo escrito de titularidad.</dd>
+      <dt>Redacción sustitutiva</dt><dd>Registrar la marca en SENAPI (clases 9 y 42), comprar clauscheck.com y clauscheck.bo (NIC Bolivia), y firmar con el grupo F‑1 un acuerdo simple de cesión o participación antes del primer cobro. Definir quién es el abogado responsable del contenido.</dd>
+    </dl>
+  </div>
+
+  <h2 id="omisiones">Omisiones</h2>
+  <p>Lo que el proyecto no contempla y debería:</p>
+  <ul>
+    <li><b>Abogado curador con nombre.</b> Un producto legal sin un profesional que responda por el catálogo no pasa la primera reunión con un despacho. Puede ser un socio del grupo F‑1 con matrícula o un abogado senior con participación.</li>
+    <li><b>Perfil de cliente ideal escrito.</b> Como en AEI Software: hipótesis explícita («despachos de 2 a 8 abogados en Santa Cruz que revisan contratos inmobiliarios y laborales») validada con los primeros cinco clientes, no con el documento académico.</li>
+    <li><b>Atribución comercial.</b> Registrar quién trajo cada organización (socio, estudiante, aliado) para pagar comisiones: el canal más barato en Bolivia son abogados jóvenes que recomiendan.</li>
+    <li><b>Términos de servicio y aviso de responsabilidad</b> redactados por un abogado, no plantilla; cláusula de limitación, uso como herramienta de apoyo, retención de datos y eliminación a pedido.</li>
+    <li><b>Métrica de activación.</b> Un despacho «activado» = tres contratos analizados por dos usuarios distintos en la primera semana. Todo el onboarding se diseña para eso.</li>
+  </ul>
+
+  <h2 id="no">Lo que no hay que hacer</h2>
+  <ul class="no">
+    <li>Blockchain, tokens o «auditoría inmutable». Hash y sello de tiempo bastan.</li>
+    <li>Entrenar o afinar un modelo propio antes de tener 1.000 contratos anotados y clientes pagando.</li>
+    <li>Aplicación Android nativa o modo offline ahora. La PWA cubre el celular; el valor está en la base normativa viva.</li>
+    <li>Vender a ministerios o a la Contraloría en 2026. Es SICOES, licitación y un año de espera.</li>
+    <li>Prometer «detecta todas las cláusulas abusivas». Prometer «revisa en minutos y cita la ley con texto oficial; usted decide».</li>
+    <li>Cobrar en dólares. Precios en bolivianos, QR, factura.</li>
+  </ul>
+
+  <h2 id="roadmap">Roadmap vendible en Bolivia</h2>
+  <p>Cinco fases desde hoy. Cada una termina con un criterio de salida medible; si no se cumple, no se pasa a la siguiente.</p>
+
+  <div class="fase">
+    <div class="cuando">Sep 2026<br>semanas 1–6</div>
+    <div>
+      <h3>Fase 0 · Cerrar el MVP y quitar riesgos</h3>
+      <ul>
+        <li>Registro por solicitud y aprobación en /admin, correo transaccional, contraseña de superadmin nueva, MFA.</li>
+        <li>Renombrar «dictamen» a «informe de revisión asistida»; aviso de responsabilidad; página de confidencialidad.</li>
+        <li>Seudonimización antes del envío al modelo; proveedor de no retención por defecto; DeepSeek como opción.</li>
+        <li>Dominio (.com y .bo), TLS propio en el VPS con IP pública de COTAS, respaldo diario fuera del servidor y restauración probada.</li>
+        <li>Revisión del abogado curador sobre los 63 artículos y los 11 contratos; benchmark v0 automatizado en el repo.</li>
+        <li>Acuerdo de titularidad con el grupo F‑1; solicitud de marca en SENAPI.</li>
+      </ul>
+      <div class="kpi"><b>Salida:</b> un despacho externo usa el sistema sin que nadie del equipo intervenga; benchmark v0 con precisión y recall publicados internamente.</div>
+    </div>
+  </div>
+
+  <div class="fase">
+    <div class="cuando">Oct – Nov 2026</div>
+    <div>
+      <h3>Fase 1 · Piloto cerrado en Santa Cruz</h3>
+      <ul>
+        <li>Cinco despachos pequeños y tres pymes (inmobiliarias, constructoras, una cooperativa) reclutados por la red del grupo F‑1 y por Santa Cruz Innova (CAINCO). Gratis a cambio de una entrevista semanal y de anotar contratos.</li>
+        <li>Catálogo a 250 artículos: Ley 453, Ley 393 y reglamentos ASFI, Código de Comercio, Ley 708, Ley 439, laboral completo.</li>
+        <li>Exportación a .docx con cambios rastreados; expediente por cliente; playbook básico por despacho.</li>
+        <li>Conjunto dorado de 50 contratos anotados; benchmark v1 por rubro; corrección de prompts hasta superar 80 % de precisión en crítico y alto.</li>
+        <li>Prueba de precio: tres planes en bolivianos presentados a cada piloto; medir cuál eligen y qué objeción aparece.</li>
+      </ul>
+      <div class="kpi"><b>Salida:</b> tres de los ocho pilotos aceptan pagar el plan que eligieron desde diciembre; NPS ≥ 40; precisión ≥ 80 % en hallazgos crítico y alto.</div>
+    </div>
+  </div>
+
+  <div class="fase">
+    <div class="cuando">Dic 2026 – Feb 2027</div>
+    <div>
+      <h3>Fase 2 · Lanzamiento comercial</h3>
+      <ul>
+        <li>Cobro por QR (módulo portado de mtk‑payments) y tarjeta; factura electrónica SIAT al confirmar el pago; planes anuales con dos meses de descuento.</li>
+        <li>Facturación con Redesk Bolivia mientras se constituye la sociedad; CAEB de software en el padrón antes de la primera factura.</li>
+        <li>Landing con el benchmark publicado, tres casos del piloto con nombre y una demostración de dos minutos.</li>
+        <li>Canales: charla en el Colegio de Abogados de Santa Cruz y en la carrera de Derecho de la UAGRM; LinkedIn semanal con una cláusula abusiva real explicada; programa de referidos con 20 % de comisión el primer año, con atribución en la base.</li>
+        <li>Soporte por WhatsApp Business con horario; manual del usuario en video.</li>
+      </ul>
+      <div class="kpi"><b>Salida:</b> 30 organizaciones pagando; Bs 12.000 de ingreso mensual recurrente; costo de IA por debajo del 8 % del ingreso; abandono mensual &lt; 5 %.</div>
+    </div>
+  </div>
+
+  <div class="fase">
+    <div class="cuando">Mar – Jun 2027</div>
+    <div>
+      <h3>Fase 3 · Diferenciación</h3>
+      <ul>
+        <li>Jurisprudencia del Tribunal Constitucional y del Tribunal Supremo sobre nulidad de cláusulas, citada junto al artículo.</li>
+        <li>Dictamen firmado: el abogado revisa, edita y firma con certificado ADSIB; hash y sello de tiempo del documento y del informe.</li>
+        <li>Comparación entre versiones de un contrato y contra el playbook del despacho; alertas de plazos (vencimiento, renovación automática).</li>
+        <li>WhatsApp como canal de ingreso y entrega; corrección de fotos en el navegador.</li>
+        <li>API para inmobiliarias y notarías (868 notarías en el país, 5,5 millones de usuarios de SINPLU): revisión antes de protocolizar.</li>
+        <li>Producto para pymes: «Revise antes de firmar», Bs 39 por contrato suelto, pagado por QR sin cuenta.</li>
+      </ul>
+      <div class="kpi"><b>Salida:</b> 100 organizaciones; Bs 45.000 mensuales; dos alianzas firmadas (una inmobiliaria grande, un colegio profesional).</div>
+    </div>
+  </div>
+
+  <div class="fase">
+    <div class="cuando">2S 2027</div>
+    <div>
+      <h3>Fase 4 · Escala</h3>
+      <ul>
+        <li>La Paz y Cochabamba (con Santa Cruz concentran el 74 % de los 62.243 abogados registrados) con un socio comercial por ciudad.</li>
+        <li>Producto financiero: auditoría de contratos de adhesión para bancos y cooperativas, que la Ley 393 obliga a registrar ante ASFI. Venta consultiva, ticket alto, referencia para el regulador.</li>
+        <li>Inscripción en SICOES y primer piloto institucional (una gobernación o alcaldía) solo si hay caja para esperar.</li>
+        <li>Sociedad constituida, contador, primera ronda con inversionistas locales o programa de aceleración con los números de las fases 2 y 3.</li>
+      </ul>
+      <div class="kpi"><b>Salida:</b> 300 organizaciones; Bs 150.000 mensuales; catálogo de 1.000 artículos y 300 sentencias; benchmark v3 publicado.</div>
+    </div>
+  </div>
+
+  <h2 id="precios">Precios y unit economics</h2>
+  <p>Anclas encontradas: software para pymes en Bolivia desde Bs 252 al mes (CUCU); legaltech latinoamericana de entrada entre USD 9 y 30 por usuario; herramientas globales de revisión de contratos desde USD 1.200 por asiento, fuera de escala local. Propuesta inicial para probar en el piloto:</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Plan</th><th>Para quién</th><th class="num">Bs / mes</th><th class="num">Análisis / mes</th><th>Incluye</th></tr></thead>
+    <tbody>
+      <tr><td>Personal</td><td>Abogado independiente, emprendedor</td><td class="num">149</td><td class="num">20</td><td>1 usuario, informes, exportar .docx</td></tr>
+      <tr><td>Despacho</td><td>2 a 8 abogados</td><td class="num">490</td><td class="num">100</td><td>5 usuarios, expedientes, playbook, dictamen firmado</td></tr>
+      <tr><td>Empresa</td><td>Área legal interna, inmobiliaria, constructora</td><td class="num">1.200</td><td class="num">300</td><td>15 usuarios, API, auditoría, soporte prioritario</td></tr>
+      <tr><td>Suelto</td><td>Persona que va a firmar</td><td class="num">39 / contrato</td><td class="num">1</td><td>Sin cuenta, pago QR, informe con aviso</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Concepto</th><th class="num">Valor</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>Costo de IA por análisis (DeepSeek, contrato corto)</td><td class="num">USD 0,012</td><td>Medido el 2‑sep‑2026, 115–140 s</td></tr>
+      <tr><td>Costo estimado con proveedor de no retención</td><td class="num">USD 0,06 – 0,18</td><td>Según modelo; contratos largos, más</td></tr>
+      <tr><td>Costo de IA del plan Despacho al 100 % de uso</td><td class="num">Bs 40 – 125</td><td>8 % – 25 % del precio; limitar páginas</td></tr>
+      <tr><td>Infraestructura fija (VM COTAS, dominio, correo)</td><td class="num">≈ Bs 700 / mes</td><td>Cubierta con dos planes Despacho</td></tr>
+      <tr><td>Punto de equilibrio con un abogado curador a medio tiempo</td><td class="num">≈ 25 planes Despacho</td><td>Meta de la fase 2</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="nota">Cifras de precio y de tarifas de abogados en Bolivia no encontradas en fuentes públicas; validar en el piloto con la pregunta directa «¿cuánto cobra por revisar un contrato de alquiler?». Todo lo marcado como estimado debe reemplazarse por el costo real registrado por el sistema.</p>
+
+  <h2 id="fuentes">Fuentes</h2>
+  <ul class="fuentes">
+    <li>Competidores: <a href="https://lexius.io/bo/">LEXIUS Bolivia</a>, <a href="https://www.pixilegal.com/">Pixi Legal</a>, <a href="https://boliviaemprende.com/entrevistas/jusnova-inteligencia-artificial-para-transformar-el-futuro-legal-en-bolivia">JusNova</a>, <a href="https://www.derechoteca.com/legal-tech/d-lex-bolivia-suscripcion">D‑Lex</a>, <a href="https://vlex.com/coverage/bolivia">vLex Bolivia</a>; precios regionales en <a href="https://blog.lemontech.com/firmas-legales/software-de-ia-para-abogados-lemontech">Lemontech</a> y <a href="https://ecosistemastartup.com/miscausas-io-levanta-8-6m-lecciones-legaltech-latam/">MisCausas</a>; <a href="https://cucu.bo/precios">CUCU Bolivia</a>.</li>
+    <li>Normativa: <a href="https://www.lexivox.org/norms/BO-L-N387.html">Ley 387</a>, <a href="https://www.lexivox.org/norms/BO-L-N453.html">Ley 453</a>, <a href="https://www.asfi.gob.bo/la/ley-ndeg-393-servicios-financieros">Ley 393</a>, <a href="https://www.ctic.gob.bo/wp-content/uploads/2016/03/DS-N%C2%B0-1793-Reglamento-a-la-Ley-N%C2%B0164-para-el-Desarrollo-de-Tecnolog%C3%ADas-de-la-Informaci%C3%B3n-y-Comunicaci%C3%B3n.pdf">D.S. 1793 / Ley 164</a>, <a href="https://agetic.gob.bo/sites/default/files/2025-06/DATOS-PERSONALES-PRESENTACION-ANTEPROYECTO-DE-LEY-2024-firmado.pdf">anteproyecto de datos personales (AGETIC)</a>.</li>
+    <li>Mercado: <a href="https://www.urgente.bo/noticia/la-paz-santa-cruz-y-cochabamba-concentran-el-74-de-62-243-abogados-registrados-en-bolivia-en">62.243 abogados registrados</a>, <a href="https://abi.bo/index.php/noticias/gobierno/37-notas/noticias/sociedad/62076-destacan-emision-digital-de-documentos-notariales-para-mas-de-5-5-millones-de-usuarios-en-2024">868 notarías / SINPLU</a>, <a href="https://larazon.bo/economia-y-empresa/2026/05/17/pagos-con-qr-crecen-131-en-bolivia-y-consolidan-digitalizacion-financiera/">pagos QR +131 %</a>, <a href="https://mobiletime.la/noticias/20/10/2025/bolivia-lanza-openbcb/">OpenBCB</a>, <a href="https://santacruzinnova.cainco.org.bo/innovaup/">Santa Cruz Innova</a>, <a href="https://siatinfo.impuestos.gob.bo/index.php/12-modalidades-de-facturacion">modalidades SIAT</a>.</li>
+    <li>Alucinaciones legales: <a href="https://academic.oup.com/jla/article/16/1/64/7699227">Large Legal Fictions (JLA)</a>, <a href="https://arxiv.org/html/2509.09467v1">IA jurídica y veracidad (RAG)</a>, <a href="https://lexlatin.com/gestion-lexlatin/problemas-legales-chatgpt-alucinaciones-inteligencia-artificial-abogados">LexLatin</a>.</li>
+    <li>Experiencia propia: metalticket.org (devengado, CAEB, QR Mercantil), AEI Software (perfil de cliente ideal), facturador SaaS (suscripción + consumo, atribución comercial), cloud.cotas.com (soberanía de datos frente a túneles de terceros).</li>
+  </ul>
+</div>
