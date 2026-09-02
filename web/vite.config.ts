@@ -39,6 +39,10 @@ export default defineConfig({
         ]
       },
       workbox: {
+        // Take over stale clients immediately after a deploy (avoids serving an old bundle).
+        skipWaiting: true,
+        clientsClaim: true,
+        cleanupOutdatedCaches: true,
         globPatterns: ["**/*.{js,css,html,svg,png,ico,woff2}"],
         runtimeCaching: [
           {
