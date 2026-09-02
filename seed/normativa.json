@@ -1,0 +1,685 @@
+{
+  "cuerpos": [
+    {
+      "code": "CC",
+      "nombre": "Código Civil",
+      "tipo": "decreto ley",
+      "numero": "12760",
+      "fecha": "1975-08-06",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html"
+    },
+    {
+      "code": "CPE",
+      "nombre": "Constitución Política del Estado",
+      "tipo": "constitución",
+      "numero": "",
+      "fecha": "2009-02-07",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html"
+    },
+    {
+      "code": "LGT",
+      "nombre": "Ley General del Trabajo",
+      "tipo": "ley",
+      "numero": "",
+      "fecha": "1942-12-08",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/7506"
+    },
+    {
+      "code": "DS110",
+      "nombre": "Decreto Supremo 110 — Garantía de indemnización por tiempo de servicios",
+      "tipo": "decreto supremo",
+      "numero": "110",
+      "fecha": "2009-05-01",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N110.html"
+    },
+    {
+      "code": "LEY065",
+      "nombre": "Ley de Pensiones",
+      "tipo": "ley",
+      "numero": "065",
+      "fecha": "2010-12-10",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/2647/ley-de-pensiones-065"
+    },
+    {
+      "code": "CSS",
+      "nombre": "Código de Seguridad Social (texto conforme reforma D.L. 13214)",
+      "tipo": "decreto ley",
+      "numero": "13214",
+      "fecha": "1975-12-24",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/1136/decreto-ley-13214",
+      "nota": "El Código de Seguridad Social original es de 1956 (elevado a rango de ley); los artículos citados aquí (afiliación patronal) provienen del D.L. 13214 de 24-dic-1975, que reforma ese código y es la fuente donde se localizó texto verbatim de las obligaciones de afiliación del empleador."
+    },
+    {
+      "code": "DS21637",
+      "nombre": "Decreto Supremo 21637",
+      "tipo": "decreto supremo",
+      "numero": "21637",
+      "fecha": "",
+      "fuente_url": "",
+      "nota": "No se localizó ni verificó texto verbatim citable para cláusulas contractuales; ver articulo NOT_FOUND asociado."
+    },
+    {
+      "code": "DS3150",
+      "nombre": "Decreto Supremo 3150 — Escala de vacaciones anuales (modifica Art. 44 LGT)",
+      "tipo": "decreto supremo",
+      "numero": "3150",
+      "fecha": "1952-08-19",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/16219",
+      "nota": "CORRECCIÓN AL ENCARGO ORIGINAL: este decreto regula la escala de vacaciones anuales por años de servicio, NO reglas de retiro voluntario/desahucio."
+    },
+    {
+      "code": "DS17288",
+      "nombre": "Decreto Supremo 17288 — Escala de descansos/vacaciones anuales por años de servicio",
+      "tipo": "decreto supremo",
+      "numero": "17288",
+      "fecha": "1980-03-18",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/22667",
+      "nota": "CORRECCIÓN AL ENCARGO ORIGINAL: este decreto regula la escala de vacaciones anuales por años de servicio, NO reglas de retiro voluntario/desahucio."
+    },
+    {
+      "code": "DS5383",
+      "nombre": "Decreto Supremo 5383 — Incremento salarial y Salario Mínimo Nacional 2025",
+      "tipo": "decreto supremo",
+      "numero": "5383",
+      "fecha": "2025-05-01",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/107639"
+    },
+    {
+      "code": "LEY045",
+      "nombre": "Ley Contra el Racismo y Toda Forma de Discriminación",
+      "tipo": "ley",
+      "numero": "045",
+      "fecha": "2010-10-08",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N45.html"
+    },
+    {
+      "code": "DL16998",
+      "nombre": "Ley General de Higiene, Seguridad Ocupacional y Bienestar",
+      "tipo": "decreto ley",
+      "numero": "16998",
+      "fecha": "1979-08-02",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DL-16998.html"
+    }
+  ],
+  "articulos": [
+    {
+      "cuerpo": "CC",
+      "numero": "29",
+      "inciso": null,
+      "titulo": "Irrenunciabilidad. Domicilio especial",
+      "texto": "El domicilio es irrenunciable. Puede elegirse un domicilio especial para la ejecución de un acto o para el ejercicio de un derecho.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/16883",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "409",
+      "inciso": null,
+      "titulo": "Interés convencional",
+      "texto": "El interés convencional no puede exceder del tres por ciento mensual. Si se estipula en cantidad superior se reduce automáticamente a dicha tasa.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18452",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "412",
+      "inciso": null,
+      "titulo": "Prohibición del anatocismo",
+      "texto": "Están prohibidos el anatocismo y toda otra forma de capitalización de los intereses. Las convenciones en contrario son nulas.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18455",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "414",
+      "inciso": null,
+      "titulo": "Interés legal",
+      "texto": "El interés legal es del seis por ciento anual. Rige a falta del convencional desde el día de la mora.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18457",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "450",
+      "inciso": null,
+      "titulo": "Noción",
+      "texto": "Hay contrato cuando dos o más personas se ponen de acuerdo para constituir, modificar o extinguir entre sí una relación jurídica.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18497",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "452",
+      "inciso": null,
+      "titulo": "Enunciación de requisitos",
+      "texto": "Son requisitos para la formación del contrato: 1. El consentimiento de las partes. 2. El objeto. 3. La causa. 4. La forma, siempre que sea legalmente exigible.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18499",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "454",
+      "inciso": null,
+      "titulo": "Libertad contractual: sus limitaciones",
+      "texto": "Las partes pueden determinar libremente el contenido de los contratos que celebren y acordar contratos diferentes de los comprendidos en este Código. La libertad contractual está subordinada a los límites impuestos por la ley y a la realización de intereses dignos de protección jurídica.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18507",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "485",
+      "inciso": null,
+      "titulo": "Objeto del contrato: requisitos",
+      "texto": "Todo contrato debe tener un objeto posible, lícito y determinado o determinable.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-485-objeto-del-contrato-requisitos/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "489",
+      "inciso": null,
+      "titulo": "Causa ilícita",
+      "texto": "La causa es ilícita cuando es contraria al orden público o a las buenas costumbres o cuando el contrato es un medio para eludir la aplicación de una norma imperativa.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18562",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "491",
+      "inciso": null,
+      "titulo": "Contratos y actos que deben hacerse por documento público",
+      "texto": "Deben celebrarse por documento público: 1. El contrato de donación, excepto la donación manual. 2. La hipoteca voluntaria. 3. La anticresis. 4. La subrogación consentida por el deudor. 5. Los demás actos señalados por la ley.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18564",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "491",
+      "inciso": "3",
+      "titulo": "Contratos y actos que deben hacerse por documento público (inciso 3: anticresis)",
+      "texto": "La anticresis.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18564",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "518",
+      "inciso": null,
+      "titulo": "Interpretación contra el autor de la cláusula",
+      "texto": "Las cláusulas dispuestas por uno de los contratantes o en formularios organizados por él se interpretan, en caso de duda, en favor del otro.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18607",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "519",
+      "inciso": null,
+      "titulo": "Eficacia del contrato",
+      "texto": "El contrato tiene fuerza de ley entre las partes contratantes. No puede ser disuelto sino por consentimiento mutuo o por las causas autorizadas por la ley.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18608",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "520",
+      "inciso": null,
+      "titulo": "Ejecución de buena fe e integración del contrato",
+      "texto": "El contrato debe ser ejecutado de buena fe y obliga no sólo a lo que se ha expresado en él, sino también a todos los efectos que deriven conforme a su naturaleza, según la ley, o a falta de ésta según los usos y la equidad.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18609",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "532",
+      "inciso": null,
+      "titulo": "Resarcimiento convencional",
+      "texto": "Si se ha estipulado una cláusula penal para el caso de incumplimiento o de retraso en la ejecución de un contrato, la pena convencional sustituye al resarcimiento judicial del daño que hubiera causado la inejecución o el retraso de la obligación principal.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18621",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "535",
+      "inciso": null,
+      "titulo": "Disminución equitativa de la pena",
+      "texto": "La pena puede ser equitativamente disminuida por el juez, si se ha cumplido en parte la obligación principal o si la pena fuese manifiestamente excesiva, considerando la persona del deudor, la importancia de las prestaciones y las demás circunstancias del caso.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18624",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "549",
+      "inciso": null,
+      "titulo": "Casos de nulidad del contrato",
+      "texto": "El contrato será nulo: 1. Por faltar en el contrato el objeto o la forma prevista por la ley como requisito de validez. 2. Por faltar en el objeto del contrato los requisitos señalados por la ley. 3. Por ilicitud de la causa y por ilicitud del motivo que impulsó a las partes a celebrar el contrato. 4. Por error esencial sobre la naturaleza o sobre el objeto del contrato. 5. En los demás casos determinados por la ley.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-549-casos-de-nulidad-del-contrato/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "554",
+      "inciso": null,
+      "titulo": "Casos de anulabilidad del contrato",
+      "texto": "El contrato será anulable: 1. Por falta de consentimiento para su formación. 2. Por incapacidad de una de las partes contratantes. En este caso la persona capaz no podrá reclamar la incapacidad del prohibido con quien ha contratado. 3. Porque una de las partes, aun sin haber sido declarada interdicta, era incapaz de querer o entender en el momento de celebrarse el contrato, siempre que resulte mala fe en la otra parte, apreciada por el perjuicio que se ocasione a la primera según la naturaleza del acto o por otra circunstancia. 4. Por violencia, dolo o error sustancial sobre la materia o sobre las cualidades de la cosa. 5. Por error sustancial sobre la identidad o las cualidades de la persona cuando ellas hayan sido la razón o motivo principal para la celebración del contrato. 6. En los demás casos determinados por la ley.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-554-casos-de-anulabilidad-del-contrato/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "561",
+      "inciso": null,
+      "titulo": "Rescisión del contrato por efecto de la lesión",
+      "texto": "I. A demanda de la parte perjudicada es rescindible el contrato en el cual sea manifiestamente desproporcionada la diferencia entre la prestación de dicha parte y la contraprestación de la otra, siempre que la lesión resultare de haberse explotado las necesidades apremiantes, la ligereza o la ignorancia de la parte perjudicada. II. La acción rescisoria sólo será admisible si la lesión excede a la mitad del valor de la prestación ejecutada o prometida.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/18650",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "568",
+      "inciso": null,
+      "titulo": "Resolución por incumplimiento",
+      "texto": "I. En los contratos con prestaciones recíprocas, cuando una de las partes incumple por su voluntad la obligación, la parte que ha cumplido puede pedir judicialmente el cumplimiento o la resolución del contrato, más el resarcimiento del daño; o también puede pedir sólo el cumplimiento dentro de un plazo razonable que fijará el juez, y no haciéndose efectiva la prestación dentro de ese plazo quedará resuelto el contrato, sin perjuicio, en todo caso, de resarcir el daño. II. Si se hubiera demandado solamente la resolución, no podrá ya pedirse el cumplimiento del contrato; y el demandado, a su vez, ya no podrá cumplir su obligación desde el día de su notificación con la demanda.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-568-resolucion-por-incumplimiento/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "581",
+      "inciso": null,
+      "titulo": "Resolución judicial por excesiva onerosidad de los contratos con prestaciones recíprocas",
+      "texto": "En los contratos de ejecución continuada, periódica o diferida, la parte cuya prestación se ha tornado excesivamente onerosa por circunstancias o acontecimientos extraordinarios e imprevisibles podrá demandar la resolución del contrato con los efectos establecidos para la resolución por incumplimiento voluntario. La demanda de resolución no será admitida si la prestación excesivamente onerosa ha sido ya ejecutada, o si la parte cuya prestación se ha tornado onerosa en exceso era ya voluntariamente incumplida o si las circunstancias o los acontecimientos extraordinarios e imprevisibles se presentaron después de cumplirse la obligación. Tampoco se admitirá la demanda de resolución si la onerosidad sobrevenida está inclusa en el riesgo o álea normal del contrato. El demandado puede terminar el litigio si antes de sentencia ofrece modificar el contrato en condiciones que, a juicio del juez, sean equitativas.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-581-resolucion-judicial-por-excesiva-onerosidad-de-los-contratos-con-prestaciones-reciprocas/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "584",
+      "inciso": null,
+      "titulo": "Noción (venta)",
+      "texto": "La venta es un contrato por el cual el vendedor transfiere la propiedad de una cosa o transfiere otro derecho al comprador por un precio en dinero.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "614",
+      "inciso": null,
+      "titulo": "Obligaciones principales del vendedor",
+      "texto": "El vendedor tiene, respecto al comprador, las obligaciones principales siguientes: 1. Entregarle la cosa vendida. 2. Hacerle adquirir la propiedad de la cosa o el derecho si la adquisición no ha sido efecto inmediato del contrato. 3. Responderle por la evicción y los vicios de la cosa.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "624",
+      "inciso": null,
+      "titulo": "Responsabilidad legal",
+      "texto": "I. La responsabilidad del vendedor por la evicción y por los vicios de la cosa tiene lugar aunque no se la haya expresado en el contrato. II. Las partes pueden, sin embargo, aumentar, disminuir o suprimir esta responsabilidad conforme a disposiciones contenidas en la subsección presente.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "628",
+      "inciso": null,
+      "titulo": "Modificación convencional de la responsabilidad",
+      "texto": "I. Los contratantes pueden gravar, disminuir o excluir la responsabilidad del vendedor. II. Aún cuando se pacte la exclusión de responsabilidad el vendedor está siempre sujeto a la responsabilidad por un hecho propio. Es nulo todo pacto contrario.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "628",
+      "inciso": "II",
+      "titulo": "Modificación convencional de la responsabilidad — responsabilidad por hecho propio",
+      "texto": "Aún cuando se pacte la exclusión de responsabilidad el vendedor está siempre sujeto a la responsabilidad por un hecho propio. Es nulo todo pacto contrario.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "685",
+      "inciso": null,
+      "titulo": "Noción (arrendamiento)",
+      "texto": "El arrendamiento es el contrato por el cual una de las partes concede a la otra el uso o goce temporal de una cosa mueble o inmueble a cambio de un canon.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/19067",
+      "verificado": true,
+      "nota": "Discrepancia entre fuentes: lexivox.org, OAS PDF y paradaabogados.com muestran '...concede a la obra...' (aparente error OCR compartido entre esos espejos), mientras que bolivia.infoleyes.com muestra '...concede a la otra...' (gramaticalmente correcto). Se adoptó la versión de infoleyes.com; se recomienda confirmar contra un ejemplar impreso/Gaceta Oficial antes de uso comercial."
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "700",
+      "inciso": null,
+      "titulo": "Innovaciones",
+      "texto": "El arrendador no puede hacer en la cosa innovaciones que perjudiquen el uso o goce por parte del arrendatario. Se salva el pacto contrario.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "705",
+      "inciso": null,
+      "titulo": "Restitución de la cosa",
+      "texto": "I. El arrendatario, a la extinción del arrendamiento debe restituir la cosa arrendada en el mismo estado que tenía cuando la recibió, salvo el deterioro o el consumo resultante por el uso o goce de la cosa en conformidad al contrato. II. A falta de acta de entrega se presume que el arrendatario recibió la cosa en buen estado de mantenimiento.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "719",
+      "inciso": null,
+      "titulo": "Prohibición de subarrendar y ceder el contrato",
+      "texto": "I. El arrendatario de un fundo urbano destinado a vivienda está prohibido de ceder el contrato o subarrendar total o parcialmente el fundo, salvo pacto contrario. II. La contravención autoriza al arrendador a percibir directamente el canon pagado o a pagarse por el subarrendatario o cesionario, aparte de constituir causal de desahucio.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "720",
+      "inciso": null,
+      "titulo": "Modos de extinción",
+      "texto": "El arrendamiento de fundos urbanos destinados a vivienda se extingue: 1. Por separación unilateral del contrato que haga el arrendatario mediante la entrega voluntaria del fundo al arrendador. 2. Por muerte del arrendatario, salvo el caso en que éste hubiese dejado cónyuge o hijos menores que se encuentren viviendo en el inmueble, en favor de quienes se mantiene el contrato. 3. Por sentencia ejecutoriada de desahucio por las causales que señala expresamente la ley.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "726",
+      "inciso": null,
+      "titulo": "Obligaciones del arrendador",
+      "texto": "El arrendador está obligado a entregar la cosa con sus pertenencias y en estado de servir para el uso y producción a que está destinada.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL12760B.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "732",
+      "inciso": null,
+      "titulo": "Noción (contrato de obra)",
+      "texto": "Por el contrato de obra el empresario o contratista asume, por si solo o bajo su dirección e independientemente la realización del trabajo prometido a cambio de una retribución convenida. El objeto de este contrato puede ser la reparación o transformación de una cosa, cualquier otro resultado de trabajo o la prestación de servicios.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-732-nocion-contrato-de-obra/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "1360",
+      "inciso": null,
+      "titulo": "Constitución (hipoteca)",
+      "texto": "I. La hipoteca constituida sobre bienes propios del deudor o de un tercero, como garantía de una deuda, confiere al acreedor hipotecario los derechos de persecución y preferencia. II. Los bienes muebles sujetos a registro, sobre los cuales se constituye una hipoteca, se equiparan a los inmuebles para los efectos correspondientes. III. La hipoteca sólo tiene lugar en los casos y según las formas autorizadas por la ley.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/20016",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "1429",
+      "inciso": null,
+      "titulo": "Derecho a percibir los frutos (anticresis)",
+      "texto": "I. Por el contrato de anticresis el acreedor tiene derecho a percibir los frutos del inmueble, imputándolos primero a los intereses, si son debidos, y después al capital. II. Es válido el pacto por el cual las partes convienen en que los frutos se compensen con los intereses en todo o en parte.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/20128",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "1430",
+      "inciso": null,
+      "titulo": "Constitución por documento público (anticresis)",
+      "texto": "El contrato de anticresis no se constituye sino por documento público, surte efecto respecto a terceros sólo desde el día de su inscripción en el registro.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/20129",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "1435",
+      "inciso": null,
+      "titulo": "Indivisibilidad y duración de la anticresis",
+      "texto": "La anticresis es indivisible. La anticresis no puede convenirse por un plazo superior a cinco años y si se pacta otro mayor, él se reduce a dicho término. El anticresista tiene el derecho de retención mientras no sea satisfecho su crédito, salvo lo dispuesto por el artículo 1479.",
+      "fuente_url": "https://paradaabogados.com/codigo-civil-bolivia/art-1435-indivisibilidad-y-duracion-de-la-anticresis/",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CC",
+      "numero": "1538",
+      "inciso": null,
+      "titulo": "Publicidad de los derechos reales; regla general",
+      "texto": "I. Ningún derecho real sobre inmuebles surte efectos contra terceros sino desde el momento en que se hace público según la forma prevista por este Código. II. La publicidad se adquiere mediante la inscripción del título que origina el derecho en el registro de los derechos reales. III. Los actos por los que se constituyen, transmiten, modifican o limitan los derechos reales sobre bienes inmuebles, y en los cuales no se hubiesen llenado las formalidades de inscripción, surten sus efectos sólo entre las partes contratantes con arreglo a las leyes, sin perjudicar a terceros interesados.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/20751",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "21",
+      "inciso": "2",
+      "titulo": "Derecho a la privacidad, intimidad, honra, honor, propia imagen y dignidad",
+      "texto": "A la privacidad, intimidad, honra, honor, propia imagen y dignidad.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "48",
+      "inciso": "II",
+      "titulo": "Principios de interpretación y aplicación de las normas laborales",
+      "texto": "Las normas laborales se interpretarán y aplicarán bajo los principios de protección de las trabajadoras y de los trabajadores como principal fuerza productiva de la sociedad; de primacía de la relación laboral; de continuidad y estabilidad laboral; de no discriminación y de inversión de la prueba a favor de la trabajadora y del trabajador.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/8848",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "48",
+      "inciso": "III",
+      "titulo": "Irrenunciabilidad de derechos laborales",
+      "texto": "Los derechos y beneficios reconocidos en favor de las trabajadoras y los trabajadores no pueden renunciarse, y son nulas las convenciones contrarias o que tiendan a burlar sus efectos.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/8848",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "48",
+      "inciso": "IV",
+      "titulo": "Privilegio de salarios, beneficios sociales y aportes a la seguridad social",
+      "texto": "Los salarios o sueldos devengados, derechos laborales, beneficios sociales y aportes a la seguridad social no pagados tienen privilegio y preferencia sobre cualquier otra acreencia, y son inembargables e imprescriptibles.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/8848",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "56",
+      "inciso": null,
+      "titulo": "Derecho a la propiedad privada",
+      "texto": "Toda persona tiene derecho a la propiedad privada individual o colectiva, siempre que ésta cumpla una función social. Se garantiza la propiedad privada siempre que el uso que se haga de ella no sea perjudicial al interés colectivo. Se garantiza el derecho a la sucesión hereditaria.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true,
+      "nota": "Lexivox no imprime rótulos explícitos 'I./II.' en artículos narrativos; el parágrafo se identificó por posición y se contrastó contra bolivia.infoleyes.com, con coincidencia textual exacta."
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "115",
+      "inciso": "II",
+      "titulo": "Derecho al debido proceso",
+      "texto": "El Estado garantiza el derecho al debido proceso, a la defensa y a una justicia plural, pronta, oportuna, gratuita, transparente y sin dilaciones.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true,
+      "nota": "Lexivox no imprime rótulos explícitos 'I./II.' en artículos narrativos; el parágrafo se identificó por posición y se contrastó contra bolivia.infoleyes.com, con coincidencia textual exacta."
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "116",
+      "inciso": "II",
+      "titulo": "Principio de legalidad en materia sancionadora",
+      "texto": "Cualquier sanción debe fundarse en una ley anterior al hecho punible.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true,
+      "nota": "Lexivox no imprime rótulos explícitos 'I./II.' en artículos narrativos; el parágrafo se identificó por posición y se contrastó contra bolivia.infoleyes.com, con coincidencia textual exacta."
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "119",
+      "inciso": "II",
+      "titulo": "Derecho a la defensa",
+      "texto": "Toda persona tiene derecho inviolable a la defensa. El Estado proporcionará a las personas denunciadas o imputadas una defensora o un defensor gratuito, en los casos en que éstas no cuenten con los recursos económicos necesarios.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true,
+      "nota": "Lexivox no imprime rótulos explícitos 'I./II.' en artículos narrativos; el parágrafo se identificó por posición y se contrastó contra bolivia.infoleyes.com, con coincidencia textual exacta."
+    },
+    {
+      "cuerpo": "CPE",
+      "numero": "130",
+      "inciso": null,
+      "titulo": "Acción de Protección de Privacidad",
+      "texto": "Toda persona individual o colectiva que crea estar indebida o ilegalmente impedida de conocer, objetar u obtener la eliminación o rectificación de los datos registrados por cualquier medio físico, electrónico, magnético o informático, en archivos o bancos de datos públicos o privados, o que afecten a su derecho fundamental a la intimidad y privacidad personal o familiar, o a su propia imagen, honra y reputación, podrá interponer la Acción de Protección de Privacidad. La Acción de Protección de Privacidad no procederá para levantar el secreto en materia de prensa.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-CPE-20090207.html",
+      "verificado": true,
+      "nota": "Lexivox no imprime rótulos explícitos 'I./II.' en artículos narrativos; el parágrafo se identificó por posición y se contrastó contra bolivia.infoleyes.com, con coincidencia textual exacta."
+    },
+    {
+      "cuerpo": "LGT",
+      "numero": "16",
+      "inciso": null,
+      "titulo": "Causales de despido sin derecho a desahucio ni indemnización",
+      "texto": "No habrá lugar a desahucio ni indemnización cuando exista una de las siguientes causales: a) Perjuicio material causado con intención en los instrumentos de trabajo; b) Revelación de secretos industriales; c) Omisiones o imprudencia que afecten a la seguridad o higiene industrial; d) Inasistencia injustificada de mas de tres días; e) Incumplimiento total o parcial del convenio; f) Retiro voluntario del trabajador; g) Robo hurto por el trabajador.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/7506",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LGT",
+      "numero": "46",
+      "inciso": null,
+      "titulo": "Jornada máxima de trabajo",
+      "texto": "La jornada efectiva de trabajo no excederá de 8 horas por día y de 48 por semana. La jornada de trabajo nocturno no excederá de 7 horas, entendiéndose trabajo nocturno el que se practica entre horas 20 y 6 de la mañana. Se exceptúa de ésta disposición el trabajo de las empresas periodísticas, que están sometidas a reglamentación especial. La jornada para mujeres y menores de 18 años no excederá de 40 horas semanales diurnas. Se exceptúan a los empleados u obreros que ocupen puestos de dirección, vigilancia o confianza, o que trabajen discontinuamente, o que realicen labores que por su naturaleza no pueden someterse a jornadas de trabajo. En éstos casos tendrá una hora de descanso dentro del día, y no podrán trabajar más de 12 horas diarias.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/7536",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS110",
+      "numero": "1",
+      "inciso": null,
+      "titulo": "Objeto — garantía de indemnización por tiempo de servicios tras 90 días",
+      "texto": "Garantizar el pago de indemnización por tiempo de servicios de las trabajadoras y trabajadores, luego de haber cumplido más de noventa (90) días de trabajo continuo.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N110.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS110",
+      "numero": "2",
+      "inciso": null,
+      "titulo": "Regla de cálculo de la indemnización por quinquenios",
+      "texto": "",
+      "fuente_url": "",
+      "verificado": false,
+      "nota": "No se pudo extraer texto verbatim limpio del Art. 2 (regla de cálculo/quinquenios); el PDF oficial (cfb.org.bo) llegó corrupto/no extraíble en los intentos realizados."
+    },
+    {
+      "cuerpo": "LEY065",
+      "numero": "91",
+      "inciso": null,
+      "titulo": "Obligaciones del empleador",
+      "texto": "El Empleador tiene las siguientes obligaciones: 1. Actuar como agente de retención y pagar: el Aporte del Asegurado, el Aporte Solidario del Asegurado, la Prima por Riesgo Común y la Comisión, deducidos del Total Ganado; el Aporte Nacional Solidario hasta el monto del Total Ganado que corresponda al Asegurado; las contribuciones a favor de terceros de sus dependientes, cuando así corresponda. 2. Pagar con sus propios recursos, la Prima por Riesgo Profesional de sus dependientes y el Aporte Patronal Solidario. 3. Presentar las declaraciones de pago y la documentación de respaldo.",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/2647/ley-de-pensiones-065",
+      "verificado": false,
+      "nota": "Contenido confirmado en dos fetches independientes de la misma página, pero la extracción reorganizó la numeración/puntuación del artículo original (romanos/incisos); la estructura literal exacta no está garantizada. Requiere cotejo contra el texto oficial de la Ley 065 antes de uso comercial."
+    },
+    {
+      "cuerpo": "LEY065",
+      "numero": "96",
+      "inciso": null,
+      "titulo": "Plazo de pago de las Contribuciones y del Aporte Nacional Solidario",
+      "texto": "Los Empleadores deberán realizar los pagos de las Contribuciones hasta el último día hábil del mes posterior a aquel en que devengan los sueldos o salarios de sus dependientes.",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/2647/ley-de-pensiones-065",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CSS",
+      "numero": "2",
+      "inciso": null,
+      "titulo": "Obligación del empleador de registrarse ante la Entidad Gestora (D.L. 13214)",
+      "texto": "Todo empleador está obligado a registrarse en la Entidad Gestora de acuerdo con el 'Código de Ramas de Actividad Económica' para lo cual utilizará el formulario de 'AVISO DE AFILIACIÓN DEL EMPLEADOR' que consignará los siguientes datos: a) Nombre o razón social del empleador. b) Número de registro que será asignado por la Entidad Gestora. c) Ubicación del centro de trabajo. d) Domicilio legal; e) Actividad Económica. f) Fecha de iniciación de actividades. g) Número de trabajadores. h) Lugar y fecha de presentación del aviso. Este formulario sustituirá a la 'FICHA DE AFILIACIÓN PATRONAL' vigente y eximirá a los empleadores de la presentación de los documentos jurídicos y contables que actualmente se exigen como condición para el registro. No obstante los empleadores están obligados a exhibir a la Entidad Gestora los documentos que se les requerirán cuando sea necesaria la comprobación de sus datos.",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/1136/decreto-ley-13214",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CSS",
+      "numero": "6",
+      "inciso": null,
+      "titulo": "Obligación del empleador de afiliar a sus trabajadores en 5 días hábiles (D.L. 13214)",
+      "texto": "Todos los empleadores están obligados a inscribir a sus trabajadores en la Entidad Gestora respectiva, en el plazo máximo de cinco días hábiles a partir de la fecha de la iniciación de la relación laboral, incluyendo el período de prueba, utilizando el 'Aviso de Afiliación del Trabajador'.",
+      "fuente_url": "https://bolivia.infoleyes.com/norma/1136/decreto-ley-13214",
+      "verificado": true,
+      "nota": "El listado detallado de datos exigidos por el formulario (incisos a-k) no se transcribió íntegro; solo el párrafo operativo introductorio está confirmado verbatim."
+    },
+    {
+      "cuerpo": "DS21637",
+      "numero": "N/A",
+      "inciso": null,
+      "titulo": "",
+      "texto": "",
+      "fuente_url": "",
+      "verificado": false,
+      "nota": "No se identificó un artículo de D.S. 21637 directamente citable para obligaciones contractuales del empleador; se usó en su lugar D.L. 13214 arts. 2 y 6 (afiliación patronal, cuerpo 'CSS') como fuente más relevante."
+    },
+    {
+      "cuerpo": "DS3150",
+      "numero": "1",
+      "inciso": null,
+      "titulo": "Escala de vacaciones anuales (modifica Art. 44 LGT)",
+      "texto": "Se modifica el artículo 44 de la Ley General del Trabajo, estableciendo para empleados y obreros en general, sean particulares o del Estado, la siguiente escala de vacaciones...",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/16219",
+      "verificado": false,
+      "nota": "Texto truncado en la fuente extraída (termina en '...'); no se pudo confirmar el listado completo de la escala de días. Fuente alternativa (derechoteca.com) bloqueó el fetch (HTTP 403)."
+    },
+    {
+      "cuerpo": "DS17288",
+      "numero": "1",
+      "inciso": null,
+      "titulo": "Escala de descansos/vacaciones anuales por años de servicio",
+      "texto": "De conformidad al Art. 1 del Decreto Supremo 03150, de 19 de agosto de 1952, reformatorio del Art. 44 de la Ley General del Trabajo, los descansos anuales a que tienen derecho los trabajadores se regirán por la siguiente escala: De 1 a 2 años cumplidos de trabajo 15 días; De 2 a 3 años cumplidos de trabajo 15 días; De 3 a 4 años cumplidos de trabajo 15 días; De 4 a 5 años cumplidos de trabajo 15 días; De 5 a 6 años cumplidos de trabajo 20 días; De 6 a 7 años cumplidos de trabajo 20 días; De 7 a 8 años cumplidos de trabajo 20 días; De 8 a 9 años cumplidos de trabajo 20 días; De 9 a 10 años cumplidos de trabajo 20 días; De 10 años cumplidos adelante 30 días.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/22667",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS5383",
+      "numero": "6",
+      "inciso": null,
+      "titulo": "Base del incremento salarial en el sector privado (5%)",
+      "texto": "El Incremento Salarial en el sector privado será acordado entre las empleadoras y los empleadores con las trabajadoras y los trabajadores, sobre la base del cinco por ciento (5%).",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/107639",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS5383",
+      "numero": "7",
+      "inciso": null,
+      "titulo": "Salario Mínimo Nacional 2025",
+      "texto": "El monto determinado para el Salario Mínimo Nacional, en los sectores público y privado, es de Bs2.750.- (DOS MIL SETECIENTOS CINCUENTA 00/100 BOLIVIANOS), que representa un incremento del diez por ciento (10%) con relación al establecido para la gestión 2024, siendo su aplicación obligatoria y sujeta a las acciones de control y supervisión del Ministerio de Trabajo, Empleo y Previsión Social.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/107640",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY045",
+      "numero": "5",
+      "inciso": "I.1",
+      "titulo": "Definición legal de discriminación",
+      "texto": "toda forma de distinción, exclusión, restricción o preferencia fundada en razón de sexo, color, edad, orientación sexual e identidad de géneros, origen, cultura, nacionalidad, ciudadanía, idioma, credo religioso, ideología, filiación política o filosófica, estado civil, condición económica, social o de salud, profesión, ocupación u oficio, grado de instrucción, capacidades diferentes y/o discapacidad física, intelectual o sensorial, estado de embarazo, procedencia, apariencia física, vestimenta, apellido u otras que tengan por objetivo o resultado anular o menoscabar el reconocimiento, goce o ejercicio, en condiciones de igualdad, de derechos humanos y libertades fundamentales.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N45.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DL16998",
+      "numero": "3",
+      "inciso": null,
+      "titulo": "Ámbito de aplicación de la ley",
+      "texto": "La presente Ley es aplicable a toda actividad en que se ocupe uno o más trabajadores por cuenta de un empleador.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DL-16998.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DL16998",
+      "numero": "6",
+      "inciso": null,
+      "titulo": "Obligación del empleador de cumplir normas de higiene y seguridad ocupacional",
+      "texto": "Cumplir las leyes y Reglamentos relativos a la higiene, seguridad ocupacional y bienestar.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DL-16998.html",
+      "verificado": false,
+      "nota": "Posible fragmento de una lista más amplia de obligaciones del empleador (Art. 6); no se pudo confirmar si es el texto íntegro del artículo o solo un inciso."
+    }
+  ]
+}
