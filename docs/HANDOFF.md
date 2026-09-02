@@ -226,3 +226,13 @@ Ver `infra/scripts/bootstrap-vm.sh` y `infra/scripts/deploy.sh` para detalles.
 - **Arquitectura detallada**: docs/HLD.md
 - **Revisión del corpus normativo**: docs/corpus-review.md
 - **Instrucciones globales del proyecto**: /home/kali/.claude/CLAUDE.md
+
+## 13. Inicio de una nueva sesión (leer primero)
+
+1. Leer `CLAUDE.md` (premisas: Fable planifica, Sonnet/Haiku implementan; verbosidad mínima), este HANDOFF y `docs/HLD.md`.
+2. Local: `docker compose -f infra/docker-compose.yml --env-file .env --profile app up -d` → `curl -s localhost:8080/api/v1/health` debe dar `ok` en db/redis/paperless. Web en http://localhost:8080.
+3. VPS Fase B (COTAS, IP privada por VPN del proyecto cloud.cotas.com):
+   `ssh -i /home/kali/it911/cloud.cotas.com/kit_de_bienvenida/jpvargassoruco/cliente/jpvargassoruco-admin_ed25519 ubuntu@10.40.2.235` (host `jpv-srv-01`, Ubuntu 24.04, 4 vCPU / 7 GB / 96 GB). Repo en `/opt/clauscheck`, `.env` propio. Deploy: `infra/scripts/deploy.sh` (ver cabecera del script). Falta: dominio en Cloudflare + token de Tunnel (perfil `edge`), Cloudflare Access sobre `/docs-ui` y `/admin`, cron de backup.
+4. Verificado el 2026-09-02 en local: registro → documento (texto pegado y PNG escaneado vía paperless OCR) → análisis DeepSeek 7 etapas (115–140 s) → dictamen con citas verificadas contra la BD; aislamiento entre orgs; cuota free 5/mes.
+5. Detalles de integración descubiertos hoy: paperless-ngx 2.x devuelve las tareas como `{results:[...]}` con `status` en minúsculas y el id del documento en `result_data.document_id` / `related_document_ids` (ya soportado); `GET /documents/{id}/status` sincroniza el texto OCR desde paperless y pasa a `ready`; `POST /documents` acepta JSON y multipart; `email-validator` rechaza dominios `.local` en registro (el superadmin `admin@clauscheck.local` entra por login porque `LoginRequest.email` es `str`).
+6. Datos de prueba en la BD local (usuarios `smoke*@example.com`, `probe*@example.com`, cuerpo `TESTCUERPO`): se pueden borrar.
