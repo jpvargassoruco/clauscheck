@@ -1,9 +1,9 @@
 """arq worker: job queue for analysis + embeddings.
 
-`analyze` is currently a STUB: it marks the analysis running -> done with a
-minimal valid dictamen (v1.0). The real 7-stage pipeline lives in
-`app/pipeline/` and will replace this stub's body without changing the job
-signature or the `analyses` row contract.
+`analyze` resolves the org's LLM provider and document, then delegates the
+real 7-stage analysis to `app.pipeline.run_pipeline` (HLD §5), handling the
+`queued -> running -> done|failed` status transitions and recording a
+human-readable Spanish `error` on failure.
 """
 
 import logging
@@ -15,25 +15,11 @@ from sqlalchemy import select
 from app.config import settings
 from app.db import async_session_maker
 from app.embeddings import embed_passages
-from app.models import Analysis, AnalysisStatus, Articulo
-from app.schemas.dictamen import Dictamen, Resumen, ResumenPorNivel
+from app.llm.registry import get_default_provider
+from app.models import Analysis, AnalysisStatus, Articulo, Document
+from app.pipeline import run_pipeline
 
 logger = logging.getLogger("clauscheck.worker")
-
-
-def _stub_dictamen() -> dict:
-    dictamen = Dictamen(
-        indice_riesgo=0,
-        nivel="informativo",
-        confianza=0.0,
-        resumen=Resumen(hallazgos=0, omisiones=0, por_nivel=ResumenPorNivel()),
-        sintesis="Análisis pendiente de implementación del pipeline completo.",
-        partes=[],
-        hallazgos=[],
-        omisiones=[],
-        recomendaciones=[],
-    )
-    return dictamen.model_dump(mode="json")
 
 
 async def analyze(ctx, analysis_id: str) -> None:
@@ -44,23 +30,28 @@ async def analyze(ctx, analysis_id: str) -> None:
             return
 
         analysis.status = AnalysisStatus.running
-        analysis.etapa = 1
+        analysis.etapa = 0
         analysis.started_at = datetime.now(UTC)
         await db.commit()
 
         try:
-            analysis.etapa = 7
-            analysis.dictamen = _stub_dictamen()
-            analysis.status = AnalysisStatus.done
-            analysis.finished_at = datetime.now(UTC)
+            document = await db.get(Document, analysis.document_id)
+            if document is None:
+                raise ValueError("El documento del análisis ya no existe.")
+
+            provider = await get_default_provider(db)
+            analysis.provider_code = provider.code
+            analysis.model = provider.model
             await db.commit()
-        except Exception as exc:  # pragma: no cover - defensive
+
+            await run_pipeline(db, analysis, document, provider)
+        except Exception as exc:
+            logger.exception("analyze: fallo en analysis %s", analysis_id)
             await db.rollback()
             analysis.status = AnalysisStatus.failed
             analysis.error = str(exc)
             analysis.finished_at = datetime.now(UTC)
             await db.commit()
-            raise
 
 
 async def reembed_articulos(ctx, articulo_ids: list[str] | None = None) -> int:
