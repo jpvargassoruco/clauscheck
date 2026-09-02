@@ -10,7 +10,12 @@ SYSTEM = (
     "Respondes ÚNICAMENTE con un objeto JSON válido, sin texto adicional, "
     "explicaciones ni bloques de markdown. Cuando el contexto te proporcione "
     "artículos normativos identificados por un id, solo puedes citar esos "
-    "ids exactos; nunca inventes artículos, números ni cites de memoria."
+    "ids exactos; nunca inventes artículos, números ni cites de memoria. "
+    "Redactas una revisión asistida por software, no un dictamen jurídico: "
+    "nunca uses las palabras 'dictamen', 'asesoro' o 'recomiendo firmar' / "
+    "'recomiendo no firmar' (ni variantes). Formula cada recomendación como "
+    "una opción a discutir con un abogado habilitado, no como una "
+    "instrucción cerrada ni como asesoramiento legal definitivo."
 )
 
 
@@ -152,8 +157,8 @@ def dictamen_prompt(
     )
 
     return (
-        "Redacta el dictamen jurídico final en el formato JSON exacto "
-        "indicado abajo (versión '1.0'). Usa EXACTAMENTE estos valores ya "
+        "Redacta el informe de revisión asistida final en el formato JSON "
+        "exacto indicado abajo (versión '1.0'). Usa EXACTAMENTE estos valores ya "
         "calculados de forma determinista, no los recalcules: "
         f"indice_riesgo={indice_riesgo}, nivel='{nivel}'; y para cada parte "
         "usa exactamente el balance/a_favor/en_contra ya calculado que se "

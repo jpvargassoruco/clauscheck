@@ -5,7 +5,7 @@ from datetime import date, datetime
 
 from pydantic import BaseModel, EmailStr, Field
 
-from app.models import AnalysisStatus, MembershipRole, OcrStatus, Rubro
+from app.models import AccessRequestStatus, AnalysisStatus, MembershipRole, OcrStatus, Rubro
 
 # --- auth ---------------------------------------------------------------
 
@@ -48,7 +48,28 @@ class MeResponse(BaseModel):
     email: str
     nombre: str
     is_superadmin: bool
+    mfa_enabled: bool = False
     orgs: list[OrgRoleOut]
+
+
+class MfaRequiredOut(BaseModel):
+    mfa_required: bool = True
+    mfa_token: str
+
+
+class MfaVerifyRequest(BaseModel):
+    mfa_token: str
+    code: str
+
+
+class MfaSetupOut(BaseModel):
+    secret: str
+    otpauth_url: str
+    qr: str
+
+
+class MfaCodeRequest(BaseModel):
+    code: str
 
 
 # --- orgs -----------------------------------------------------------------
@@ -311,3 +332,58 @@ class PlanUpdate(BaseModel):
 
 class OrgAdminUpdate(BaseModel):
     plan_code: str | None = None
+
+
+# --- access requests / invitaciones públicas --------------------------------
+
+
+class AccessRequestCreate(BaseModel):
+    nombre: str
+    email: EmailStr
+    organizacion: str
+    telefono: str = ""
+    motivo: str = ""
+    # Honeypot anti-spam: debe llegar vacío; si viene con contenido se
+    # descarta la solicitud silenciosamente (sin revelar el filtro al bot).
+    website: str = ""
+
+
+class AccessRequestOut(BaseModel):
+    id: uuid.UUID
+    nombre: str
+    email: str
+    organizacion: str
+    telefono: str
+    motivo: str
+    status: AccessRequestStatus
+    created_at: datetime
+    decided_at: datetime | None
+    org_id: uuid.UUID | None
+
+    model_config = {"from_attributes": True}
+
+
+class AccessRequestApprove(BaseModel):
+    plan_code: str
+    role: MembershipRole = MembershipRole.owner
+
+
+class AccessRequestReject(BaseModel):
+    motivo: str = ""
+
+
+class InvitationPreviewOut(BaseModel):
+    org_nombre: str
+    email: str
+    role: MembershipRole
+    expired: bool
+    accepted: bool
+
+
+class InvitationAcceptRequest(BaseModel):
+    nombre: str
+    password: str = Field(min_length=8)
+
+
+class PublicConfigOut(BaseModel):
+    registration_mode: str

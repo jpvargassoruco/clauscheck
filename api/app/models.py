@@ -58,6 +58,12 @@ class AnalysisStatus(str, enum.Enum):
     failed = "failed"
 
 
+class AccessRequestStatus(str, enum.Enum):
+    pending = "pending"
+    approved = "approved"
+    rejected = "rejected"
+
+
 class Org(Base):
     __tablename__ = "orgs"
 
@@ -87,6 +93,8 @@ class User(Base):
     nombre: Mapped[str] = mapped_column(String(255), nullable=False, default="")
     is_superadmin: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     is_active: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
+    mfa_secret_enc: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    mfa_enabled: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )
@@ -222,6 +230,10 @@ class Document(Base):
     partes: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
     clausulas: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
     texto: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # token -> real_value map used to pseudonymize `texto`/`clausulas`/`partes`
+    # before every LLM call in the pipeline (see `app.pipeline.anonymize`),
+    # persisted so re-running an analysis reuses the same tokens.
+    pseudonyms: Mapped[dict] = mapped_column(JSONB, nullable=False, default=dict)
     ocr_status: Mapped[OcrStatus] = mapped_column(
         Enum(OcrStatus, name="ocr_status"), nullable=False, default=OcrStatus.pending
     )
@@ -265,3 +277,30 @@ class Analysis(Base):
     )
     started_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     finished_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+
+
+class AccessRequest(Base):
+    __tablename__ = "access_requests"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=_uuid)
+    nombre: Mapped[str] = mapped_column(String(255), nullable=False)
+    email: Mapped[str] = mapped_column(String(255), nullable=False, index=True)
+    organizacion: Mapped[str] = mapped_column(String(255), nullable=False)
+    telefono: Mapped[str] = mapped_column(String(50), nullable=False, default="")
+    motivo: Mapped[str] = mapped_column(Text, nullable=False, default="")
+    status: Mapped[AccessRequestStatus] = mapped_column(
+        Enum(AccessRequestStatus, name="access_request_status"),
+        nullable=False,
+        default=AccessRequestStatus.pending,
+        index=True,
+    )
+    created_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), server_default=func.now()
+    )
+    decided_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
+    decided_by: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("users.id", ondelete="SET NULL"), nullable=True
+    )
+    org_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("orgs.id", ondelete="SET NULL"), nullable=True
+    )

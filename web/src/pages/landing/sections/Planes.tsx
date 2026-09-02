@@ -3,45 +3,58 @@ import styles from "../Landing.module.css";
 
 const planes = [
   {
-    codigo: "free",
-    nombre: "Free",
-    precio: "Bs 0",
+    codigo: "personal",
+    nombre: "Personal",
+    precio: "Bs 149",
     periodo: "/mes",
     destacado: false,
     items: [
-      "3 análisis por mes",
-      "Hasta 10 documentos",
-      "1 organización",
-      "Dictamen completo con citas verificadas",
-      "Soporte por comunidad"
-    ]
-  },
-  {
-    codigo: "pro",
-    nombre: "Pro",
-    precio: "Bs 149",
-    periodo: "/mes",
-    destacado: true,
-    items: [
-      "30 análisis por mes",
-      "Hasta 150 documentos",
-      "Hasta 5 usuarios por organización",
-      "Historial completo y exportación",
-      "Soporte prioritario"
+      "Abogado independiente o emprendedor",
+      "Hasta 20 análisis por mes",
+      "1 usuario",
+      "Informe de revisión asistida con citas verificadas",
+      "Exportación a .docx"
     ]
   },
   {
     codigo: "despacho",
     nombre: "Despacho",
-    precio: "Bs 399",
+    precio: "Bs 490",
+    periodo: "/mes",
+    destacado: true,
+    items: [
+      "De 2 a 8 abogados",
+      "Hasta 100 análisis por mes",
+      "5 usuarios",
+      "Expedientes y playbook por despacho",
+      "Informe firmado por abogado (próximamente)"
+    ]
+  },
+  {
+    codigo: "empresa",
+    nombre: "Empresa",
+    precio: "Bs 1.200",
     periodo: "/mes",
     destacado: false,
     items: [
-      "Análisis ilimitados",
-      "Documentos ilimitados",
-      "Usuarios ilimitados",
-      "Organizaciones múltiples",
-      "Soporte dedicado y onboarding"
+      "Área legal interna, inmobiliaria, constructora",
+      "Hasta 300 análisis por mes",
+      "15 usuarios",
+      "Acceso por API",
+      "Auditoría y soporte prioritario"
+    ]
+  },
+  {
+    codigo: "suelto",
+    nombre: "Suelto",
+    precio: "Bs 39",
+    periodo: "/contrato",
+    destacado: false,
+    items: [
+      "Persona que va a firmar",
+      "1 análisis, sin necesidad de cuenta",
+      "Pago por QR",
+      "Informe con aviso de responsabilidad"
     ]
   }
 ];
@@ -55,8 +68,8 @@ export function Planes() {
           Un modelo SaaS accesible para despachos, startups y empresas
         </h2>
         <p className={styles.seccionIntro}>
-          Precios de referencia en bolivianos. Los montos finales se
-          confirman al activar la suscripción.
+          Precios de lanzamiento en bolivianos, sujetos a cambio. Los montos
+          finales se confirman al activar la suscripción.
         </p>
         <div className={styles.planesGrid}>
           {planes.map((p) => (

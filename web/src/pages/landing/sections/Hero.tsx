@@ -16,11 +16,11 @@ export function Hero() {
             citando la norma boliviana que lo sostiene.
           </p>
           <div className={styles.heroAcciones}>
-            <Link to="/registro" className="boton boton-primario">
-              Crear cuenta gratis
+            <Link to="/solicitar-acceso" className="boton boton-primario">
+              Solicitar acceso
             </Link>
             <a href="#ejemplos" className="boton boton-secundario">
-              Ver ejemplos de dictámenes
+              Ver ejemplos
             </a>
           </div>
         </div>

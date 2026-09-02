@@ -21,7 +21,7 @@ export default function Ejemplo() {
           <Link to="/#ejemplos">← Volver a ejemplos</Link>
         </p>
 
-        {isLoading && <p>Cargando dictamen…</p>}
+        {isLoading && <p>Cargando informe…</p>}
         {isError && <p>No se pudo cargar este ejemplo.</p>}
 
         {data && (
@@ -36,7 +36,7 @@ export default function Ejemplo() {
             {data.dictamen ? (
               <Dictamen dictamen={data.dictamen} tituloDocumento={data.document.titulo} />
             ) : (
-              <p>Este documento todavía no tiene un dictamen publicado.</p>
+              <p>Este documento todavía no tiene un informe publicado.</p>
             )}
           </>
         )}

@@ -1,14 +1,19 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { useAuthStore } from "@/store/auth";
 import styles from "./AppShell.module.css";
 
 const navItems = [
   { to: "/admin/proveedores", label: "Proveedores" },
   { to: "/admin/normativa", label: "Normativa" },
   { to: "/admin/organizaciones", label: "Organizaciones" },
-  { to: "/admin/planes", label: "Planes" }
+  { to: "/admin/planes", label: "Planes" },
+  { to: "/admin/solicitudes", label: "Solicitudes" }
 ];
 
 export function AdminShell() {
+  const user = useAuthStore((s) => s.user);
+  const mostrarAvisoMfa = !!user?.is_superadmin && !user.mfa_enabled;
+
   return (
     <div className={styles.shell}>
       <aside className={styles.sidebar}>
@@ -42,6 +47,12 @@ export function AdminShell() {
       </aside>
 
       <main className={styles.contenido}>
+        {mostrarAvisoMfa && (
+          <p className="error-texto" style={{ marginBottom: 16 }}>
+            Su cuenta de superadmin no tiene la autenticación en dos pasos
+            (MFA) activada. Actívela en Ajustes de la app.
+          </p>
+        )}
         <Outlet />
       </main>
     </div>

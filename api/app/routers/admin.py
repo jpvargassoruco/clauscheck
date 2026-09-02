@@ -1,18 +1,38 @@
+import secrets
 import uuid
+from datetime import UTC, datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import mail
+from app.config import settings
 from app.crypto import encrypt
 from app.db import get_db
 from app.deps import require_superadmin
 from app.embeddings import embed_passages
 from app.llm.base import LLMError
 from app.llm.registry import build_provider
-from app.models import Articulo, CuerpoLegal, LLMProvider, LLMProviderKind, Org, Plan
+from app.models import (
+    AccessRequest,
+    AccessRequestStatus,
+    Articulo,
+    CuerpoLegal,
+    Invitation,
+    LLMProvider,
+    LLMProviderKind,
+    Org,
+    Plan,
+    User,
+)
 from app.normativa_import import import_normativa
+from app.paperless import provision_org
+from app.routers.auth import _slugify, _unique_slug
 from app.schemas.api import (
+    AccessRequestApprove,
+    AccessRequestOut,
+    AccessRequestReject,
     ArticuloIn,
     ArticuloOut,
     CuerpoLegalIn,
@@ -253,3 +273,93 @@ async def admin_update_plan(
     await db.commit()
     await db.refresh(plan)
     return plan
+
+
+# --- access requests --------------------------------------------------------
+
+
+@router.get("/access-requests", response_model=list[AccessRequestOut])
+async def list_access_requests(
+    status_filter: AccessRequestStatus | None = Query(default=None, alias="status"),
+    db: AsyncSession = Depends(get_db),
+) -> list[AccessRequest]:
+    stmt = select(AccessRequest).order_by(AccessRequest.created_at.desc())
+    if status_filter is not None:
+        stmt = stmt.where(AccessRequest.status == status_filter)
+    result = await db.execute(stmt)
+    return list(result.scalars().all())
+
+
+async def _get_access_request_or_404(db: AsyncSession, request_id: uuid.UUID) -> AccessRequest:
+    access_request = await db.get(AccessRequest, request_id)
+    if access_request is None:
+        raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Solicitud no encontrada")
+    return access_request
+
+
+@router.post("/access-requests/{request_id}/approve", response_model=AccessRequestOut)
+async def approve_access_request(
+    request_id: uuid.UUID,
+    payload: AccessRequestApprove,
+    user: User = Depends(require_superadmin),
+    db: AsyncSession = Depends(get_db),
+) -> AccessRequest:
+    access_request = await _get_access_request_or_404(db, request_id)
+    if access_request.status != AccessRequestStatus.pending:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Solicitud ya decidida")
+
+    slug = await _unique_slug(db, _slugify(access_request.organizacion))
+    org = Org(slug=slug, nombre=access_request.organizacion, plan_code=payload.plan_code)
+    db.add(org)
+    await db.flush()
+
+    resources = await provision_org(slug, org.id)
+    org.paperless_user_id = resources.user_id
+    org.paperless_tag_id = resources.tag_id
+    org.paperless_storage_path_id = resources.storage_path_id
+
+    invitation = Invitation(
+        org_id=org.id,
+        email=access_request.email,
+        role=payload.role,
+        token=secrets.token_urlsafe(32),
+        expires_at=datetime.now(UTC) + timedelta(days=7),
+    )
+    db.add(invitation)
+
+    access_request.status = AccessRequestStatus.approved
+    access_request.decided_at = datetime.now(UTC)
+    access_request.decided_by = user.id
+    access_request.org_id = org.id
+
+    await db.commit()
+    await db.refresh(access_request)
+
+    accept_url = f"{settings.APP_BASE_URL}/invitacion/{invitation.token}"
+    await mail.send_invitacion(
+        access_request.email, invitation.token, org.nombre, invitation.role.value, accept_url
+    )
+
+    return access_request
+
+
+@router.post("/access-requests/{request_id}/reject", response_model=AccessRequestOut)
+async def reject_access_request(
+    request_id: uuid.UUID,
+    payload: AccessRequestReject,
+    user: User = Depends(require_superadmin),
+    db: AsyncSession = Depends(get_db),
+) -> AccessRequest:
+    access_request = await _get_access_request_or_404(db, request_id)
+    if access_request.status != AccessRequestStatus.pending:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Solicitud ya decidida")
+
+    access_request.status = AccessRequestStatus.rejected
+    access_request.decided_at = datetime.now(UTC)
+    access_request.decided_by = user.id
+    await db.commit()
+    await db.refresh(access_request)
+
+    await mail.send_solicitud_rechazada(access_request.email, access_request.nombre, payload.motivo)
+
+    return access_request

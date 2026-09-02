@@ -1,7 +1,17 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import admin, analyses, auth, documents, health, orgs, public, usage
+from app.routers import (
+    access_requests,
+    admin,
+    analyses,
+    auth,
+    documents,
+    health,
+    orgs,
+    public,
+    usage,
+)
 
 app = FastAPI(title="ClausCheck API", version="0.1.0")
 
@@ -22,6 +32,7 @@ app.include_router(documents.router, prefix=API_PREFIX)
 app.include_router(analyses.router, prefix=API_PREFIX)
 app.include_router(usage.router, prefix=API_PREFIX)
 app.include_router(public.router, prefix=API_PREFIX)
+app.include_router(access_requests.router, prefix=API_PREFIX)
 app.include_router(admin.router, prefix=API_PREFIX)
 
 

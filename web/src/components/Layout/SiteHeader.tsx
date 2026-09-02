@@ -7,7 +7,6 @@ const enlaces = [
   { href: "/#producto", label: "Producto" },
   { href: "/#ejemplos", label: "Ejemplos" },
   { href: "/#planes", label: "Planes" },
-  { href: "/#equipo", label: "Equipo" },
   { href: "/manual", label: "Manual" },
   { href: "/#contacto", label: "Contacto" }
 ];

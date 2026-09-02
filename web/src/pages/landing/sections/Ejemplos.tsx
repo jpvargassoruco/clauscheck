@@ -15,7 +15,7 @@ export function Ejemplos() {
       <div className="contenedor">
         <span className={styles.seccionEtiqueta}>Ejemplos</span>
         <h2 className={styles.seccionTitulo}>
-          Dictámenes reales sobre contratos de la práctica jurídica boliviana
+          Informes reales sobre contratos de la práctica jurídica boliviana
         </h2>
         <p className={styles.seccionIntro}>
           El corpus público muestra contratos ya analizados: cada tarjeta

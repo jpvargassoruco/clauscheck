@@ -6,6 +6,8 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import mail
+from app.config import settings
 from app.db import get_db
 from app.deps import get_current_user, user_orgs
 from app.models import Invitation, Membership, MembershipRole, Org, User
@@ -127,6 +129,13 @@ async def create_invitation(
     db.add(invitation)
     await db.commit()
     await db.refresh(invitation)
+
+    org = await db.get(Org, org_id)
+    accept_url = f"{settings.APP_BASE_URL}/invitacion/{invitation.token}"
+    await mail.send_invitacion(
+        invitation.email, invitation.token, org.nombre if org else "", invitation.role.value, accept_url
+    )
+
     return invitation
 
 

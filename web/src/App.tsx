@@ -7,8 +7,11 @@ import { AdminShell } from "@/components/Layout/AdminShell";
 import Landing from "@/pages/landing/Landing";
 import Ejemplo from "@/pages/landing/Ejemplo";
 import Manual from "@/pages/Manual";
+import Confidencialidad from "@/pages/Confidencialidad";
 import Login from "@/pages/auth/Login";
 import Registro from "@/pages/auth/Registro";
+import Invitacion from "@/pages/auth/Invitacion";
+import SolicitarAcceso from "@/pages/SolicitarAcceso";
 
 import Documentos from "@/pages/app/Documentos";
 import Analisis from "@/pages/app/Analisis";
@@ -20,6 +23,7 @@ import Proveedores from "@/pages/admin/Proveedores";
 import Normativa from "@/pages/admin/Normativa";
 import Organizaciones from "@/pages/admin/Organizaciones";
 import Planes from "@/pages/admin/Planes";
+import Solicitudes from "@/pages/admin/Solicitudes";
 
 export default function App() {
   useThemeSync();
@@ -29,8 +33,11 @@ export default function App() {
       <Route path="/" element={<Landing />} />
       <Route path="/ejemplos/:id" element={<Ejemplo />} />
       <Route path="/manual" element={<Manual />} />
+      <Route path="/confidencialidad" element={<Confidencialidad />} />
       <Route path="/login" element={<Login />} />
       <Route path="/registro" element={<Registro />} />
+      <Route path="/solicitar-acceso" element={<SolicitarAcceso />} />
+      <Route path="/invitacion/:token" element={<Invitacion />} />
 
       <Route element={<RequireAuth />}>
         <Route path="/app" element={<AppShell />}>
@@ -50,6 +57,7 @@ export default function App() {
           <Route path="normativa" element={<Normativa />} />
           <Route path="organizaciones" element={<Organizaciones />} />
           <Route path="planes" element={<Planes />} />
+          <Route path="solicitudes" element={<Solicitudes />} />
         </Route>
       </Route>
 

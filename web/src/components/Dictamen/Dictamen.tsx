@@ -13,6 +13,7 @@ interface DictamenProps {
 
 export function Dictamen({ dictamen: d, tituloDocumento }: DictamenProps) {
   const [copiado, setCopiado] = useState(false);
+  const [mostrarPanelAbogado, setMostrarPanelAbogado] = useState(false);
 
   const hallazgosOrdenados = [...d.hallazgos].sort(
     (a, b) => NIVEL_ORDEN.indexOf(a.nivel) - NIVEL_ORDEN.indexOf(b.nivel)
@@ -37,6 +38,31 @@ export function Dictamen({ dictamen: d, tituloDocumento }: DictamenProps) {
 
   return (
     <article className={styles.dictamen}>
+      <div className={styles.avisoResponsabilidad} role="note">
+        <p>
+          Este informe es una herramienta de apoyo a la revisión contractual
+          generada por software. No constituye asesoramiento legal ni
+          sustituye el criterio de un abogado habilitado. Las citas
+          normativas reproducen el texto oficial; su aplicación a un caso
+          concreto requiere revisión profesional.
+        </p>
+        <div className={styles.avisoAcciones}>
+          <button
+            type="button"
+            className="boton boton-secundario"
+            onClick={() => setMostrarPanelAbogado((v) => !v)}
+          >
+            Enviar a un abogado
+          </button>
+        </div>
+        {mostrarPanelAbogado && (
+          <div className={styles.panelAbogado}>
+            Próximamente: envíe este informe a un despacho que usa
+            ClausCheck.
+          </div>
+        )}
+      </div>
+
       <header className={`${styles.encabezado} tarjeta`}>
         <IndiceGauge indice={d.indice_riesgo} nivel={d.nivel} />
         <div className={styles.encabezadoInfo}>
@@ -61,7 +87,7 @@ export function Dictamen({ dictamen: d, tituloDocumento }: DictamenProps) {
           className="boton boton-secundario"
           onClick={copiar}
         >
-          {copiado ? "Copiado ✓" : "Copiar dictamen completo"}
+          {copiado ? "Copiado ✓" : "Copiar informe completo"}
         </button>
       </header>
 

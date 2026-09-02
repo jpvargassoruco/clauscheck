@@ -29,7 +29,7 @@ const partesDictamen = [
     numero: "05",
     titulo: "Omisiones",
     texto:
-      "Los puntos que este tipo de contrato debía regular y que el instrumento no contempla. En varios casos es la sección más grave del dictamen."
+      "Los puntos que este tipo de contrato debía regular y que el instrumento no contempla. En varios casos es la sección más grave del informe."
   },
   {
     numero: "06",
@@ -52,10 +52,12 @@ export function Solucion() {
           ClausCheck existe para adelantar el descubrimiento de esos
           defectos. Toma un contrato, lo separa en cláusulas y contrasta cada
           una contra el Código Civil, la Constitución Política del Estado y
-          la normativa laboral vigente de Bolivia. Devuelve un dictamen
-          escrito en el lenguaje de un informe legal, no en el de una
-          aplicación, que se lee de arriba abajo y va de lo general a lo
-          particular.
+          la normativa laboral vigente de Bolivia. Cada cita queda
+          verificada contra la base normativa, con el texto oficial del
+          artículo, no una paráfrasis. El resultado es un informe de
+          revisión asistida, escrito en el lenguaje de un informe legal, no
+          en el de una aplicación, que se lee de arriba abajo y va de lo
+          general a lo particular.
         </p>
         <div className={styles.solucionGrid}>
           {partesDictamen.map((p) => (

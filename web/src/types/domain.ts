@@ -32,14 +32,58 @@ export interface User {
   email: string;
   nombre: string;
   is_superadmin: boolean;
+  mfa_enabled: boolean;
   orgs: OrgRole[];
 }
 
-/** POST /auth/register|login|refresh — schemas.TokenResponse. */
+/** POST /auth/register|login|refresh|mfa/verify — schemas.TokenResponse. */
 export interface AuthTokens {
   access_token: string;
   refresh_token: string;
   token_type: "bearer";
+}
+
+/** POST /auth/login cuando el usuario tiene MFA activo — schemas.MfaRequiredOut. */
+export interface MfaRequired {
+  mfa_required: true;
+  mfa_token: string;
+}
+
+/** POST /auth/mfa/setup — schemas.MfaSetupOut. */
+export interface MfaSetup {
+  secret: string;
+  otpauth_url: string;
+  qr: string;
+}
+
+/** GET /public/config — schemas.PublicConfigOut. */
+export interface PublicConfig {
+  registration_mode: "open" | "approval" | "closed";
+}
+
+export type AccessRequestStatusValue = "pending" | "approved" | "rejected";
+
+/** GET/POST /admin/access-requests — schemas.AccessRequestOut. */
+export interface AccessRequest {
+  id: string;
+  nombre: string;
+  email: string;
+  organizacion: string;
+  telefono: string;
+  motivo: string;
+  status: AccessRequestStatusValue;
+  created_at: string;
+  decided_at: string | null;
+  org_id: string | null;
+}
+
+/** GET /public/invitations/{token} — schemas.InvitationPreviewOut. */
+export interface InvitationPreview {
+  org_nombre: string;
+  email: string;
+  role: Role;
+  expired: boolean;
+  accepted: boolean;
 }
 
 /** GET /orgs/{id}/members, PATCH .../members/{user_id}, POST /invitations/{token}/accept — schemas.MemberOut */

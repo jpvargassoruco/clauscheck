@@ -1,12 +1,16 @@
 import { NIVEL_LABEL, NIVEL_ORDEN, type Dictamen } from "@/types/dictamen";
 
-/** Serializa el dictamen completo a texto plano, para "Copiar dictamen completo". */
+/** Serializa el informe completo a texto plano, para "Copiar informe completo". */
 export function dictamenATexto(d: Dictamen, tituloDocumento?: string): string {
   const lineas: string[] = [];
   const sep = "—".repeat(48);
 
-  lineas.push("DICTAMEN CLAUSCHECK");
+  lineas.push("INFORME DE REVISIÓN ASISTIDA — CLAUSCHECK");
   if (tituloDocumento) lineas.push(tituloDocumento);
+  lineas.push(sep);
+  lineas.push(
+    "Este informe es una herramienta de apoyo a la revisión contractual generada por software. No constituye asesoramiento legal ni sustituye el criterio de un abogado habilitado. Las citas normativas reproducen el texto oficial; su aplicación a un caso concreto requiere revisión profesional."
+  );
   lineas.push(sep);
   lineas.push(
     `Índice de riesgo: ${d.indice_riesgo}/100 — Nivel: ${NIVEL_LABEL[d.nivel]}`
@@ -76,7 +80,7 @@ export function dictamenATexto(d: Dictamen, tituloDocumento?: string): string {
   lineas.push("");
   lineas.push(sep);
   lineas.push(
-    "ClausCheck es una herramienta de apoyo, no sustituye a un abogado."
+    "ClausCheck es una herramienta de apoyo a la revisión contractual, no sustituye a un abogado."
   );
 
   return lineas.join("\n");

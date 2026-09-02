@@ -11,7 +11,7 @@ const ETAPAS = [
   "Detecta patrones de riesgo",
   "Contrasta contra la norma",
   "Pondera el impacto por parte",
-  "Redacta el dictamen"
+  "Redacta el informe"
 ];
 
 export default function AnalisisDetalle() {

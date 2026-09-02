@@ -6,7 +6,6 @@ import { Solucion } from "./sections/Solucion";
 import { ComoFunciona } from "./sections/ComoFunciona";
 import { Ejemplos } from "./sections/Ejemplos";
 import { Planes } from "./sections/Planes";
-import { Equipo } from "./sections/Equipo";
 import { Contacto } from "./sections/Contacto";
 
 export default function Landing() {
@@ -20,7 +19,6 @@ export default function Landing() {
         <ComoFunciona />
         <Ejemplos />
         <Planes />
-        <Equipo />
         <Contacto />
       </main>
       <SiteFooter />

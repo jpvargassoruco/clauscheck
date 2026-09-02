@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Link, useNavigate } from "react-router-dom";
-import { authApi, ApiError } from "@/api/client";
+import { authApi, publicApi, ApiError } from "@/api/client";
 import { useAuthStore } from "@/store/auth";
 import styles from "./Auth.module.css";
 
@@ -13,6 +14,11 @@ export default function Registro() {
   const [cargando, setCargando] = useState(false);
   const setSession = useAuthStore((s) => s.setSession);
   const navigate = useNavigate();
+
+  const { data: config, isLoading: cargandoConfig } = useQuery({
+    queryKey: ["public-config"],
+    queryFn: publicApi.config
+  });
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -38,6 +44,40 @@ export default function Registro() {
     } finally {
       setCargando(false);
     }
+  }
+
+  if (cargandoConfig) {
+    return (
+      <div className={styles.pantalla}>
+        <div className={`${styles.tarjeta} tarjeta`}>
+          <p className={styles.subtitulo}>Cargando…</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (config && config.registration_mode !== "open") {
+    return (
+      <div className={styles.pantalla}>
+        <div className={`${styles.tarjeta} tarjeta`}>
+          <Link to="/" className={styles.marca}>
+            <span className={styles.marcaClaus}>Claus</span>
+            <span className={styles.marcaCheck}>Check</span>
+          </Link>
+          <h1 style={{ fontSize: "1.5rem" }}>Registro por solicitud</h1>
+          <p className={styles.subtitulo}>
+            El registro es por solicitud. Complete el formulario y un
+            administrador revisará su acceso.
+          </p>
+          <Link to="/solicitar-acceso" className="boton boton-primario">
+            Solicitar acceso
+          </Link>
+          <p className={styles.pie}>
+            ¿Ya tiene cuenta? <Link to="/login">Inicie sesión</Link>.
+          </p>
+        </div>
+      </div>
+    );
   }
 
   return (

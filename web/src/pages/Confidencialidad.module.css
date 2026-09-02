@@ -1,0 +1,24 @@
+.pagina {
+  padding: 48px 0 80px;
+}
+
+.cabecera {
+  margin-bottom: 32px;
+}
+
+.cabecera p {
+  max-width: 680px;
+  color: var(--color-texto-suave);
+  font-size: 1.05rem;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+}
+
+.contenido p {
+  line-height: 1.6;
+}

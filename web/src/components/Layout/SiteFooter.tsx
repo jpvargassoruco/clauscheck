@@ -11,14 +11,14 @@ export function SiteFooter() {
             <span className={styles.marcaCheck}>Check</span>
           </div>
           <p className={styles.footerTagline}>
-            Detección de cláusulas abusivas en contratos, con dictamen
+            Detección de cláusulas abusivas en contratos, con informe de revisión asistida
             respaldado en normativa boliviana.
           </p>
         </div>
         <nav className={styles.footerNav} aria-label="Enlaces del pie">
           <Link to="/manual">Manual</Link>
+          <Link to="/confidencialidad">Confidencialidad</Link>
           <a href="/#planes">Planes</a>
-          <a href="/#equipo">Equipo</a>
           <a href="/#contacto">Contacto</a>
           <Link to="/login">Iniciar sesión</Link>
         </nav>
@@ -30,7 +30,7 @@ export function SiteFooter() {
           derecho habilitado.
         </p>
         <p className={styles.copy}>
-          © {new Date().getFullYear()} ClausCheck LegalTech · UAGRM · Santa
+          © {new Date().getFullYear()} ClausCheck LegalTech · Santa
           Cruz de la Sierra, Bolivia
         </p>
       </div>

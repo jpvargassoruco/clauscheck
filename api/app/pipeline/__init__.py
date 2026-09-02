@@ -6,6 +6,17 @@
 with `status=done` and a validated `dictamen` (or raises, so the caller can
 set `status=failed` with a human-readable `error`).
 
+When `settings.PSEUDONYMIZE` is on (default), stage 1's real `texto` is
+pseudonymized (`anonymize.anonymize`) before it is ever handed to an LLM
+prompt: stages 2-7 build every prompt from the pseudonymized text/clauses/
+partes, so the LLM provider only ever sees tokens (`PARTE_1`, `CI_1`, ...)
+in place of real identities. `document.clausulas`/`document.partes` and the
+final `analysis.dictamen` are `anonymize.restore`d back to real values right
+before being persisted; the working (pseudonymized) `clausulas`/`partes`
+local variables keep driving the remaining stages. The mapping is persisted
+on `document.pseudonyms` so a re-run of the same document reuses the same
+tokens.
+
 Stage map (HLD §5):
   1 normalizar        -> `normalizar.normalizar`             (no LLM)
   2 separar clausulas  -> LLM (`prompts.clausulas_prompt`)
@@ -29,10 +40,12 @@ from datetime import UTC, datetime
 
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.config import settings
 from app.llm.base import LLMProviderBase
 from app.models import Analysis, AnalysisStatus, Document, Rubro
 from app.schemas.dictamen import DICTAMEN_VERSION, Dictamen, dictamen_json_schema
 
+from .anonymize import anonymize, restore
 from .normalizar import normalizar
 from .pricing import cost_usd
 from .prompts import (
@@ -49,6 +62,14 @@ from .scoring import NIVEL_WEIGHT, ponderar
 from .verify import verify_citations
 
 logger = logging.getLogger("clauscheck.pipeline")
+
+# Neither `app.main` nor `app.worker` configure a root logging handler, so
+# without this, `logger.info(...)` below (e.g. the pseudonymize replacement
+# count) is silently dropped by the interpreter's WARNING-level "handler of
+# last resort" and never reaches `docker compose logs`. `basicConfig` is a
+# no-op if a handler is already configured elsewhere, so this is safe to
+# call unconditionally on import.
+logging.basicConfig(level=logging.INFO)
 
 _RUBRO_VALUES = {r.value for r in Rubro}
 
@@ -97,18 +118,32 @@ async def run_pipeline(
         raise
     await db.commit()
 
+    # Pseudonymize before the text ever reaches an LLM prompt (stages 2-7
+    # below use `texto_llm`/local `clausulas`/`partes`, never the real
+    # `texto`). Reuse any mapping persisted from a prior run so tokens stay
+    # stable across re-runs of the same document.
+    pseudonyms = dict(document.pseudonyms or {})
+    if settings.PSEUDONYMIZE:
+        texto_llm, pseudonyms = anonymize(texto, pseudonyms)
+        replaced = len(pseudonyms)
+        document.pseudonyms = pseudonyms
+        await db.commit()
+        logger.info("pseudonymize: %d reemplazos en el texto del contrato", replaced)
+    else:
+        texto_llm = texto
+
     # --- 2. separar clausulas --------------------------------------------
     await set_etapa(2)
-    resp = await call_llm(clausulas_prompt(texto), CLAUSULAS_SCHEMA, max_tokens=4096)
+    resp = await call_llm(clausulas_prompt(texto_llm), CLAUSULAS_SCHEMA, max_tokens=4096)
     clausulas = resp.get("clausulas") or []
-    document.clausulas = clausulas
+    document.clausulas = restore(clausulas, pseudonyms) if settings.PSEUDONYMIZE else clausulas
     await db.commit()
 
     # --- 3. identificar partes + redacto ----------------------------------
     await set_etapa(3)
-    resp = await call_llm(partes_prompt(texto, clausulas), PARTES_SCHEMA)
+    resp = await call_llm(partes_prompt(texto_llm, clausulas), PARTES_SCHEMA)
     partes = resp.get("partes") or []
-    document.partes = partes
+    document.partes = restore(partes, pseudonyms) if settings.PSEUDONYMIZE else partes
 
     ficha_nuevo = resp.get("ficha") or {}
     ficha = dict(document.ficha or {})
@@ -303,8 +338,11 @@ async def run_pipeline(
     resp.setdefault("confianza", 0.5)
 
     dictamen = Dictamen.model_validate(resp)
+    dictamen_data = dictamen.model_dump(mode="json")
+    if settings.PSEUDONYMIZE:
+        dictamen_data = restore(dictamen_data, pseudonyms)
 
-    analysis.dictamen = dictamen.model_dump(mode="json")
+    analysis.dictamen = dictamen_data
     analysis.tokens_in = tokens_in_total
     analysis.tokens_out = tokens_out_total
     analysis.costo_usd = cost_usd(provider.code, provider.model, tokens_in_total, tokens_out_total)

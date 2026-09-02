@@ -1,10 +1,13 @@
 import re
+import uuid
 
 import jwt
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import mail, mfa
+from app.config import settings
 from app.db import get_db
 from app.deps import get_current_user
 from app.models import Membership, MembershipRole, Org, User
@@ -12,6 +15,10 @@ from app.paperless import provision_org
 from app.schemas.api import (
     LoginRequest,
     MeResponse,
+    MfaCodeRequest,
+    MfaRequiredOut,
+    MfaSetupOut,
+    MfaVerifyRequest,
     OrgRoleOut,
     RefreshRequest,
     RegisterRequest,
@@ -48,6 +55,9 @@ async def _unique_slug(db: AsyncSession, base: str) -> str:
 
 @router.post("/register", response_model=TokenResponse, status_code=status.HTTP_201_CREATED)
 async def register(payload: RegisterRequest, db: AsyncSession = Depends(get_db)) -> TokenResponse:
+    if settings.REGISTRATION_MODE in ("approval", "closed"):
+        raise HTTPException(status.HTTP_403_FORBIDDEN, detail="El registro es por solicitud")
+
     existing = await db.execute(select(User).where(User.email == payload.email))
     if existing.scalars().first() is not None:
         raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="El email ya está registrado")
@@ -79,17 +89,99 @@ async def register(payload: RegisterRequest, db: AsyncSession = Depends(get_db))
     )
 
 
-@router.post("/login", response_model=TokenResponse)
-async def login(payload: LoginRequest, db: AsyncSession = Depends(get_db)) -> TokenResponse:
+@router.post("/login", response_model=None)
+async def login(
+    payload: LoginRequest, db: AsyncSession = Depends(get_db)
+) -> TokenResponse | MfaRequiredOut:
     result = await db.execute(select(User).where(User.email == payload.email))
     user = result.scalars().first()
     if user is None or not user.is_active or not verify_password(payload.password, user.password_hash):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Credenciales inválidas")
 
+    if user.mfa_enabled:
+        return MfaRequiredOut(mfa_token=mfa.create_mfa_token(user.id))
+
     return TokenResponse(
         access_token=create_access_token(user.id),
         refresh_token=create_refresh_token(user.id),
     )
+
+
+@router.post("/mfa/verify", response_model=TokenResponse)
+async def mfa_verify(payload: MfaVerifyRequest, db: AsyncSession = Depends(get_db)) -> TokenResponse:
+    try:
+        data = decode_token(payload.mfa_token)
+    except jwt.PyJWTError:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Token inválido") from None
+    if data.get("type") != "mfa":
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Token inválido")
+
+    try:
+        user_id = uuid.UUID(data["sub"])
+    except (KeyError, ValueError):
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Token inválido") from None
+
+    user = await db.get(User, user_id)
+    if user is None or not user.is_active or not user.mfa_enabled:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Usuario inválido")
+
+    secret = mfa.decrypt_secret(user.mfa_secret_enc)
+    if not mfa.verify_code(secret, payload.code):
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED, detail="Código inválido")
+
+    return TokenResponse(
+        access_token=create_access_token(user.id),
+        refresh_token=create_refresh_token(user.id),
+    )
+
+
+@router.post("/mfa/setup", response_model=MfaSetupOut)
+async def mfa_setup(
+    user: User = Depends(get_current_user), db: AsyncSession = Depends(get_db)
+) -> MfaSetupOut:
+    secret = mfa.generate_secret()
+    user.mfa_secret_enc = mfa.encrypt_secret(secret)
+    await db.commit()
+
+    uri = mfa.provisioning_uri(secret, user.email)
+    return MfaSetupOut(secret=secret, otpauth_url=uri, qr=mfa.qr_data_url(uri))
+
+
+@router.post("/mfa/enable")
+async def mfa_enable(
+    payload: MfaCodeRequest,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    if not user.mfa_secret_enc:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Primero genere un secreto MFA")
+    secret = mfa.decrypt_secret(user.mfa_secret_enc)
+    if not mfa.verify_code(secret, payload.code):
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Código inválido")
+
+    user.mfa_enabled = True
+    await db.commit()
+    await mail.send_mfa_notice(user.email, "activada")
+    return {"mfa_enabled": True}
+
+
+@router.post("/mfa/disable")
+async def mfa_disable(
+    payload: MfaCodeRequest,
+    user: User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+) -> dict:
+    if not user.mfa_enabled:
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="MFA no está activa")
+    secret = mfa.decrypt_secret(user.mfa_secret_enc)
+    if not mfa.verify_code(secret, payload.code):
+        raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Código inválido")
+
+    user.mfa_enabled = False
+    user.mfa_secret_enc = ""
+    await db.commit()
+    await mail.send_mfa_notice(user.email, "desactivada")
+    return {"mfa_enabled": False}
 
 
 @router.post("/refresh", response_model=TokenResponse)
@@ -129,5 +221,6 @@ async def me(
         email=user.email,
         nombre=user.nombre,
         is_superadmin=user.is_superadmin,
+        mfa_enabled=user.mfa_enabled,
         orgs=orgs,
     )

@@ -9,6 +9,10 @@ os.environ.setdefault("REDIS_URL", "redis://localhost:6399/0")
 os.environ.setdefault("FERNET_KEY", "")
 os.environ.setdefault("ADMIN_EMAIL", "admin@clauscheck.local")
 os.environ.setdefault("ADMIN_PASSWORD", "changeme-test")
+# La mayoría de los tests existentes (helpers.register_org) usan
+# POST /auth/register directo; sólo test_access_requests.py fuerza
+# REGISTRATION_MODE="approval"/"closed" puntualmente con monkeypatch.
+os.environ.setdefault("REGISTRATION_MODE", "open")
 
 import pytest
 import pytest_asyncio
@@ -27,6 +31,7 @@ _ALEMBIC_INI = os.path.join(os.path.dirname(os.path.dirname(__file__)), "alembic
 _TABLES = [
     "analyses",
     "usage",
+    "access_requests",
     "invitations",
     "memberships",
     "documents",

@@ -7,7 +7,7 @@ import styles from "./Manual.module.css";
 const capitulos = [
   { id: "problema", num: "01", titulo: "Qué problema resuelve" },
   { id: "uso", num: "02", titulo: "Cómo se usa" },
-  { id: "lectura", num: "03", titulo: "Cómo leer el dictamen" },
+  { id: "lectura", num: "03", titulo: "Cómo leer el informe" },
   { id: "escala", num: "04", titulo: "La escala de riesgo" },
   { id: "corpus", num: "05", titulo: "Los contratos incluidos" },
   { id: "normativa", num: "06", titulo: "En qué se apoya" },
@@ -39,7 +39,7 @@ const niveles: Array<{ nivel: keyof typeof NIVEL_LABEL; texto: string }> = [
   {
     nivel: "informativo",
     texto:
-      "Cláusula conforme a derecho. Se documenta el contraste: en un dictamen serio importa tanto señalar lo defectuoso como acreditar lo correcto."
+      "Cláusula conforme a derecho. Se documenta el contraste: en un informe serio importa tanto señalar lo defectuoso como acreditar lo correcto."
   }
 ];
 
@@ -111,8 +111,8 @@ export default function Manual() {
               ClausCheck existe para adelantar ese descubrimiento. Toma un
               contrato, lo separa en cláusulas y contrasta cada una contra
               el Código Civil, la Constitución y la normativa laboral
-              vigente. Devuelve un dictamen escrito en el lenguaje de un
-              informe legal, no en el de una aplicación.
+              vigente. Devuelve un informe de revisión asistida escrito en
+              el lenguaje de un informe legal, no en el de una aplicación.
             </p>
             <h3 style={{ marginTop: 24 }}>Para quién es</h3>
             <ul>
@@ -126,19 +126,19 @@ export default function Manual() {
             <h2><span className={styles.capituloNumero}>02</span> Cómo se usa</h2>
             <p>
               El recorrido completo, desde que se sube el contrato hasta
-              que se tiene el dictamen en la mano, toma minutos.
+              que se tiene el informe en la mano, toma minutos.
             </p>
             <ol>
               <li><strong>Abrir Documentos.</strong> La pestaña Documentos de la app muestra los contratos ya cargados por la organización. Se puede buscar por parte, tipo de contrato o texto de cualquier cláusula.</li>
               <li><strong>Cargar el contrato.</strong> Con «Subir documento» se ofrece tomar el archivo del equipo (PDF, imagen, DOCX o TXT) o pegar el texto directamente.</li>
               <li><strong>Revisar el documento.</strong> Antes de analizar, la ficha del contrato —plaza, fecha, cuantía, forma instrumental—, los intervinientes con una marca sobre quién redactó el clausulado, y el articulado completo quedan disponibles para revisión.</li>
-              <li><strong>Ejecutar el análisis.</strong> Desde la pestaña Análisis, el botón «Analizar» encola el contrato. El motor recorre siete etapas visibles: normaliza el texto, separa las cláusulas, identifica a las partes, detecta patrones de riesgo, contrasta contra la norma, pondera el impacto sobre cada parte y redacta el dictamen.</li>
-              <li><strong>Leer y compartir.</strong> El dictamen queda guardado en el historial de la organización. Con «Copiar dictamen completo» se lleva al portapapeles en texto plano, listo para pegarlo en un correo, un informe o un mensaje.</li>
+              <li><strong>Ejecutar el análisis.</strong> Desde la pestaña Análisis, el botón «Analizar» encola el contrato. El motor recorre siete etapas visibles: normaliza el texto, separa las cláusulas, identifica a las partes, detecta patrones de riesgo, contrasta contra la norma, pondera el impacto sobre cada parte y redacta el informe.</li>
+              <li><strong>Leer y compartir.</strong> El informe queda guardado en el historial de la organización. Con «Copiar informe completo» se lleva al portapapeles en texto plano, listo para pegarlo en un correo o un mensaje.</li>
             </ol>
           </section>
 
           <section id="lectura" className={styles.capitulo}>
-            <h2><span className={styles.capituloNumero}>03</span> Cómo leer el dictamen</h2>
+            <h2><span className={styles.capituloNumero}>03</span> Cómo leer el informe</h2>
             <p>El informe se lee de arriba abajo y va de lo general a lo particular. Estas son sus seis partes.</p>
             <ul>
               <li><strong>Encabezado — Índice de riesgo.</strong> Un número de 0 a 100 que resume el estado del contrato completo, con el recuento de hallazgos, de omisiones y el grado de confianza del motor. Es el dato que se mira primero.</li>
@@ -213,7 +213,7 @@ export default function Manual() {
           <section id="normativa" className={styles.capitulo}>
             <h2><span className={styles.capituloNumero}>06</span> En qué se apoya</h2>
             <p>
-              Cada cita del dictamen reproduce el texto oficial del
+              Cada cita del informe reproduce el texto oficial del
               artículo, no una paráfrasis, para que quien conozca la
               materia pueda contrastarla de inmediato. El catálogo se
               verifica contra el texto publicado de cada cuerpo legal antes
@@ -253,7 +253,7 @@ export default function Manual() {
               autorizado de administración puede configurarlas.
             </p>
             <p>
-              Los últimos dictámenes consultados quedan disponibles para
+              Los últimos informes consultados quedan disponibles para
               lectura sin conexión gracias al caché de la aplicación, pero
               generar un análisis nuevo sí requiere conexión, porque el
               texto del contrato debe procesarse contra el proveedor de IA
@@ -265,21 +265,25 @@ export default function Manual() {
           <section id="alcance" className={styles.capitulo}>
             <h2><span className={styles.capituloNumero}>08</span> Alcance y límites</h2>
             <div className={styles.aviso}>
-              <strong>Léase antes de usar el dictamen.</strong> ClausCheck
+              <strong>Léase antes de usar el informe.</strong> ClausCheck
               es una herramienta de apoyo a la revisión contractual. No
               sustituye el criterio de un abogado habilitado ni constituye
-              asesoramiento legal para un caso concreto. Un dictamen
+              asesoramiento legal para un caso concreto. El informe
               señala dónde mirar y con qué norma contrastar; la decisión
               sobre qué hacer con un contrato concreto, en una situación
               concreta y frente a una contraparte concreta, sigue
-              correspondiendo a un profesional del derecho.
+              correspondiendo a un profesional del derecho. Está prevista,
+              como función futura, la posibilidad de que un abogado
+              habilitado revise, edite y firme este informe —con nombre,
+              matrícula y fecha— para que recién entonces adquiera el
+              carácter de dictamen jurídico en el sentido de la Ley 387.
             </div>
             <h3 style={{ marginTop: 24 }}>Qué hace y qué no hace</h3>
             <ul>
               <li><strong>Analiza los documentos de su organización.</strong> El corpus privado crece con cada contrato cargado, y el corpus público cubre los tipos contractuales más frecuentes de la práctica boliviana.</li>
               <li><strong>Cita normativa boliviana vigente.</strong> Las referencias corresponden al ordenamiento del Estado Plurinacional de Bolivia y no son trasladables a otra jurisdicción.</li>
               <li><strong>No litiga ni redacta por usted.</strong> Las recomendaciones proponen redacciones sustitutivas y trámites, pero requieren revisión profesional antes de incorporarse a un documento que se vaya a firmar.</li>
-              <li><strong>No conoce el contexto del caso.</strong> Un contrato desequilibrado puede ser perfectamente aceptable si las partes lo negociaron con información y asesoría. El dictamen valora el texto, no la negociación que lo produjo.</li>
+              <li><strong>No conoce el contexto del caso.</strong> Un contrato desequilibrado puede ser perfectamente aceptable si las partes lo negociaron con información y asesoría. El informe valora el texto, no la negociación que lo produjo.</li>
             </ul>
           </section>
 
@@ -290,7 +294,7 @@ export default function Manual() {
               <dd>
                 Para analizar un contrato nuevo, sí: el texto se procesa
                 contra el proveedor de IA configurado y contra el
-                catálogo normativo de la base de datos. Los dictámenes ya
+                catálogo normativo de la base de datos. Los informes ya
                 generados quedan disponibles para lectura sin conexión
                 gracias al caché de la PWA.
               </dd>
@@ -307,7 +311,7 @@ export default function Manual() {
                 correspondiente, verificado contra la publicación del
                 Código Civil, la Constitución y la normativa laboral. Un
                 verificador automático descarta cualquier cita que no
-                exista en la base de datos antes de mostrar el dictamen.
+                exista en la base de datos antes de mostrar el informe.
               </dd>
               <dt>¿Un índice de 100 significa que el contrato es inválido?</dt>
               <dd>
@@ -317,12 +321,12 @@ export default function Manual() {
                 corresponde a un juez; el índice solo ordena la urgencia
                 de la revisión.
               </dd>
-              <dt>¿Puedo compartir un dictamen?</dt>
+              <dt>¿Puedo compartir un informe?</dt>
               <dd>
-                Sí. El botón «Copiar dictamen completo» lo lleva al
+                Sí. El botón «Copiar informe completo» lo lleva al
                 portapapeles en texto plano —con hallazgos, citas, normas
                 y recomendaciones— listo para pegarlo en un correo o un
-                informe.
+                mensaje.
               </dd>
               <dt>¿Se pueden añadir otros contratos?</dt>
               <dd>

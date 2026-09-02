@@ -47,9 +47,28 @@ class Settings(BaseSettings):
     EMBEDDING_MODEL: str = "intfloat/multilingual-e5-small"
     EMBEDDING_DIM: int = 384
 
+    # Pipeline: pseudonymize PII before every LLM call, restore on persistence.
+    PSEUDONYMIZE: bool = True
+
     # Seed / bootstrap
     ADMIN_EMAIL: str = "admin@clauscheck.local"
     ADMIN_PASSWORD: str = "changeme"
+
+    # Registro / solicitudes de acceso
+    REGISTRATION_MODE: str = "approval"  # open|approval|closed
+
+    # Correo saliente
+    MAIL_BACKEND: str = "console"  # console|smtp
+    SMTP_HOST: str = ""
+    SMTP_PORT: int = 587
+    SMTP_USER: str = ""
+    SMTP_PASS: str = ""
+    SMTP_FROM: str = ""
+    SMTP_FROM_NAME: str = "ClausCheck"
+    ADMIN_NOTIFY_EMAIL: str = ""
+
+    # Base URL pública de la web (para enlaces en correos)
+    APP_BASE_URL: str = "http://localhost:8080"
 
     @property
     def database_url_resolved(self) -> str:

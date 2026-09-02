@@ -1,5 +1,7 @@
 import { useAuthStore } from "@/store/auth";
 import type {
+  AccessRequest,
+  AccessRequestStatusValue,
   AdminOrg,
   Analysis,
   AnalysisStatus,
@@ -10,11 +12,15 @@ import type {
   CuerpoLegal,
   DocumentSummary,
   Invitation,
+  InvitationPreview,
   LlmProvider,
   Member,
+  MfaRequired,
+  MfaSetup,
   NormativaImportResult,
   Org,
   Plan,
+  PublicConfig,
   Role,
   Usage,
   User
@@ -143,12 +149,25 @@ export const authApi = {
       body: input,
       skipAuth: true
     }),
+  // El backend devuelve AuthTokens normalmente, o {mfa_required:true, mfa_token}
+  // si el usuario tiene MFA activo (ver Login.tsx).
   login: (input: { email: string; password: string }) =>
-    request<AuthTokens>("/auth/login", {
+    request<AuthTokens | MfaRequired>("/auth/login", {
       method: "POST",
       body: input,
       skipAuth: true
     }),
+  mfaVerify: (input: { mfa_token: string; code: string }) =>
+    request<AuthTokens>("/auth/mfa/verify", {
+      method: "POST",
+      body: input,
+      skipAuth: true
+    }),
+  mfaSetup: () => request<MfaSetup>("/auth/mfa/setup", { method: "POST" }),
+  mfaEnable: (code: string) =>
+    request<{ mfa_enabled: boolean }>("/auth/mfa/enable", { method: "POST", body: { code } }),
+  mfaDisable: (code: string) =>
+    request<{ mfa_enabled: boolean }>("/auth/mfa/disable", { method: "POST", body: { code } }),
   refresh: () => doRefresh(),
   me: () => request<User>("/auth/me")
 };
@@ -257,6 +276,16 @@ export const usageApi = {
 
 // ---- public (sin auth) -------------------------------------------------------
 
+export interface AccessRequestInput {
+  nombre: string;
+  email: string;
+  organizacion: string;
+  telefono?: string;
+  motivo?: string;
+  /** Honeypot anti-spam: debe quedar vacío. */
+  website?: string;
+}
+
 export const publicApi = {
   corpus: () =>
     request<CorpusItem[]>("/public/corpus", { skipAuth: true }),
@@ -266,7 +295,22 @@ export const publicApi = {
       { skipAuth: true }
     ),
   articulo: (id: string) =>
-    request<Articulo>(`/public/normativa/articulos/${id}`, { skipAuth: true })
+    request<Articulo>(`/public/normativa/articulos/${id}`, { skipAuth: true }),
+  config: () => request<PublicConfig>("/public/config", { skipAuth: true }),
+  createAccessRequest: (input: AccessRequestInput) =>
+    request<{ ok: boolean }>("/public/access-requests", {
+      method: "POST",
+      body: input,
+      skipAuth: true
+    }),
+  invitationPreview: (token: string) =>
+    request<InvitationPreview>(`/public/invitations/${token}`, { skipAuth: true }),
+  acceptInvitation: (token: string, input: { nombre: string; password: string }) =>
+    request<AuthTokens>(`/public/invitations/${token}/accept`, {
+      method: "POST",
+      body: input,
+      skipAuth: true
+    })
 };
 
 // ---- admin --------------------------------------------------------------------
@@ -366,6 +410,22 @@ export const adminApi = {
     list: () => request<Plan[]>("/admin/plans"),
     update: (code: string, input: Partial<Plan>) =>
       request<Plan>(`/admin/plans/${code}`, { method: "PATCH", body: input })
+  },
+  accessRequests: {
+    list: (status?: AccessRequestStatusValue) =>
+      request<AccessRequest[]>(
+        `/admin/access-requests${status ? `?status=${status}` : ""}`
+      ),
+    approve: (id: string, input: { plan_code: string; role?: Role }) =>
+      request<AccessRequest>(`/admin/access-requests/${id}/approve`, {
+        method: "POST",
+        body: input
+      }),
+    reject: (id: string, motivo: string) =>
+      request<AccessRequest>(`/admin/access-requests/${id}/reject`, {
+        method: "POST",
+        body: { motivo }
+      })
   }
 };
 

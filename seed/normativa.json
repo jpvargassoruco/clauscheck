@@ -99,6 +99,54 @@
       "numero": "16998",
       "fecha": "1979-08-02",
       "fuente_url": "https://www.lexivox.org/norms/BO-DL-16998.html"
+    },
+    {
+      "code": "LEY453",
+      "nombre": "Ley General de los Derechos de las Usuarias y los Usuarios y de las Consumidoras y los Consumidores",
+      "tipo": "ley",
+      "numero": "453",
+      "fecha": "2013-12-04",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html"
+    },
+    {
+      "code": "DS2130",
+      "nombre": "Decreto Supremo N° 2130 — Reglamento a la Ley N° 453, General de los Derechos de las Usuarias y los Usuarios y de las Consumidoras y los Consumidores",
+      "tipo": "decreto supremo",
+      "numero": "2130",
+      "fecha": "2014-09-25",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html"
+    },
+    {
+      "code": "DS4732",
+      "nombre": "Decreto Supremo N° 4732 — Prevención de cláusulas y prácticas comerciales abusivas en contratos de venta futura, venta con reserva de propiedad u otras modalidades de preventa de bienes inmuebles (Ley N° 453)",
+      "tipo": "decreto supremo",
+      "numero": "4732",
+      "fecha": "2022-06-01",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html"
+    },
+    {
+      "code": "LEY393",
+      "nombre": "Ley de Servicios Financieros",
+      "tipo": "ley",
+      "numero": "393",
+      "fecha": "2013-08-21",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N393.html"
+    },
+    {
+      "code": "CCOM",
+      "nombre": "Código de Comercio",
+      "tipo": "decreto ley",
+      "numero": "14379",
+      "fecha": "1977-02-25",
+      "fuente_url": "https://www.lexivox.org/norms/BO-COD-DL14379.html"
+    },
+    {
+      "code": "LEY708",
+      "nombre": "Ley de Conciliación y Arbitraje",
+      "tipo": "ley",
+      "numero": "708",
+      "fecha": "2015-06-25",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html"
     }
   ],
   "articulos": [
@@ -680,6 +728,978 @@
       "fuente_url": "https://www.lexivox.org/norms/BO-DL-16998.html",
       "verificado": false,
       "nota": "Posible fragmento de una lista más amplia de obligaciones del empleador (Art. 6); no se pudo confirmar si es el texto íntegro del artículo o solo un inciso."
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "5",
+      "inciso": "1",
+      "titulo": "Definición de usuarias/usuarios, consumidoras/consumidores",
+      "texto": "Son las personas naturales o jurídicas que adquieran, utilizan o disfrutan productos o servicios, como destinatarios finales.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "6",
+      "inciso": "6",
+      "titulo": "Principio de favorabilidad (interpretación pro-consumidor)",
+      "texto": "Favorabilidad. En caso de duda, la Ley y las estipulaciones convenidas se aplicarán en la forma más favorable a las usuarias y los usuarios, las consumidoras y los consumidores.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "19",
+      "inciso": "I",
+      "titulo": "Definición de contrato de adhesión",
+      "texto": "El contrato de adhesión es aquél en el que las cláusulas son dispuestas unilateralmente por un proveedor de productos o servicios, normalmente mediante un formulario preimpreso, de manera que la otra parte no pueda modificarlas o negociarlas, limitándose a aceptarlas o rechazarlas en su integridad.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "19",
+      "inciso": "II",
+      "titulo": "Aprobación previa de modelos de contratos de adhesión",
+      "texto": "Los modelos de contratos de adhesión deberán ser previamente aprobados por la autoridad que otorgue la autorización de la actividad, conforme a las disposiciones de la presente Ley y la normativa específica.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "20",
+      "inciso": null,
+      "titulo": "Eficacia de los contratos de adhesión",
+      "texto": "Los contratos de adhesión que no cumplan con las condiciones establecidas carecerán de eficacia jurídica total o parcial, previa determinación fundamentada por la autoridad competente.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "21",
+      "inciso": "a",
+      "titulo": "Contenido mínimo del contrato de adhesión: información sobre términos y cláusulas",
+      "texto": "Contener toda la información sobre los términos, modalidades, limitaciones y cláusulas a las que se someten las usuarias y los usuarios, las consumidoras y los consumidores al momento de contratar, así como los medios y lugares que se disponen para que se realicen los pagos.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "21",
+      "inciso": "b",
+      "titulo": "Contenido mínimo del contrato de adhesión: redacción clara y comprensible",
+      "texto": "Estar redactados en términos claros, sencillos y comprensibles, legibles a simple vista y en idioma castellano u optativamente en otro idioma oficial del Estado que sea de conocimiento del adherente.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "21",
+      "inciso": "parrafo final",
+      "titulo": "Prohibición de remisión a documentos no entregados al adherente",
+      "texto": "El contrato de adhesión no podrá hacer remisiones a otros documentos que no se entreguen a las usuarias y los usuarios, las consumidoras y los consumidores, salvo que la remisión sea a una norma de carácter público.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "encabezado",
+      "titulo": "Definición de cláusulas abusivas",
+      "texto": "Son cláusulas abusivas aquellas que dejan a las usuarias y los usuarios, a las consumidoras y los consumidores en estado de total desventaja y desigualdad frente a los proveedores de productos o servicios.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "a",
+      "titulo": "Cláusula abusiva: exclusión/limitación de derechos o restricción a reclamar",
+      "texto": "Excluyan o limiten los derechos de las usuarias y los usuarios, las consumidoras y los consumidores, así como las que impliquen renuncia o restricción a formular reclamos o denuncias.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "b",
+      "titulo": "Cláusula abusiva: modificación unilateral del contrato por el proveedor",
+      "texto": "Establezcan a favor del proveedor, la facultad unilateral de modificar los términos del contrato de consumo o servicio, previamente suscrito.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "c",
+      "titulo": "Cláusula abusiva: exoneración de responsabilidad del proveedor",
+      "texto": "Exoneren de responsabilidad al proveedor.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "d",
+      "titulo": "Cláusula abusiva: silencio como aceptación de prestaciones no requeridas",
+      "texto": "Establezcan el silencio de las usuarias y los usuarios, las consumidoras y los consumidores, como aceptación de prestaciones adicionales no requeridas, pagos u otras obligaciones no estipuladas expresamente.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "e",
+      "titulo": "Cláusula abusiva: cesión de información personal/crediticia a terceros",
+      "texto": "Señalen que la información personal o crediticia de las consumidoras y los consumidores, será compartida con otros proveedores, salvo lo dispuesto en normativa específica.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "f",
+      "titulo": "Cláusula abusiva: cláusula residual (otras establecidas en normativa específica)",
+      "texto": "Otras que se establezcan en la normativa específica.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "22",
+      "inciso": "parrafo final",
+      "titulo": "Nulidad de las cláusulas abusivas (se tienen por no puestas)",
+      "texto": "Las cláusulas abusivas insertas en los contratos, se tendrán por no puestas y no producirán efecto legal alguno.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY453",
+      "numero": "25",
+      "inciso": null,
+      "titulo": "Prohibición de publicidad e información engañosa o abusiva",
+      "texto": "Está prohibida la publicidad engañosa o abusiva y toda información u omisión sobre la naturaleza, características, calidad, cantidad, seguridad, desempeño, durabilidad, precio o garantía de productos o servicios que provoque error o daño económico, y será sancionada conforme a la normativa penal vigente. Si resultara delito de fraude o engaño contra la industria y el comercio, sin perjuicio de otras sanciones que correspondan.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N453.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "11",
+      "inciso": "I",
+      "titulo": "Prevención de cláusulas abusivas — deber del proveedor",
+      "texto": "Es responsabilidad de las proveedoras y de los proveedores, prevenir que previo a la aprobación y registro por parte de la autoridad competente de los sectores regulado y no regulado, el contrato de adhesión, u otro cualquiera fuera su naturaleza, se encuentre libre de cláusulas abusivas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "11",
+      "inciso": "II",
+      "titulo": "Prevención de cláusulas abusivas — control y registro por autoridad competente",
+      "texto": "La autoridad competente de los sectores regulado y no regulado al momento del registro y aprobación del contrato de adhesión, u otro cualquiera fuera su naturaleza, tiene el deber de controlar que el mismo se encuentre libre de cláusulas abusivas, que de encontrar una o más cláusulas abusivas, deberá disponer su previa rectificación, hecho que no libera a la proveedora o el proveedor, de su responsabilidad de prevenir la existencia de cláusulas abusivas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "11",
+      "inciso": "III",
+      "titulo": "Responsabilidad civil y penal por cláusulas abusivas",
+      "texto": "La presencia de una o más cláusulas abusivas, en un contrato, aún cuando el mismo no fuera de adhesión, hace responsable a la proveedora o el proveedor, no solo por los derechos vulnerados de las usuarias y los usuarios, las consumidoras y los consumidores, sino también de las responsabilidades civiles y penales que emerjan por los daños y perjuicios ocasionados.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "11",
+      "inciso": "IV",
+      "titulo": "Sanción por presencia de cláusula abusiva",
+      "texto": "La autoridad competente de los sectores regulado y no regulado, cuando advierta la presencia de una cláusula abusiva en un contrato, de manera fundamentada e independientemente de la reparación de los derechos vulnerados, podrá aplicar la sanción que corresponda de acuerdo a normativa vigente.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "1",
+      "titulo": "Práctica comercial abusiva: venta condicionada",
+      "texto": "Condicionar la compra, venta, comercialización o disposición de determinados productos o servicios a la aceptación de obligaciones adicionales o distintas al objeto de la venta.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "2",
+      "titulo": "Práctica comercial abusiva: negativa injustificada a vender",
+      "texto": "Negativa injustificada a vender o proporcionar productos o servicios en las condiciones comerciales habituales del lugar de venta.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "3",
+      "titulo": "Práctica comercial abusiva: envío de producto no solicitado",
+      "texto": "Enviar a las usuarias y los usuarios, a las consumidoras y los consumidores, un servicio o producto, sin que éste lo haya solicitado. De producirse el hecho, será considerado como muestra gratis, sin responsabilidad alguna para el receptor.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "4",
+      "titulo": "Práctica comercial abusiva: aprovechamiento de edad o discapacidad",
+      "texto": "Aprovecharse dolosamente de la edad o algún grado de discapacidad de las usuarias y los usuarios, las consumidoras y los consumidores, para venderle determinado producto o servicio.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "5",
+      "titulo": "Práctica comercial abusiva: incumplimiento de normas técnicas y de calidad",
+      "texto": "Ofrecer o exponer al público, productos o prestación de servicios, que no cumplan con los requisitos y normas técnicas y de calidad.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "6",
+      "titulo": "Práctica comercial abusiva: fórmulas de reajuste no informadas",
+      "texto": "Aplicar fórmulas de reajuste diferentes a las previamente informadas o acordadas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "7",
+      "titulo": "Práctica comercial abusiva: plazo de cumplimiento no especificado o incumplido",
+      "texto": "No especificar el plazo para el cumplimiento de sus obligaciones, o incumplir el plazo acordado.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS2130",
+      "numero": "12",
+      "inciso": "II",
+      "titulo": "Exclusión de prácticas comerciales abusivas por autoridad competente",
+      "texto": "La autoridad competente de los sectores regulado y no regulado, cuando advierta la presencia de prácticas comerciales abusivas, de manera fundamentada dispondrá su exclusión.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-RE-DSN2130.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "2",
+      "inciso": null,
+      "titulo": "Ámbito de aplicación (contratos de preventa de inmuebles)",
+      "texto": "El presente Decreto Supremo se aplica a todo contrato emergente de una relación jurídica cuyo objeto esté relacionado con la venta futura, venta con reserva de propiedad u otras modalidades conocidas comúnmente como preventa, de un bien inmueble de cualquier tipo, incluidos lotes de terreno, viviendas, lotes de inhumación, parqueos, depósitos, tiendas y otros bienes inmuebles ofertados bajo tales modalidades.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "3",
+      "inciso": null,
+      "titulo": "Certificación previa de no contener cláusulas abusivas",
+      "texto": "A efectos del cumplimiento de las obligaciones de los proveedores, dispuestas en el Artículo 14 de la Ley Nº 453, los contratos señalados en el Artículo 2 del presente Decreto Supremo, en forma previa a la suscripción de los mismos, deberán contar obligatoriamente con la certificación de no contener cláusulas abusivas, misma que será emitida por el Ministerio de Justicia y Transparencia Institucional a través del Viceministerio de Defensa de los Derechos del Usuario y del Consumidor.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "1",
+      "titulo": "Parámetro de certificación: identificación del propietario",
+      "texto": "Identificación del propietario del bien inmueble.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "2",
+      "titulo": "Parámetro de certificación: identificación del promotor/intermediario",
+      "texto": "Identificación del promotor, intermediario, constructor u otro a cargo de la venta, cuando corresponda.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "3",
+      "titulo": "Parámetro de certificación: documentos que acreditan la propiedad",
+      "texto": "Identificación de los documentos que acrediten la propiedad del bien inmueble en el cual se ejecutará el proyecto objeto del contrato y/o documentos con facultades de disposición del bien inmueble.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "4",
+      "titulo": "Parámetro de certificación: acreditación del derecho propietario",
+      "texto": "Acreditación del derecho propietario del bien inmueble, folio real y escritura pública de propiedad y otros, en el cual se ejecutará el proyecto, objeto del contrato.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "5",
+      "titulo": "Parámetro de certificación: documento de facultades de disposición",
+      "texto": "Documento con facultades de disposición del bien inmueble y cesión de derechos, sin limitación.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "6",
+      "titulo": "Parámetro de certificación: cláusula de transferencia/cesión por el comprador",
+      "texto": "Cláusula que permita al comprador transferir el inmueble o realizar cualquier tipo de cesión de derechos o accesorios.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "7",
+      "titulo": "Parámetro de certificación: cláusula de entrega inmediata del título",
+      "texto": "Cláusula de obligación de entrega inmediata del título de propiedad al comprador, una vez pagado el precio de venta acordado. Esta obligación debe establecerse de forma expresa, así como las sanciones por su incumplimiento.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "8",
+      "titulo": "Parámetro de certificación: no modificación unilateral del precio",
+      "texto": "Disposición expresa de no modificación unilateral del precio de venta acordado entre partes.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "9",
+      "titulo": "Parámetro de certificación: prohibición de cláusulas desproporcionales",
+      "texto": "Cláusulas que no sean desproporcionales para la usuaria y usuario, consumidora o consumidor.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "10",
+      "titulo": "Parámetro de certificación: fecha de inicio de obra",
+      "texto": "Fecha de inicio de la obra, cuando corresponda.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "11",
+      "titulo": "Parámetro de certificación: fecha de entrega del bien",
+      "texto": "Fecha de entrega del bien inmueble objeto del contrato.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "12",
+      "titulo": "Parámetro de certificación: detalle de todos los pagos",
+      "texto": "Todos los pagos que la usuaria o usuario, consumidora o consumidor debe realizar como parte del precio de venta acordado, así como pagos por otros conceptos.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "13",
+      "titulo": "Parámetro de certificación: superficie y características técnicas",
+      "texto": "La superficie del bien inmueble y sus características técnicas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "14",
+      "titulo": "Parámetro de certificación: obligaciones existentes sobre el bien",
+      "texto": "Toda obligación existente sobre el bien inmueble, incluyendo tributos.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "15",
+      "titulo": "Parámetro de certificación: planos y permisos de construcción",
+      "texto": "Planos autorizados y permisos de construcción otorgados por el Gobierno Autónomo Municipal, para proyectos inmobiliarios.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "16",
+      "titulo": "Parámetro de certificación: documento de administración de territorio",
+      "texto": "Documento de administración de territorio aprobado por el Gobierno Autónomo Municipal, para lotes.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "17",
+      "titulo": "Parámetro de certificación: porcentaje de áreas comunes",
+      "texto": "Cláusula que establezca el porcentaje de áreas comunes.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "4",
+      "inciso": "18",
+      "titulo": "Parámetro de certificación: otros requisitos",
+      "texto": "Otros requisitos que puedan ser solicitados.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "1",
+      "titulo": "Práctica comercial abusiva: contrato no certificado",
+      "texto": "Suscribir contratos no certificados, conforme lo establecido en el presente Decreto Supremo.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "2",
+      "titulo": "Práctica comercial abusiva: oferta sin facultades de disposición acreditadas",
+      "texto": "Ofertar la venta futura, venta con reserva de propiedad u otras modalidades de preventa, de bienes inmuebles, sin acreditar facultades específicas de disposición sobre el bien inmueble otorgadas mediante instrumento público por el propietario.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "3",
+      "titulo": "Práctica comercial abusiva: incumplimiento de plazo de entrega",
+      "texto": "El incumplimiento del plazo de entrega acordado en los contratos señalados en el Artículo 2 del presente Decreto Supremo.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "4",
+      "titulo": "Práctica comercial abusiva: incumplimiento de características técnicas",
+      "texto": "El incumplimiento a las características técnicas del bien inmueble u otras condiciones acordadas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "5",
+      "titulo": "Práctica comercial abusiva: cobro no previsto en el contrato",
+      "texto": "La exigencia de cualquier otro cobro no previsto en el contrato.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "6",
+      "titulo": "Práctica comercial abusiva: incumplimiento de ofertas sobre espacios comunes",
+      "texto": "El incumplimiento de ofertas referidas a los espacios comunes, accesorios y otros compromisos establecidos.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "7",
+      "titulo": "Práctica comercial abusiva: modificación unilateral de áreas comunes",
+      "texto": "Modificación unilateral del uso de las áreas comunes ofertadas.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "DS4732",
+      "numero": "5",
+      "inciso": "8",
+      "titulo": "Práctica comercial abusiva: venta sin autorización municipal",
+      "texto": "Venta de construcciones y otros que no cuenten con autorización del Gobierno Autónomo Municipal.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-DS-N4732.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "59",
+      "inciso": "I",
+      "titulo": "Régimen de control de tasas de interés — límites por Decreto Supremo",
+      "texto": "Las tasas de interés activas serán reguladas por el Órgano Ejecutivo del nivel central del Estado mediante Decreto Supremo, estableciendo para los financiamientos destinados al sector productivo y vivienda de interés social límites máximos dentro de los cuales las entidades financieras podrán pactar con sus clientes en el marco de lo establecido en la presente Ley.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "59",
+      "inciso": "II",
+      "titulo": "Régimen de control de tasas de interés — tasa variable no supera el límite",
+      "texto": "Para el caso de operaciones crediticias pactadas con tasa variable, la tasa de interés cobrada al cliente no podrá superar las tasas establecidas en el Decreto Supremo señalado en el presente Artículo.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "59",
+      "inciso": "III",
+      "titulo": "Régimen de control de tasas de interés — tasas mínimas de depósitos",
+      "texto": "El régimen de tasas de interés del mismo modo podrá establecer tasas de interés mínimas para operaciones de depósitos. Las características y condiciones de estos depósitos serán establecidas en Decreto Supremo.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "59",
+      "inciso": "IV",
+      "titulo": "Régimen de control de tasas de interés — gestión del Decreto Supremo",
+      "texto": "El Decreto Supremo señalado en el presente Artículo, será gestionado por el Ministerio de Economía y Finanzas Públicas.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "60",
+      "inciso": null,
+      "titulo": "Régimen de comisiones",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI establecerá las comisiones y los niveles máximos de comisiones, tarifas y otros cargos que las entidades financieras podrán cobrar a los consumidores financieros por las operaciones y servicios prestados; pudiendo inclusive incluir la gratuidad de algunas operaciones y servicios con fines sociales.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "61",
+      "inciso": null,
+      "titulo": "Mecanismos y procedimientos de control",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI mediante regulación normativa expresa, establecerá los mecanismos y procedimientos operativos para la aplicación y control del Régimen de Control de Tasas de Interés y Comisiones.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "I",
+      "titulo": "Defensoría del Consumidor Financiero — creación",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI establecerá en su estructura organizacional una unidad especializada de Defensoría del Consumidor Financiero, con dependencia funcional directa de la directora ejecutiva o director ejecutivo de la Autoridad de Supervisión del Sistema Financiero - ASFI.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "II",
+      "titulo": "Defensoría del Consumidor Financiero — coordinación",
+      "texto": "La Defensoría del Consumidor Financiero deberá coordinar operativamente con otras defensorías nacionales y el Ministerio de Justicia y Transparencia.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true,
+      "nota": "Texto modificado por el Artículo 28 de la Ley N° 915 de 22 de marzo de 2017."
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "III",
+      "titulo": "Defensoría del Consumidor Financiero — misión",
+      "texto": "La misión de la Defensoría del Consumidor Financiero consistirá en la defensa y protección de los intereses de los consumidores financieros, frente a los actos, hechos u omisiones de las entidades financieras.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "IV",
+      "titulo": "Defensoría del Consumidor Financiero — segunda instancia de reclamos",
+      "texto": "La Defensoría del Consumidor Financiero se constituirá como segunda instancia de atención de reclamos interpuestos por los consumidores financieros de entidades financieras, una vez agotada la gestión de reclamación ante la entidad financiera.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "V",
+      "titulo": "Defensoría del Consumidor Financiero — análisis y estudios",
+      "texto": "Se instituirá como área especializada para realizar análisis y estudios sobre necesidades y grado de satisfacción de los consumidores financieros.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "73",
+      "inciso": "VI",
+      "titulo": "Defensoría del Consumidor Financiero — atribuciones por regulación ASFI",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI, mediante regulación expresa determinará las atribuciones y funciones de la Defensoría del Consumidor Financiero así como la operativa de atención de reclamos.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.a",
+      "titulo": "Derechos del consumidor financiero — acceso equitativo sin discriminación",
+      "texto": "Al acceso a los servicios financieros con trato equitativo, sin discriminación por razones de edad, género, raza, religión o identidad cultural.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.b",
+      "titulo": "Derechos del consumidor financiero — calidad del servicio",
+      "texto": "A recibir servicios financieros en condiciones de calidad, cuantía, oportunidad y disponibilidad adecuadas a sus intereses económicos.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.c",
+      "titulo": "Derechos del consumidor financiero — información fidedigna",
+      "texto": "A recibir información fidedigna, amplia, íntegra, clara, comprensible, oportuna y accesible de las entidades financieras, sobre las características y condiciones de los productos y servicios financieros que ofrecen.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.d",
+      "titulo": "Derechos del consumidor financiero — trato digno",
+      "texto": "A recibir buena atención y trato digno de parte de las entidades financieras, debiendo éstas actuar en todo momento con la debida diligencia.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.e",
+      "titulo": "Derechos del consumidor financiero — canales de reclamo",
+      "texto": "Al acceso a medios o canales de reclamo eficientes, si los productos y servicios financieros recibidos no se ajustan a lo dispuesto en los numerales precedentes.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.f",
+      "titulo": "Derechos del consumidor financiero — confidencialidad",
+      "texto": "A la confidencialidad, con las excepciones establecidas por Ley.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.g",
+      "titulo": "Derechos del consumidor financiero — consultas y peticiones",
+      "texto": "A efectuar consultas, peticiones y solicitudes.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "I.h",
+      "titulo": "Derechos del consumidor financiero — otros derechos",
+      "texto": "Otros derechos reconocidos por disposiciones legales y reglamentarias.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "74",
+      "inciso": "II",
+      "titulo": "Derechos del consumidor financiero — reglas ASFI para garantizar ejercicio",
+      "texto": "La normativa emitida por la Autoridad de Supervisión del Sistema Financiero - ASFI establecerá reglas para que las entidades financieras, aseguren a los consumidores financieros el ejercicio pleno de sus derechos.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "75",
+      "inciso": "I",
+      "titulo": "Suspensión de acuerdos o prácticas restrictivas",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI ordenará la suspensión de acuerdos y prácticas por parte de la entidad financiera que directa o indirectamente tengan por objeto o efecto impedir, restringir o limitar a los consumidores financieros, el ejercicio de la elección de sus preferencias o cualquier forma de discriminación.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "75",
+      "inciso": "II",
+      "titulo": "Suspensión de acuerdos o prácticas restrictivas — sin perjuicio de sanción",
+      "texto": "La suspensión del acuerdo o práctica, se ejecutará sin perjuicio del inicio del procedimiento sancionatorio.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "I",
+      "titulo": "Registro de contratos ante ASFI — obligación de registro previo",
+      "texto": "Las entidades financieras, están obligadas a registrar en el registro de contratos de la Autoridad de Supervisión del Sistema Financiero - ASFI, los formatos y modelos de todos los contratos tipo de las operaciones autorizadas, previo a su aplicación, de acuerdo a reglamentación a ser emitida por la Autoridad de Supervisión del Sistema Financiero - ASFI.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "II",
+      "titulo": "Registro de contratos — revisión y aprobación de contratos modelo",
+      "texto": "Los contratos modelo de operaciones comunes y recurrentes, deberán ser revisados y aprobados por la Autoridad de Supervisión del Sistema Financiero - ASFI.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "III",
+      "titulo": "Registro de contratos — operaciones no recurrentes",
+      "texto": "En caso de operaciones no recurrentes o especiales, la Autoridad de Supervisión del Sistema Financiero - ASFI se limitará a revisar y registrar los contratos; si la Autoridad de Supervisión del Sistema Financiero - ASFI determina la recurrencia de estos contratos, podrá determinar que aplique lo dispuesto en el Parágrafo II.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "IV",
+      "titulo": "Registro de contratos — revisión de cláusulas abusivas por ASFI",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI deberá revisar que los contratos no contengan cláusulas abusivas, publicarlos en su sitio electrónico y regular la operativa de registro de los mismos.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "V",
+      "titulo": "Registro de contratos — plazo de pronunciamiento y silencio positivo",
+      "texto": "La Autoridad de Supervisión del Sistema Financiero - ASFI deberá pronunciarse en un plazo máximo establecido por Decreto Supremo, pasado el plazo procederá el silencio administrativo positivo.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "VI",
+      "titulo": "Registro de contratos — prohibición de operar con contratos no registrados",
+      "texto": "Las entidades financieras no podrán operar con contratos que no se encuentren en el registro de contratos de la Autoridad de Supervisión del Sistema Financiero - ASFI.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "84",
+      "inciso": "VII",
+      "titulo": "Registro de contratos — incumplimiento y rectificación",
+      "texto": "En caso de que una entidad financiera incumpla la determinación del presente Artículo, será sujeta a un proceso sancionatorio, a la reparación del daño si así correspondiere conforme al Artículo 45 de la presente Ley. La Autoridad de Supervisión del Sistema Financiero - ASFI instruirá la inmediata rectificación del contrato.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "85",
+      "inciso": "I",
+      "titulo": "Prohibición de cláusulas de exceso o abuso",
+      "texto": "En la celebración de contratos por las operaciones propias de su objeto, las entidades financieras están prohibidas de convenir cláusulas que puedan afectar indebidamente los intereses del cliente o dar lugar a excesos o abusos de posición dominante.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "85",
+      "inciso": "II",
+      "titulo": "Prohibición de cláusulas de exceso o abuso — remisión a derechos del consumidor",
+      "texto": "Las cláusulas de los contratos deberán estipularse observando los derechos del consumidor financiero contenidos en el Título I, Capítulo VI, Sección II de la presente Ley.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "86",
+      "inciso": null,
+      "titulo": "Prohibición de modificaciones unilaterales",
+      "texto": "Las entidades financieras no podrán modificar unilateralmente los términos y condiciones pactadas en los contratos de operaciones de intermediación financiera y de servicios complementarios, salvo que dicha modificación beneficie al consumidor financiero.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "87",
+      "inciso": null,
+      "titulo": "Seguros colectivos — licitación pública y prohibición de cobros adicionales",
+      "texto": "Todo seguro colectivo a ser tomado por las entidades de intermediación financiera por cuenta de clientes, deberá realizarse a través de licitación pública, de acuerdo a pólizas uniformes establecidas conforme la normativa emitida por la Autoridad de Fiscalización y Control de Pensiones y Seguros. Las entidades de intermediación financiera no podrán cobrar bajo ningún concepto sumas adicionales a la prima establecida por la entidad aseguradora que obtenga la licitación.\n\nTodo crédito hipotecario de vivienda deberá contar con un seguro de desgravamen, salvo excepciones y condiciones establecidas en normativa por la Autoridad de Supervisión del Sistema Financiero – ASFI.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true,
+      "nota": "Segundo párrafo incorporado por la Disposición Adicional Sexta de la Ley N° 856 de 28 de noviembre de 2016."
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "88",
+      "inciso": "I",
+      "titulo": "Cobro de cargos y comisiones — prohibición de cobros sin contraprestación",
+      "texto": "Se prohíbe el cobro de cargos o comisiones que no impliquen una contraprestación efectiva de servicios o el cobro de más de una comisión por un mismo acto, hecho o evento.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "88",
+      "inciso": "II",
+      "titulo": "Cobro de cargos y comisiones — servicios no solicitados",
+      "texto": "Las entidades financieras no podrán cobrar cargos o comisiones por servicios no aceptados o no solicitados expresamente por el cliente o usuario.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "88",
+      "inciso": "III",
+      "titulo": "Cobro de cargos y comisiones — sanción y devolución",
+      "texto": "La entidad financiera que incumpla la determinación del presente artículo será sujeta a proceso sancionador, sin perjuicio de la devolución del cobro de cargo o comisión mal realizada.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY393",
+      "numero": "89",
+      "inciso": null,
+      "titulo": "Prohibición de prácticas discriminatorias, abusivas o restrictivas",
+      "texto": "Las entidades financieras, en todos sus actos y contratos, evitarán privilegios y discriminaciones, absteniéndose de toda práctica que tenga la capacidad, el propósito o el efecto de generar algún tipo de práctica indebida o arbitraria.",
+      "fuente_url": "https://www.asfi.gob.bo/sites/default/files/2025-07/Texto%20ordenado.pdf",
+      "verificado": true,
+      "nota": "Fuera del rango aproximado indicado en el encargo, pero directamente relevante a cláusulas abusivas/restrictivas; añadido como complemento."
+    },
+    {
+      "cuerpo": "CCOM",
+      "numero": "786",
+      "inciso": null,
+      "titulo": "Aplicación supletoria del Código Civil a los negocios mercantiles",
+      "texto": "Se aplican supletoriamente a los negocios comerciales, los principios y normas de los contratos y obligaciones, así como la prueba regulados, respectivamente por el Código Civil y Código de Procedimiento Civil.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/27225",
+      "verificado": true,
+      "nota": "Fuente principal (lexivox.org) usada como cuerpo_fuente_url; el texto fue verificado también en bolivia.infoleyes.com/articulo/27225."
+    },
+    {
+      "cuerpo": "CCOM",
+      "numero": "803",
+      "inciso": null,
+      "titulo": "Buena fe en los contratos mercantiles",
+      "texto": "En todo contrato se presume la buena fe y, en consecuencia, obliga no solo a lo pactado expresamente en ellos, sino también en lo correspondiente a la naturaleza de los mismos según la ley, la costumbre o la equidad.",
+      "fuente_url": "https://bolivia.infoleyes.com/articulo/27483",
+      "verificado": true
+    },
+    {
+      "cuerpo": "CCOM",
+      "numero": "N/A-1",
+      "inciso": null,
+      "titulo": "",
+      "texto": "",
+      "fuente_url": "",
+      "verificado": false,
+      "nota": "Se verificaron secuencialmente los arts. 786-805 del Código de Comercio (D.L. 14379) en lexivox.org y bolivia.infoleyes.com: no existe un artículo dedicado a 'contratos de adhesión' ni a 'cláusulas predispuestas se interpretan contra quien las redactó' (encargo original suponía art. 787, que en realidad trata 'Forma de expresar la voluntad'). Esa regla de interpretación contra el predisponente está en el CÓDIGO CIVIL (D.L. 12760), cuerpo ya existente 'CC' en este seed, no en el Código de Comercio. No se fabricó una entrada CCOM para este tema."
+    },
+    {
+      "cuerpo": "CCOM",
+      "numero": "N/A-2",
+      "inciso": null,
+      "titulo": "",
+      "texto": "",
+      "fuente_url": "",
+      "verificado": false,
+      "nota": "Se verificaron los arts. 802 (resolución del contrato), 803 (buena fe, ya incluido arriba) y 804 (contratos celebrados en el exterior) del Código de Comercio: ninguno regula cláusula penal ni limitación convencional de responsabilidad. La cláusula penal está regulada en el CÓDIGO CIVIL (cuerpo 'CC'), no en el Código de Comercio. No se fabricó una entrada CCOM para este tema."
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "42",
+      "inciso": null,
+      "titulo": "Cláusula arbitral",
+      "texto": "La cláusula arbitral es el acuerdo escrito establecido en una cláusula de un contrato, en la cual las partes se obligan a someter sus controversias derivadas del indicado contrato, a arbitraje.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true,
+      "nota": "Numeración real es Art. 42, no el rango aproximado 39-41 dado en el encargo."
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "43",
+      "inciso": "1",
+      "titulo": "Convenio arbitral — definición",
+      "texto": "El Convenio Arbitral es el acuerdo que se instrumenta por escrito en otro documento posterior diferente al contrato, en el cual las partes se obligan a someter las controversias a arbitraje.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "43",
+      "inciso": "2",
+      "titulo": "Convenio arbitral — soporte",
+      "texto": "El Convenio Arbitral debe constar en un soporte físico, electrónico o cualquier otro que deje constancia de la expresión de voluntad de las partes, manifestada en conjunto o en forma sucesiva.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "43",
+      "inciso": "3",
+      "titulo": "Convenio arbitral — relación contractual o extracontractual",
+      "texto": "El Convenio Arbitral hará referencia a una relación contractual o extracontractual.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "44",
+      "inciso": "1",
+      "titulo": "Autonomía de la cláusula arbitral — independencia",
+      "texto": "Toda cláusula arbitral o convenio arbitral que forme parte de un contrato, se considera como un acuerdo independiente y autónomo con relación a las demás estipulaciones del mismo.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "44",
+      "inciso": "2",
+      "titulo": "Autonomía de la cláusula arbitral — inafectación por nulidad del contrato",
+      "texto": "La nulidad o anulabilidad, ineficacia o invalidez del contrato no afectará a la Cláusula Arbitral o al Convenio Arbitral.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "5",
+      "inciso": "1",
+      "titulo": "Exclusión expresa — materia laboral y seguridad social",
+      "texto": "Quedan excluidas de la aplicación de la presente Ley: 1. Las controversias en materia laboral y de seguridad social, por estar sometidas a disposiciones legales que el son propias.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true,
+      "nota": "Numeración real es Art. 5, no Art. 44 como se aproximó en el encargo. No existe exclusión expresa de materia de consumo/consumidor en esta ley; solo se confirma exclusión laboral/seguridad social."
+    },
+    {
+      "cuerpo": "LEY708",
+      "numero": "4",
+      "inciso": null,
+      "titulo": "Materias excluidas de la conciliación y del arbitraje (enumeración)",
+      "texto": "No podrá someterse a la Conciliación ni al Arbitraje, lo siguiente: 1. La propiedad de los recursos naturales. 2. Los títulos otorgados sobre reservas fiscales. 3. Los tributos y regalías. 4. Los contratos administrativos, salvo lo dispuesto en la presente Ley. 5. El acceso a los servicios públicos. 6. Las licencias, registros y autorizaciones sobre recursos naturales en todos sus estados. 7. Cuestiones que afecten al orden público. 8. Las cuestiones sobre las que haya recaído resolución judicial firme y definitiva, salvo los aspectos derivados de su ejecución. 9. Las cuestiones que versen sobre el estado civil y la capacidad de las personas. 10. Las cuestiones referidas a bienes o derechos de incapaces, sin previa autorización judicial. 11. Las cuestiones concernientes a las funciones del Estado. 12. Las cuestiones que no sean objeto de transacción. 13. Y cualquier otra determinada por la Constitución Política del Estado o la Ley.",
+      "fuente_url": "https://www.lexivox.org/norms/BO-L-N708.html",
+      "verificado": true,
+      "nota": "Incluido de contexto general aunque no fue pedido explícitamente; no incluye exclusión de materia de consumo."
     }
   ]
 }
