@@ -112,6 +112,7 @@
     <li><a href="#omisiones">Omisiones</a></li>
     <li><a href="#no">Lo que no hay que hacer</a></li>
     <li><a href="#roadmap">Roadmap vendible en Bolivia</a></li>
+    <li><a href="#verticales">Verticales del derecho</a></li>
     <li><a href="#precios">Precios y unit economics</a></li>
     <li><a href="#fuentes">Fuentes</a></li>
   </ol>
@@ -282,6 +283,8 @@
         <li>Exportación a .docx con cambios rastreados; expediente por cliente; playbook básico por despacho.</li>
         <li>Conjunto dorado de 50 contratos anotados; benchmark v1 por rubro; corrección de prompts hasta superar 80 % de precisión en crítico y alto.</li>
         <li>Prueba de precio: tres planes en bolivianos presentados a cada piloto; medir cuál eligen y qué objeción aparece.</li>
+        <li><b>Panel de consumo en /admin</b>: tokens de entrada y salida, costo en USD y Bs por análisis, por organización, por proveedor y por día; cuota del plan con barra de uso, alertas al 80 % y corte al 100 %; exportación CSV para el contador. Los datos ya se registran por análisis; falta la vista y el costo real reportado por cada proveedor en lugar del estimado.</li>
+        <li><b>Clave de IA propia por organización (BYOK)</b>: una organización puede cargar su propia clave (DeepSeek, Anthropic, OpenRouter, Moonshot) cifrada con Fernet; sus análisis usan esa clave, no descuentan de la cuota de ClausCheck y se cobran solo por plataforma. Hoy la clave la configura únicamente el superadmin a nivel global.</li>
       </ul>
       <div class="kpi"><b>Salida:</b> tres de los ocho pilotos aceptan pagar el plan que eligieron desde diciembre; NPS ≥ 40; precisión ≥ 80 % en hallazgos crítico y alto.</div>
     </div>
@@ -331,6 +334,23 @@
       <div class="kpi"><b>Salida:</b> 300 organizaciones; Bs 150.000 mensuales; catálogo de 1.000 artículos y 300 sentencias; benchmark v3 publicado.</div>
     </div>
   </div>
+
+  <h2 id="verticales">Verticales del derecho</h2>
+  <p>ClausCheck revisa documentos contractuales. Eso define qué verticales entran, en qué fase y cuáles quedan fuera aunque sean atractivas. La tabla toma la clasificación de seis verticales y la traduce a producto: qué documento se analiza, qué normativa hay que cargar y cuándo.</p>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>Vertical</th><th>Subverticales</th><th>Qué revisa ClausCheck</th><th>Normativa a cargar</th><th>Fase</th></tr></thead>
+    <tbody>
+      <tr><td><b>Corporativo y negocios (B2B)</b></td><td>Laboral empresarial, gobierno corporativo, propiedad intelectual, tributario, M&amp;A</td><td>Contratos de trabajo y de servicios, distribución y agencia, confidencialidad, licencias de software y marca, estatutos y actas, compraventa de acciones y cuotas</td><td>Ya: LGT, Ley 453, Ley 393, Código de Comercio, Ley 708. Falta: Ley 1834 propiedad intelectual y D.S. 24582, Ley 843 tributaria (retenciones e IVA en contratos), Código de Comercio libro de sociedades</td><td>Ahora y Fase 1; M&amp;A en Fase 3 (comparación de versiones, playbook)</td></tr>
+      <tr><td><b>Civil y privado (B2C)</b></td><td>Inmobiliario, responsabilidad civil, familia, sucesiones</td><td>Compraventa, anticrético, alquiler, preventa de inmuebles, préstamos entre particulares, transacciones y acuerdos de divorcio, testamentos y acuerdos de partición</td><td>Ya: Código Civil, Ley 247, D.S. 4732. Falta: Código de las Familias (Ley 603) para acuerdos reguladores, Código Civil libro IV sucesiones, Ley 1178 no aplica</td><td>Inmobiliario ahora; familia y sucesiones en Fase 3 con abogado curador de familia</td></tr>
+      <tr><td><b>Administrativo y público</b></td><td>Contratación pública, urbanismo, migración</td><td>Contratos administrativos y pliegos SICOES (cláusulas de multas, garantías, resolución), convenios con gobiernos locales; revisión desde el lado del contratista privado</td><td>D.S. 181 (NB‑SABS) y sus modificaciones, Ley 1178, Ley 2341 de procedimiento administrativo, Ley 466 de la empresa pública</td><td>Fase 4, ligado a la venta institucional y al perfil «contratista del Estado»</td></tr>
+      <tr><td><b>Emergentes y tecnología</b></td><td>Derecho digital, privacidad, fintech, contratos de influencers</td><td>Términos y condiciones de plataformas, políticas de privacidad, contratos de desarrollo de software y SaaS, acuerdos con creadores de contenido, contratos con pasarelas de pago</td><td>Ley 164 y D.S. 1793, anteproyecto de datos personales (como referencia, no como norma vigente), reglamentos ASFI de pagos y fintech, Ley 453 en adhesión digital</td><td>Fase 3; es la vertical donde ClausCheck vende a startups y agencias, con precios por contrato suelto</td></tr>
+      <tr><td><b>Penal</b></td><td>Penal general, penal económico</td><td>No hay revisión de cláusulas: son denuncias, querellas, escritos procesales y pruebas. Único punto de contacto: cláusulas contractuales que esconden estelionato o estafa (Art. 628 CC, Art. 335 CP), que ya se detectan como hallazgo crítico y podrían enlazar al tipo penal</td><td>Código Penal arts. 335 y 337 solo como cita cruzada</td><td>Fuera del roadmap como vertical; cita cruzada en Fase 3</td></tr>
+      <tr><td><b>Forense (legal y ciencia)</b></td><td>Informática forense, contabilidad forense, medicina legal, criminalística</td><td>No es revisión contractual. Lo aprovechable: la cadena de custodia del documento (hash, sello de tiempo, registro de auditoría) que ClausCheck ya planea, útil como evidencia de qué versión se revisó y cuándo</td><td>Ley 164 sobre valor probatorio del documento digital</td><td>Fuera del roadmap; el hash y sello de tiempo de Fase 3 cubren el caso de uso</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="nota">Regla para decidir: entra una vertical cuando existe un documento contractual que un cliente firma, un cuerpo normativo verificable que lo rige y un abogado curador disponible para anotar veinte ejemplos. Penal y forense no cumplen la primera condición.</p>
 
   <h2 id="precios">Precios y unit economics</h2>
   <p>Anclas encontradas: software para pymes en Bolivia desde Bs 252 al mes (CUCU); legaltech latinoamericana de entrada entre USD 9 y 30 por usuario; herramientas globales de revisión de contratos desde USD 1.200 por asiento, fuera de escala local. Propuesta inicial para probar en el piloto:</p>
