@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 # Phase B: one-time bootstrap of a fresh Ubuntu 24.04 VM (COTAS cloud) to
 # host ClausCheck behind a Cloudflare Tunnel. Run as root (or via sudo) on
-# the target VM itself. NOT executed automatically — review before running.
+# the target VM itself. NOT executed automatically - review before running.
 #
-# Usage: VPN_SUBNET=10.8.0.0/24 REPO_URL=git@github.com:jpvargassoruco/clauscheck.git \
-#          ./bootstrap-vm.sh
+# The VM has only a private IP inside the COTAS tenant network (no public
+# IP), so SSH (22/tcp) is allowed from anywhere; every other inbound port
+# stays denied. HTTP/HTTPS/edge traffic reaches the box via the outbound-only
+# Cloudflare Tunnel once that profile is enabled (Phase B, later).
+#
+# Usage: ./bootstrap-vm.sh
 set -euo pipefail
 
-: "${VPN_SUBNET:?set VPN_SUBNET, e.g. 10.8.0.0/24 (only SSH from here is allowed)}"
-REPO_URL="${REPO_URL:-git@github.com:jpvargassoruco/clauscheck.git}"
-REPO_PATH="${REPO_PATH:-/opt/clauscheck}"
-DEPLOY_USER="${DEPLOY_USER:-$(logname 2>/dev/null || echo "$SUDO_USER")}"
+DEPLOY_USER="${DEPLOY_USER:-$(logname 2>/dev/null || echo "${SUDO_USER:-}")}"
 
 echo "==> Updating base system"
 apt-get update -y
@@ -35,35 +36,28 @@ if [ -n "${DEPLOY_USER:-}" ] && [ "${DEPLOY_USER}" != "root" ]; then
   echo "==> Added ${DEPLOY_USER} to the docker group (re-login required)"
 fi
 
-echo "==> Configuring ufw (deny incoming by default; SSH only from ${VPN_SUBNET})"
+echo "==> Configuring ufw (deny incoming by default; allow SSH from anywhere; allow outgoing)"
 ufw default deny incoming
 ufw default allow outgoing
-ufw allow from "${VPN_SUBNET}" to any port 22 proto tcp
-# HTTP/HTTPS/edge traffic reaches the box via the Cloudflare Tunnel
-# (outbound-only), so no inbound 80/443 rule is opened here.
+ufw allow 22/tcp
 ufw --force enable
+
+echo "==> Setting timezone to America/La_Paz"
+timedatectl set-timezone America/La_Paz
 
 echo "==> Enabling unattended-upgrades"
 dpkg-reconfigure -f noninteractive unattended-upgrades
 systemctl enable --now unattended-upgrades
 
-echo "==> Cloning repo to ${REPO_PATH}"
-if [ -d "${REPO_PATH}/.git" ]; then
-  echo "    already present, skipping clone"
-else
-  git clone "${REPO_URL}" "${REPO_PATH}"
-fi
-if [ -n "${DEPLOY_USER:-}" ] && [ "${DEPLOY_USER}" != "root" ]; then
-  chown -R "${DEPLOY_USER}:${DEPLOY_USER}" "${REPO_PATH}"
-fi
-
 cat <<EOF
 
 ==> Bootstrap done.
 Next steps (manual):
-  1. Copy infra/.env.example to ${REPO_PATH}/.env and fill in secrets
+  1. Generate a deploy key on this VM, register it as a read-only GitHub
+     deploy key, and clone the repo into /opt/clauscheck.
+  2. Copy infra/.env.example to /opt/clauscheck/.env and fill in secrets
      (POSTGRES_PASSWORD, PAPERLESS_*, JWT_SECRET, FERNET_KEY, DEEPSEEK_*,
-     CF_TUNNEL_TOKEN, ...).
-  2. Log out/in (or newgrp docker) for the docker group membership to apply.
-  3. Run infra/scripts/deploy.sh from your workstation to bring the stack up.
+     CF_TUNNEL_TOKEN once Phase B edge is enabled, ...).
+  3. Log out/in (or newgrp docker) for the docker group membership to apply.
+  4. Run infra/scripts/deploy.sh from your workstation to bring the stack up.
 EOF
