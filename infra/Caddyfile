@@ -1,0 +1,32 @@
+{
+	admin off
+	auto_https off
+}
+
+:80 {
+	# /api/*  -> FastAPI (routes already carry the /api/v1 prefix, so the
+	# path is forwarded unmodified).
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+
+	# /docs-ui/* -> paperless-ngx. Prefix is kept on the wire: paperless is
+	# configured with PAPERLESS_FORCE_SCRIPT_NAME=/docs-ui and
+	# PAPERLESS_STATIC_URL=/docs-ui/static/, so it expects to see the
+	# prefix on incoming requests.
+	handle /docs-ui/* {
+		reverse_proxy paperless:8000
+	}
+
+	# Everything else: the PWA static build, with SPA fallback to index.html.
+	handle {
+		root * /srv/web
+
+		header /index.html Cache-Control "no-cache"
+		header /sw.js Cache-Control "no-cache"
+		header /manifest.webmanifest Cache-Control "no-cache"
+
+		try_files {path} /index.html
+		file_server
+	}
+}

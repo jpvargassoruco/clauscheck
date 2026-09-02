@@ -17,6 +17,7 @@ __pycache__/
 infra/data/
 backups/
 *.sql
+!infra/postgres-init/*.sql
 *.sql.gz
 *.tar.gz
 # misc
