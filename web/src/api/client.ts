@@ -2,14 +2,18 @@ import { useAuthStore } from "@/store/auth";
 import type {
   AdminOrg,
   Analysis,
+  AnalysisStatus,
+  AnalysisSummary,
   Articulo,
+  AuthTokens,
   CorpusItem,
   CuerpoLegal,
   DocumentSummary,
+  Invitation,
   LlmProvider,
-  LoginResponse,
-  Membership,
-  Paginated,
+  Member,
+  NormativaImportResult,
+  Org,
   Plan,
   Role,
   Usage,
@@ -42,20 +46,30 @@ interface RequestOptions {
 
 let refreshPromise: Promise<string | null> | null = null;
 
+/**
+ * `POST /auth/refresh` no usa cookie httpOnly: exige `refresh_token` en el
+ * body y devuelve un par de tokens nuevo (rotado) — no un `user`.
+ */
 async function doRefresh(): Promise<string | null> {
+  const { refreshToken } = useAuthStore.getState();
+  if (!refreshToken) {
+    useAuthStore.getState().logout();
+    return null;
+  }
   try {
     const res = await fetch(`${API_BASE}/auth/refresh`, {
       method: "POST",
-      credentials: "include",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({})
+      body: JSON.stringify({ refresh_token: refreshToken })
     });
     if (!res.ok) {
       useAuthStore.getState().logout();
       return null;
     }
-    const data = (await res.json()) as { access_token: string };
-    useAuthStore.getState().setAccessToken(data.access_token);
+    const data = (await res.json()) as AuthTokens;
+    useAuthStore
+      .getState()
+      .setTokens({ accessToken: data.access_token, refreshToken: data.refresh_token });
     return data.access_token;
   } catch {
     useAuthStore.getState().logout();
@@ -82,7 +96,6 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
     method,
     headers,
-    credentials: "include",
     body:
       body === undefined ? undefined : isForm ? (body as FormData) : JSON.stringify(body)
   });
@@ -115,6 +128,8 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
 }
 
 // ---- auth -------------------------------------------------------------
+// POST /auth/register|login|refresh sólo devuelven tokens (schemas.TokenResponse);
+// no incluyen `user`. Para tener la sesión completa hay que encadenar GET /auth/me.
 
 export const authApi = {
   register: (input: {
@@ -123,13 +138,13 @@ export const authApi = {
     nombre: string;
     org_nombre: string;
   }) =>
-    request<LoginResponse>("/auth/register", {
+    request<AuthTokens>("/auth/register", {
       method: "POST",
       body: input,
       skipAuth: true
     }),
   login: (input: { email: string; password: string }) =>
-    request<LoginResponse>("/auth/login", {
+    request<AuthTokens>("/auth/login", {
       method: "POST",
       body: input,
       skipAuth: true
@@ -140,39 +155,58 @@ export const authApi = {
 
 // ---- orgs ---------------------------------------------------------------
 
+function slugify(text: string): string {
+  return (
+    text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "") || "org"
+  );
+}
+
 export const orgsApi = {
-  list: () => request<Membership[]>("/orgs"),
-  create: (nombre: string) =>
-    request<Membership>("/orgs", { method: "POST", body: { nombre } }),
-  members: (orgId: string) =>
-    request<{ user_id: string; email: string; nombre: string; role: Role }[]>(
-      `/orgs/${orgId}/members`
-    ),
+  list: () => request<Org[]>("/orgs"),
+  create: (nombre: string, slug?: string) =>
+    request<Org>("/orgs", {
+      method: "POST",
+      body: { nombre, slug: slug || slugify(nombre) }
+    }),
+  members: (orgId: string) => request<Member[]>(`/orgs/${orgId}/members`),
   updateMember: (orgId: string, userId: string, role: Role) =>
-    request(`/orgs/${orgId}/members/${userId}`, {
+    request<Member>(`/orgs/${orgId}/members/${userId}`, {
       method: "PATCH",
       body: { role }
     }),
   invite: (orgId: string, email: string, role: Role) =>
-    request(`/orgs/${orgId}/invitations`, {
+    request<Invitation>(`/orgs/${orgId}/invitations`, {
       method: "POST",
       body: { email, role }
     }),
   acceptInvitation: (token: string) =>
-    request(`/invitations/${token}/accept`, { method: "POST" })
+    request<Member>(`/invitations/${token}/accept`, { method: "POST" })
 };
 
 // ---- documents ------------------------------------------------------------
+// GET /documents no está paginado con {items,total,...}: devuelve un arreglo
+// plano (limit/offset por query, 20/0 por defecto).
 
 export const documentsApi = {
-  list: (page = 1) =>
-    request<Paginated<DocumentSummary>>(`/documents?page=${page}`, {
+  list: (params: { limit?: number; offset?: number } = {}) => {
+    const qs = new URLSearchParams(
+      Object.entries(params)
+        .filter(([, v]) => v !== undefined)
+        .map(([k, v]) => [k, String(v)])
+    ).toString();
+    return request<DocumentSummary[]>(`/documents${qs ? `?${qs}` : ""}`, {
       withOrg: true
-    }),
+    });
+  },
   get: (id: string) =>
     request<DocumentoContrato>(`/documents/${id}`, { withOrg: true }),
   status: (id: string) =>
-    request<{ ocr_status: DocumentSummary["ocr_status"] }>(
+    request<{ id: string; ocr_status: DocumentSummary["ocr_status"] }>(
       `/documents/${id}/status`,
       { withOrg: true }
     ),
@@ -187,6 +221,7 @@ export const documentsApi = {
       withOrg: true
     });
   },
+  // La API acepta JSON {titulo, texto} en /documents cuando no se manda archivo.
   createFromText: (titulo: string, texto: string) =>
     request<DocumentSummary>("/documents", {
       method: "POST",
@@ -198,11 +233,13 @@ export const documentsApi = {
 };
 
 // ---- analyses ---------------------------------------------------------------
+// GET /analyses (lista) NO incluye `dictamen` (schemas.AnalysisOut); sólo
+// GET /analyses/{id} lo incluye (schemas.AnalysisDetailOut).
 
 export const analysesApi = {
-  list: () => request<Analysis[]>("/analyses", { withOrg: true }),
+  list: () => request<AnalysisSummary[]>("/analyses", { withOrg: true }),
   create: (documentId: string) =>
-    request<{ id: string; status: string }>("/analyses", {
+    request<{ id: string; status: AnalysisStatus }>("/analyses", {
       method: "POST",
       body: { document_id: documentId },
       withOrg: true
@@ -224,7 +261,7 @@ export const publicApi = {
   corpus: () =>
     request<CorpusItem[]>("/public/corpus", { skipAuth: true }),
   corpusItem: (id: string) =>
-    request<{ document: DocumentoContrato; dictamen: Dictamen }>(
+    request<{ document: DocumentoContrato; dictamen: Dictamen | null }>(
       `/public/corpus/${id}`,
       { skipAuth: true }
     ),
@@ -234,12 +271,23 @@ export const publicApi = {
 
 // ---- admin --------------------------------------------------------------------
 
+export interface ProviderCreateInput {
+  code: LlmProvider["code"];
+  kind: LlmProvider["kind"];
+  base_url?: string;
+  model?: string;
+  api_key: string;
+  enabled?: boolean;
+  is_default?: boolean;
+  params?: Record<string, unknown>;
+}
+
 export const adminApi = {
   providers: {
     list: () => request<LlmProvider[]>("/admin/providers"),
-    create: (input: Partial<LlmProvider> & { api_key: string }) =>
+    create: (input: ProviderCreateInput) =>
       request<LlmProvider>("/admin/providers", { method: "POST", body: input }),
-    update: (id: string, input: Partial<LlmProvider>) =>
+    update: (id: string, input: Partial<LlmProvider> & { api_key?: string }) =>
       request<LlmProvider>(`/admin/providers/${id}`, {
         method: "PATCH",
         body: input
@@ -259,7 +307,8 @@ export const adminApi = {
         method: "POST",
         body: input
       }),
-    updateCuerpo: (id: string, input: Partial<CuerpoLegal>) =>
+    // PATCH /admin/normativa/cuerpos/{id} valida el cuerpo completo (no parcial).
+    updateCuerpo: (id: string, input: Omit<CuerpoLegal, "id">) =>
       request<CuerpoLegal>(`/admin/normativa/cuerpos/${id}`, {
         method: "PATCH",
         body: input
@@ -272,28 +321,36 @@ export const adminApi = {
         `/admin/normativa/articulos${qs ? `?${qs}` : ""}`
       );
     },
-    createArticulo: (input: Omit<Articulo, "id">) =>
+    // schemas.ArticuloIn: no incluye `version` (lo asigna el servidor).
+    createArticulo: (input: Omit<Articulo, "id" | "version">) =>
       request<Articulo>("/admin/normativa/articulos", {
         method: "POST",
         body: input
       }),
-    updateArticulo: (id: string, input: Partial<Articulo>) =>
+    // PATCH /admin/normativa/articulos/{id} valida el artículo completo (no parcial).
+    updateArticulo: (id: string, input: Omit<Articulo, "id" | "version">) =>
       request<Articulo>(`/admin/normativa/articulos/${id}`, {
         method: "PATCH",
         body: input
       }),
     removeArticulo: (id: string) =>
       request(`/admin/normativa/articulos/${id}`, { method: "DELETE" }),
-    importJson: (file: File) => {
-      const form = new FormData();
-      form.append("file", file);
-      return request<{ cuerpos: number; articulos: number }>(
-        "/admin/normativa/import",
-        { method: "POST", body: form, isForm: true }
-      );
+    // POST /admin/normativa/import espera JSON (formato seed), no multipart.
+    importJson: async (file: File) => {
+      const text = await file.text();
+      let payload: unknown;
+      try {
+        payload = JSON.parse(text);
+      } catch {
+        throw new ApiError(400, "El archivo no es JSON válido.");
+      }
+      return request<NormativaImportResult>("/admin/normativa/import", {
+        method: "POST",
+        body: payload
+      });
     },
     reembed: () =>
-      request<{ queued: number }>("/admin/normativa/reembed", {
+      request<{ reembedded: number }>("/admin/normativa/reembed", {
         method: "POST"
       })
   },
@@ -316,7 +373,7 @@ export const adminApi = {
 
 export const healthApi = {
   get: () =>
-    request<{ db: boolean; redis: boolean; paperless: boolean }>("/health", {
+    request<{ status: "ok" | "degraded"; checks: Record<string, string> }>("/health", {
       skipAuth: true
     })
 };

@@ -37,8 +37,8 @@ export interface Clausula {
 export interface DocumentoContrato {
   id: string;
   titulo: string;
-  tipo_contrato: string;
-  rubro: Rubro;
+  tipo_contrato: string | null;
+  rubro: Rubro | null;
   ficha: Ficha;
   partes: Parte[];
   clausulas: Clausula[];

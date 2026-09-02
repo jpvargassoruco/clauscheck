@@ -28,7 +28,7 @@ export default function Ajustes() {
   }
 
   const porcentajeUso = uso
-    ? Math.min(100, Math.round((uso.analisis_count / Math.max(uso.plan.analisis_mes, 1)) * 100))
+    ? Math.min(100, Math.round((uso.analisis_count / Math.max(uso.analisis_mes, 1)) * 100))
     : 0;
 
   return (
@@ -62,15 +62,12 @@ export default function Ajustes() {
           {uso ? (
             <>
               <p style={{ margin: 0 }}>
-                Plan <strong>{uso.plan.nombre}</strong> — {uso.analisis_count} de{" "}
-                {uso.plan.analisis_mes} análisis usados este mes ({uso.periodo}).
+                Plan <strong>{uso.plan_code}</strong> — {uso.analisis_count} de{" "}
+                {uso.analisis_mes} análisis usados este mes ({uso.periodo}).
               </p>
               <div className={styles.usoBarra}>
                 <div className={styles.usoBarraRelleno} style={{ width: `${porcentajeUso}%` }} />
               </div>
-              <p style={{ margin: 0, fontSize: "0.85rem", color: "var(--color-texto-suave)" }}>
-                Hasta {uso.plan.docs_max} documentos · Bs {uso.plan.precio_bob}/mes
-              </p>
             </>
           ) : (
             <p>Cargando uso del plan…</p>

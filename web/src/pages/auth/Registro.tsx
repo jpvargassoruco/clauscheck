@@ -19,13 +19,19 @@ export default function Registro() {
     setError(null);
     setCargando(true);
     try {
-      const res = await authApi.register({
+      const tokens = await authApi.register({
         email,
         password,
         nombre,
         org_nombre: orgNombre
       });
-      setSession(res.access_token, res.user);
+      // /auth/me exige Authorization: hay que cargar el access token en el
+      // store ANTES de llamarlo (register no devuelve el user, sólo tokens).
+      useAuthStore
+        .getState()
+        .setTokens({ accessToken: tokens.access_token, refreshToken: tokens.refresh_token });
+      const user = await authApi.me();
+      setSession({ accessToken: tokens.access_token, refreshToken: tokens.refresh_token }, user);
       navigate("/app", { replace: true });
     } catch (err) {
       setError(err instanceof ApiError ? err.detail : "No se pudo crear la cuenta.");

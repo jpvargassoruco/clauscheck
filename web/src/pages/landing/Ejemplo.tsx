@@ -33,7 +33,11 @@ export default function Ejemplo() {
                 {data.document.ficha.fecha} · {data.document.ficha.cuantia}
               </p>
             </header>
-            <Dictamen dictamen={data.dictamen} tituloDocumento={data.document.titulo} />
+            {data.dictamen ? (
+              <Dictamen dictamen={data.dictamen} tituloDocumento={data.document.titulo} />
+            ) : (
+              <p>Este documento todavía no tiene un dictamen publicado.</p>
+            )}
           </>
         )}
       </main>

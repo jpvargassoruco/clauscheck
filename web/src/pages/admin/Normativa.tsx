@@ -24,11 +24,20 @@ export default function Normativa() {
   });
 
   const actualizarMutacion = useMutation({
-    mutationFn: (input: { id: string; texto: string; verificado: boolean }) =>
+    // PATCH /admin/normativa/articulos/{id} valida el artículo completo
+    // (schemas.ArticuloIn), no un parche parcial: hay que reenviar todos
+    // los campos, no sólo los que cambiaron en el formulario.
+    mutationFn: (input: Articulo) =>
       adminApi.normativa.updateArticulo(input.id, {
+        cuerpo_id: input.cuerpo_id,
+        numero: input.numero,
+        inciso: input.inciso,
+        titulo: input.titulo,
         texto: input.texto,
-        verificado: input.verificado
-      }),
+        vigente: input.vigente,
+        verificado: input.verificado,
+        fuente_url: input.fuente_url
+      } satisfies Omit<Articulo, "id" | "version">),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-articulos"] });
       setEditando(null);
@@ -38,7 +47,10 @@ export default function Normativa() {
   const importarMutacion = useMutation({
     mutationFn: (file: File) => adminApi.normativa.importJson(file),
     onSuccess: (res) => {
-      setMensaje(`Importados ${res.cuerpos} cuerpos y ${res.articulos} artículos.`);
+      setMensaje(
+        `Importados ${res.cuerpos_creados} cuerpos nuevos (${res.cuerpos_actualizados} actualizados) ` +
+          `y ${res.articulos_creados} artículos nuevos (${res.articulos_actualizados} actualizados).`
+      );
       queryClient.invalidateQueries({ queryKey: ["admin-cuerpos"] });
       queryClient.invalidateQueries({ queryKey: ["admin-articulos"] });
     },
@@ -48,7 +60,7 @@ export default function Normativa() {
 
   const reembedMutacion = useMutation({
     mutationFn: adminApi.normativa.reembed,
-    onSuccess: (res) => setMensaje(`Reembedding encolado para ${res.queued} artículos.`)
+    onSuccess: (res) => setMensaje(`Reembedding aplicado a ${res.reembedded} artículos.`)
   });
 
   return (
@@ -167,13 +179,7 @@ export default function Normativa() {
                     <button
                       type="button"
                       className="boton boton-primario"
-                      onClick={() =>
-                        actualizarMutacion.mutate({
-                          id: editando.id,
-                          texto: editando.texto,
-                          verificado: editando.verificado
-                        })
-                      }
+                      onClick={() => actualizarMutacion.mutate(editando)}
                     >
                       Guardar
                     </button>

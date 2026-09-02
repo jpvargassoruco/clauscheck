@@ -132,15 +132,15 @@ export default function Documentos() {
 
       {isLoading && <p>Cargando documentos…</p>}
 
-      {data && data.items.length === 0 && (
+      {data && data.length === 0 && (
         <div className={`${styles.vacio} tarjeta`}>
           Aún no hay documentos. Suba el primer contrato arriba.
         </div>
       )}
 
-      {data && data.items.length > 0 && (
+      {data && data.length > 0 && (
         <div className={styles.lista}>
-          {data.items.map((doc) => (
+          {data.map((doc) => (
             <div key={doc.id} className={`${styles.filaItem} tarjeta`}>
               <div className={styles.filaInfo}>
                 <h3>{doc.titulo}</h3>

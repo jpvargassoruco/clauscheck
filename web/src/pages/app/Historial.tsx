@@ -54,11 +54,6 @@ export default function Historial() {
                 <h3>Análisis {a.id.slice(0, 8)}</h3>
                 <div className={styles.filaMeta}>
                   <span>{new Date(a.created_at).toLocaleString("es-BO")}</span>
-                  {a.dictamen && (
-                    <span>
-                      Índice {a.dictamen.indice_riesgo}/100 · {a.dictamen.nivel}
-                    </span>
-                  )}
                 </div>
               </div>
               <span className={`${styles.estadoBadge} ${ESTADO_CLASE[a.status]}`}>

@@ -20,7 +20,7 @@ export default function Analisis() {
       setError(err instanceof ApiError ? err.detail : "No se pudo iniciar el análisis.")
   });
 
-  const documentosListos = data?.items.filter((d) => d.ocr_status === "ready") ?? [];
+  const documentosListos = data?.filter((d) => d.ocr_status === "ready") ?? [];
 
   return (
     <div className={styles.pagina}>

@@ -18,8 +18,14 @@ export default function Login() {
     setError(null);
     setCargando(true);
     try {
-      const res = await authApi.login({ email, password });
-      setSession(res.access_token, res.user);
+      const tokens = await authApi.login({ email, password });
+      // /auth/me exige Authorization: hay que cargar el access token en el
+      // store ANTES de llamarlo (login no devuelve el user, sólo tokens).
+      useAuthStore
+        .getState()
+        .setTokens({ accessToken: tokens.access_token, refreshToken: tokens.refresh_token });
+      const user = await authApi.me();
+      setSession({ accessToken: tokens.access_token, refreshToken: tokens.refresh_token }, user);
       const from =
         (location.state as { from?: { pathname?: string } } | null)?.from?.pathname ??
         "/app";

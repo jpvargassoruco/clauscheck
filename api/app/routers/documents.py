@@ -1,13 +1,13 @@
 import uuid
 
-from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
+from fastapi import APIRouter, Depends, HTTPException, Request, UploadFile, status
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.db import get_db
 from app.deps import get_current_org, get_current_user
 from app.models import Document, OcrStatus, Org, User
-from app.paperless import PaperlessError, set_owner_permissions, upload_document
+from app.paperless import PaperlessError, set_owner_permissions, upload_document, get_content
 from app.schemas.api import DocumentCreateJSON, DocumentDetailOut, DocumentOut, DocumentStatusOut
 
 router = APIRouter(prefix="/documents", tags=["documents"])
@@ -15,13 +15,33 @@ router = APIRouter(prefix="/documents", tags=["documents"])
 
 @router.post("", response_model=DocumentOut, status_code=status.HTTP_201_CREATED)
 async def create_document(
-    titulo: str | None = Form(default=None),
-    texto: str | None = Form(default=None),
-    file: UploadFile | None = File(default=None),
+    request: Request,
     org: Org = Depends(get_current_org),
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> Document:
+    titulo: str | None = None
+    texto: str | None = None
+    file: UploadFile | None = None
+
+    content_type = request.headers.get("content-type", "")
+    if content_type.startswith("application/json"):
+        payload = await request.json()
+        if not isinstance(payload, dict):
+            raise HTTPException(status.HTTP_400_BAD_REQUEST, detail="Cuerpo JSON inválido")
+        titulo = payload.get("titulo")
+        texto = payload.get("texto")
+    else:
+        form = await request.form()
+        raw_titulo = form.get("titulo")
+        raw_texto = form.get("texto")
+        titulo = raw_titulo if isinstance(raw_titulo, str) else None
+        texto = raw_texto if isinstance(raw_texto, str) else None
+        raw_file = form.get("file")
+        # starlette returns its own UploadFile (fastapi.UploadFile is a subclass, so isinstance fails)
+        if raw_file is not None and not isinstance(raw_file, str) and hasattr(raw_file, "read"):
+            file = raw_file  # type: ignore[assignment]
+
     if file is not None:
         content = await file.read()
         document = Document(
@@ -115,4 +135,16 @@ async def delete_document(
 async def get_document_status(
     document_id: uuid.UUID, org: Org = Depends(get_current_org), db: AsyncSession = Depends(get_db)
 ) -> Document:
-    return await _get_org_document(db, org, document_id)
+    document = await _get_org_document(db, org, document_id)
+    # Sync OCR result from paperless while the document is still pending.
+    if document.ocr_status == OcrStatus.pending and document.paperless_id:
+        try:
+            content = await get_content(document.paperless_id)
+        except PaperlessError:
+            content = ""
+        if content and content.strip():
+            document.texto = content
+            document.ocr_status = OcrStatus.ready
+            await db.commit()
+            await db.refresh(document)
+    return document

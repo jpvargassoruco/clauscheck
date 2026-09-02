@@ -1,7 +1,7 @@
 """Request/response Pydantic models for the REST API (non-dictamen)."""
 
 import uuid
-from datetime import datetime
+from datetime import date, datetime
 
 from pydantic import BaseModel, EmailStr, Field
 
@@ -18,7 +18,11 @@ class RegisterRequest(BaseModel):
 
 
 class LoginRequest(BaseModel):
-    email: EmailStr
+    # Plain str (not EmailStr): login must accept whatever email is on file
+    # (e.g. the seeded superadmin admin@clauscheck.local), and email-validator
+    # rejects reserved/special-use TLDs like .local even without deliverability
+    # checks. Format validation belongs at registration time, not login.
+    email: str
     password: str
 
 
@@ -243,7 +247,9 @@ class CuerpoLegalIn(BaseModel):
     nombre: str
     tipo: str = ""
     numero: str | None = None
-    fecha: str | None = None
+    # `date`, no `str`: la columna es Date y Pydantic la serializa a ISO
+    # (YYYY-MM-DD) sola; declararlo `str` rompía GET (ResponseValidationError).
+    fecha: date | None = None
     fuente_url: str = ""
 
 

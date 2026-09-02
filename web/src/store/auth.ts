@@ -6,11 +6,12 @@ export type Theme = "light" | "dark" | "system";
 
 interface AuthState {
   accessToken: string | null;
+  refreshToken: string | null;
   user: User | null;
   currentOrgId: string | null;
   theme: Theme;
-  setSession: (accessToken: string, user: User) => void;
-  setAccessToken: (accessToken: string | null) => void;
+  setSession: (tokens: { accessToken: string; refreshToken: string }, user: User) => void;
+  setTokens: (tokens: { accessToken: string; refreshToken: string }) => void;
   setUser: (user: User | null) => void;
   setCurrentOrg: (orgId: string) => void;
   setTheme: (theme: Theme) => void;
@@ -18,33 +19,37 @@ interface AuthState {
 }
 
 /**
- * El access token vive SOLO en memoria (no persist) por seguridad;
- * el refresh token lo maneja el backend (cookie httpOnly) o se
- * reenvía en el body de /auth/refresh según arranque de sesión.
- * currentOrgId y theme sí persisten (preferencias de UI, no secretos).
+ * La API real (`POST /auth/refresh`) no usa cookie httpOnly: exige
+ * `refresh_token` en el body de cada llamado. Por eso, a diferencia del
+ * access token (solo en memoria), el refresh token SÍ persiste (es lo único
+ * que permite renovar la sesión tras recargar la página). currentOrgId y
+ * theme también persisten (preferencias de UI).
  */
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
       accessToken: null,
+      refreshToken: null,
       user: null,
       currentOrgId: null,
       theme: "system",
-      setSession: (accessToken, user) =>
+      setSession: ({ accessToken, refreshToken }, user) =>
         set({
           accessToken,
+          refreshToken,
           user,
-          currentOrgId: user.orgs[0]?.org.id ?? null
+          currentOrgId: user.orgs[0]?.id ?? null
         }),
-      setAccessToken: (accessToken) => set({ accessToken }),
+      setTokens: ({ accessToken, refreshToken }) => set({ accessToken, refreshToken }),
       setUser: (user) => set({ user }),
       setCurrentOrg: (orgId) => set({ currentOrgId: orgId }),
       setTheme: (theme) => set({ theme }),
-      logout: () => set({ accessToken: null, user: null, currentOrgId: null })
+      logout: () => set({ accessToken: null, refreshToken: null, user: null, currentOrgId: null })
     }),
     {
       name: "clauscheck-auth",
       partialize: (state) => ({
+        refreshToken: state.refreshToken,
         currentOrgId: state.currentOrgId,
         theme: state.theme
       })

@@ -17,7 +17,7 @@ export function AppShell() {
   const logout = useAuthStore((s) => s.logout);
   const navigate = useNavigate();
 
-  const memberships = user?.orgs ?? [];
+  const orgs = user?.orgs ?? [];
 
   function handleLogout() {
     logout();
@@ -41,9 +41,9 @@ export function AppShell() {
           value={currentOrgId ?? ""}
           onChange={(e) => setCurrentOrg(e.target.value)}
         >
-          {memberships.map((m) => (
-            <option key={m.org.id} value={m.org.id}>
-              {m.org.nombre}
+          {orgs.map((o) => (
+            <option key={o.id} value={o.id}>
+              {o.nombre}
             </option>
           ))}
         </select>

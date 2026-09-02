@@ -100,12 +100,22 @@ async def upload_document(
             while elapsed < poll_timeout:
                 task_resp = await client.get("/api/tasks/", params={"task_id": task_id})
                 task_resp.raise_for_status()
-                tasks = task_resp.json()
+                payload = task_resp.json()
+                # paperless-ngx >= 2.x returns a paginated envelope; older versions a bare list
+                tasks = payload.get("results", []) if isinstance(payload, dict) else payload
                 if tasks:
                     task = tasks[0]
-                    status = task.get("status")
+                    status = str(task.get("status") or "").upper()
                     if status == "SUCCESS":
-                        return task.get("related_document") or task.get("document_id")
+                        related = task.get("related_document") or task.get("document_id")
+                        if related is None:
+                            rd = task.get("result_data")
+                            if isinstance(rd, dict):
+                                related = rd.get("document_id")
+                        if related is None:
+                            ids = task.get("related_document_ids") or []
+                            related = ids[0] if ids else None
+                        return int(related) if related is not None else None
                     if status == "FAILURE":
                         raise PaperlessError(f"paperless task failed: {task.get('result')}")
                 await asyncio.sleep(poll_interval)

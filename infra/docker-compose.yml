@@ -31,6 +31,8 @@ services:
       DATABASE_URL: postgresql+psycopg://postgres:${POSTGRES_PASSWORD}@postgres:5432/clauscheck
       REDIS_URL: redis://redis:6379/0
       PAPERLESS_BASE_URL: http://paperless:8000
+    volumes:
+      - ../seed:/seed:ro
     ports:
       - "8001:8000"
     depends_on:
