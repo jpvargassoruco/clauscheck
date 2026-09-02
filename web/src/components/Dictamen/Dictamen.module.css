@@ -1,0 +1,264 @@
+.dictamen {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.encabezadoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 220px;
+}
+
+.encabezadoMetricas {
+  display: flex;
+  gap: 24px;
+  margin: 0;
+}
+
+.encabezadoMetricas dt {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+}
+
+.encabezadoMetricas dd {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: var(--fuente-titulos);
+}
+
+.gauge {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.gaugeCentro {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gaugeNumero {
+  font-family: var(--fuente-titulos);
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.gaugeEscala {
+  font-size: 0.75rem;
+  color: var(--color-texto-suave);
+}
+
+.nivelBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+
+.nivelPunto {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.seccion h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+.sintesis {
+  font-size: 1.05rem;
+  color: var(--color-texto);
+}
+
+.listaPartes,
+.listaHallazgos,
+.articulos,
+.recomendaciones {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listaPartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.parteItem {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.parteCabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.parteNombre {
+  font-weight: 700;
+}
+
+.redactoMarca {
+  margin-left: 8px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-acento-hover);
+  background: color-mix(in srgb, var(--dorado) 18%, transparent);
+  border-radius: 999px;
+  padding: 2px 8px;
+  cursor: help;
+}
+
+.parteRol {
+  font-size: 0.85rem;
+  color: var(--color-texto-suave);
+}
+
+.balanceBar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-bg-sutil);
+  overflow: hidden;
+}
+
+.balanceEje {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-borde);
+}
+
+.balanceRelleno {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+}
+
+.balanceFavor {
+  background: var(--balance-favor);
+}
+
+.balanceContra {
+  background: var(--balance-contra);
+}
+
+.parteConteo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+}
+
+.parteLectura {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.hallazgo {
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hallazgoCabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hallazgoCabecera h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.clausulaRef {
+  font-size: 0.78rem;
+  color: var(--color-texto-suave);
+}
+
+.cita {
+  margin: 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--color-acento);
+  background: var(--color-bg-sutil);
+  font-style: italic;
+}
+
+.articulos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.92rem;
+}
+
+.articulos li {
+  padding: 8px 12px;
+  background: var(--color-bg-sutil);
+  border-radius: var(--radio-chico);
+}
+
+.sustitutiva {
+  margin: 0;
+}
+
+.recomendaciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  counter-reset: rec;
+}
+
+.recomendaciones li {
+  padding: 12px 16px;
+  background: var(--color-bg-elevado);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-chico);
+}
+
+.recTipo {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--color-bg-sutil);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}

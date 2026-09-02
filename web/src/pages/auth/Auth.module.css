@@ -1,0 +1,50 @@
+.pantalla {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: var(--color-bg-elevado);
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.marca {
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.marcaClaus {
+  color: var(--color-primario);
+}
+
+.marcaCheck {
+  color: var(--color-acento);
+}
+
+.subtitulo {
+  color: var(--color-texto-suave);
+  margin-bottom: 20px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.pie {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: var(--color-texto-suave);
+}

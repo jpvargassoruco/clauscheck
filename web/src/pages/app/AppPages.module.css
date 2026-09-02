@@ -1,0 +1,217 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cabecera h1 {
+  margin: 0 0 4px;
+  font-size: 1.7rem;
+}
+
+.cabecera p {
+  margin: 0;
+  color: var(--color-texto-suave);
+}
+
+.panelSubida {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tabsModo {
+  display: flex;
+  gap: 8px;
+}
+
+.tabModo {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-borde);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tabModoActivo {
+  background: var(--color-primario);
+  color: #fff;
+  border-color: var(--color-primario);
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filaItem {
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filaInfo h3 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.filaMeta {
+  font-size: 0.82rem;
+  color: var(--color-texto-suave);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filaAcciones {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.estadoBadge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.estadoReady {
+  background: color-mix(in srgb, var(--nivel-informativo) 18%, transparent);
+  color: var(--nivel-informativo);
+}
+
+.estadoPending {
+  background: color-mix(in srgb, var(--nivel-medio) 20%, transparent);
+  color: var(--nivel-medio);
+}
+
+.estadoFailed {
+  background: color-mix(in srgb, var(--nivel-critico) 18%, transparent);
+  color: var(--nivel-critico);
+}
+
+.vacio {
+  padding: 40px;
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+/* Progreso de análisis */
+
+.progreso {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+}
+
+.progresoEtapa {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.progresoPunto {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--color-borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  color: var(--color-texto-suave);
+}
+
+.progresoPuntoHecho {
+  background: var(--nivel-informativo);
+  border-color: var(--nivel-informativo);
+  color: #fff;
+}
+
+.progresoPuntoActivo {
+  border-color: var(--color-primario);
+  color: var(--color-primario);
+}
+
+.progresoTexto {
+  font-size: 0.95rem;
+}
+
+.progresoTextoHecho {
+  color: var(--color-texto-suave);
+}
+
+/* Ajustes */
+
+.ajustesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.ajustesTarjeta {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.usoBarra {
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-bg-sutil);
+  overflow: hidden;
+}
+
+.usoBarraRelleno {
+  height: 100%;
+  background: var(--color-primario);
+}
+
+/* Tabla admin */
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-borde);
+  font-size: 0.9rem;
+}
+
+.tabla th {
+  color: var(--color-texto-suave);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}

@@ -1,0 +1,239 @@
+:root {
+  --azul: #1e3a8a;
+  --azul-claro: #2f4fb0;
+  --azul-oscuro: #14285e;
+  --dorado: #c9a227;
+  --dorado-claro: #e0bd4e;
+  --blanco: #ffffff;
+
+  --color-bg: #ffffff;
+  --color-bg-elevado: #f7f7fb;
+  --color-bg-sutil: #eef0f8;
+  --color-texto: #1a1a2e;
+  --color-texto-suave: #52526b;
+  --color-borde: #dcdfef;
+  --color-primario: var(--azul);
+  --color-primario-hover: var(--azul-claro);
+  --color-acento: var(--dorado);
+  --color-acento-hover: var(--dorado-claro);
+
+  --nivel-critico: #b3261e;
+  --nivel-alto: #d97706;
+  --nivel-medio: #c9a227;
+  --nivel-bajo: #2563a8;
+  --nivel-informativo: #1e7a4c;
+
+  --balance-favor: #1e7a4c;
+  --balance-contra: #b3261e;
+
+  --fuente-titulos: "Spectral", Georgia, "Times New Roman", serif;
+  --fuente-texto: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+
+  --radio: 10px;
+  --radio-chico: 6px;
+  --sombra: 0 1px 3px rgba(20, 20, 40, 0.08), 0 8px 24px rgba(20, 20, 40, 0.06);
+  --max-ancho: 1180px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #0f1220;
+    --color-bg-elevado: #171b2e;
+    --color-bg-sutil: #1d2238;
+    --color-texto: #eef0f8;
+    --color-texto-suave: #a8adc9;
+    --color-borde: #2b3050;
+    --color-primario: #5c7fe0;
+    --color-primario-hover: #7a98ea;
+    --color-acento: var(--dorado-claro);
+    --color-acento-hover: var(--dorado);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #0f1220;
+  --color-bg-elevado: #171b2e;
+  --color-bg-sutil: #1d2238;
+  --color-texto: #eef0f8;
+  --color-texto-suave: #a8adc9;
+  --color-borde: #2b3050;
+  --color-primario: #5c7fe0;
+  --color-primario-hover: #7a98ea;
+  --color-acento: var(--dorado-claro);
+  --color-acento-hover: var(--dorado);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+  color: var(--color-texto);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--color-primario);
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.contenedor {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radio-chico);
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.boton:active {
+  transform: translateY(1px);
+}
+
+.boton-primario {
+  background: var(--color-primario);
+  color: #ffffff;
+}
+
+.boton-primario:hover {
+  background: var(--color-primario-hover);
+}
+
+.boton-acento {
+  background: var(--color-acento);
+  color: #26210a;
+}
+
+.boton-acento:hover {
+  background: var(--color-acento-hover);
+}
+
+.boton-secundario {
+  background: transparent;
+  color: var(--color-primario);
+  border: 1px solid var(--color-borde);
+}
+
+.boton-secundario:hover {
+  background: var(--color-bg-sutil);
+}
+
+.boton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.tarjeta {
+  background: var(--color-bg-elevado);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-texto-suave);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 10px 12px;
+  border-radius: var(--radio-chico);
+  border: 1px solid var(--color-borde);
+  background: var(--color-bg);
+  color: var(--color-texto);
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: 2px solid var(--color-primario);
+  outline-offset: 1px;
+}
+
+.error-texto {
+  color: var(--nivel-critico);
+  font-size: 0.9rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
