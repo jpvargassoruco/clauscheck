@@ -236,3 +236,15 @@ Ver `infra/scripts/bootstrap-vm.sh` y `infra/scripts/deploy.sh` para detalles.
 4. Verificado el 2026-09-02 en local: registro → documento (texto pegado y PNG escaneado vía paperless OCR) → análisis DeepSeek 7 etapas (115–140 s) → dictamen con citas verificadas contra la BD; aislamiento entre orgs; cuota free 5/mes.
 5. Detalles de integración descubiertos hoy: paperless-ngx 2.x devuelve las tareas como `{results:[...]}` con `status` en minúsculas y el id del documento en `result_data.document_id` / `related_document_ids` (ya soportado); `GET /documents/{id}/status` sincroniza el texto OCR desde paperless y pasa a `ready`; `POST /documents` acepta JSON y multipart; `email-validator` rechaza dominios `.local` en registro (el superadmin `admin@clauscheck.local` entra por login porque `LoginRequest.email` es `str`).
 6. Datos de prueba en la BD local (usuarios `smoke*@example.com`, `probe*@example.com`, cuerpo `TESTCUERPO`): se pueden borrar.
+
+## 14. Cambios del 2026-09-02 (tarde) — Fase 0 en marcha
+
+- **Registro por solicitud** (`REGISTRATION_MODE=approval` por defecto): `/solicitar-acceso` → correo al solicitante y a `ADMIN_NOTIFY_EMAIL` → `/admin/solicitudes` aprobar (crea org + invitación) o rechazar → `/invitacion/:token` fija contraseña. `POST /auth/register` responde 403 salvo `REGISTRATION_MODE=open`.
+- **Correo SMTP real**: `contacto@clauscheck.info` en `mail.redesk.we.bs:465` (variables `SMTP_*`, `MAIL_BACKEND=smtp`, credenciales en `~/.config/clauscheck/smtp.env` y en los `.env`). Falta SPF/DKIM en la zona `clauscheck.info` (Cloudflare) para no caer en spam.
+- **MFA TOTP** para cualquier usuario (Ajustes); el superadmin sigue sin MFA hasta que lo active — hacerlo antes de exponer el sitio.
+- **Salida renombrada** a «Informe de revisión asistida» en toda la interfaz, con aviso de responsabilidad fijo y botón «Enviar a un abogado» (placeholder). Claves JSON/DB siguen llamándose `dictamen`.
+- **Seudonimización** (`PSEUDONYMIZE=true`): nombres, CI, NIT, teléfonos, correos, cuentas, placas, direcciones y razones sociales se reemplazan por tokens antes de cada llamada al LLM y se restituyen al guardar; mapa en `documents.pseudonyms`. Página `/confidencialidad`.
+- **Normativa**: 170 artículos / 18 cuerpos (Ley 453, D.S. 2130, D.S. 4732, Ley 393, Código de Comercio parcial, Ley 708 añadidos). Ver `docs/normativa-consumidor-financiero.md`. Reembed hecho local y en VPS.
+- **VPS**: túnel Cloudflare activo (perfil `edge`, token en `.env` del VPS), `PUBLIC_URL=https://mvp.clauscheck.info` para paperless. Pendiente del usuario: crear el hostname público `mvp.clauscheck.info → http://caddy:80` en Zero Trust (crea el DNS) y añadir Cloudflare Access sobre `/docs-ui` y `/admin`. Puerto 8080 del VPS solo alcanzable si se abre en el security group del tenant (no necesario con el túnel).
+- **Roadmap comercial**: `docs/dictamen-roadmap.html` (artefacto compartible) con verticales, panel de consumo y BYOK por organización como siguientes ítems de Fase 1.
+- Sección «Equipo» y menciones a UAGRM eliminadas del portal a pedido del usuario.
