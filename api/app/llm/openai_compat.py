@@ -16,7 +16,9 @@ class OpenAICompatProvider(LLMProviderBase):
         self.model = model
         self.timeout = timeout
 
-    async def _send(self, system: str, user: str, max_tokens: int) -> str:
+    async def _send(
+        self, system: str, user: str, max_tokens: int
+    ) -> tuple[str, dict[str, int] | None]:
         payload: dict = {
             "model": self.model,
             "messages": [
@@ -37,9 +39,18 @@ class OpenAICompatProvider(LLMProviderBase):
 
         data = resp.json()
         try:
-            return data["choices"][0]["message"]["content"] or ""
+            text = data["choices"][0]["message"]["content"] or ""
         except (KeyError, IndexError, TypeError) as exc:
             raise LLMError(f"{self.code}: respuesta inesperada: {data}") from exc
+
+        usage_raw = data.get("usage") or {}
+        usage = None
+        if "prompt_tokens" in usage_raw or "completion_tokens" in usage_raw:
+            usage = {
+                "tokens_in": int(usage_raw.get("prompt_tokens") or 0),
+                "tokens_out": int(usage_raw.get("completion_tokens") or 0),
+            }
+        return text, usage
 
     async def test_connection(self) -> str:
         """Minimal 1-token call used by the admin `test` endpoint."""

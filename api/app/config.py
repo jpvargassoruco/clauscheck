@@ -70,6 +70,14 @@ class Settings(BaseSettings):
     # Base URL pública de la web (para enlaces en correos)
     APP_BASE_URL: str = "http://localhost:8080"
 
+    # Límites de tamaño de documento (abuso), independientes del plan.
+    MAX_TEXTO_CHARS: int = 200_000
+    MAX_UPLOAD_BYTES: int = 20 * 1024 * 1024
+    MAX_PALABRAS_DOC: int = 40_000
+
+    # Tasa de cambio USD -> Bs usada solo para el dashboard de consumo.
+    USD_BOB: float = 6.96
+
     @property
     def database_url_resolved(self) -> str:
         return self.DATABASE_URL.replace("${POSTGRES_PASSWORD}", self.POSTGRES_PASSWORD)

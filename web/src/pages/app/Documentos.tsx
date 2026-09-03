@@ -147,6 +147,7 @@ export default function Documentos() {
                 <div className={styles.filaMeta}>
                   <span>{doc.tipo_contrato}</span>
                   <span>{doc.rubro}</span>
+                  <span>{doc.palabras.toLocaleString("es-BO")} palabras</span>
                   <span>{new Date(doc.created_at).toLocaleDateString("es-BO")}</span>
                 </div>
               </div>

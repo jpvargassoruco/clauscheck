@@ -137,6 +137,7 @@ class DocumentOut(BaseModel):
     rubro: Rubro | None
     ocr_status: OcrStatus
     is_public: bool
+    palabras: int
     created_at: datetime
 
     model_config = {"from_attributes": True}
@@ -152,6 +153,15 @@ class DocumentDetailOut(DocumentOut):
 class DocumentStatusOut(BaseModel):
     id: uuid.UUID
     ocr_status: OcrStatus
+    palabras: int
+
+
+class DocumentEstimateOut(BaseModel):
+    palabras: int
+    tokens_estimados: int
+    costo_estimado_usd: float
+    dentro_del_plan: bool
+    motivo: str = ""
 
 
 # --- analyses -----------------------------------------------------------------
@@ -193,6 +203,8 @@ class UsageOut(BaseModel):
     periodo: str
     analisis_count: int
     analisis_mes: int
+    palabras_count: int
+    palabras_mes: int
     plan_code: str
 
 
@@ -319,6 +331,8 @@ class PlanOut(BaseModel):
     analisis_mes: int
     docs_max: int
     precio_bob: float
+    palabras_mes: int
+    palabras_max_doc: int
 
     model_config = {"from_attributes": True}
 
@@ -328,6 +342,8 @@ class PlanUpdate(BaseModel):
     analisis_mes: int | None = None
     docs_max: int | None = None
     precio_bob: float | None = None
+    palabras_mes: int | None = None
+    palabras_max_doc: int | None = None
 
 
 class OrgAdminUpdate(BaseModel):
@@ -387,3 +403,47 @@ class InvitationAcceptRequest(BaseModel):
 
 class PublicConfigOut(BaseModel):
     registration_mode: str
+
+
+# --- admin: consumo -----------------------------------------------------
+
+
+class ConsumoOrgRow(BaseModel):
+    org_id: uuid.UUID
+    org_nombre: str
+    plan_code: str
+    analisis: int
+    palabras: int
+    tokens_in: int
+    tokens_out: int
+    costo_usd: float
+    costo_bs: float
+    analisis_mes_plan: int
+    palabras_mes_plan: int
+    analisis_mes_usado: int
+    palabras_mes_usado: int
+
+
+class ConsumoDiaRow(BaseModel):
+    fecha: date
+    analisis: int
+    palabras: int
+    costo_usd: float
+
+
+class ConsumoTotales(BaseModel):
+    analisis: int
+    palabras: int
+    tokens_in: int
+    tokens_out: int
+    costo_usd: float
+    costo_bs: float
+
+
+class ConsumoOut(BaseModel):
+    desde: date
+    hasta: date
+    usd_bob: float
+    totales: ConsumoTotales
+    rows: list[ConsumoOrgRow]
+    serie_diaria: list[ConsumoDiaRow]

@@ -1,5 +1,4 @@
 import uuid
-from datetime import UTC, datetime
 
 from arq import ArqRedis
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -9,14 +8,12 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.db import get_db
 from app.deps import get_current_org, get_current_user
 from app.models import Analysis, Document, Org, Plan, Usage, User
+from app.periodo import current_periodo
+from app.pipeline.words import contar_palabras
 from app.queue import get_arq_pool
 from app.schemas.api import AnalysisCreate, AnalysisDetailOut, AnalysisOut, AnalysisQueuedOut
 
 router = APIRouter(prefix="/analyses", tags=["analyses"])
-
-
-def _current_periodo() -> str:
-    return datetime.now(UTC).strftime("%Y-%m")
 
 
 @router.post("", response_model=AnalysisQueuedOut, status_code=status.HTTP_201_CREATED)
@@ -32,19 +29,50 @@ async def create_analysis(
         raise HTTPException(status.HTTP_404_NOT_FOUND, detail="Documento no encontrado")
 
     plan = await db.get(Plan, org.plan_code)
-    periodo = _current_periodo()
+    if plan is None:
+        raise HTTPException(
+            status.HTTP_402_PAYMENT_REQUIRED, detail="La organización no tiene un plan válido"
+        )
+
+    # `document.palabras` is computed on create/OCR-sync (see routers.documents
+    # and pipeline stage 1); fall back to counting `texto` directly in case a
+    # document predates that field or was never synced.
+    palabras = document.palabras or contar_palabras(document.texto)
+
+    if palabras > plan.palabras_max_doc:
+        raise HTTPException(
+            status.HTTP_413_REQUEST_ENTITY_TOO_LARGE,
+            detail=(
+                f"El documento tiene {palabras} palabras y el plan permite "
+                f"{plan.palabras_max_doc} por documento. Divídalo o cambie de plan."
+            ),
+        )
+
+    periodo = current_periodo()
     usage = await db.get(Usage, {"org_id": org.id, "periodo": periodo})
-    used = usage.analisis_count if usage else 0
-    limit = plan.analisis_mes if plan else 0
+    used_analisis = usage.analisis_count if usage else 0
+    used_palabras = usage.palabras_count if usage else 0
 
-    if used >= limit:
-        raise HTTPException(status.HTTP_402_PAYMENT_REQUIRED, detail="Cuota de análisis agotada")
+    if used_analisis >= plan.analisis_mes or used_palabras + palabras > plan.palabras_mes:
+        analisis_restantes = max(plan.analisis_mes - used_analisis, 0)
+        palabras_restantes = max(plan.palabras_mes - used_palabras, 0)
+        raise HTTPException(
+            status.HTTP_402_PAYMENT_REQUIRED,
+            detail=(
+                "Cuota mensual del plan agotada: quedan "
+                f"{analisis_restantes} análisis y {palabras_restantes} palabras."
+            ),
+        )
 
+    # Reserve both counters at enqueue time (not at job completion), so
+    # concurrent requests can't both slip past the checks above; refunded
+    # by the worker if the job fails (app.worker.analyze).
     if usage is None:
-        usage = Usage(org_id=org.id, periodo=periodo, analisis_count=1)
+        usage = Usage(org_id=org.id, periodo=periodo, analisis_count=1, palabras_count=palabras)
         db.add(usage)
     else:
-        usage.analisis_count = used + 1
+        usage.analisis_count = used_analisis + 1
+        usage.palabras_count = used_palabras + palabras
 
     analysis = Analysis(
         org_id=org.id,

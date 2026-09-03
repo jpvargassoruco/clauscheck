@@ -116,7 +116,17 @@ export interface DocumentSummary {
   rubro: Rubro | null;
   ocr_status: OcrStatus;
   is_public: boolean;
+  palabras: number;
   created_at: string;
+}
+
+/** GET /documents/{id}/estimate — schemas.DocumentEstimateOut */
+export interface DocumentEstimate {
+  palabras: number;
+  tokens_estimados: number;
+  costo_estimado_usd: number;
+  dentro_del_plan: boolean;
+  motivo: string;
 }
 
 export type AnalysisStatus = "queued" | "running" | "done" | "failed";
@@ -154,11 +164,13 @@ export interface CorpusItem {
 
 /** GET/PATCH /admin/plans — schemas.PlanOut */
 export interface Plan {
-  code: "free" | "pro" | "despacho";
+  code: "free" | "personal" | "pro" | "despacho";
   nombre: string;
   analisis_mes: number;
   docs_max: number;
   precio_bob: number;
+  palabras_mes: number;
+  palabras_max_doc: number;
 }
 
 /** GET /usage — schemas.UsageOut (plano, sin org_id ni Plan anidado). */
@@ -166,6 +178,8 @@ export interface Usage {
   periodo: string;
   analisis_count: number;
   analisis_mes: number;
+  palabras_count: number;
+  palabras_mes: number;
   plan_code: string;
 }
 
@@ -216,6 +230,50 @@ export interface NormativaImportResult {
 
 /** GET/PATCH /admin/orgs — misma forma que OrgOut (paperless_* no se expone). */
 export type AdminOrg = Org;
+
+// ---- admin: consumo -----------------------------------------------------
+// GET /admin/consumo — schemas.ConsumoOut
+
+export interface ConsumoOrgRow {
+  org_id: string;
+  org_nombre: string;
+  plan_code: string;
+  analisis: number;
+  palabras: number;
+  tokens_in: number;
+  tokens_out: number;
+  costo_usd: number;
+  costo_bs: number;
+  analisis_mes_plan: number;
+  palabras_mes_plan: number;
+  analisis_mes_usado: number;
+  palabras_mes_usado: number;
+}
+
+export interface ConsumoDiaRow {
+  fecha: string;
+  analisis: number;
+  palabras: number;
+  costo_usd: number;
+}
+
+export interface ConsumoTotales {
+  analisis: number;
+  palabras: number;
+  tokens_in: number;
+  tokens_out: number;
+  costo_usd: number;
+  costo_bs: number;
+}
+
+export interface Consumo {
+  desde: string;
+  hasta: string;
+  usd_bob: number;
+  totales: ConsumoTotales;
+  rows: ConsumoOrgRow[];
+  serie_diaria: ConsumoDiaRow[];
+}
 
 export interface ApiError {
   detail: string;

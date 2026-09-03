@@ -7,6 +7,7 @@ const navItems = [
   { to: "/admin/normativa", label: "Normativa" },
   { to: "/admin/organizaciones", label: "Organizaciones" },
   { to: "/admin/planes", label: "Planes" },
+  { to: "/admin/consumo", label: "Consumo" },
   { to: "/admin/solicitudes", label: "Solicitudes" }
 ];
 

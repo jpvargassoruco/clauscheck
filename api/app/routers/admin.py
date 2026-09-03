@@ -1,8 +1,11 @@
+import csv
+import io
 import secrets
 import uuid
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, date, datetime, time, timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
+from fastapi.responses import StreamingResponse
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -17,17 +20,22 @@ from app.llm.registry import build_provider
 from app.models import (
     AccessRequest,
     AccessRequestStatus,
+    Analysis,
     Articulo,
     CuerpoLegal,
+    Document,
     Invitation,
     LLMProvider,
     LLMProviderKind,
     Org,
     Plan,
+    Usage,
     User,
 )
 from app.normativa_import import import_normativa
 from app.paperless import provision_org
+from app.periodo import current_periodo
+from app.pipeline.pricing import costo_bs
 from app.routers.auth import _slugify, _unique_slug
 from app.schemas.api import (
     AccessRequestApprove,
@@ -35,6 +43,10 @@ from app.schemas.api import (
     AccessRequestReject,
     ArticuloIn,
     ArticuloOut,
+    ConsumoDiaRow,
+    ConsumoOrgRow,
+    ConsumoOut,
+    ConsumoTotales,
     CuerpoLegalIn,
     CuerpoLegalOut,
     NormativaImportResult,
@@ -273,6 +285,183 @@ async def admin_update_plan(
     await db.commit()
     await db.refresh(plan)
     return plan
+
+
+# --- consumo (dashboard) -----------------------------------------------------
+
+
+async def _build_consumo(
+    db: AsyncSession, desde: date | None, hasta: date | None, org_id: uuid.UUID | None
+) -> ConsumoOut:
+    hoy = datetime.now(UTC).date()
+    if hasta is None:
+        hasta = hoy
+    if desde is None:
+        desde = hasta.replace(day=1)
+
+    start_dt = datetime.combine(desde, time.min, tzinfo=UTC)
+    end_dt = datetime.combine(hasta, time.max, tzinfo=UTC)
+
+    stmt = (
+        select(Analysis, Document.palabras, Org.nombre, Org.plan_code)
+        .join(Document, Analysis.document_id == Document.id)
+        .join(Org, Analysis.org_id == Org.id)
+        .where(Analysis.created_at >= start_dt, Analysis.created_at <= end_dt)
+    )
+    if org_id is not None:
+        stmt = stmt.where(Analysis.org_id == org_id)
+    result = await db.execute(stmt)
+    rows = result.all()
+
+    org_acc: dict[uuid.UUID, dict] = {}
+    dia_acc: dict[date, dict] = {}
+    for analysis, palabras, org_nombre, plan_code in rows:
+        oid = analysis.org_id
+        acc = org_acc.setdefault(
+            oid,
+            {
+                "org_nombre": org_nombre,
+                "plan_code": plan_code,
+                "analisis": 0,
+                "palabras": 0,
+                "tokens_in": 0,
+                "tokens_out": 0,
+                "costo_usd": 0.0,
+            },
+        )
+        acc["analisis"] += 1
+        acc["palabras"] += palabras or 0
+        acc["tokens_in"] += analysis.tokens_in or 0
+        acc["tokens_out"] += analysis.tokens_out or 0
+        acc["costo_usd"] += float(analysis.costo_usd or 0)
+
+        dia = analysis.created_at.date()
+        dacc = dia_acc.setdefault(dia, {"analisis": 0, "palabras": 0, "costo_usd": 0.0})
+        dacc["analisis"] += 1
+        dacc["palabras"] += palabras or 0
+        dacc["costo_usd"] += float(analysis.costo_usd or 0)
+
+    # Plan usage bars (web) compare against the *current* month, regardless
+    # of the desde/hasta range being aggregated above.
+    periodo = current_periodo()
+    usage_by_org: dict[uuid.UUID, Usage] = {}
+    if org_acc:
+        result2 = await db.execute(
+            select(Usage).where(Usage.org_id.in_(org_acc.keys()), Usage.periodo == periodo)
+        )
+        for u in result2.scalars():
+            usage_by_org[u.org_id] = u
+
+    result3 = await db.execute(select(Plan))
+    plans_by_code = {p.code: p for p in result3.scalars()}
+
+    org_rows: list[ConsumoOrgRow] = []
+    for oid, acc in sorted(org_acc.items(), key=lambda kv: kv[1]["costo_usd"], reverse=True):
+        plan = plans_by_code.get(acc["plan_code"])
+        usage_row = usage_by_org.get(oid)
+        org_rows.append(
+            ConsumoOrgRow(
+                org_id=oid,
+                org_nombre=acc["org_nombre"],
+                plan_code=acc["plan_code"],
+                analisis=acc["analisis"],
+                palabras=acc["palabras"],
+                tokens_in=acc["tokens_in"],
+                tokens_out=acc["tokens_out"],
+                costo_usd=round(acc["costo_usd"], 4),
+                costo_bs=costo_bs(acc["costo_usd"], settings.USD_BOB),
+                analisis_mes_plan=plan.analisis_mes if plan else 0,
+                palabras_mes_plan=plan.palabras_mes if plan else 0,
+                analisis_mes_usado=usage_row.analisis_count if usage_row else 0,
+                palabras_mes_usado=usage_row.palabras_count if usage_row else 0,
+            )
+        )
+
+    serie_diaria = [
+        ConsumoDiaRow(
+            fecha=dia,
+            analisis=v["analisis"],
+            palabras=v["palabras"],
+            costo_usd=round(v["costo_usd"], 4),
+        )
+        for dia, v in sorted(dia_acc.items())
+    ]
+
+    total_costo = sum(r.costo_usd for r in org_rows)
+    totales = ConsumoTotales(
+        analisis=sum(r.analisis for r in org_rows),
+        palabras=sum(r.palabras for r in org_rows),
+        tokens_in=sum(r.tokens_in for r in org_rows),
+        tokens_out=sum(r.tokens_out for r in org_rows),
+        costo_usd=round(total_costo, 4),
+        costo_bs=costo_bs(total_costo, settings.USD_BOB),
+    )
+
+    return ConsumoOut(
+        desde=desde,
+        hasta=hasta,
+        usd_bob=settings.USD_BOB,
+        totales=totales,
+        rows=org_rows,
+        serie_diaria=serie_diaria,
+    )
+
+
+@router.get("/consumo", response_model=ConsumoOut)
+async def admin_consumo(
+    desde: date | None = None,
+    hasta: date | None = None,
+    org_id: uuid.UUID | None = None,
+    db: AsyncSession = Depends(get_db),
+) -> ConsumoOut:
+    return await _build_consumo(db, desde, hasta, org_id)
+
+
+@router.get("/consumo/export.csv")
+async def admin_consumo_export_csv(
+    desde: date | None = None,
+    hasta: date | None = None,
+    org_id: uuid.UUID | None = None,
+    db: AsyncSession = Depends(get_db),
+) -> StreamingResponse:
+    consumo = await _build_consumo(db, desde, hasta, org_id)
+
+    buf = io.StringIO()
+    writer = csv.writer(buf)
+    writer.writerow(
+        [
+            "org_id",
+            "org_nombre",
+            "plan_code",
+            "analisis",
+            "palabras",
+            "tokens_in",
+            "tokens_out",
+            "costo_usd",
+            "costo_bs",
+        ]
+    )
+    for r in consumo.rows:
+        writer.writerow(
+            [
+                r.org_id,
+                r.org_nombre,
+                r.plan_code,
+                r.analisis,
+                r.palabras,
+                r.tokens_in,
+                r.tokens_out,
+                r.costo_usd,
+                r.costo_bs,
+            ]
+        )
+    buf.seek(0)
+    filename = f"consumo_{consumo.desde}_{consumo.hasta}.csv"
+    return StreamingResponse(
+        iter([buf.getvalue()]),
+        media_type="text/csv",
+        headers={"Content-Disposition": f'attachment; filename="{filename}"'},
+    )
 
 
 # --- access requests --------------------------------------------------------

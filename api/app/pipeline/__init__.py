@@ -27,11 +27,18 @@ Stage map (HLD §5):
   6 ponderar            -> `scoring.ponderar`                  (no LLM, deterministic)
   7 redactar dictamen   -> LLM (`prompts.dictamen_prompt`) + `verify.verify_citations`
 
-Token/cost accounting is an estimate: the shared `chat_json(system, user,
-schema) -> dict` provider interface (HLD §5) does not expose provider usage
-counters, so `tokens_in`/`tokens_out` are approximated from prompt/response
-character length (~4 chars/token) via `_estimate_tokens` below, then priced
-with `pricing.cost_usd`.
+Token/cost accounting prefers real provider usage: `LLMProviderBase.chat_json`
+sets `provider.last_usage` (`{"tokens_in","tokens_out"}`) after every call
+when the provider reports it (openai_compat `response.usage`, anthropic
+`usage`). When it doesn't, `tokens_in`/`tokens_out` fall back to a
+~4-chars/token estimate via `_estimate_tokens` below. `analyses.costo_usd`
+is priced with `pricing.cost_usd` either way; `analyses.costo_estimado` is
+`True` unless every single LLM call in the run reported real usage.
+
+Long documents: stages 2 (separar cláusulas) and 4 (detectar patrones) run
+the LLM over ~3.000-word windows with 200-word overlap (`.windows`) instead
+of the whole document/clause list at once, merging/deduping the per-window
+results, so a long contract still completes within max_tokens guards.
 """
 
 import json
@@ -60,6 +67,8 @@ from .retrieval import articulo_to_dict, retrieve_articulos
 from .schemas import CANDIDATOS_SCHEMA, CLAUSULAS_SCHEMA, CONTRASTE_SCHEMA, PARTES_SCHEMA
 from .scoring import NIVEL_WEIGHT, ponderar
 from .verify import verify_citations
+from .windows import chunk_clausulas, dedupe_candidatos, dedupe_clausulas, split_words_with_overlap
+from .words import contar_palabras
 
 logger = logging.getLogger("clauscheck.pipeline")
 
@@ -95,12 +104,19 @@ async def run_pipeline(
 ) -> None:
     tokens_in_total = 0
     tokens_out_total = 0
+    all_calls_real_usage = True
 
     async def call_llm(user: str, schema: dict, max_tokens: int = 2048) -> dict:
-        nonlocal tokens_in_total, tokens_out_total
-        tokens_in_total += _estimate_tokens(SYSTEM) + _estimate_tokens(user)
+        nonlocal tokens_in_total, tokens_out_total, all_calls_real_usage
         result = await provider.chat_json(SYSTEM, user, schema, max_tokens=max_tokens)
-        tokens_out_total += _estimate_tokens(json.dumps(result, ensure_ascii=False))
+        usage = getattr(provider, "last_usage", None)
+        if usage:
+            tokens_in_total += usage.get("tokens_in", 0)
+            tokens_out_total += usage.get("tokens_out", 0)
+        else:
+            all_calls_real_usage = False
+            tokens_in_total += _estimate_tokens(SYSTEM) + _estimate_tokens(user)
+            tokens_out_total += _estimate_tokens(json.dumps(result, ensure_ascii=False))
         return result
 
     async def set_etapa(n: int) -> None:
@@ -116,6 +132,7 @@ async def run_pipeline(
         # `ocr_status=failed`) before the caller rolls back on failure.
         await db.commit()
         raise
+    document.palabras = contar_palabras(texto)
     await db.commit()
 
     # Pseudonymize before the text ever reaches an LLM prompt (stages 2-7
@@ -133,9 +150,18 @@ async def run_pipeline(
         texto_llm = texto
 
     # --- 2. separar clausulas --------------------------------------------
+    # Long contracts are split into ~3.000-word windows (200-word overlap)
+    # so a single call never has to read the whole document; per-window
+    # clauses are merged and deduped (the overlap re-extracts some).
     await set_etapa(2)
-    resp = await call_llm(clausulas_prompt(texto_llm), CLAUSULAS_SCHEMA, max_tokens=4096)
-    clausulas = resp.get("clausulas") or []
+    texto_windows = split_words_with_overlap(texto_llm)
+    clausulas_raw: list[dict] = []
+    for window_text in texto_windows:
+        resp = await call_llm(clausulas_prompt(window_text), CLAUSULAS_SCHEMA, max_tokens=4096)
+        clausulas_raw.extend(resp.get("clausulas") or [])
+    clausulas = dedupe_clausulas(clausulas_raw)
+    for i, c in enumerate(clausulas, start=1):
+        c["id"] = f"c{i}"
     document.clausulas = restore(clausulas, pseudonyms) if settings.PSEUDONYMIZE else clausulas
     await db.commit()
 
@@ -158,9 +184,22 @@ async def run_pipeline(
     await db.commit()
 
     # --- 4. detectar patrones de riesgo (candidatos) ----------------------
+    # Same windowing strategy as stage 2, over the (already deduped) clause
+    # list this time; candidato ids are prefixed per chunk to stay unique
+    # after merging, and re-detections in the overlap are deduped.
     await set_etapa(4)
-    resp = await call_llm(candidatos_prompt(clausulas, partes), CANDIDATOS_SCHEMA, max_tokens=8192)
-    candidatos = resp.get("candidatos") or []
+    clausula_chunks = chunk_clausulas(clausulas)
+    multi_chunk = len(clausula_chunks) > 1
+    candidatos_raw: list[dict] = []
+    for chunk_idx, chunk in enumerate(clausula_chunks):
+        if not chunk:
+            continue
+        resp = await call_llm(candidatos_prompt(chunk, partes), CANDIDATOS_SCHEMA, max_tokens=8192)
+        for cand in resp.get("candidatos") or []:
+            if multi_chunk and cand.get("id"):
+                cand["id"] = f"w{chunk_idx}_{cand['id']}"
+            candidatos_raw.append(cand)
+    candidatos = dedupe_candidatos(candidatos_raw)
 
     # --- 5. contrastar norma: retrieval (pgvector) + LLM selection --------
     await set_etapa(5)
@@ -346,6 +385,7 @@ async def run_pipeline(
     analysis.tokens_in = tokens_in_total
     analysis.tokens_out = tokens_out_total
     analysis.costo_usd = cost_usd(provider.code, provider.model, tokens_in_total, tokens_out_total)
+    analysis.costo_estimado = not all_calls_real_usage
     analysis.status = AnalysisStatus.done
     analysis.finished_at = datetime.now(UTC)
     await db.commit()

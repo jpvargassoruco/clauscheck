@@ -76,10 +76,49 @@ async def _seed_plans():
     from app.db import async_session_maker
 
     async with async_session_maker() as db:
-        db.add(Plan(code="free", nombre="Free", analisis_mes=5, docs_max=10, precio_bob=0))
-        db.add(Plan(code="pro", nombre="Pro", analisis_mes=50, docs_max=200, precio_bob=150))
         db.add(
-            Plan(code="despacho", nombre="Despacho", analisis_mes=500, docs_max=2000, precio_bob=800)
+            Plan(
+                code="free",
+                nombre="Free",
+                analisis_mes=5,
+                docs_max=10,
+                precio_bob=0,
+                palabras_mes=15_000,
+                palabras_max_doc=5_000,
+            )
+        )
+        db.add(
+            Plan(
+                code="personal",
+                nombre="Personal",
+                analisis_mes=20,
+                docs_max=50,
+                precio_bob=80,
+                palabras_mes=60_000,
+                palabras_max_doc=6_000,
+            )
+        )
+        db.add(
+            Plan(
+                code="pro",
+                nombre="Despacho",
+                analisis_mes=100,
+                docs_max=300,
+                precio_bob=350,
+                palabras_mes=400_000,
+                palabras_max_doc=15_000,
+            )
+        )
+        db.add(
+            Plan(
+                code="despacho",
+                nombre="Empresa",
+                analisis_mes=300,
+                docs_max=2000,
+                precio_bob=1200,
+                palabras_mes=1_500_000,
+                palabras_max_doc=30_000,
+            )
         )
         await db.commit()
 

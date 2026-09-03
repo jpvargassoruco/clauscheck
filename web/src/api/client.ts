@@ -8,8 +8,10 @@ import type {
   AnalysisSummary,
   Articulo,
   AuthTokens,
+  Consumo,
   CorpusItem,
   CuerpoLegal,
+  DocumentEstimate,
   DocumentSummary,
   Invitation,
   InvitationPreview,
@@ -225,10 +227,12 @@ export const documentsApi = {
   get: (id: string) =>
     request<DocumentoContrato>(`/documents/${id}`, { withOrg: true }),
   status: (id: string) =>
-    request<{ id: string; ocr_status: DocumentSummary["ocr_status"] }>(
+    request<{ id: string; ocr_status: DocumentSummary["ocr_status"]; palabras: number }>(
       `/documents/${id}/status`,
       { withOrg: true }
     ),
+  estimate: (id: string) =>
+    request<DocumentEstimate>(`/documents/${id}/estimate`, { withOrg: true }),
   createFromFile: (file: File, titulo: string) => {
     const form = new FormData();
     form.append("file", file);
@@ -426,6 +430,37 @@ export const adminApi = {
         method: "POST",
         body: { motivo }
       })
+  },
+  consumo: {
+    get: (params: { desde?: string; hasta?: string; org_id?: string } = {}) => {
+      const qs = new URLSearchParams(
+        Object.entries(params).filter(([, v]) => v) as [string, string][]
+      ).toString();
+      return request<Consumo>(`/admin/consumo${qs ? `?${qs}` : ""}`);
+    },
+    // El endpoint devuelve un CSV (no JSON); se descarga vía fetch+blob para
+    // poder mandar el header Authorization (no es una URL navegable directa).
+    exportCsv: async (params: { desde?: string; hasta?: string; org_id?: string } = {}) => {
+      const qs = new URLSearchParams(
+        Object.entries(params).filter(([, v]) => v) as [string, string][]
+      ).toString();
+      const { accessToken } = useAuthStore.getState();
+      const res = await fetch(`${API_BASE}/admin/consumo/export.csv${qs ? `?${qs}` : ""}`, {
+        headers: accessToken ? { Authorization: `Bearer ${accessToken}` } : {}
+      });
+      if (!res.ok) {
+        throw new ApiError(res.status, "No se pudo descargar el CSV de consumo.");
+      }
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `consumo_${params.desde ?? ""}_${params.hasta ?? ""}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
   }
 };
 

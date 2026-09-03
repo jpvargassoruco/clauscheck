@@ -75,6 +75,9 @@ export default function Ajustes() {
   const porcentajeUso = uso
     ? Math.min(100, Math.round((uso.analisis_count / Math.max(uso.analisis_mes, 1)) * 100))
     : 0;
+  const porcentajePalabras = uso
+    ? Math.min(100, Math.round((uso.palabras_count / Math.max(uso.palabras_mes, 1)) * 100))
+    : 0;
 
   const esSuperadminSinMfa = !!user?.is_superadmin && !user.mfa_enabled;
 
@@ -121,6 +124,19 @@ export default function Ajustes() {
               </p>
               <div className={styles.usoBarra}>
                 <div className={styles.usoBarraRelleno} style={{ width: `${porcentajeUso}%` }} />
+              </div>
+              <p style={{ margin: 0 }}>
+                {uso.palabras_count.toLocaleString("es-BO")} de{" "}
+                {uso.palabras_mes.toLocaleString("es-BO")} palabras usadas este mes.
+              </p>
+              <div className={styles.usoBarra}>
+                <div
+                  className={styles.usoBarraRelleno}
+                  style={{
+                    width: `${porcentajePalabras}%`,
+                    background: porcentajePalabras >= 80 ? "var(--nivel-critico)" : undefined
+                  }}
+                />
               </div>
             </>
           ) : (

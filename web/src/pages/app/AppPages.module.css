@@ -215,3 +215,65 @@
   flex-wrap: wrap;
   align-items: flex-end;
 }
+
+/* Consumo (dashboard admin) */
+
+.tilesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.tile {
+  padding: 16px 18px;
+}
+
+.tileLabel {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+.tileValor {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.barraMiniFila {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+}
+
+.barraMiniTexto {
+  font-size: 0.72rem;
+  color: var(--color-texto-suave);
+}
+
+.barraMini {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-bg-sutil);
+  overflow: hidden;
+}
+
+.barraMiniRelleno {
+  height: 100%;
+  background: var(--color-primario);
+}
+
+.barraMiniAlerta {
+  background: var(--nivel-critico);
+}
+
+.graficoDiario {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.graficoDiarioSvgWrap {
+  min-width: 480px;
+}

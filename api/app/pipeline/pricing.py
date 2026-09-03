@@ -26,3 +26,25 @@ def cost_usd(provider_code: str, model: str, tokens_in: int, tokens_out: int) ->
     """
     price_in, price_out = _PRICING.get((provider_code, model), (0.0, 0.0))
     return round((tokens_in / 1_000_000) * price_in + (tokens_out / 1_000_000) * price_out, 6)
+
+
+def estimate_tokens_from_palabras(palabras: int) -> int:
+    """Rough end-to-end token estimate for a full 7-stage analysis run.
+
+    The document text/clauses are read by several LLM stages (2, 3, 4, 5,
+    7), so total input token volume is a multiple of a single ~1.3
+    tokens/word pass — used only for the pre-flight `GET
+    /documents/{id}/estimate`, never for billing.
+    """
+    return int(palabras * 1.3 * 3)
+
+
+def estimate_cost_usd(provider_code: str, model: str, palabras: int) -> float:
+    tokens = estimate_tokens_from_palabras(palabras)
+    tokens_in = int(tokens * 0.85)
+    tokens_out = tokens - tokens_in
+    return cost_usd(provider_code, model, tokens_in, tokens_out)
+
+
+def costo_bs(costo_usd: float, usd_bob: float) -> float:
+    return round(costo_usd * usd_bob, 4)

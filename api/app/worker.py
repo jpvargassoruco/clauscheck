@@ -3,7 +3,10 @@
 `analyze` resolves the org's LLM provider and document, then delegates the
 real 7-stage analysis to `app.pipeline.run_pipeline` (HLD §5), handling the
 `queued -> running -> done|failed` status transitions and recording a
-human-readable Spanish `error` on failure.
+human-readable Spanish `error` on failure. `POST /analyses` reserves 1
+análisis + the document's word count against the org's monthly quota
+up-front (see `app.routers.analyses`); if the job fails, that reservation
+is refunded here so a failed run never counts against the quota.
 """
 
 import logging
@@ -11,15 +14,28 @@ from datetime import UTC, datetime
 
 from arq.connections import RedisSettings
 from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import settings
 from app.db import async_session_maker
 from app.embeddings import embed_passages
 from app.llm.registry import get_default_provider
-from app.models import Analysis, AnalysisStatus, Articulo, Document
+from app.models import Analysis, AnalysisStatus, Articulo, Document, Usage
+from app.periodo import current_periodo
 from app.pipeline import run_pipeline
+from app.pipeline.words import contar_palabras
 
 logger = logging.getLogger("clauscheck.worker")
+
+
+async def _refund_usage(db: AsyncSession, org_id, periodo: str, palabras: int) -> None:
+    """Undo the POST /analyses reservation (1 análisis + `palabras`) after a
+    failed job, so a failed run doesn't count against the org's quota."""
+    usage = await db.get(Usage, {"org_id": org_id, "periodo": periodo})
+    if usage is None:
+        return
+    usage.analisis_count = max(usage.analisis_count - 1, 0)
+    usage.palabras_count = max(usage.palabras_count - palabras, 0)
 
 
 async def analyze(ctx, analysis_id: str) -> None:
@@ -29,15 +45,24 @@ async def analyze(ctx, analysis_id: str) -> None:
             logger.warning("analyze: analysis %s not found", analysis_id)
             return
 
+        org_id = analysis.org_id  # captured before any rollback expires it below
+
         analysis.status = AnalysisStatus.running
         analysis.etapa = 0
         analysis.started_at = datetime.now(UTC)
         await db.commit()
 
+        periodo = current_periodo()
+        palabras_reservadas = 0
+
         try:
             document = await db.get(Document, analysis.document_id)
             if document is None:
                 raise ValueError("El documento del análisis ya no existe.")
+
+            # Mirrors what POST /analyses reserved (see routers.analyses),
+            # for the refund below if this run fails.
+            palabras_reservadas = document.palabras or contar_palabras(document.texto)
 
             provider = await get_default_provider(db)
             analysis.provider_code = provider.code
@@ -51,6 +76,7 @@ async def analyze(ctx, analysis_id: str) -> None:
             analysis.status = AnalysisStatus.failed
             analysis.error = str(exc)
             analysis.finished_at = datetime.now(UTC)
+            await _refund_usage(db, org_id, periodo, palabras_reservadas)
             await db.commit()
 
 

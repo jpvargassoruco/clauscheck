@@ -45,6 +45,7 @@ export interface DocumentoContrato {
   texto?: string;
   ocr_status?: "pending" | "ready" | "failed";
   is_public?: boolean;
+  palabras?: number;
   created_at?: string;
 }
 

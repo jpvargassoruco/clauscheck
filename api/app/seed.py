@@ -35,14 +35,45 @@ logger = logging.getLogger("clauscheck.seed")
 SEED_DIR = Path(__file__).resolve().parent.parent.parent / "seed"
 
 PLANS = [
-    {"code": "free", "nombre": "Free", "analisis_mes": 5, "docs_max": 10, "precio_bob": 0},
-    {"code": "pro", "nombre": "Pro", "analisis_mes": 50, "docs_max": 200, "precio_bob": 150},
     {
-        "code": "despacho",
+        "code": "free",
+        "nombre": "Free",
+        "analisis_mes": 5,
+        "docs_max": 10,
+        "precio_bob": 0,
+        "palabras_mes": 15_000,
+        "palabras_max_doc": 5_000,
+    },
+    {
+        "code": "personal",
+        "nombre": "Personal",
+        "analisis_mes": 20,
+        "docs_max": 50,
+        "precio_bob": 80,
+        "palabras_mes": 60_000,
+        "palabras_max_doc": 6_000,
+    },
+    {
+        # code kept as "pro" for backward compatibility; display name
+        # renamed to "Despacho" as part of the palabras-based re-pricing.
+        "code": "pro",
         "nombre": "Despacho",
-        "analisis_mes": 500,
+        "analisis_mes": 100,
+        "docs_max": 300,
+        "precio_bob": 350,
+        "palabras_mes": 400_000,
+        "palabras_max_doc": 15_000,
+    },
+    {
+        # code kept as "despacho"; display name renamed to "Empresa" (top
+        # tier) now that "Despacho" names the (renamed) "pro" plan above.
+        "code": "despacho",
+        "nombre": "Empresa",
+        "analisis_mes": 300,
         "docs_max": 2000,
-        "precio_bob": 800,
+        "precio_bob": 1200,
+        "palabras_mes": 1_500_000,
+        "palabras_max_doc": 30_000,
     },
 ]
 

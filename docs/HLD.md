@@ -24,13 +24,13 @@ Este documento es el contrato entre los módulos. Los agentes implementan CONTRA
 - `users(id, email uq, password_hash argon2, nombre, is_superadmin, is_active, created_at)`
 - `memberships(user_id, org_id, role enum owner|admin|member, pk(user_id,org_id))`
 - `invitations(id, org_id, email, role, token uq, expires_at, accepted_at)`
-- `plans(code pk free|pro|despacho, nombre, analisis_mes int, docs_max int, precio_bob numeric)`
-- `usage(org_id, periodo 'YYYY-MM', analisis_count, pk(org_id,periodo))`
+- `plans(code pk free|personal|pro|despacho, nombre, analisis_mes int, docs_max int, precio_bob numeric, palabras_mes int, palabras_max_doc int)` — `palabras_mes` = presupuesto mensual de palabras; `palabras_max_doc` = máximo por documento. Seed: free 5/15.000/5.000 · personal 20/60.000/6.000 · pro ("Despacho") 100/400.000/15.000 · despacho ("Empresa") 300/1.500.000/30.000.
+- `usage(org_id, periodo 'YYYY-MM', analisis_count, palabras_count, pk(org_id,periodo))`
 - `llm_providers(id, code uq deepseek|moonshot|openrouter|anthropic, kind enum openai_compat|anthropic, base_url, model, api_key_enc (Fernet), enabled, is_default, params jsonb, updated_at)`
 - `cuerpos_legales(id, code uq p.ej. CC|CPE|LGT|DS110|LEY065, nombre, tipo, numero, fecha, fuente_url)`
 - `articulos(id, cuerpo_id, numero text, inciso text null, titulo null, texto, vigente bool, verificado bool, fuente_url, version int, valid_from date, valid_to date null, embedding vector(384), uq(cuerpo_id,numero,inciso,version))`
-- `documents(id, org_id, paperless_id int null, titulo, tipo_contrato, rubro enum laboral|comercial|financiero|civil, ficha jsonb, partes jsonb, clausulas jsonb, texto text, ocr_status enum pending|ready|failed, is_public bool, created_by, created_at)`
-- `analyses(id, org_id, document_id, status enum queued|running|done|failed, etapa int 0..7, provider_code, model, dictamen jsonb null, error text null, tokens_in, tokens_out, costo_usd numeric, created_by, created_at, started_at, finished_at)`
+- `documents(id, org_id, paperless_id int null, titulo, tipo_contrato, rubro enum laboral|comercial|financiero|civil, ficha jsonb, partes jsonb, clausulas jsonb, texto text, palabras int, ocr_status enum pending|ready|failed, is_public bool, created_by, created_at)` — `palabras` se computa al crear (JSON `texto`) y al sincronizar el OCR (`GET /documents/{id}/status` y pipeline etapa 1).
+- `analyses(id, org_id, document_id, status enum queued|running|done|failed, etapa int 0..7, provider_code, model, dictamen jsonb null, error text null, tokens_in, tokens_out, costo_usd numeric, costo_estimado bool, created_by, created_at, started_at, finished_at)` — `costo_estimado=true` salvo que el proveedor haya devuelto `usage` real en TODAS las llamadas del run.
 
 Org demo: slug `clauscheck-demo`, `is_demo=true`, sus documents tienen `is_public=true` y un analysis `done` → corpus de ejemplos.
 
@@ -71,11 +71,11 @@ Escala: crítico = nulidad/inoponibilidad/renuncia irrenunciable; alto = desequi
 - `POST /auth/register {email,password,nombre,org_nombre}` → crea user + org (owner). `POST /auth/login`, `POST /auth/refresh`, `GET /auth/me` (incluye orgs+roles).
 - `GET /orgs` · `POST /orgs` · `GET /orgs/{id}/members` · `PATCH /orgs/{id}/members/{user_id}` · `POST /orgs/{id}/invitations` · `POST /invitations/{token}/accept`
 - Header `X-Org-Id` obligatorio en documents/analyses/usage.
-- `POST /documents` multipart `file` (pdf/png/jpg/docx/txt) **o** JSON `{titulo, texto}` → sube a paperless (si file) y crea document `ocr_status=pending`; `GET /documents` (paginado) · `GET /documents/{id}` · `DELETE /documents/{id}` · `GET /documents/{id}/status`
-- `POST /analyses {document_id}` → valida cuota del plan, encola job, devuelve `{id,status:"queued"}` · `GET /analyses` · `GET /analyses/{id}` (status, etapa, dictamen) · `DELETE`
-- `GET /usage` (periodo actual vs plan)
+- `POST /documents` multipart `file` (pdf/png/jpg/docx/txt) **o** JSON `{titulo, texto}` → sube a paperless (si file) y crea document `ocr_status=pending`; caps duros anti-abuso (independientes del plan): texto pegado ≤ `MAX_TEXTO_CHARS` (200.000) y archivo ≤ `MAX_UPLOAD_BYTES` (20 MB), ambos 413. `GET /documents` (paginado) · `GET /documents/{id}` · `DELETE /documents/{id}` · `GET /documents/{id}/status` (sincroniza OCR + `palabras`) · `GET /documents/{id}/estimate` → `{palabras, tokens_estimados, costo_estimado_usd, dentro_del_plan, motivo}` (pricing.py, sin llamar al proveedor)
+- `POST /analyses {document_id}` → 413 si `document.palabras > plan.palabras_max_doc`; 402 si la cuota mensual de análisis o de palabras del plan está agotada; si ok, **reserva** 1 análisis + las palabras del documento en `usage` (misma transacción) y encola el job, devuelve `{id,status:"queued"}`. Si el job falla, el worker reembolsa esa reserva. `GET /analyses` · `GET /analyses/{id}` (status, etapa, dictamen) · `DELETE`
+- `GET /usage` (periodo actual: análisis y palabras, usados vs plan)
 - Público sin auth: `GET /public/corpus` (lista documentos demo + índice/nivel/hallazgos) · `GET /public/corpus/{id}` (document + dictamen) · `GET /public/normativa/articulos/{id}`
-- Superadmin: `GET/POST/PATCH/DELETE /admin/providers`, `POST /admin/providers/{id}/test` · `GET/POST/PATCH /admin/normativa/cuerpos` · `GET/POST/PATCH/DELETE /admin/normativa/articulos` (filtros cuerpo, numero, q) · `POST /admin/normativa/import` (JSON del formato seed) · `POST /admin/normativa/reembed` · `GET /admin/orgs`, `PATCH /admin/orgs/{id}` (plan) · `GET/PATCH /admin/plans`
+- Superadmin: `GET/POST/PATCH/DELETE /admin/providers`, `POST /admin/providers/{id}/test` · `GET/POST/PATCH /admin/normativa/cuerpos` · `GET/POST/PATCH/DELETE /admin/normativa/articulos` (filtros cuerpo, numero, q) · `POST /admin/normativa/import` (JSON del formato seed) · `POST /admin/normativa/reembed` · `GET /admin/orgs`, `PATCH /admin/orgs/{id}` (plan) · `GET/PATCH /admin/plans` (incluye `palabras_mes`/`palabras_max_doc`) · `GET /admin/consumo?desde=&hasta=&org_id=` → totales + filas por org (análisis, palabras, tokens_in/out, costo_usd, costo_bs a `USD_BOB`) + serie diaria · `GET /admin/consumo/export.csv` (mismo filtro, CSV)
 - `GET /health` (db, redis, paperless).
 
 Errores: JSON `{detail}`; 402 cuota agotada; 403 sin membresía; 404 recursos de otra org (nunca 403 para no filtrar existencia).

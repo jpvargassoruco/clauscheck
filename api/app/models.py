@@ -143,6 +143,10 @@ class Plan(Base):
     analisis_mes: Mapped[int] = mapped_column(Integer, nullable=False)
     docs_max: Mapped[int] = mapped_column(Integer, nullable=False)
     precio_bob: Mapped[float] = mapped_column(Numeric(10, 2), nullable=False, default=0)
+    # Monthly word budget for the org, and the max words a single document
+    # may have to be analyzed (both enforced in POST /analyses).
+    palabras_mes: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    palabras_max_doc: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
 
 
 class Usage(Base):
@@ -153,6 +157,7 @@ class Usage(Base):
     )
     periodo: Mapped[str] = mapped_column(String(7), primary_key=True)  # 'YYYY-MM'
     analisis_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    palabras_count: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
 
 
 class LLMProvider(Base):
@@ -230,6 +235,9 @@ class Document(Base):
     partes: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
     clausulas: Mapped[list] = mapped_column(JSONB, nullable=False, default=list)
     texto: Mapped[str | None] = mapped_column(Text, nullable=True)
+    # Word count of `texto`, computed on create (JSON path) and when OCR
+    # text is synced (status endpoint / pipeline stage 1).
+    palabras: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     # token -> real_value map used to pseudonymize `texto`/`clausulas`/`partes`
     # before every LLM call in the pipeline (see `app.pipeline.anonymize`),
     # persisted so re-running an analysis reuses the same tokens.
@@ -269,6 +277,10 @@ class Analysis(Base):
     tokens_in: Mapped[int | None] = mapped_column(Integer, nullable=True)
     tokens_out: Mapped[int | None] = mapped_column(Integer, nullable=True)
     costo_usd: Mapped[float | None] = mapped_column(Numeric(10, 4), nullable=True)
+    # True when tokens_in/out/costo_usd are the ~4-chars/token estimate
+    # (no provider usage counters available); False when they are the real
+    # counters the provider returned.
+    costo_estimado: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
     created_by: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True), ForeignKey("users.id"), nullable=True
     )

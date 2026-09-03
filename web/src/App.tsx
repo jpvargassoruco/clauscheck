@@ -23,6 +23,7 @@ import Proveedores from "@/pages/admin/Proveedores";
 import Normativa from "@/pages/admin/Normativa";
 import Organizaciones from "@/pages/admin/Organizaciones";
 import Planes from "@/pages/admin/Planes";
+import Consumo from "@/pages/admin/Consumo";
 import Solicitudes from "@/pages/admin/Solicitudes";
 
 export default function App() {
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="normativa" element={<Normativa />} />
           <Route path="organizaciones" element={<Organizaciones />} />
           <Route path="planes" element={<Planes />} />
+          <Route path="consumo" element={<Consumo />} />
           <Route path="solicitudes" element={<Solicitudes />} />
         </Route>
       </Route>

@@ -356,12 +356,12 @@
   <p>Anclas encontradas: software para pymes en Bolivia desde Bs 252 al mes (CUCU); legaltech latinoamericana de entrada entre USD 9 y 30 por usuario; herramientas globales de revisión de contratos desde USD 1.200 por asiento, fuera de escala local. Propuesta inicial para probar en el piloto:</p>
   <div class="tabla">
   <table>
-    <thead><tr><th>Plan</th><th>Para quién</th><th class="num">Bs / mes</th><th class="num">Análisis / mes</th><th>Incluye</th></tr></thead>
+    <thead><tr><th>Plan</th><th>Para quién</th><th class="num">Bs / mes</th><th class="num">Análisis / mes</th><th class="num">Palabras / mes</th><th class="num">Máx. por doc.</th><th>Incluye</th></tr></thead>
     <tbody>
-      <tr><td>Personal</td><td>Abogado independiente, emprendedor</td><td class="num">149</td><td class="num">20</td><td>1 usuario, informes, exportar .docx</td></tr>
-      <tr><td>Despacho</td><td>2 a 8 abogados</td><td class="num">490</td><td class="num">100</td><td>5 usuarios, expedientes, playbook, dictamen firmado</td></tr>
-      <tr><td>Empresa</td><td>Área legal interna, inmobiliaria, constructora</td><td class="num">1.200</td><td class="num">300</td><td>15 usuarios, API, auditoría, soporte prioritario</td></tr>
-      <tr><td>Suelto</td><td>Persona que va a firmar</td><td class="num">39 / contrato</td><td class="num">1</td><td>Sin cuenta, pago QR, informe con aviso</td></tr>
+      <tr><td>Personal</td><td>Abogado independiente, emprendedor</td><td class="num">149</td><td class="num">20</td><td class="num">60.000</td><td class="num">6.000</td><td>1 usuario, informes, exportar .docx</td></tr>
+      <tr><td>Despacho</td><td>2 a 8 abogados</td><td class="num">490</td><td class="num">100</td><td class="num">400.000</td><td class="num">15.000</td><td>5 usuarios, expedientes, playbook, dictamen firmado</td></tr>
+      <tr><td>Empresa</td><td>Área legal interna, inmobiliaria, constructora</td><td class="num">1.200</td><td class="num">300</td><td class="num">1.500.000</td><td class="num">30.000</td><td>15 usuarios, API, auditoría, soporte prioritario</td></tr>
+      <tr><td>Suelto</td><td>Persona que va a firmar</td><td class="num">39 / contrato</td><td class="num">1</td><td class="num">—</td><td class="num">6.000</td><td>Sin cuenta, pago QR, informe con aviso</td></tr>
     </tbody>
   </table>
   </div>
@@ -377,6 +377,7 @@
     </tbody>
   </table>
   </div>
+  <p class="nota"><b>Cobro por tamaño.</b> Cada plan tiene tres límites: análisis por mes, palabras por mes y palabras por documento. Un contrato típico tiene entre 1.500 y 4.000 palabras; los topes por documento evitan que un solo expediente de 200 páginas consuma el presupuesto de IA del plan. Topes absolutos para todos: 40.000 palabras por documento, 200.000 caracteres pegados, 20 MB por archivo. El usuario ve el conteo de palabras y el costo estimado antes de analizar; un documento fuera de límite se divide o se sube de plan. Las palabras se reservan al encolar y se devuelven si el análisis falla. El panel /admin/consumo muestra tokens y costo reales por organización y por día.</p>
   <p class="nota">Cifras de precio y de tarifas de abogados en Bolivia no encontradas en fuentes públicas; validar en el piloto con la pregunta directa «¿cuánto cobra por revisar un contrato de alquiler?». Todo lo marcado como estimado debe reemplazarse por el costo real registrado por el sistema.</p>
 
   <h2 id="fuentes">Fuentes</h2>

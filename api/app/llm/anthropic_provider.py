@@ -12,7 +12,9 @@ class AnthropicProvider(LLMProviderBase):
         self.model = model
         self._client = AsyncAnthropic(api_key=api_key)
 
-    async def _send(self, system: str, user: str, max_tokens: int) -> str:
+    async def _send(
+        self, system: str, user: str, max_tokens: int
+    ) -> tuple[str, dict[str, int] | None]:
         system_json = (
             f"{system}\n\n"
             "Responde ÚNICAMENTE con un objeto JSON válido, sin texto adicional, "
@@ -29,7 +31,16 @@ class AnthropicProvider(LLMProviderBase):
             raise LLMError(f"anthropic: {exc}") from exc
 
         parts = [block.text for block in resp.content if getattr(block, "type", None) == "text"]
-        return "".join(parts)
+        text = "".join(parts)
+
+        usage = None
+        raw_usage = getattr(resp, "usage", None)
+        if raw_usage is not None:
+            usage = {
+                "tokens_in": int(getattr(raw_usage, "input_tokens", 0) or 0),
+                "tokens_out": int(getattr(raw_usage, "output_tokens", 0) or 0),
+            }
+        return text, usage
 
     async def test_connection(self) -> str:
         try:

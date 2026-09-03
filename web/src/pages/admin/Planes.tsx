@@ -19,7 +19,9 @@ export default function Planes() {
         nombre: plan.nombre,
         analisis_mes: plan.analisis_mes,
         docs_max: plan.docs_max,
-        precio_bob: plan.precio_bob
+        precio_bob: plan.precio_bob,
+        palabras_mes: plan.palabras_mes,
+        palabras_max_doc: plan.palabras_max_doc
       }),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["admin-plans"] });
@@ -45,6 +47,8 @@ export default function Planes() {
               <th>Código</th>
               <th>Nombre</th>
               <th>Análisis/mes</th>
+              <th>Palabras/mes</th>
+              <th>Palabras/doc. máx.</th>
               <th>Docs. máx.</th>
               <th>Precio (Bs)</th>
               <th></th>
@@ -79,6 +83,32 @@ export default function Planes() {
                       />
                     ) : (
                       p.analisis_mes
+                    )}
+                  </td>
+                  <td>
+                    {enEdicion ? (
+                      <input
+                        type="number"
+                        value={filaEditable.palabras_mes}
+                        onChange={(e) =>
+                          setEditando({ ...filaEditable, palabras_mes: Number(e.target.value) })
+                        }
+                      />
+                    ) : (
+                      p.palabras_mes.toLocaleString("es-BO")
+                    )}
+                  </td>
+                  <td>
+                    {enEdicion ? (
+                      <input
+                        type="number"
+                        value={filaEditable.palabras_max_doc}
+                        onChange={(e) =>
+                          setEditando({ ...filaEditable, palabras_max_doc: Number(e.target.value) })
+                        }
+                      />
+                    ) : (
+                      p.palabras_max_doc.toLocaleString("es-BO")
                     )}
                   </td>
                   <td>

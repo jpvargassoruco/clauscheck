@@ -40,6 +40,11 @@ class LLMProviderBase(ABC):
 
     code: str = "base"
     model: str = ""
+    # Real token usage (`{"tokens_in": int, "tokens_out": int}`) from the
+    # provider for the most recent `chat_json` call (summed across the
+    # repair retry, if any), or `None` when the provider did not report it
+    # (the pipeline then falls back to its own char-based estimate).
+    last_usage: dict[str, int] | None = None
 
     async def chat_json(
         self, system: str, user: str, schema: dict[str, Any], max_tokens: int = 2048
@@ -49,9 +54,17 @@ class LLMProviderBase(ABC):
         Performs one repair retry if the first response is not valid JSON or
         fails schema validation.
         """
-        raw = await self._send(system, user, max_tokens)
+        cumulative = {"tokens_in": 0, "tokens_out": 0}
+        have_usage = False
+
+        raw, usage = await self._send(system, user, max_tokens)
+        if usage:
+            have_usage = True
+            cumulative["tokens_in"] += usage.get("tokens_in", 0)
+            cumulative["tokens_out"] += usage.get("tokens_out", 0)
         data = self._parse_and_validate(raw, schema)
         if data is not None:
+            self.last_usage = cumulative if have_usage else None
             return data
 
         repair_user = (
@@ -61,16 +74,27 @@ class LLMProviderBase(ABC):
             f"{json.dumps(schema, ensure_ascii=False)}\n\n"
             f"Respuesta anterior:\n{raw}"
         )
-        raw2 = await self._send(system, repair_user, max_tokens)
+        raw2, usage2 = await self._send(system, repair_user, max_tokens)
+        if usage2:
+            have_usage = True
+            cumulative["tokens_in"] += usage2.get("tokens_in", 0)
+            cumulative["tokens_out"] += usage2.get("tokens_out", 0)
         data2 = self._parse_and_validate(raw2, schema)
+        self.last_usage = cumulative if have_usage else None
         if data2 is not None:
             return data2
 
         raise LLMError("La respuesta del proveedor no es JSON válido tras el reintento de reparación")
 
     @abstractmethod
-    async def _send(self, system: str, user: str, max_tokens: int) -> str:
-        """Send the chat request and return the raw text response."""
+    async def _send(
+        self, system: str, user: str, max_tokens: int
+    ) -> tuple[str, dict[str, int] | None]:
+        """Send the chat request; return `(raw_text, usage)`.
+
+        `usage` is `{"tokens_in": int, "tokens_out": int}` when the provider
+        reports it, else `None`.
+        """
         raise NotImplementedError
 
     @staticmethod
